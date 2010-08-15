@@ -1,0 +1,3143 @@
+<!--
+ A little help:
+ 1. every rule starts with <rule> and ends with </rule>
+ 2. every rule needs a condition
+ -k for the key (required)
+ -v for the value as a string
+ -b for the values yes / no (boolean, will also understand true, 1 and false, 0 respectively)
+ Although the value flags v/b for the condition are optional, using at
+ least one of them is highly recommended!
+ 3. line attributes
+ - width absolute width in pixel in every zoom level
+ - realwidth relative width which will be scaled in meters, integer
+ - colour
+ - priority
+ - dashed x - dashed line, length of dashes / spaces in x pixels
+ - dashed x,y - dashed line, x length of dashes / spaces in y pixels
+ - dashedcolour second (background) colour of a dashed line
+ 4. linemod attributes
+ - all line attributes
+ - mode ('over' or 'under')
+ - width can be specified relative to modified way:
+ +x - <x> pixels are added to way size
+ -x - <x> pixels are subtracted from way size
+ x% - the size is <x> percent of modified way
+ If the size is <= 1 the minimum size of 1 is used.
+ 5. area attributes
+ - colour
+ - priority
+ - closed (true or false - when true the area style is ignored for unclosed ways)
+ 6. icon attributes
+ - icon (path to icon)
+ - relative to the icon path
+ - URL's are also supported to allow remote icons (are cached locally)
+ - priority
+ - annonate (true or false)
+ 7. scale_min / scale_max
+ - zoom scale for display
+ 
+ Using both area and line attributes for the same key/value pair does work. For areas
+ first the rbest matching area rule is searched and the best matching line rule is
+ connected with it. They need not have the same key/value pair.
+ 
+ The colours can consist of the two components - name and hex code (e.g. water#0000ff).
+ If both are given, the color name is introduced in preferences with that value. If only
+ code is given (e.g. #0000ff), it is used directly. If only name is given, either user
+ modified preferences or previous value is used. The 6 hex digit color code can also
+ be appended by a hex value of the alpha channel (thus having 8 hex digits instead of 6).
+ 
+ Linemod's are drawn over or under the line they are associated with and modify the
+ appearance. There can be multiple linemod's for one way (contrary to line styles,
+ where only one applies). When drawn over a way either a very small width must be choosen
+ or an alpha value must be used for the colour field (otherwise the original way is
+ not visible). When the mod is under the way, then it must be wide enough to be visible
+ on the sides of the way or the waystyles itself must use alpha channel (which may
+ look strange).
+ 
+ If a key/value pair matches more than one rule, the "rule that wins" is unpredicted
+ in case they have same priority! Using priority settings helps to solve conflicts.
+ 
+ For external files the <rules> should have following elements:
+ - author           the author of the style
+ - version          a version number of some sort (e.g. creation date)
+ - description      what is your style meant to be
+ - shortdescription very short description
+ - link             a link to a helpful website (optional)
+ - The fields description, shortdescription and link may also be localized (e.g. de.link)
+ - name             is the name of the style
+ - when the style replaces the whole rendering choose a new name
+ - when the style is additional choose "standard" or don't use name tag
+ -->
+
+<rules
+    description="Seamarks for OpenSeaMap"
+    shortdescription="OpenSeaMap" 
+    author="OpenSeaMap"
+    link="http://www.openseamap.org"
+    version="2010-08-06_18:41:07" >
+    
+    
+    <!-- **************************************************************************************** -->
+    <!-- seamark tags -->
+    
+    <!-- red port can, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Can_Red_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port can, can topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Can_Red_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port can, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Can_Red_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port can -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Can_Red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port can, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Can_Green_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port can, can topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Can_Green_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port can, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Can_Green_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port can -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Can_Green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red starboard cone, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Cone_Red_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red starboard cone, cone topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Cone_Red_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red starboard cone, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Cone_Red_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red starboard cone -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Cone_Red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green starboard cone, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Cone_Green_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green starboard cone, can topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Cone_Green_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green starboard cone, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Cone_Green_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green starboard cone -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Cone_Green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red preferred port can, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Can_Red_Green_Red_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red preferred port can, can topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Can_Red_Green_Red_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red preferred port can, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Can_Red_Green_Red_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red preferred port can -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Can_Red_Green_Red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green preferred port can, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Can_Green_Red_Green_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green preferred port can, can topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Can_Green_Red_Green_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green preferred port can, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Can_Green_Red_Green_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green preferred port can -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Can_Green_Red_Green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red preferred starboard cone, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Cone_Red_Green_Red_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red preferred starboard cone, cone topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Cone_Red_Green_Red_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red preferred starboard cone, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Cone_Red_Green_Red_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red preferred starboard cone -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Cone_Red_Green_Red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green preferred starboard cone, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Cone_Green_Red_Green_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green preferred starboard cone, can topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Cone_Green_Red_Green_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green preferred starboard cone, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Cone_Green_Red_Green_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green preferred starboard cone -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Cone_Green_Red_Green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port pillar, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Pillar_Red_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port pillar, can topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Red_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red starboard pillar, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Pillar_Red_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red starboard pillar, cone topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Red_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port/starboard pillar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Red_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port/starboard pillar -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green starboard pillar, topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>				
+		<icon annotate="true" src="Lateral_Pillar_Green_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+	
+    <!-- green starboard pillar, topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Green_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port pillar, topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>				
+		<icon annotate="true" src="Lateral_Pillar_Green_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+	
+    <!-- green port, topmark pillar -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Green_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port/starboard pillar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Green_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port/starboard pillar -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- preferred channel red-green-red pillar, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Red_Green_Red_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red pillar, can topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Red_Green_Red_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red pillar, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Red_Green_Red_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red pillar, cone topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Red_Green_Red_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red pillar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Red_Green_Red_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- preferred channel red-green-red pillar -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Red_Green_Red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green pillar, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Green_Red_Green_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green pillar, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Green_Red_Green_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- preferred channel green-red-green pillar, can topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Green_Red_Green_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+	
+    <!-- preferred channel green-red-green pillar, cone topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Green_Red_Green_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green pillar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Green_Red_Green_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green pillar -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Pillar_Green_Red_Green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- red port spar, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Spar_Red_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port spar, can topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Red_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red starboard spar, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<icon annotate="true" src="Lateral_Spar_Red_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red starboard spar, cone topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Red_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port/starboard spar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Red_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port/starboard spar -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green starboard spar, topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>				
+		<icon annotate="true" src="Lateral_Spar_Green_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+	
+    <!-- green starboard spar, topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Green_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port spar, topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>				
+		<icon annotate="true" src="Lateral_Spar_Green_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+	
+    <!-- green port, topmark spar -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Green_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port/starboard spar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Green_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port/starboard spar -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- preferred channel red-green-red spar, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Red_Green_Red_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red spar, can topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Red_Green_Red_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red spar, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Red_Green_Red_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red spar, cone topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Red_Green_Red_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red spar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Red_Green_Red_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- preferred channel red-green-red spar -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Red_Green_Red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green spar, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Green_Red_Green_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green spar, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Green_Red_Green_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- preferred channel green-red-green spar, can topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Green_Red_Green_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+	
+    <!-- preferred channel green-red-green spar, cone topmark -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Green_Red_Green_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green spar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Green_Red_Green_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green spar -->
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:type" v="buoy_lateral"/>		
+		<icon annotate="true" src="Lateral_Spar_Green_Red_Green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+     <!-- red port tower, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Red_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port tower, can topmark -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Red_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red starboard tower, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Red_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red starboard tower, cone topmark -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Red_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port/starboard tower, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Red_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port/starboard tower -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="red"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green starboard tower, topmark, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Green_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+	
+    <!-- green starboard tower, topmark -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Green_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port tower, topmark, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Green_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+	
+    <!-- green port, topmark tower -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Green_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port/starboard tower, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Green_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port/starboard tower -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="green"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- preferred channel red-green-red tower, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Red_Green_Red_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red tower, can topmark -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Red_Green_Red_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red tower, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Red_Green_Red_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red tower, cone topmark -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Red_Green_Red_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red tower, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Red_Green_Red_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- preferred channel red-green-red tower -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Red_Green_Red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green tower, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Green_Red_Green_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green tower, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Green_Red_Green_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- preferred channel green-red-green tower, can topmark -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Green_Red_Green_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+	
+    <!-- preferred channel green-red-green tower, cone topmark -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Green_Red_Green_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green tower, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Green_Red_Green_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green tower -->
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="tower"/>
+		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Tower_Green_Red_Green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+
+     <!-- red port beacon, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Red_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port beacon, can topmark -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Red_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red starboard beacon, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Red_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red starboard beacon, cone topmark -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Red_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port/starboard beacon, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Red_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port/starboard beacon -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="red"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green starboard beacon, topmark, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Green_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+	
+    <!-- green starboard beacon, topmark -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Green_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port beacon, topmark, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Green_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+	
+    <!-- green port, topmark beacon -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Green_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port/starboard beacon, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Green_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port/starboard beacon -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="green"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- preferred channel red-green-red beacon, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Red_Green_Red_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red beacon, can topmark -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Red_Green_Red_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red beacon, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Red_Green_Red_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red beacon, cone topmark -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Red_Green_Red_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red beacon, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Red_Green_Red_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- preferred channel red-green-red beacon -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Red_Green_Red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green beacon, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Green_Red_Green_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green beacon, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Green_Red_Green_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- preferred channel green-red-green beacon, can topmark -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Green_Red_Green_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+	
+    <!-- preferred channel green-red-green beacon, cone topmark -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Green_Red_Green_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green beacon, lighted -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Green_Red_Green_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green beacon -->
+	<rule>
+		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="Lateral_Beacon_Green_Red_Green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+
+     <!-- red port float, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Red_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port float, can topmark -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Red_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red starboard float, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Red_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red starboard float, cone topmark -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Red_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port/starboard float, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Red_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- red port/starboard float -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="red"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green starboard float, topmark, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Green_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+	
+    <!-- green starboard float, topmark -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Green_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port float, topmark, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Green_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+	
+    <!-- green port, topmark float -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Green_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port/starboard float, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Green_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- green port/starboard float -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="green"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- preferred channel red-green-red float, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Red_Green_Red_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red float, can topmark -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="red;green;red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Red_Green_Red_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red float, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Red_Green_Red_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red float, cone topmark -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="red;green;red"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Red_Green_Red_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel red-green-red float, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Red_Green_Red_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- preferred channel red-green-red float -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="red;green;red"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Red_Green_Red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green float, cone topmark, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Green_Red_Green_Cone_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green float, can topmark, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Green_Red_Green_Can_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- preferred channel green-red-green float, can topmark -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="green;red;green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Green_Red_Green_Can.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+	
+    <!-- preferred channel green-red-green float, cone topmark -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="green;red;green"/>
+		<condition k="seamark:topmark:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Green_Red_Green_Cone.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green float, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Green_Red_Green_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred channel green-red-green float -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="green;red;green"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Lateral_Float_Green_Red_Green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+
+    <!-- safewater pillar, topmark -->
+	<rule>
+		<condition k="seamark:buoy_safe_water:shape" v="pillar"/>
+		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:type" v="buoy_safe_water"/>		
+		<icon annotate="true" src="Safe_Water_Pillar_Sphere_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- safewater pillar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_safe_water:shape" v="pillar"/>
+		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="buoy_safe_water"/>		
+		<icon annotate="true" src="Safe_Water_Pillar_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- safewater pillar, topmark -->
+	<rule>
+		<condition k="seamark:buoy_safe_water:shape" v="pillar"/>
+		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:type" v="buoy_safe_water"/>		
+		<icon annotate="true" src="Safe_Water_Pillar_Sphere.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- safewater pillar -->
+	<rule>
+		<condition k="seamark:buoy_safe_water:shape" v="pillar"/>
+		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
+		<condition k="seamark:type" v="buoy_safe_water"/>		
+		<icon annotate="true" src="Safe_Water_Pillar.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- safewater spar, topmark -->
+	<rule>
+		<condition k="seamark:buoy_safe_water:shape" v="spar"/>
+		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:type" v="buoy_safe_water"/>		
+		<icon annotate="true" src="Safe_Water_Spar_Sphere_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- safewater spar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_safe_water:shape" v="spar"/>
+		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="buoy_safe_water"/>		
+		<icon annotate="true" src="Safe_Water_Spar_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- safewater spar, topmark -->
+	<rule>
+		<condition k="seamark:buoy_safe_water:shape" v="spar"/>
+		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:type" v="buoy_safe_water"/>		
+		<icon annotate="true" src="Safe_Water_Spar_Sphere.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- safewater spar -->
+	<rule>
+		<condition k="seamark:buoy_safe_water:shape" v="spar"/>
+		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
+		<condition k="seamark:type" v="buoy_safe_water"/>		
+		<icon annotate="true" src="Safe_Water_Spar.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- safewater sphere, topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_safe_water:shape" v="sphere"/>
+		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:type" v="buoy_safe_water"/>		
+		<icon annotate="true" src="Safe_Water_Sphere_Sphere_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- safewater sphere, lighted -->
+	<rule>
+		<condition k="seamark:buoy_safe_water:shape" v="sphere"/>
+		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="buoy_safe_water"/>		
+		<icon annotate="true" src="Safe_Water_Sphere_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- safewater sphere, topmark -->
+	<rule>
+		<condition k="seamark:buoy_safe_water:shape" v="sphere"/>
+		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:type" v="buoy_safe_water"/>		
+		<icon annotate="true" src="Safe_Water_Sphere_Sphere.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- safewater sphere -->
+	<rule>
+		<condition k="seamark:buoy_safe_water:shape" v="sphere"/>
+		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
+		<condition k="seamark:type" v="buoy_safe_water"/>		
+		<icon annotate="true" src="Safe_Water_Sphere.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- safewater beacon, topmark, lighted -->
+	<rule>
+		<condition k="seamark:beacon_safe_water:colour" v="red;white"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:type" v="beacon_safe_water"/>		
+		<icon annotate="true" src="Safe_Water_Beacon_Sphere_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- safewater beacon, lighted -->
+	<rule>
+		<condition k="seamark:beacon_safe_water:colour" v="red;white"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="beacon_safe_water"/>		
+		<icon annotate="true" src="Safe_Water_Beacon_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- safewater beacon, topmark -->
+	<rule>
+		<condition k="seamark:beacon_safe_water:colour" v="red;white"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:type" v="beacon_safe_water"/>		
+		<icon annotate="true" src="Safe_Water_Beacon_Sphere.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- safewater beacon -->
+	<rule>
+		<condition k="seamark:beacon_safe_water:colour" v="red;white"/>
+		<condition k="seamark:type" v="beacon_safe_water"/>		
+		<icon annotate="true" src="Safe_Water_Beacon.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- safewater float, topmark -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="red;white"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Safe_Water_Float_Sphere_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- safewater float, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="red;white"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Safe_Water_Float_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- safewater float, topmark -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="red;white"/>
+		<condition k="seamark:topmark:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Safe_Water_Float_Sphere.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- safewater float -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="red;white"/>
+		<condition k="seamark:type" v="light_float"/>		
+		<icon annotate="true" src="Safe_Water_Float.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- port, topmark, lighted, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<icon annotate="true" src="Sphere_Cyl_Light_Red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- port, topmark, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<icon annotate="true" src="Sphere_Cyl_Red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- port,lighted, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<icon annotate="true" src="Sphere_Light_Red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- port, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<icon annotate="true" src="Sphere_red.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- starboard, topmark (tagvalue cone, point up), lighted, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<icon annotate="true" src="Sphere_Cone_Light_green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- starboard, topmark (tagvalue cone), lighted, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone"/>
+		<icon annotate="true" src="Sphere_Cone_Light_green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- starboard, topmark (tagvalue cone, point up), unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<icon annotate="true" src="Sphere_cone_green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- starboard, topmark (tagvalue cone), unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone"/>
+		<icon annotate="true" src="Sphere_cone_green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- starboard, lighted, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<icon annotate="true" src="Sphere_Light_green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- starboard, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<icon annotate="true" src="Sphere_green.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- preferred_channel_port, topmark, lighted, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<icon annotate="true" src="Sphere_Cyl_Light_rgr.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+	
+    <!-- preferred_channel_port, topmark, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:topmark:shape" v="cylinder"/>
+		<icon annotate="true" src="Sphere_Cyl_rgr.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred_channel_port, lighted, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<condition k="seamark:light:colour" v="red"/>
+		<icon annotate="true" src="Sphere_light_rgr.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred_channel_port, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<icon annotate="true" src="Sphere_rgr.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- preferred_channel_starboard, topmark (tagvalue cone, point up), lighted, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<icon annotate="true" src="Sphere_Cone_Light_grg.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+	
+    <!-- preferred_channel_starboard, topmark (tagvalue cone), lighted, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<condition k="seamark:topmark:shape" v="cone"/>
+		<icon annotate="true" src="Sphere_Cone_Light_grg.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+	
+    <!-- preferred_channel_starboard, topmark (tagvalue cone, point up), unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:topmark:shape" v="cone, point up"/>
+		<icon annotate="true" src="Sphere_Cone_grg.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+	
+    
+    <!-- preferred_channel_starboard, topmark (tagvalue cone), unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:topmark:shape" v="cone"/>
+		<icon annotate="true" src="Sphere_Cone_grg.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+	
+    <!-- preferred_channel_starboard, lighted, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<condition k="seamark:light:colour" v="green"/>
+		<icon annotate="true" src="Sphere_Light_grg.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    
+    <!-- preferred_channel_starboard, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
+		<icon annotate="true" src="Sphere_grg.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- safewater, topmark, lighted (tagvalue spherical) unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_safewater:shape" v="pillar"/>
+		<condition k="seamark:buoy_safewater:colour" v="red;white"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:topmark:shape" v="spherical"/>
+		<icon annotate="true" src="Sphere_Circ_Light_rw.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- safewater, topmark, lighted (tagvalue sphere) unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_safewater:shape" v="pillar"/>
+		<condition k="seamark:buoy_safewater:colour" v="red;white"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:topmark:shape" v="sphere"/>
+		<icon annotate="true" src="Sphere_Circ_Light_rw.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- safewater, lighted, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_safewater:shape" v="pillar"/>
+		<condition k="seamark:buoy_safewater:colour" v="red;white"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<icon annotate="true" src="Sphere_Light_rw.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- safewater, topmark,(tagvalue spherical) unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_safewater:shape" v="pillar"/>
+		<condition k="seamark:buoy_safewater:colour" v="red;white"/>
+		<condition k="seamark:topmark:shape" v="spherical"/>
+		<icon annotate="true" src="Sphere_Circ_rw.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- safewater, topmark,(tagvalue sphere) unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_safewater:shape" v="pillar"/>
+		<condition k="seamark:buoy_safewater:colour" v="red;white"/>
+		<condition k="seamark:topmark:shape" v="sphere"/>
+		<icon annotate="true" src="Sphere_Circ_rw.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>	
+    
+    <!-- safewater, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_safewater:shape" v="pillar"/>
+		<condition k="seamark:buoy_safewater:colour" v="red;white"/>
+		<icon annotate="true" src="Sphere_rw.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal north pillar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="black;yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<icon annotate="true" src="Cardinal_Pillar_North_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal north pillar -->
+	<rule>
+		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="black;yellow"/>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<icon annotate="true" src="Cardinal_Pillar_North.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal east pillar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="black;yellow;black"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<icon annotate="true" src="Cardinal_Pillar_East_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+	
+    <!-- cardinal east pillar -->
+	<rule>
+		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="black;yellow;black"/>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<icon annotate="true" src="Cardinal_Pillar_East.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal south pillar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="yellow;black"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<icon annotate="true" src="Cardinal_Pillar_South_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal south pillar -->
+	<rule>
+		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="yellow;black"/>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<icon annotate="true" src="Cardinal_Pillar_South.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal west pillar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="yellow;black;yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<icon annotate="true" src="Cardinal_Pillar_West_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal west pillar -->
+	<rule>
+		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="yellow;black;yellow"/>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<icon annotate="true" src="Cardinal_Pillar_West.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal north spar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_cardinal:shape" v="spar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="black;yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<icon annotate="true" src="Cardinal_Spar_North_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal north spar -->
+	<rule>
+		<condition k="seamark:buoy_cardinal:shape" v="spar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="black;yellow"/>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<icon annotate="true" src="Cardinal_Spar_North.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal east spar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_cardinal:shape" v="spar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="black;yellow;black"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<icon annotate="true" src="Cardinal_Spar_East_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+	
+    <!-- cardinal east spar -->
+	<rule>
+		<condition k="seamark:buoy_cardinal:shape" v="spar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="black;yellow;black"/>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<icon annotate="true" src="Cardinal_Spar_East.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal south spar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_cardinal:shape" v="spar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="yellow;black"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<icon annotate="true" src="Cardinal_Spar_South_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal south spar -->
+	<rule>
+		<condition k="seamark:buoy_cardinal:shape" v="spar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="yellow;black"/>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<icon annotate="true" src="Cardinal_Spar_South.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal west spar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_cardinal:shape" v="spar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="yellow;black;yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<icon annotate="true" src="Cardinal_Spar_West_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal west spar -->
+	<rule>
+		<condition k="seamark:buoy_cardinal:shape" v="spar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="yellow;black;yellow"/>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<icon annotate="true" src="Cardinal_Spar_West.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal north tower, lighted -->
+	<rule>
+		<condition k="seamark:beacon_cardinal:shape" v="tower"/>
+		<condition k="seamark:beacon_cardinal:colour" v="black;yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="beacon_cardinal"/>
+		<icon annotate="true" src="Cardinal_Tower_North_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal north tower -->
+	<rule>
+		<condition k="seamark:beacon_cardinal:shape" v="tower"/>
+		<condition k="seamark:beacon_cardinal:colour" v="black;yellow"/>
+		<condition k="seamark:type" v="beacon_cardinal"/>
+		<icon annotate="true" src="Cardinal_Tower_North.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal east tower, lighted -->
+	<rule>
+		<condition k="seamark:beacon_cardinal:shape" v="tower"/>
+		<condition k="seamark:beacon_cardinal:colour" v="black;yellow;black"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="beacon_cardinal"/>
+		<icon annotate="true" src="Cardinal_Tower_East_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+	
+    <!-- cardinal east tower -->
+	<rule>
+		<condition k="seamark:beacon_cardinal:shape" v="tower"/>
+		<condition k="seamark:beacon_cardinal:colour" v="black;yellow;black"/>
+		<condition k="seamark:type" v="beacon_cardinal"/>
+		<icon annotate="true" src="Cardinal_Tower_East.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal south tower, lighted -->
+	<rule>
+		<condition k="seamark:beacon_cardinal:shape" v="tower"/>
+		<condition k="seamark:beacon_cardinal:colour" v="yellow;black"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="beacon_cardinal"/>
+		<icon annotate="true" src="Cardinal_Tower_South_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal south tower -->
+	<rule>
+		<condition k="seamark:beacon_cardinal:shape" v="tower"/>
+		<condition k="seamark:beacon_cardinal:colour" v="yellow;black"/>
+		<condition k="seamark:type" v="beacon_cardinal"/>
+		<icon annotate="true" src="Cardinal_Tower_South.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal west tower, lighted -->
+	<rule>
+		<condition k="seamark:beacon_cardinal:shape" v="tower"/>
+		<condition k="seamark:beacon_cardinal:colour" v="yellow;black;yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="beacon_cardinal"/>
+		<icon annotate="true" src="Cardinal_Tower_West_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal west tower -->
+	<rule>
+		<condition k="seamark:beacon_cardinal:shape" v="tower"/>
+		<condition k="seamark:beacon_cardinal:colour" v="yellow;black;yellow"/>
+		<condition k="seamark:type" v="beacon_cardinal"/>
+		<icon annotate="true" src="Cardinal_Tower_West.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal north beacon, lighted -->
+	<rule>
+		<condition k="seamark:beacon_cardinal:colour" v="black;yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="beacon_cardinal"/>
+		<icon annotate="true" src="Cardinal_Beacon_North_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal north beacon -->
+	<rule>
+		<condition k="seamark:beacon_cardinal:colour" v="black;yellow"/>
+		<condition k="seamark:type" v="beacon_cardinal"/>
+		<icon annotate="true" src="Cardinal_Beacon_North.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal east beacon, lighted -->
+	<rule>
+		<condition k="seamark:beacon_cardinal:colour" v="black;yellow;black"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="beacon_cardinal"/>
+		<icon annotate="true" src="Cardinal_Beacon_East_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+	
+    <!-- cardinal east beacon -->
+	<rule>
+		<condition k="seamark:beacon_cardinal:colour" v="black;yellow;black"/>
+		<condition k="seamark:type" v="beacon_cardinal"/>
+		<icon annotate="true" src="Cardinal_Beacon_East.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal south beacon, lighted -->
+	<rule>
+		<condition k="seamark:beacon_cardinal:colour" v="yellow;black"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="beacon_cardinal"/>
+		<icon annotate="true" src="Cardinal_Beacon_South_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal south beacon -->
+	<rule>
+		<condition k="seamark:beacon_cardinal:colour" v="yellow;black"/>
+		<condition k="seamark:type" v="beacon_cardinal"/>
+		<icon annotate="true" src="Cardinal_Beacon_South.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal west beacon, lighted -->
+	<rule>
+		<condition k="seamark:beacon_cardinal:colour" v="yellow;black;yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="beacon_cardinal"/>
+		<icon annotate="true" src="Cardinal_Beacon_West_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal west beacon -->
+	<rule>
+		<condition k="seamark:beacon_cardinal:colour" v="yellow;black;yellow"/>
+		<condition k="seamark:type" v="beacon_cardinal"/>
+		<icon annotate="true" src="Cardinal_Beacon_West.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal north float, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="black;yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="light_float"/>
+		<icon annotate="true" src="Cardinal_Float_North_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal north float -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="black;yellow"/>
+		<condition k="seamark:type" v="light_float"/>
+		<icon annotate="true" src="Cardinal_Float_North.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal east float, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="black;yellow;black"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="light_float"/>
+		<icon annotate="true" src="Cardinal_Float_East_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+	
+    <!-- cardinal east float -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="black;yellow;black"/>
+		<condition k="seamark:type" v="light_float"/>
+		<icon annotate="true" src="Cardinal_Float_East.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal south float, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="yellow;black"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="light_float"/>
+		<icon annotate="true" src="Cardinal_Float_South_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal south float -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="yellow;black"/>
+		<condition k="seamark:type" v="light_float"/>
+		<icon annotate="true" src="Cardinal_Float_South.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal west float, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="yellow;black;yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="light_float"/>
+		<icon annotate="true" src="Cardinal_Float_West_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal west float -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="yellow;black;yellow"/>
+		<condition k="seamark:type" v="light_float"/>
+		<icon annotate="true" src="Cardinal_Float_West.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- isolated danger pillar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_isolated_danger:shape" v="pillar"/>
+		<condition k="seamark:buoy_isolated_danger:colour" v="black;red;black"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="buoy_isolated_danger"/>
+		<icon annotate="true" src="Cardinal_Pillar_Single_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- isolated danger pillar, OpenSeamap -->
+	<rule>
+		<condition k="seamark:buoy_isolated_danger:shape" v="pillar"/>
+		<condition k="seamark:buoy_isolated_danger:colour" v="black;red;black"/>
+		<condition k="seamark:type" v="buoy_isolated_danger"/>
+		<icon annotate="true" src="Cardinal_Pillar_Single.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+   <!-- isolated danger spar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_isolated_danger:shape" v="spar"/>
+		<condition k="seamark:buoy_isolated_danger:colour" v="black;red;black"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="buoy_isolated_danger"/>
+		<icon annotate="true" src="Cardinal_Spar_Single_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- isolated danger spar -->
+	<rule>
+		<condition k="seamark:buoy_isolated_danger:shape" v="spar"/>
+		<condition k="seamark:buoy_isolated_danger:colour" v="black;red;black"/>
+		<condition k="seamark:type" v="buoy_isolated_danger"/>
+		<icon annotate="true" src="Cardinal_Spar_Single.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+   <!-- isolated danger tower, lighted -->
+	<rule>
+		<condition k="seamark:beacon_isolated_danger:shape" v="tower"/>
+		<condition k="seamark:beacon_isolated_danger:colour" v="black;red;black"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="beacon_isolated_danger"/>
+		<icon annotate="true" src="Cardinal_Tower_Single_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- isolated danger tower -->
+	<rule>
+		<condition k="seamark:beacon_isolated_danger:shape" v="tower"/>
+		<condition k="seamark:beacon_isolated_danger:colour" v="black;red;black"/>
+		<condition k="seamark:type" v="beacon_isolated_danger"/>
+		<icon annotate="true" src="Cardinal_Tower_Single.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+   <!-- isolated danger beacon, lighted -->
+	<rule>
+		<condition k="seamark:beacon_isolated_danger:colour" v="black;red;black"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="beacon_isolated_danger"/>
+		<icon annotate="true" src="Cardinal_Beacon_Single_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- isolated danger beacon -->
+	<rule>
+		<condition k="seamark:beacon_isolated_danger:colour" v="black;red;black"/>
+		<condition k="seamark:type" v="beacon_isolated_danger"/>
+		<icon annotate="true" src="Cardinal_Beacon_Single.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+   <!-- isolated danger float, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="black;red;black"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="light_float"/>
+		<icon annotate="true" src="Cardinal_Float_Single_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- isolated danger float -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="black;red;black"/>
+		<condition k="seamark:type" v="light_float"/>
+		<icon annotate="true" src="Cardinal_Float_Single.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- special purpose pillar, yellow x topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:buoy_special_purpose:shape" v="pillar"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:topmark:colour" v="yellow"/>
+		<condition k="seamark:topmark:shape" v="x-shape"/>
+		<condition k="seamark:type" v="buoy_special_purpose"/>
+		<icon annotate="true" src="Special_Purpose_Pillar_CrossY_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- special purppose pillar, yellow x topmark -->
+	<rule>
+		<condition k="seamark:buoy_special_purpose:shape" v="pillar"/>
+		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:topmark:colour" v="yellow"/>
+		<condition k="seamark:topmark:shape" v="x-shape"/>
+		<condition k="seamark:type" v="buoy_special_purpose"/>
+		<icon annotate="true" src="Special_Purpose_Pillar_CrossY.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+   <!-- special purpose pillar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_special_purpose:shape" v="pillar"/>
+		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="buoy_special_purpose"/>
+		<icon annotate="true" src="Special_Purpose_Pillar_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- special purppose pillar -->
+	<rule>
+		<condition k="seamark:buoy_special_purpose:shape" v="pillar"/>
+		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:type" v="buoy_special_purpose"/>
+		<icon annotate="true" src="Special_Purpose_Pillar.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- special purpose spar, yellow x topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_special_purpose:shape" v="spar"/>
+		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:topmark:colour" v="yellow"/>
+		<condition k="seamark:topmark:shape" v="x-shape"/>
+		<condition k="seamark:type" v="buoy_special_purpose"/>
+		<icon annotate="true" src="Special_Purpose_Spar_CrossY_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- special purppose spar, yellow x topmark -->
+	<rule>
+		<condition k="seamark:buoy_special_purpose:shape" v="spar"/>
+		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:topmark:colour" v="yellow"/>
+		<condition k="seamark:topmark:shape" v="x-shape"/>
+		<condition k="seamark:type" v="buoy_special_purpose"/>
+		<icon annotate="true" src="Special_Purpose_Spar_CrossY.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+   <!-- special purpose spar, lighted -->
+	<rule>
+		<condition k="seamark:buoy_special_purpose:shape" v="spar"/>
+		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="buoy_special_purpose"/>
+		<icon annotate="true" src="Special_Purpose_Spar_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- special purppose spar -->
+	<rule>
+		<condition k="seamark:buoy_special_purpose:shape" v="spar"/>
+		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:type" v="buoy_special_purpose"/>
+		<icon annotate="true" src="Special_Purpose_Spar.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+   <!-- special purpose sphere, yellow x topmark, lighted -->
+	<rule>
+		<condition k="seamark:buoy_special_purpose:shape" v="sphere"/>
+		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:topmark:colour" v="yellow"/>
+		<condition k="seamark:topmark:shape" v="x-shape"/>
+		<condition k="seamark:type" v="buoy_special_purpose"/>
+		<icon annotate="true" src="Special_Purpose_Sphere_CrossY_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- special purppose sphere, yellow x topmark -->
+	<rule>
+		<condition k="seamark:buoy_special_purpose:shape" v="sphere"/>
+		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:topmark:colour" v="yellow"/>
+		<condition k="seamark:topmark:shape" v="x-shape"/>
+		<condition k="seamark:type" v="buoy_special_purpose"/>
+		<icon annotate="true" src="Special_Purpose_Sphere_CrossY.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+   <!-- special purpose sphere, lighted -->
+	<rule>
+		<condition k="seamark:buoy_special_purpose:shape" v="sphere"/>
+		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="buoy_special_purpose"/>
+		<icon annotate="true" src="Special_Purpose_Sphere_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- special purppose sphere -->
+	<rule>
+		<condition k="seamark:buoy_special_purpose:shape" v="sphere"/>
+		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:type" v="buoy_special_purpose"/>
+		<icon annotate="true" src="Special_Purpose_Sphere.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+   <!-- special purpose beacon, yellow cross lighted -->
+	<rule>
+		<condition k="seamark:beacon_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:topmark:colour" v="yellow"/>
+		<condition k="seamark:topmark:shape" v="x-shape"/>
+		<condition k="seamark:type" v="beacon_special_purpose"/>
+		<icon annotate="true" src="Special_Purpose_Beacon_CrossY_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- special purppose beacon, yellow cross -->
+	<rule>
+		<condition k="seamark:beacon_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:topmark:colour" v="yellow"/>
+		<condition k="seamark:topmark:shape" v="x-shape"/>
+		<condition k="seamark:type" v="beacon_special_purpose"/>
+		<icon annotate="true" src="Special_Purpose_Beacon_CrossY.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+ 
+   <!-- special purpose beacon, lighted -->
+	<rule>
+		<condition k="seamark:beacon_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="beacon_special_purpose"/>
+		<icon annotate="true" src="Special_Purpose_Beacon_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- special purppose beacon -->
+	<rule>
+		<condition k="seamark:beacon_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:type" v="beacon_special_purpose"/>
+		<icon annotate="true" src="Special_Purpose_Beacon.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+ 
+    <!-- lighthouse -->
+	<rule>
+		<condition k="seamark:light" />
+		<condition k="seamark:type" v="landmark"/>
+		<icon annotate="true" src="Light_House.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+ 
+	<rule>
+		<condition k="seamark:light:1" />
+		<condition k="seamark:type" v="landmark"/>
+		<icon annotate="true" src="Light_House.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+ 
+    <!-- major light -->
+	<rule>
+		<condition k="seamark:type" v="light_major"/>
+		<icon annotate="true" src="Light_Major.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+ 
+    <!-- minor light -->
+	<rule>
+		<condition k="seamark:type" v="light_minor"/>
+		<icon annotate="true" src="Light_Minor.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+ 
+<!-- ********************************************************************************** --> 
+    
+    <!-- cardinal north, lighted, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="black;yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<icon annotate="true" src="Sphere_Light_yb.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal north, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="black;yellow"/>
+		<icon annotate="true" src="Sphere_yb.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    
+    <!-- cardinal east, lighted, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="black;yellow;black"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<icon annotate="true" src="Sphere_Light_byb.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal east, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="black;yellow;black"/>
+		<icon annotate="true" src="Sphere_byb.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal south, lighted, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="yellow;black"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<icon annotate="true" src="Sphere_Light_by.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- cardinal south,unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="yellow;black"/>
+		<icon annotate="true" src="Sphere_by.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    
+    <!-- cardinal west, lighted, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="yellow;black;yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<icon annotate="true" src="Sphere_Light_yby.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    
+    <!-- cardinal west, unbekannt -->
+	<rule>
+		<condition k="seamark" v="buoy"/>
+		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
+		<condition k="seamark:buoy_cardinal:colour" v="yellow;black;yellow"/>
+		<icon annotate="true" src="Sphere_yby.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    </rules>
