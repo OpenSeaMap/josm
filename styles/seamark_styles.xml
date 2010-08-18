@@ -2851,7 +2851,7 @@
 		<scale_max>50000</scale_max>
         </rule>
     
-    <!-- special purppose pillar, yellow x topmark -->
+    <!-- special purpose pillar, yellow x topmark -->
 	<rule>
 		<condition k="seamark:buoy_special_purpose:shape" v="pillar"/>
 		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
@@ -2874,7 +2874,7 @@
 		<scale_max>50000</scale_max>
         </rule>
     
-    <!-- special purppose pillar -->
+    <!-- special purpose pillar -->
 	<rule>
 		<condition k="seamark:buoy_special_purpose:shape" v="pillar"/>
 		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
@@ -2897,7 +2897,7 @@
 		<scale_max>50000</scale_max>
         </rule>
     
-    <!-- special purppose spar, yellow x topmark -->
+    <!-- special purpose spar, yellow x topmark -->
 	<rule>
 		<condition k="seamark:buoy_special_purpose:shape" v="spar"/>
 		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
@@ -2920,7 +2920,7 @@
 		<scale_max>50000</scale_max>
         </rule>
     
-    <!-- special purppose spar -->
+    <!-- special purpose spar -->
 	<rule>
 		<condition k="seamark:buoy_special_purpose:shape" v="spar"/>
 		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
@@ -2943,7 +2943,7 @@
 		<scale_max>50000</scale_max>
         </rule>
     
-    <!-- special purppose sphere, yellow x topmark -->
+    <!-- special purpose sphere, yellow x topmark -->
 	<rule>
 		<condition k="seamark:buoy_special_purpose:shape" v="sphere"/>
 		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
@@ -2966,7 +2966,7 @@
 		<scale_max>50000</scale_max>
         </rule>
     
-    <!-- special purppose sphere -->
+    <!-- special purpose sphere -->
 	<rule>
 		<condition k="seamark:buoy_special_purpose:shape" v="sphere"/>
 		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
@@ -2988,7 +2988,7 @@
 		<scale_max>50000</scale_max>
         </rule>
     
-    <!-- special purppose beacon, yellow cross -->
+    <!-- special purpose beacon, yellow cross -->
 	<rule>
 		<condition k="seamark:beacon_special_purpose:colour" v="yellow"/>
 		<condition k="seamark:topmark:colour" v="yellow"/>
@@ -3009,11 +3009,53 @@
 		<scale_max>50000</scale_max>
         </rule>
     
-    <!-- special purppose beacon -->
+    <!-- special purpose beacon -->
 	<rule>
 		<condition k="seamark:beacon_special_purpose:colour" v="yellow"/>
 		<condition k="seamark:type" v="beacon_special_purpose"/>
 		<icon annotate="true" src="Special_Purpose_Beacon.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+ 
+   <!-- special purpose float, yellow cross lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:topmark:colour" v="yellow"/>
+		<condition k="seamark:topmark:shape" v="x-shape"/>
+		<condition k="seamark:type" v="light_float"/>
+		<icon annotate="true" src="Special_Purpose_Float_CrossY_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- special purpose float, yellow cross -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="yellow"/>
+		<condition k="seamark:topmark:colour" v="yellow"/>
+		<condition k="seamark:topmark:shape" v="x-shape"/>
+		<condition k="seamark:type" v="light_float"/>
+		<icon annotate="true" src="Special_Purpose_Float_CrossY.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+ 
+   <!-- special purpose float, lighted -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="yellow"/>
+		<condition k="seamark:light:colour" v="white"/>
+		<condition k="seamark:type" v="light_float"/>
+		<icon annotate="true" src="Special_Purpose_Float_Lit.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
+    <!-- special purpose float -->
+	<rule>
+		<condition k="seamark:light_float:colour" v="yellow"/>
+		<condition k="seamark:type" v="light_float"/>
+		<icon annotate="true" src="Special_Purpose_Float.png"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
         </rule>
