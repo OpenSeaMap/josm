@@ -2976,6 +2976,16 @@
 		<scale_max>50000</scale_max>
         </rule>
     
+    <!-- special purpose barrel -->
+	<rule>
+		<condition k="seamark:buoy_special_purpose:shape" v="barrel"/>
+		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:type" v="buoy_special_purpose"/>
+		<icon annotate="true" src="Special_Purpose_Barrel.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+        </rule>
+    
    <!-- special purpose beacon, yellow cross lighted -->
 	<rule>
 		<condition k="seamark:beacon_special_purpose:colour" v="yellow"/>
