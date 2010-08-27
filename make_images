@@ -1,2 +1,2 @@
 for i in ../renderer/osmarender/styleshheets/SeaMapSymbols/*.svg; do \
-inkscape $i -d 18 -e `echo $i | sed -e 'sX^../renderer/osmarender/styleshheets/SeaMapSymbolsXstyles/imagesX' -e 's/.svg$/.png/'`; done
+inkscape $i -d 18 -e `echo $i | sed -e 'sX^../renderer/osmarender/styleshheets/SeaMapSymbolsXicons/imagesX' -e 's/.svg$/.png/'`; done
