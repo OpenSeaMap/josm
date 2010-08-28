@@ -1751,6 +1751,26 @@
 		<scale_max>50000</scale_max>
   </rule>	
 
+    <!-- port perch -->
+	<rule>
+		<condition k="seamark:beacon_lateral:category" v="port"/>
+		<condition k="seamark:beacon_lateral:shape" v="perch"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Perch_Port.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+	  </rule>
+    
+    <!-- starboard perch -->
+	<rule>
+		<condition k="seamark:beacon_lateral:category" v="starboard"/>
+		<condition k="seamark:beacon_lateral:shape" v="perch"/>
+		<condition k="seamark:type" v="beacon_lateral"/>		
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Perch_Starboard.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+	  </rule>
+    
     <!-- safewater pillar, topmark -->
 	<rule>
 		<condition k="seamark:buoy_safe_water:shape" v="pillar"/>
