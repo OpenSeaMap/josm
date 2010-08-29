@@ -2927,6 +2927,18 @@
 		<scale_max>50000</scale_max>
   </rule>
     
+    <!-- special purpose barrel, yellow cross -->
+	<rule>
+		<condition k="seamark:buoy_special_purpose:shape" v="barrel"/>
+		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
+		<condition k="seamark:topmark:colour" v="yellow"/>
+		<condition k="seamark:topmark:shape" v="x-shape"/>
+		<condition k="seamark:type" v="buoy_special_purpose"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Barrel_CrossY.png"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+	  </rule>
+    
     <!-- special purpose barrel -->
 	<rule>
 		<condition k="seamark:buoy_special_purpose:shape" v="barrel"/>
