@@ -1777,7 +1777,7 @@
 		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
 		<condition k="seamark:light:colour" v="white"/>
 		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:topmark:shape" v="sphere"/>
 		<condition k="seamark:type" v="buoy_safe_water"/>		
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Pillar_Sphere_Lit.png"/>
 		<scale_min>1</scale_min>
@@ -1800,7 +1800,7 @@
 		<condition k="seamark:buoy_safe_water:shape" v="pillar"/>
 		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
 		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:topmark:shape" v="sphere"/>
 		<condition k="seamark:type" v="buoy_safe_water"/>		
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Pillar_Sphere.png"/>
 		<scale_min>1</scale_min>
@@ -1823,7 +1823,7 @@
 		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
 		<condition k="seamark:light:colour" v="white"/>
 		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:topmark:shape" v="sphere"/>
 		<condition k="seamark:type" v="buoy_safe_water"/>		
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Spar_Sphere_Lit.png"/>
 		<scale_min>1</scale_min>
@@ -1846,7 +1846,7 @@
 		<condition k="seamark:buoy_safe_water:shape" v="spar"/>
 		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
 		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:topmark:shape" v="sphere"/>
 		<condition k="seamark:type" v="buoy_safe_water"/>		
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Spar_Sphere.png"/>
 		<scale_min>1</scale_min>
@@ -1869,7 +1869,7 @@
 		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
 		<condition k="seamark:light:colour" v="white"/>
 		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:topmark:shape" v="sphere"/>
 		<condition k="seamark:type" v="buoy_safe_water"/>		
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Sphere_Sphere_Lit.png"/>
 		<scale_min>1</scale_min>
@@ -1892,7 +1892,7 @@
 		<condition k="seamark:buoy_safe_water:shape" v="sphere"/>
 		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
 		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:topmark:shape" v="sphere"/>
 		<condition k="seamark:type" v="buoy_safe_water"/>		
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Sphere_Sphere.png"/>
 		<scale_min>1</scale_min>
@@ -1914,7 +1914,7 @@
 		<condition k="seamark:beacon_safe_water:colour" v="red;white"/>
 		<condition k="seamark:light:colour" v="white"/>
 		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:topmark:shape" v="sphere"/>
 		<condition k="seamark:type" v="beacon_safe_water"/>		
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Beacon_Sphere_Lit.png"/>
 		<scale_min>1</scale_min>
@@ -1935,7 +1935,7 @@
 	<rule>
 		<condition k="seamark:beacon_safe_water:colour" v="red;white"/>
 		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:topmark:shape" v="sphere"/>
 		<condition k="seamark:type" v="beacon_safe_water"/>		
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Beacon_Sphere.png"/>
 		<scale_min>1</scale_min>
@@ -1956,7 +1956,7 @@
 		<condition k="seamark:light_float:colour" v="red;white"/>
 		<condition k="seamark:light:colour" v="white"/>
 		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:topmark:shape" v="sphere"/>
 		<condition k="seamark:type" v="light_float"/>		
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Float_Sphere_Lit.png"/>
 		<scale_min>1</scale_min>
@@ -1977,7 +1977,7 @@
 	<rule>
 		<condition k="seamark:light_float:colour" v="red;white"/>
 		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="spherical"/>
+		<condition k="seamark:topmark:shape" v="sphere"/>
 		<condition k="seamark:type" v="light_float"/>		
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Float_Sphere.png"/>
 		<scale_min>1</scale_min>
