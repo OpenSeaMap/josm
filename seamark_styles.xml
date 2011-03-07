@@ -3089,17 +3089,17 @@
  
     <!-- lighthouse -->
 	<rule>
-		<condition k="seamark:light" />
+		<condition k="seamark:light:colour" />
 		<condition k="seamark:type" v="landmark"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Light_House.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Light_House.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
  
 	<rule>
-		<condition k="seamark:light:1" />
+		<condition k="seamark:light:1:colour" />
 		<condition k="seamark:type" v="landmark"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Light_House.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Light_House.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
