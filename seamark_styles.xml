@@ -7,9 +7,17 @@
     shortdescription="OpenSeaMap" 
     author="OpenSeaMap"
     link="http://www.openseamap.org"
-    version="2010-08-06_18:41:07" >
+    version="2011-02-13" >
     
     <!-- seamark tags -->
+    
+    <!-- LoL import -->
+	<rule>
+		<condition k="seamark:fixme" v="please_fix_position"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/LLight.png" priority="100" />
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+	  </rule>
     
     <!-- red port can, can topmark, lighted -->
 	<rule>
