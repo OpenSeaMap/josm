@@ -13,7 +13,7 @@
     
     <!-- LoL import -->
 	<rule>
-		<condition k="seamark:fixme" v="*"/>
+		<condition k="seamark:fixme"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/LLight.png" priority="100" />
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
