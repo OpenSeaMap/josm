@@ -19,1742 +19,247 @@
 		<scale_max>50000</scale_max>
 	  </rule>
     
-    <!-- red port can, can topmark, lighted -->
+    <!-- red can -->
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="can"/>
 		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Red_Can_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Red.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
 	  </rule>
     
-    <!-- red port can, can topmark -->
+    <!-- green can -->
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="can"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Red_Can.png"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Green.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
 	  </rule>
     
-    <!-- red port can, lighted -->
+    <!-- red cone -->
 	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
 		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Red_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Red.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
 	  </rule>
     
-    <!-- red port can -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="can"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-	  </rule>
-    
-    <!-- green port can, can topmark, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="can"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Green_Can_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-	  </rule>
-    
-    <!-- green port can, can topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="can"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Green_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-	  </rule>
-    
-    <!-- green port can, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="can"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Green_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-	  </rule>
-    
-    <!-- green port can -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="can"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Green.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-	  </rule>
-    
-    <!-- red starboard cone, cone topmark, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="conical"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Red_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-	  </rule>
-    
-    <!-- red starboard cone, cone topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="conical"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Red_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-	  </rule>
-    
-    <!-- red starboard cone, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="conical"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Red_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-	  </rule>
-    
-    <!-- red starboard cone -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="conical"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-	  </rule>
-    
-    <!-- green starboard cone, cone topmark, lighted -->
+    <!-- green cone -->
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="conical"/>
 		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Green_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-    </rule>
-    
-    <!-- green starboard cone, can topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="conical"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Green_Cone.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Green.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- green starboard cone, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="conical"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Green_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green starboard cone -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="conical"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Green.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red preferred port can, can topmark, lighted -->
+    <!-- red-green-red can -->
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="can"/>
 		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Red_Green_Red_Can_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Red_Green_Red.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- red preferred port can, can topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="can"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Red_Green_Red_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red preferred port can, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="can"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Red_Green_Red_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red preferred port can -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="can"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Red_Green_Red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green preferred port can, can topmark, lighted -->
+    <!-- green-red-green can -->
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="can"/>
 		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Green_Red_Green_Can_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Green_Red_Green.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- green preferred port can, can topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="can"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Green_Red_Green_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green preferred port can, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="can"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Green_Red_Green_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green preferred port can -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="can"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Can_Green_Red_Green.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red preferred starboard cone, cone topmark, lighted -->
+    <!-- red-green-red cone -->
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="conical"/>
 		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Red_Green_Red_Cone_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Red_Green_Red.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- red preferred starboard cone, cone topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="conical"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Red_Green_Red_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red preferred starboard cone, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="conical"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Red_Green_Red_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red preferred starboard cone -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="conical"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Red_Green_Red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green preferred starboard cone, cone topmark, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="conical"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Green_Red_Green_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green preferred starboard cone, can topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="conical"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Green_Red_Green_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green preferred starboard cone, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="conical"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Green_Red_Green_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green preferred starboard cone -->
+    <!-- green-red-green cone -->
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="conical"/>
 		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
 		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Green_Red_Green.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Cone_Green_Red_Green.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- red port pillar, can topmark, lighted -->
+    <!-- red pillar -->
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
 		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Red_Can_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Red.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- red port pillar, can topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Red_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red starboard pillar, cone topmark, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Red_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red starboard pillar, cone topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Red_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red port/starboard pillar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Red_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red port/starboard pillar -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green starboard pillar, topmark, lighted -->
+    <!-- green pillar -->
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
 		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>				
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Green_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-	
-    <!-- green starboard pillar, topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Green_Cone.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Green.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- green port pillar, topmark, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>				
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Green_Can_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-	
-    <!-- green port, topmark pillar -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Green_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green port/starboard pillar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Green_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green port/starboard pillar -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Green.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- preferred channel red-green-red pillar, can topmark, lighted -->
+    <!-- red-green-red pillar -->
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
 		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Red_Green_Red_Can_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Red_Green_Red.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>	
     
-    <!-- preferred channel red-green-red pillar, can topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Red_Green_Red_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel red-green-red pillar, cone topmark, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Red_Green_Red_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel red-green-red pillar, cone topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Red_Green_Red_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel red-green-red pillar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Red_Green_Red_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- preferred channel red-green-red pillar -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Red_Green_Red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green pillar, cone topmark, lighted -->
+    <!-- green-red-green pillar -->
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
 		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Green_Red_Green_Cone_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Green_Red_Green.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>	
     
-    <!-- preferred channel green-red-green pillar, can topmark, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Green_Red_Green_Can_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- preferred channel green-red-green pillar, can topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Green_Red_Green_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-	
-    <!-- preferred channel green-red-green pillar, cone topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Green_Red_Green_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green pillar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Green_Red_Green_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green pillar -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Pillar_Green_Red_Green.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- red port spar, can topmark, lighted -->
+    <!-- red spar -->
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="spar"/>
 		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Red_Can_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Red.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- red port spar, can topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Red_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red starboard spar, cone topmark, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Red_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red starboard spar, cone topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Red_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red port/starboard spar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Red_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red port/starboard spar -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green starboard spar, topmark, lighted -->
+    <!-- green spar -->
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="spar"/>
 		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>				
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Green_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-	
-    <!-- green starboard spar, topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Green_Cone.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Green.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- green port spar, topmark, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>				
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Green_Can_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-	
-    <!-- green port, topmark spar -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Green_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green port/starboard spar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Green_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green port/starboard spar -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Green.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- preferred channel red-green-red spar, can topmark, lighted -->
+    <!-- red-green-red spar -->
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="spar"/>
 		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Red_Green_Red_Can_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Red_Green_Red.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>	
     
-    <!-- preferred channel red-green-red spar, can topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Red_Green_Red_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel red-green-red spar, cone topmark, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Red_Green_Red_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel red-green-red spar, cone topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Red_Green_Red_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel red-green-red spar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Red_Green_Red_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- preferred channel red-green-red spar -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Red_Green_Red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green spar, cone topmark, lighted -->
+    <!-- green-red-green spar -->
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="spar"/>
 		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Green_Red_Green_Cone_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Green_Red_Green.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>	
     
-    <!-- preferred channel green-red-green spar, can topmark, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Green_Red_Green_Can_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- preferred channel green-red-green spar, can topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Green_Red_Green_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-	
-    <!-- preferred channel green-red-green spar, cone topmark -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Green_Red_Green_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green spar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Green_Red_Green_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green spar -->
-	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="spar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:type" v="buoy_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Spar_Green_Red_Green.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-     <!-- red port tower, can topmark, lighted -->
+    <!-- red tower -->
 	<rule>
 		<condition k="seamark:beacon_lateral:shape" v="tower"/>
 		<condition k="seamark:beacon_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Red_Can_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Red.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- red port tower, can topmark -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Red_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red starboard tower, cone topmark, lighted -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Red_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red starboard tower, cone topmark -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Red_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red port/starboard tower, lighted -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Red_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red port/starboard tower -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="red"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green starboard tower, topmark, lighted -->
+    <!-- green tower -->
 	<rule>
 		<condition k="seamark:beacon_lateral:shape" v="tower"/>
 		<condition k="seamark:beacon_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Green_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-	
-    <!-- green starboard tower, topmark -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Green_Cone.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Green.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- green port tower, topmark, lighted -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Green_Can_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-	
-    <!-- green port, topmark tower -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Green_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green port/starboard tower, lighted -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Green_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green port/starboard tower -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="green"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Green.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- preferred channel red-green-red tower, can topmark, lighted -->
+    <!-- red-green-red tower -->
 	<rule>
 		<condition k="seamark:beacon_lateral:shape" v="tower"/>
 		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Red_Green_Red_Can_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Red_Green_Red.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>	
     
-    <!-- preferred channel red-green-red tower, can topmark -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Red_Green_Red_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel red-green-red tower, cone topmark, lighted -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Red_Green_Red_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel red-green-red tower, cone topmark -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Red_Green_Red_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel red-green-red tower, lighted -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Red_Green_Red_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- preferred channel red-green-red tower -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Red_Green_Red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green tower, cone topmark, lighted -->
+    <!-- green-red-green tower -->
 	<rule>
 		<condition k="seamark:beacon_lateral:shape" v="tower"/>
 		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Green_Red_Green_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green tower, can topmark, lighted -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Green_Red_Green_Can_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- preferred channel green-red-green tower, can topmark -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Green_Red_Green_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-	
-    <!-- preferred channel green-red-green tower, cone topmark -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Green_Red_Green_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green tower, lighted -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Green_Red_Green_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green tower -->
-	<rule>
-		<condition k="seamark:beacon_lateral:shape" v="tower"/>
-		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Green_Red_Green.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Tower_Green_Red_Green.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>	
 
-     <!-- red port beacon, can topmark, lighted -->
+    <!-- red beacon -->
 	<rule>
 		<condition k="seamark:beacon_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Red_Can_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Red.png" priority="5"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- red port beacon, can topmark -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Red_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red starboard beacon, cone topmark, lighted -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Red_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red starboard beacon, cone topmark -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Red_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red port/starboard beacon, lighted -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Red_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red port/starboard beacon -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="red"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green starboard beacon, topmark, lighted -->
+    <!-- green beacon -->
 	<rule>
 		<condition k="seamark:beacon_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Green_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-	
-    <!-- green starboard beacon, topmark -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Green_Cone.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Green.png" priority="5"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- green port beacon, topmark, lighted -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Green_Can_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-	
-    <!-- green port, topmark beacon -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Green_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green port/starboard beacon, lighted -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Green_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green port/starboard beacon -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="green"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Green.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- preferred channel red-green-red beacon, can topmark, lighted -->
+    <!-- red-green-red beacon -->
 	<rule>
 		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Red_Green_Red_Can_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Red_Green_Red.png" priority="5"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>	
     
-    <!-- preferred channel red-green-red beacon, can topmark -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Red_Green_Red_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel red-green-red beacon, cone topmark, lighted -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Red_Green_Red_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel red-green-red beacon, cone topmark -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Red_Green_Red_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel red-green-red beacon, lighted -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Red_Green_Red_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- preferred channel red-green-red beacon -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Red_Green_Red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green beacon, cone topmark, lighted -->
+    <!-- green-red-green beacon -->
 	<rule>
 		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Green_Red_Green_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green beacon, can topmark, lighted -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Green_Red_Green_Can_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- preferred channel green-red-green beacon, can topmark -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Green_Red_Green_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-	
-    <!-- preferred channel green-red-green beacon, cone topmark -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Green_Red_Green_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green beacon, lighted -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Green_Red_Green_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green beacon -->
-	<rule>
-		<condition k="seamark:beacon_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Green_Red_Green.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Beacon_Green_Red_Green.png" priority="5"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>	
 
-     <!-- red port float, can topmark, lighted -->
+    <!-- red float -->
 	<rule>
 		<condition k="seamark:light_float:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Red_Can_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Red.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- red port float, can topmark -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Red_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red starboard float, cone topmark, lighted -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Red_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red starboard float, cone topmark -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Red_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red port/starboard float, lighted -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Red_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- red port/starboard float -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="red"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green starboard float, topmark, lighted -->
+    <!-- green float -->
 	<rule>
 		<condition k="seamark:light_float:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Green_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-	
-    <!-- green starboard float, topmark -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Green_Cone.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Green.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- green port float, topmark, lighted -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Green_Can_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-	
-    <!-- green port, topmark float -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Green_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green port/starboard float, lighted -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Green_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- green port/starboard float -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="green"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Green.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- preferred channel red-green-red float, can topmark, lighted -->
+    <!-- red-green-red float -->
 	<rule>
 		<condition k="seamark:light_float:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Red_Green_Red_Can_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Red_Green_Red.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>	
     
-    <!-- preferred channel red-green-red float, can topmark -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="red;green;red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Red_Green_Red_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel red-green-red float, cone topmark, lighted -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Red_Green_Red_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel red-green-red float, cone topmark -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="red;green;red"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Red_Green_Red_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel red-green-red float, lighted -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Red_Green_Red_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- preferred channel red-green-red float -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="red;green;red"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Red_Green_Red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green float, cone topmark, lighted -->
+    <!-- green-red-green float -->
 	<rule>
 		<condition k="seamark:light_float:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Green_Red_Green_Cone_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green float, can topmark, lighted -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Green_Red_Green_Can_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- preferred channel green-red-green float, can topmark -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="green;red;green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Green_Red_Green_Can.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-	
-    <!-- preferred channel green-red-green float, cone topmark -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="green;red;green"/>
-		<condition k="seamark:topmark:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Green_Red_Green_Cone.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green float, lighted -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Green_Red_Green_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred channel green-red-green float -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="green;red;green"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Green_Red_Green.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Float_Green_Red_Green.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>	
@@ -1763,8 +268,7 @@
 	<rule>
 		<condition k="seamark:beacon_lateral:category" v="port"/>
 		<condition k="seamark:beacon_lateral:shape" v="perch"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Perch_Port.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Perch_Port.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
 	  </rule>
@@ -1773,532 +277,50 @@
 	<rule>
 		<condition k="seamark:beacon_lateral:category" v="starboard"/>
 		<condition k="seamark:beacon_lateral:shape" v="perch"/>
-		<condition k="seamark:type" v="beacon_lateral"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Perch_Starboard.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Lateral_Perch_Starboard.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
 	  </rule>
-    
-    <!-- safewater pillar, topmark -->
-	<rule>
-		<condition k="seamark:buoy_safe_water:shape" v="pillar"/>
-		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="sphere"/>
-		<condition k="seamark:type" v="buoy_safe_water"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Pillar_Sphere_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- safewater pillar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_safe_water:shape" v="pillar"/>
-		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="buoy_safe_water"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Pillar_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- safewater pillar, topmark -->
-	<rule>
-		<condition k="seamark:buoy_safe_water:shape" v="pillar"/>
-		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="sphere"/>
-		<condition k="seamark:type" v="buoy_safe_water"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Pillar_Sphere.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
     
     <!-- safewater pillar -->
 	<rule>
 		<condition k="seamark:buoy_safe_water:shape" v="pillar"/>
 		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
-		<condition k="seamark:type" v="buoy_safe_water"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Pillar.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Pillar.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
-    
-    <!-- safewater spar, topmark -->
-	<rule>
-		<condition k="seamark:buoy_safe_water:shape" v="spar"/>
-		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="sphere"/>
-		<condition k="seamark:type" v="buoy_safe_water"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Spar_Sphere_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- safewater spar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_safe_water:shape" v="spar"/>
-		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="buoy_safe_water"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Spar_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- safewater spar, topmark -->
-	<rule>
-		<condition k="seamark:buoy_safe_water:shape" v="spar"/>
-		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="sphere"/>
-		<condition k="seamark:type" v="buoy_safe_water"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Spar_Sphere.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
     
     <!-- safewater spar -->
 	<rule>
 		<condition k="seamark:buoy_safe_water:shape" v="spar"/>
 		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
-		<condition k="seamark:type" v="buoy_safe_water"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Spar.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Spar.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
-    
-    <!-- safewater sphere, topmark, lighted -->
-	<rule>
-		<condition k="seamark:buoy_safe_water:shape" v="sphere"/>
-		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="sphere"/>
-		<condition k="seamark:type" v="buoy_safe_water"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Sphere_Sphere_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- safewater sphere, lighted -->
-	<rule>
-		<condition k="seamark:buoy_safe_water:shape" v="sphere"/>
-		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="buoy_safe_water"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Sphere_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- safewater sphere, topmark -->
-	<rule>
-		<condition k="seamark:buoy_safe_water:shape" v="sphere"/>
-		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="sphere"/>
-		<condition k="seamark:type" v="buoy_safe_water"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Sphere_Sphere.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
     
     <!-- safewater sphere -->
 	<rule>
 		<condition k="seamark:buoy_safe_water:shape" v="sphere"/>
 		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
-		<condition k="seamark:type" v="buoy_safe_water"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Sphere.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Sphere.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
-    
-    <!-- safewater beacon, topmark, lighted -->
-	<rule>
-		<condition k="seamark:beacon_safe_water:colour" v="red;white"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="sphere"/>
-		<condition k="seamark:type" v="beacon_safe_water"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Beacon_Sphere_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- safewater beacon, lighted -->
-	<rule>
-		<condition k="seamark:beacon_safe_water:colour" v="red;white"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="beacon_safe_water"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Beacon_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- safewater beacon, topmark -->
-	<rule>
-		<condition k="seamark:beacon_safe_water:colour" v="red;white"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="sphere"/>
-		<condition k="seamark:type" v="beacon_safe_water"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Beacon_Sphere.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
     
     <!-- safewater beacon -->
 	<rule>
 		<condition k="seamark:beacon_safe_water:colour" v="red;white"/>
-		<condition k="seamark:type" v="beacon_safe_water"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Beacon.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Beacon.png" priority="5"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
-    
-    <!-- safewater float, topmark -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="red;white"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="sphere"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Float_Sphere_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- safewater float, lighted -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="red;white"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Float_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- safewater float, topmark -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="red;white"/>
-		<condition k="seamark:topmark:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="sphere"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Float_Sphere.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
     
     <!-- safewater float -->
 	<rule>
 		<condition k="seamark:light_float:colour" v="red;white"/>
-		<condition k="seamark:type" v="light_float"/>		
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Float.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- port, topmark, lighted, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Cyl_Light_Red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- port, topmark, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Cyl_Red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- port,lighted, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Light_Red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- port, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_red.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- starboard, topmark (tagvalue cone, point up), lighted, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Cone_Light_green.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- starboard, topmark (tagvalue cone), lighted, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Cone_Light_green.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- starboard, topmark (tagvalue cone, point up), unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_cone_green.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- starboard, topmark (tagvalue cone), unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_cone_green.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- starboard, lighted, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Light_green.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- starboard, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_green.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- preferred_channel_port, topmark, lighted, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Cyl_Light_rgr.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-	
-    <!-- preferred_channel_port, topmark, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:topmark:shape" v="cylinder"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Cyl_rgr.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred_channel_port, lighted, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<condition k="seamark:light:colour" v="red"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_light_rgr.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred_channel_port, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_rgr.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- preferred_channel_starboard, topmark (tagvalue cone, point up), lighted, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Cone_Light_grg.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-	
-    <!-- preferred_channel_starboard, topmark (tagvalue cone), lighted, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<condition k="seamark:topmark:shape" v="cone"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Cone_Light_grg.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-	
-    <!-- preferred_channel_starboard, topmark (tagvalue cone, point up), unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:topmark:shape" v="cone, point up"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Cone_grg.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-	
-    
-    <!-- preferred_channel_starboard, topmark (tagvalue cone), unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:topmark:shape" v="cone"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Cone_grg.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-	
-    <!-- preferred_channel_starboard, lighted, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<condition k="seamark:light:colour" v="green"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Light_grg.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    
-    <!-- preferred_channel_starboard, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
-		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_grg.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- safewater, topmark, lighted (tagvalue spherical) unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_safewater:shape" v="pillar"/>
-		<condition k="seamark:buoy_safewater:colour" v="red;white"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:topmark:shape" v="spherical"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Circ_Light_rw.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- safewater, topmark, lighted (tagvalue sphere) unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_safewater:shape" v="pillar"/>
-		<condition k="seamark:buoy_safewater:colour" v="red;white"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:topmark:shape" v="sphere"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Circ_Light_rw.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- safewater, lighted, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_safewater:shape" v="pillar"/>
-		<condition k="seamark:buoy_safewater:colour" v="red;white"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Light_rw.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- safewater, topmark,(tagvalue spherical) unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_safewater:shape" v="pillar"/>
-		<condition k="seamark:buoy_safewater:colour" v="red;white"/>
-		<condition k="seamark:topmark:shape" v="spherical"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Circ_rw.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- safewater, topmark,(tagvalue sphere) unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_safewater:shape" v="pillar"/>
-		<condition k="seamark:buoy_safewater:colour" v="red;white"/>
-		<condition k="seamark:topmark:shape" v="sphere"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Circ_rw.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>	
-    
-    <!-- safewater, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_safewater:shape" v="pillar"/>
-		<condition k="seamark:buoy_safewater:colour" v="red;white"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_rw.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal north pillar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="black;yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="buoy_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Pillar_North_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Float.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
@@ -2306,41 +328,17 @@
     <!-- cardinal north pillar -->
 	<rule>
 		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="black;yellow"/>
-		<condition k="seamark:type" v="buoy_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Pillar_North.png"/>
+		<condition k="seamark:buoy_cardinal:category" v="north"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Pillar_North.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- cardinal east pillar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="black;yellow;black"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="buoy_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Pillar_East_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-	
     <!-- cardinal east pillar -->
 	<rule>
 		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="black;yellow;black"/>
-		<condition k="seamark:type" v="buoy_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Pillar_East.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal south pillar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="yellow;black"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="buoy_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Pillar_South_Lit.png"/>
+		<condition k="seamark:buoy_cardinal:category" v="east"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Pillar_East.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
@@ -2348,20 +346,8 @@
     <!-- cardinal south pillar -->
 	<rule>
 		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="yellow;black"/>
-		<condition k="seamark:type" v="buoy_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Pillar_South.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal west pillar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="yellow;black;yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="buoy_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Pillar_West_Lit.png"/>
+		<condition k="seamark:buoy_cardinal:category" v="south"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Pillar_South.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
@@ -2369,20 +355,8 @@
     <!-- cardinal west pillar -->
 	<rule>
 		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="yellow;black;yellow"/>
-		<condition k="seamark:type" v="buoy_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Pillar_West.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal north spar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_cardinal:shape" v="spar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="black;yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="buoy_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Spar_North_Lit.png"/>
+		<condition k="seamark:buoy_cardinal:category" v="west"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Pillar_West.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
@@ -2390,41 +364,17 @@
     <!-- cardinal north spar -->
 	<rule>
 		<condition k="seamark:buoy_cardinal:shape" v="spar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="black;yellow"/>
-		<condition k="seamark:type" v="buoy_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Spar_North.png"/>
+		<condition k="seamark:buoy_cardinal:category" v="north"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Spar_North.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- cardinal east spar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_cardinal:shape" v="spar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="black;yellow;black"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="buoy_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Spar_East_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-	
     <!-- cardinal east spar -->
 	<rule>
 		<condition k="seamark:buoy_cardinal:shape" v="spar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="black;yellow;black"/>
-		<condition k="seamark:type" v="buoy_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Spar_East.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal south spar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_cardinal:shape" v="spar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="yellow;black"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="buoy_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Spar_South_Lit.png"/>
+		<condition k="seamark:buoy_cardinal:category" v="east"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Spar_East.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
@@ -2432,20 +382,8 @@
     <!-- cardinal south spar -->
 	<rule>
 		<condition k="seamark:buoy_cardinal:shape" v="spar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="yellow;black"/>
-		<condition k="seamark:type" v="buoy_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Spar_South.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal west spar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_cardinal:shape" v="spar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="yellow;black;yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="buoy_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Spar_West_Lit.png"/>
+		<condition k="seamark:buoy_cardinal:category" v="south"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Spar_South.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
@@ -2453,20 +391,8 @@
     <!-- cardinal west spar -->
 	<rule>
 		<condition k="seamark:buoy_cardinal:shape" v="spar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="yellow;black;yellow"/>
-		<condition k="seamark:type" v="buoy_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Spar_West.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal north tower, lighted -->
-	<rule>
-		<condition k="seamark:beacon_cardinal:shape" v="tower"/>
-		<condition k="seamark:beacon_cardinal:colour" v="black;yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="beacon_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Tower_North_Lit.png"/>
+		<condition k="seamark:buoy_cardinal:category" v="west"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Spar_West.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
@@ -2474,41 +400,17 @@
     <!-- cardinal north tower -->
 	<rule>
 		<condition k="seamark:beacon_cardinal:shape" v="tower"/>
-		<condition k="seamark:beacon_cardinal:colour" v="black;yellow"/>
-		<condition k="seamark:type" v="beacon_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Tower_North.png"/>
+		<condition k="seamark:beacon_cardinal:category" v="north"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Tower_North.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- cardinal east tower, lighted -->
-	<rule>
-		<condition k="seamark:beacon_cardinal:shape" v="tower"/>
-		<condition k="seamark:beacon_cardinal:colour" v="black;yellow;black"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="beacon_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Tower_East_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-	
     <!-- cardinal east tower -->
 	<rule>
 		<condition k="seamark:beacon_cardinal:shape" v="tower"/>
-		<condition k="seamark:beacon_cardinal:colour" v="black;yellow;black"/>
-		<condition k="seamark:type" v="beacon_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Tower_East.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal south tower, lighted -->
-	<rule>
-		<condition k="seamark:beacon_cardinal:shape" v="tower"/>
-		<condition k="seamark:beacon_cardinal:colour" v="yellow;black"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="beacon_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Tower_South_Lit.png"/>
+		<condition k="seamark:beacon_cardinal:category" v="east"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Tower_East.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
@@ -2516,214 +418,89 @@
     <!-- cardinal south tower -->
 	<rule>
 		<condition k="seamark:beacon_cardinal:shape" v="tower"/>
-		<condition k="seamark:beacon_cardinal:colour" v="yellow;black"/>
-		<condition k="seamark:type" v="beacon_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Tower_South.png"/>
+		<condition k="seamark:beacon_cardinal:category" v="south"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Tower_South.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- cardinal west tower, lighted -->
+   <!-- cardinal west tower -->
 	<rule>
 		<condition k="seamark:beacon_cardinal:shape" v="tower"/>
-		<condition k="seamark:beacon_cardinal:colour" v="yellow;black;yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="beacon_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Tower_West_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal west tower -->
-	<rule>
-		<condition k="seamark:beacon_cardinal:shape" v="tower"/>
-		<condition k="seamark:beacon_cardinal:colour" v="yellow;black;yellow"/>
-		<condition k="seamark:type" v="beacon_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Tower_West.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal north beacon, lighted -->
-	<rule>
-		<condition k="seamark:beacon_cardinal:colour" v="black;yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="beacon_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Beacon_North_Lit.png"/>
+		<condition k="seamark:beacon_cardinal:category" v="west"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Tower_West.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
     <!-- cardinal north beacon -->
 	<rule>
-		<condition k="seamark:beacon_cardinal:colour" v="black;yellow"/>
-		<condition k="seamark:type" v="beacon_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Beacon_North.png"/>
+		<condition k="seamark:beacon_cardinal:category" v="north"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Beacon_North.png" priority="5"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- cardinal east beacon, lighted -->
-	<rule>
-		<condition k="seamark:beacon_cardinal:colour" v="black;yellow;black"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="beacon_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Beacon_East_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-	
     <!-- cardinal east beacon -->
 	<rule>
-		<condition k="seamark:beacon_cardinal:colour" v="black;yellow;black"/>
-		<condition k="seamark:type" v="beacon_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Beacon_East.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal south beacon, lighted -->
-	<rule>
-		<condition k="seamark:beacon_cardinal:colour" v="yellow;black"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="beacon_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Beacon_South_Lit.png"/>
+		<condition k="seamark:beacon_cardinal:category" v="east"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Beacon_East.png" priority="5"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
     <!-- cardinal south beacon -->
 	<rule>
-		<condition k="seamark:beacon_cardinal:colour" v="yellow;black"/>
-		<condition k="seamark:type" v="beacon_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Beacon_South.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal west beacon, lighted -->
-	<rule>
-		<condition k="seamark:beacon_cardinal:colour" v="yellow;black;yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="beacon_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Beacon_West_Lit.png"/>
+		<condition k="seamark:beacon_cardinal:category" v="south"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Beacon_South.png" priority="5"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
     <!-- cardinal west beacon -->
 	<rule>
-		<condition k="seamark:beacon_cardinal:colour" v="yellow;black;yellow"/>
-		<condition k="seamark:type" v="beacon_cardinal"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Beacon_West.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal north float, lighted -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="black;yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="light_float"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_North_Lit.png"/>
+		<condition k="seamark:beacon_cardinal:category" v="west"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Beacon_West.png" priority="5"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
     <!-- cardinal north float -->
 	<rule>
-		<condition k="seamark:light_float:colour" v="black;yellow"/>
-		<condition k="seamark:type" v="light_float"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_North.png"/>
+		<condition k="seamark:light_float:category" v="north"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_North.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- cardinal east float, lighted -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="black;yellow;black"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="light_float"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_East_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-	
     <!-- cardinal east float -->
 	<rule>
-		<condition k="seamark:light_float:colour" v="black;yellow;black"/>
-		<condition k="seamark:type" v="light_float"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_East.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal south float, lighted -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="yellow;black"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="light_float"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_South_Lit.png"/>
+		<condition k="seamark:light_float:category" v="east"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_East.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
     <!-- cardinal south float -->
 	<rule>
-		<condition k="seamark:light_float:colour" v="yellow;black"/>
-		<condition k="seamark:type" v="light_float"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_South.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal west float, lighted -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="yellow;black;yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="light_float"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_West_Lit.png"/>
+		<condition k="seamark:light_float:category" v="south"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_South.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
     <!-- cardinal west float -->
 	<rule>
-		<condition k="seamark:light_float:colour" v="yellow;black;yellow"/>
-		<condition k="seamark:type" v="light_float"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_West.png"/>
+		<condition k="seamark:light_float:category" v="west"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_West.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
-    <!-- isolated danger pillar, lighted -->
+    <!-- isolated danger pillar -->
 	<rule>
 		<condition k="seamark:buoy_isolated_danger:shape" v="pillar"/>
-		<condition k="seamark:buoy_isolated_danger:colour" v="black;red;black"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="buoy_isolated_danger"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Pillar_Single_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- isolated danger pillar, OpenSeamap -->
-	<rule>
-		<condition k="seamark:buoy_isolated_danger:shape" v="pillar"/>
-		<condition k="seamark:buoy_isolated_danger:colour" v="black;red;black"/>
-		<condition k="seamark:type" v="buoy_isolated_danger"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Pillar_Single.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-   <!-- isolated danger spar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_isolated_danger:shape" v="spar"/>
-		<condition k="seamark:buoy_isolated_danger:colour" v="black;red;black"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="buoy_isolated_danger"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Spar_Single_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Pillar_Single.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
@@ -2731,20 +508,7 @@
     <!-- isolated danger spar -->
 	<rule>
 		<condition k="seamark:buoy_isolated_danger:shape" v="spar"/>
-		<condition k="seamark:buoy_isolated_danger:colour" v="black;red;black"/>
-		<condition k="seamark:type" v="buoy_isolated_danger"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Spar_Single.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-   <!-- isolated danger tower, lighted -->
-	<rule>
-		<condition k="seamark:beacon_isolated_danger:shape" v="tower"/>
-		<condition k="seamark:beacon_isolated_danger:colour" v="black;red;black"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="beacon_isolated_danger"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Tower_Single_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Spar_Single.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
@@ -2752,38 +516,15 @@
     <!-- isolated danger tower -->
 	<rule>
 		<condition k="seamark:beacon_isolated_danger:shape" v="tower"/>
-		<condition k="seamark:beacon_isolated_danger:colour" v="black;red;black"/>
-		<condition k="seamark:type" v="beacon_isolated_danger"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Tower_Single.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-   <!-- isolated danger beacon, lighted -->
-	<rule>
-		<condition k="seamark:beacon_isolated_danger:colour" v="black;red;black"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="beacon_isolated_danger"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Beacon_Single_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Tower_Single.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
     
     <!-- isolated danger beacon -->
 	<rule>
-		<condition k="seamark:beacon_isolated_danger:colour" v="black;red;black"/>
 		<condition k="seamark:type" v="beacon_isolated_danger"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Beacon_Single.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-   <!-- isolated danger float, lighted -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="black;red;black"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="light_float"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_Single_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Beacon_Single.png" priority="5"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
@@ -2791,90 +532,14 @@
     <!-- isolated danger float -->
 	<rule>
 		<condition k="seamark:light_float:colour" v="black;red;black"/>
-		<condition k="seamark:type" v="light_float"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_Single.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_Single.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
-    
-    <!-- special purpose pillar, yellow x topmark, lighted -->
-	<rule>
-		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:buoy_special_purpose:shape" v="pillar"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:topmark:colour" v="yellow"/>
-		<condition k="seamark:topmark:shape" v="x-shape"/>
-		<condition k="seamark:type" v="buoy_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Pillar_CrossY_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- special purpose pillar, yellow x topmark -->
-	<rule>
-		<condition k="seamark:buoy_special_purpose:shape" v="pillar"/>
-		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:topmark:colour" v="yellow"/>
-		<condition k="seamark:topmark:shape" v="x-shape"/>
-		<condition k="seamark:type" v="buoy_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Pillar_CrossY.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-   <!-- special purpose pillar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_special_purpose:shape" v="pillar"/>
-		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="buoy_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Pillar_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
     <!-- special purpose pillar -->
 	<rule>
 		<condition k="seamark:buoy_special_purpose:shape" v="pillar"/>
-		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:type" v="buoy_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Pillar.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- special purpose spar, yellow x topmark, lighted -->
-	<rule>
-		<condition k="seamark:buoy_special_purpose:shape" v="spar"/>
-		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:topmark:colour" v="yellow"/>
-		<condition k="seamark:topmark:shape" v="x-shape"/>
-		<condition k="seamark:type" v="buoy_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Spar_CrossY_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- special purpose spar, yellow x topmark -->
-	<rule>
-		<condition k="seamark:buoy_special_purpose:shape" v="spar"/>
-		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:topmark:colour" v="yellow"/>
-		<condition k="seamark:topmark:shape" v="x-shape"/>
-		<condition k="seamark:type" v="buoy_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Spar_CrossY.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-   <!-- special purpose spar, lighted -->
-	<rule>
-		<condition k="seamark:buoy_special_purpose:shape" v="spar"/>
-		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="buoy_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Spar_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Pillar.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
@@ -2882,45 +547,7 @@
     <!-- special purpose spar -->
 	<rule>
 		<condition k="seamark:buoy_special_purpose:shape" v="spar"/>
-		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:type" v="buoy_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Spar.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-   <!-- special purpose sphere, yellow x topmark, lighted -->
-	<rule>
-		<condition k="seamark:buoy_special_purpose:shape" v="sphere"/>
-		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:topmark:colour" v="yellow"/>
-		<condition k="seamark:topmark:shape" v="x-shape"/>
-		<condition k="seamark:type" v="buoy_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Sphere_CrossY_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- special purpose sphere, yellow x topmark -->
-	<rule>
-		<condition k="seamark:buoy_special_purpose:shape" v="sphere"/>
-		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:topmark:colour" v="yellow"/>
-		<condition k="seamark:topmark:shape" v="x-shape"/>
-		<condition k="seamark:type" v="buoy_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Sphere_CrossY.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-   <!-- special purpose sphere, lighted -->
-	<rule>
-		<condition k="seamark:buoy_special_purpose:shape" v="sphere"/>
-		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="buoy_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Sphere_Lit.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Spar.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
@@ -2928,161 +555,39 @@
     <!-- special purpose sphere -->
 	<rule>
 		<condition k="seamark:buoy_special_purpose:shape" v="sphere"/>
-		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:type" v="buoy_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Sphere.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Sphere.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
-    
-    <!-- special purpose barrel, yellow cross -->
-	<rule>
-		<condition k="seamark:buoy_special_purpose:shape" v="barrel"/>
-		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:topmark:colour" v="yellow"/>
-		<condition k="seamark:topmark:shape" v="x-shape"/>
-		<condition k="seamark:type" v="buoy_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Barrel_CrossY.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-	  </rule>
     
     <!-- special purpose barrel -->
 	<rule>
 		<condition k="seamark:buoy_special_purpose:shape" v="barrel"/>
-		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:type" v="buoy_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Barrel.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Barrel.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
 	  </rule>
     
-   <!-- special purpose tower, yellow cross lighted -->
-	<rule>
-		<condition k="seamark:beacon_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:beacon_special_purpose:shape" v="tower"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:topmark:colour" v="yellow"/>
-		<condition k="seamark:topmark:shape" v="x-shape"/>
-		<condition k="seamark:type" v="beacon_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Tower_CrossY_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- special purpose tower, yellow cross -->
-	<rule>
-		<condition k="seamark:beacon_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:beacon_special_purpose:shape" v="tower"/>
-		<condition k="seamark:topmark:colour" v="yellow"/>
-		<condition k="seamark:topmark:shape" v="x-shape"/>
-		<condition k="seamark:type" v="beacon_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Tower_CrossY.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
- 
-   <!-- special purpose tower, lighted -->
-	<rule>
-		<condition k="seamark:beacon_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:beacon_special_purpose:shape" v="tower"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="beacon_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Tower_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
     <!-- special purpose tower -->
 	<rule>
-		<condition k="seamark:beacon_special_purpose:colour" v="yellow"/>
 		<condition k="seamark:beacon_special_purpose:shape" v="tower"/>
-		<condition k="seamark:type" v="beacon_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Tower.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Tower.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
  
-   <!-- special purpose beacon, yellow cross lighted -->
-	<rule>
-		<condition k="seamark:beacon_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:topmark:colour" v="yellow"/>
-		<condition k="seamark:topmark:shape" v="x-shape"/>
-		<condition k="seamark:type" v="beacon_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Beacon_CrossY_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- special purpose beacon, yellow cross -->
-	<rule>
-		<condition k="seamark:beacon_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:topmark:colour" v="yellow"/>
-		<condition k="seamark:topmark:shape" v="x-shape"/>
-		<condition k="seamark:type" v="beacon_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Beacon_CrossY.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
- 
-   <!-- special purpose beacon, lighted -->
-	<rule>
-		<condition k="seamark:beacon_special_purpose:colour" v="yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="beacon_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Beacon_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
     <!-- special purpose beacon -->
 	<rule>
-		<condition k="seamark:beacon_special_purpose:colour" v="yellow"/>
 		<condition k="seamark:type" v="beacon_special_purpose"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Beacon.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Beacon.png" priority="5"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
  
-   <!-- special purpose float, yellow cross lighted -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:topmark:colour" v="yellow"/>
-		<condition k="seamark:topmark:shape" v="x-shape"/>
-		<condition k="seamark:type" v="light_float"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Float_CrossY_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- special purpose float, yellow cross -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="yellow"/>
-		<condition k="seamark:topmark:colour" v="yellow"/>
-		<condition k="seamark:topmark:shape" v="x-shape"/>
-		<condition k="seamark:type" v="light_float"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Float_CrossY.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
- 
-   <!-- special purpose float, lighted -->
-	<rule>
-		<condition k="seamark:light_float:colour" v="yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<condition k="seamark:type" v="light_float"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Float_Lit.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
     <!-- special purpose float -->
 	<rule>
 		<condition k="seamark:light_float:colour" v="yellow"/>
-		<condition k="seamark:type" v="light_float"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Float.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Float.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
@@ -3107,7 +612,7 @@
     <!-- major light -->
 	<rule>
 		<condition k="seamark:type" v="light_major"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Light_Major.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Light_Major.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
@@ -3115,98 +620,9 @@
     <!-- minor light -->
 	<rule>
 		<condition k="seamark:type" v="light_minor"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Light_Minor.png"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Light_Minor.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
   </rule>
  
-<!-- ********************************************************************************** --> 
-    
-    <!-- cardinal north, lighted, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="black;yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Light_yb.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal north, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="black;yellow"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_yb.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    
-    <!-- cardinal east, lighted, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="black;yellow;black"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Light_byb.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal east, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="black;yellow;black"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_byb.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal south, lighted, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="yellow;black"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Light_by.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    <!-- cardinal south,unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="yellow;black"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_by.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    
-    <!-- cardinal west, lighted, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="yellow;black;yellow"/>
-		<condition k="seamark:light:colour" v="white"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Light_yby.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    
-    <!-- cardinal west, unbekannt -->
-	<rule>
-		<condition k="seamark" v="buoy"/>
-		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
-		<condition k="seamark:buoy_cardinal:colour" v="yellow;black;yellow"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_yby.png"/>
-		<scale_min>1</scale_min>
-		<scale_max>50000</scale_max>
-  </rule>
-    
-    </rules>
+</rules>
