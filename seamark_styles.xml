@@ -285,7 +285,6 @@
     <!-- safewater pillar -->
 	<rule>
 		<condition k="seamark:buoy_safe_water:shape" v="pillar"/>
-		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Pillar.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
@@ -294,7 +293,6 @@
     <!-- safewater spar -->
 	<rule>
 		<condition k="seamark:buoy_safe_water:shape" v="spar"/>
-		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Spar.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
@@ -302,8 +300,7 @@
     
     <!-- safewater sphere -->
 	<rule>
-		<condition k="seamark:buoy_safe_water:shape" v="sphere"/>
-		<condition k="seamark:buoy_safe_water:colour" v="red;white"/>
+		<condition k="seamark:buoy_safe_water:shape" v="spherical"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Sphere.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
@@ -311,7 +308,7 @@
     
     <!-- safewater beacon -->
 	<rule>
-		<condition k="seamark:beacon_safe_water:colour" v="red;white"/>
+		<condition k="seamark:type" v="beacon_safe_water"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Beacon.png" priority="5"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
@@ -320,6 +317,12 @@
     <!-- safewater float -->
 	<rule>
 		<condition k="seamark:light_float:colour" v="red;white"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Float.png" priority="10"/>
+		<scale_min>1</scale_min>
+		<scale_max>50000</scale_max>
+  </rule>
+	<rule>
+		<condition k="seamark:light_float:colour" v="white;red"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Safe_Water_Float.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
@@ -467,7 +470,7 @@
     
     <!-- cardinal north float -->
 	<rule>
-		<condition k="seamark:light_float:category" v="north"/>
+		<condition k="seamark:light_float:colour" v="black;yellow"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_North.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
@@ -475,7 +478,7 @@
     
     <!-- cardinal east float -->
 	<rule>
-		<condition k="seamark:light_float:category" v="east"/>
+		<condition k="seamark:light_float:colour" v="black;yellow;black"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_East.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
@@ -483,7 +486,7 @@
     
     <!-- cardinal south float -->
 	<rule>
-		<condition k="seamark:light_float:category" v="south"/>
+		<condition k="seamark:light_float:colour" v="yellow;black"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_South.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
@@ -491,7 +494,7 @@
     
     <!-- cardinal west float -->
 	<rule>
-		<condition k="seamark:light_float:category" v="west"/>
+		<condition k="seamark:light_float:colour" v="yellow;black;yellow"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cardinal_Float_West.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
@@ -554,7 +557,7 @@
     
     <!-- special purpose sphere -->
 	<rule>
-		<condition k="seamark:buoy_special_purpose:shape" v="sphere"/>
+		<condition k="seamark:buoy_special_purpose:shape" v="spherical"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Special_Purpose_Sphere.png" priority="10"/>
 		<scale_min>1</scale_min>
 		<scale_max>50000</scale_max>
