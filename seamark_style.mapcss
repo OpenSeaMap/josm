@@ -1,0 +1,216 @@
+meta {
+  title: "OpenSeaMap Style";
+  description: "JOSM style for SeaMapEditor";
+  author: "Malcolm Herring";
+  link: "http://josm.openstreetmap.de/wiki/Styles/SeaMap"; 
+}
+
+canvas {background-color: #404060;}
+
+*[seamark:type=anchor_berth] { icon-image: "images/Anchor_Berth.png"; }
+*[seamark:type=anchorage] { icon-image: "images/Anchorage.png"; }
+*[seamark:type=harbour][seamark:harbour:category=~/marina|yacht/] { icon-image: "images/Marina.png"; }
+*[seamark:small_craft_facility:category=boatyard] { icon-image: "images/Boatyard.png"; }
+node[seamark:small_craft_facility:category=chandler] { icon-image: "images/Chandler.png"; }
+node[seamark:small_craft_facility:category=boat_hoist] { icon-image: "images/Crane"; }
+node[seamark:small_craft_facility:category=fuel_station] { icon-image: "images/Fuel"; }
+node[seamark:small_craft_facility:category=slipway] { icon-image: "images/Slipway"; }
+node[seamark:small_craft_facility:category=pump-out] { icon-image: "images/Waste_Disposal"; }
+node[seamark:small_craft_facility:category=visitor_berth] { icon-image: "images/Visitor_Berth"; }
+node[seamark:small_craft_facility:category=visitor_mooring] { icon-image: "images/Visitor_Mooring"; }
+node[seamark:small_craft_facility:category=toilets] { icon-image: "images/Toilet"; }
+node[seamark:small_craft_facility:category=showers] { icon-image: "images/Shower"; }
+
+node[seamark:type=buoy_lateral], node[seamark:type=buoy_cardinal], node[seamark:type=buoy_safe_water], node[seamark:type=buoy_isolated_danger], node[seamark:type=buoy_special_purpose] { buoy: true; }
+node[seamark:type=beacon_lateral], node[seamark:type=beacon_cardinal], node[seamark:type=beacon_safe_water], node[seamark:type=beacon_isolated_danger], node[seamark:type=beacon_special_purpose]  { beacon: true; }
+
+node[seamark:buoy_lateral:shape] { buoy-shape: eval(tag("seamark:buoy_lateral:shape")); }
+node[seamark:buoy_cardinal:shape] { buoy-shape: eval(tag("seamark:buoy_cardinal:shape")); }
+node[seamark:buoy_safe_water:shape] { buoy-shape: eval(tag("seamark:buoy_safe_water:shape")); }
+node[seamark:buoy_isolated_danger:shape] { buoy-shape: eval(tag("seamark:buoy_isolated_danger:shape")); }
+node[seamark:buoy_special_purpose:shape] { buoy-shape: eval(tag("seamark:buoy_special_purpose:shape")); }
+
+node[seamark:beacon_lateral:shape] { beacon-shape: eval(tag("seamark:beacon_lateral:shape")); }
+node[seamark:beacon_cardinal:shape] { beacon-shape: eval(tag("seamark:beacon_cardinal:shape")); }
+node[seamark:beacon_safe_water:shape] { beacon-shape: eval(tag("seamark:beacon_safe_water:shape")); }
+node[seamark:beacon_isolated_danger:shape] { beacon-shape: eval(tag("seamark:beacon_isolated_danger:shape")); }
+node[seamark:beacon_special_purpose:shape] { beacon-shape: eval(tag("seamark:beacon_special_purpose:shape")); }
+
+node[seamark:buoy_lateral:colour] { buoy-colour: eval(tag("seamark:buoy_lateral:colour")); }
+node[seamark:buoy_cardinal:colour] { buoy-colour: eval(tag("seamark:buoy_cardinal:colour")); }
+node[seamark:buoy_safe_water:colour] { buoy-colour: eval(tag("seamark:buoy_safe_water:colour")); }
+node[seamark:buoy_isolated_danger:colour] { buoy-colour: eval(tag("seamark:buoy_isolated_danger:colour")); }
+node[seamark:buoy_special_purpose:colour] { buoy-colour: eval(tag("seamark:buoy_special_purpose:colour")); }
+
+node[seamark:beacon_lateral:colour] { beacon-colour: eval(tag("seamark:beacon_lateral:colour")); }
+node[seamark:beacon_cardinal:colour] { beacon-colour: eval(tag("seamark:beacon_cardinal:colour")); }
+node[seamark:beacon_safe_water:colour] { beacon-colour: eval(tag("seamark:beacon_safe_water:colour")); }
+node[seamark:beacon_isolated_danger:colour] { beacon-colour: eval(tag("seamark:beacon_isolated_danger:colour")); }
+node[seamark:beacon_special_purpose:colour] { beacon-colour: eval(tag("seamark:beacon_special_purpose:colour")); }
+
+node[prop(buoy)][prop(buoy-shape)=can][!is_prop_set(buoy-colour)] { icon-image: "images/Can_Buoy.png"; }
+node[prop(buoy)][prop(buoy-shape)=can][prop(buoy-colour)=red] { icon-image: "images/Lateral_Can_Red.png"; }
+node[prop(buoy)][prop(buoy-shape)=can][prop(buoy-colour)=green] { icon-image: "images/Lateral_Can_Green.png"; }
+node[prop(buoy)][prop(buoy-shape)=can][prop(buoy-colour)="red;green;red"] { icon-image: "images/Lateral_Can_Red_Green_Red.png"; }
+node[prop(buoy)][prop(buoy-shape)=can][prop(buoy-colour)="green;red;green"] { icon-image: "images/Lateral_Can_Green_Red_Green.png"; }
+node[prop(buoy)][prop(buoy-shape)=can][prop(buoy-colour)="red;white;red;white"] { icon-image: "images/Lateral_Can_Red_White_Red_White.png"; }
+node[prop(buoy)][prop(buoy-shape)=can][prop(buoy-colour)="yellow"] { icon-image: "images/Special_Purpose_Can.png"; }
+node[prop(buoy)][prop(buoy-shape)=can][seamark:buoy_cardinal:category=north] { icon-image: "images/Cardinal_Can_North.png"; }
+node[prop(buoy)][prop(buoy-shape)=can][seamark:buoy_cardinal:category=south] { icon-image: "images/Cardinal_Can_South.png"; }
+node[prop(buoy)][prop(buoy-shape)=can][seamark:buoy_cardinal:category=east] { icon-image: "images/Cardinal_Can_East.png"; }
+node[prop(buoy)][prop(buoy-shape)=can][seamark:buoy_cardinal:category=west] { icon-image: "images/Cardinal_Can_West.png"; }
+
+node[prop(buoy)][prop(buoy-shape)=conical][!is_prop_set(buoy-colour)] { icon-image: "images/Cone_Buoy.png"; }
+node[prop(buoy)][prop(buoy-shape)=conical][prop(buoy-colour)=red] { icon-image: "images/Lateral_Cone_Red.png"; }
+node[prop(buoy)][prop(buoy-shape)=conical][prop(buoy-colour)=green] { icon-image: "images/Lateral_Cone_Green.png"; }
+node[prop(buoy)][prop(buoy-shape)=conical][prop(buoy-colour)="red;green;red"] { icon-image: "images/Lateral_Cone_Red_Green_Red.png"; }
+node[prop(buoy)][prop(buoy-shape)=conical][prop(buoy-colour)="green;red;green"] { icon-image: "images/Lateral_Cone_Green_Red_Green.png"; }
+node[prop(buoy)][prop(buoy-shape)=conical][prop(buoy-colour)="green;white;green;white"] { icon-image: "images/Lateral_Cone_Green_White_Green_White.png"; }
+node[prop(buoy)][prop(buoy-shape)=conical][prop(buoy-colour)="yellow"] { icon-image: "images/Special_Purpose_Cone.png"; }
+node[prop(buoy)][prop(buoy-shape)=conical][seamark:buoy_cardinal:category=north] { icon-image: "images/Cardinal_Cone_North.png"; }
+node[prop(buoy)][prop(buoy-shape)=conical][seamark:buoy_cardinal:category=south] { icon-image: "images/Cardinal_Cone_South.png"; }
+node[prop(buoy)][prop(buoy-shape)=conical][seamark:buoy_cardinal:category=east] { icon-image: "images/Cardinal_Cone_East.png"; }
+node[prop(buoy)][prop(buoy-shape)=conical][seamark:buoy_cardinal:category=west] { icon-image: "images/Cardinal_Cone_West.png"; }
+
+node[prop(buoy)][!is_prop_set(buoy-shape)] { icon-image: "images/Pillar_Buoy.png"; }
+node[prop(buoy)][prop(buoy-shape)=pillar][!is_prop_set(buoy-colour)] { icon-image: "images/Pillar_Buoy.png"; }
+node[prop(buoy)][prop(buoy-shape)=pillar][prop(buoy-colour)=red] { icon-image: "images/Lateral_Pillar_Red.png"; }
+node[prop(buoy)][prop(buoy-shape)=pillar][prop(buoy-colour)=green] { icon-image: "images/Lateral_Pillar_Green.png"; }
+node[prop(buoy)][prop(buoy-shape)=pillar][prop(buoy-colour)="red;green;red"] { icon-image: "images/Lateral_Pillar_Red_Green_Red.png"; }
+node[prop(buoy)][prop(buoy-shape)=pillar][prop(buoy-colour)="green;red;green"] { icon-image: "images/Lateral_Pillar_Green_Red_Green.png"; }
+node[prop(buoy)][prop(buoy-shape)=pillar][prop(buoy-colour)="red;white;red;white"] { icon-image: "images/Lateral_Pillar_Red_White_Red_White.png"; }
+node[prop(buoy)][prop(buoy-shape)=pillar][prop(buoy-colour)="green;white;green;white"] { icon-image: "images/Lateral_Pillar_Green_White_Green_White.png"; }
+node[prop(buoy)][prop(buoy-shape)=pillar][prop(buoy-colour)="yellow"] { icon-image: "images/Special_Purpose_Pillar.png"; }
+node[prop(buoy)][prop(buoy-shape)=pillar][prop(buoy-colour)="red;green;red;green"] { icon-image: "images/Special_Purpose_Pillar_Red_Green_Red_Green.png"; }
+node[prop(buoy)][prop(buoy-shape)=pillar][seamark:buoy_safe_water:colour=~/red;white|white;red/] { icon-image: "images/Safe_Water_Pillar.png"; }
+node[prop(buoy)][prop(buoy-shape)=pillar][seamark:buoy_cardinal:category=north] { icon-image: "images/Cardinal_Pillar_North.png"; }
+node[prop(buoy)][prop(buoy-shape)=pillar][seamark:buoy_cardinal:category=south] { icon-image: "images/Cardinal_Pillar_South.png"; }
+node[prop(buoy)][prop(buoy-shape)=pillar][seamark:buoy_cardinal:category=east] { icon-image: "images/Cardinal_Pillar_East.png"; }
+node[prop(buoy)][prop(buoy-shape)=pillar][seamark:buoy_cardinal:category=west] { icon-image: "images/Cardinal_Pillar_West.png"; }
+node[prop(buoy)][prop(buoy-shape)=pillar][seamark:type=buoy_isolated_danger] { icon-image: "images/Cardinal_Pillar_Single.png"; }
+
+node[prop(buoy)][prop(buoy-shape)=spar][!is_prop_set(buoy-colour)] { icon-image: "images/Spar_Buoy.png"; }
+node[prop(buoy)][prop(buoy-shape)=spar][prop(buoy-colour)=red] { icon-image: "images/Lateral_Spar_Red.png"; }
+node[prop(buoy)][prop(buoy-shape)=spar][prop(buoy-colour)=green] { icon-image: "images/Lateral_Spar_Green.png"; }
+node[prop(buoy)][prop(buoy-shape)=spar][prop(buoy-colour)="red;green;red"] { icon-image: "images/Lateral_Spar_Red_Green_Red.png"; }
+node[prop(buoy)][prop(buoy-shape)=spar][prop(buoy-colour)="green;red;green"] { icon-image: "images/Lateral_Spar_Green_Red_Green.png"; }
+node[prop(buoy)][prop(buoy-shape)=spar][prop(buoy-colour)="red;white;red;white"] { icon-image: "images/Lateral_Spar_Red_White_Red_White.png"; }
+node[prop(buoy)][prop(buoy-shape)=spar][prop(buoy-colour)="green;white;green;white"] { icon-image: "images/Lateral_Spar_Green_White_Green_White.png"; }
+node[prop(buoy)][prop(buoy-shape)=spar][prop(buoy-colour)="yellow"] { icon-image: "images/Special_Purpose_Spar.png"; }
+node[prop(buoy)][prop(buoy-shape)=spar][prop(buoy-colour)="red;green;red;green"] { icon-image: "images/Special_Purpose_Spar_Red_Green_Red_Green.png"; }
+node[prop(buoy)][prop(buoy-shape)=spar][seamark:buoy_safe_water:colour=~/red;white|white;red/] { icon-image: "images/Safe_Water_Spar.png"; }
+node[prop(buoy)][prop(buoy-shape)=spar][seamark:buoy_cardinal:category=north] { icon-image: "images/Cardinal_Spar_North.png"; }
+node[prop(buoy)][prop(buoy-shape)=spar][seamark:buoy_cardinal:category=south] { icon-image: "images/Cardinal_Spar_South.png"; }
+node[prop(buoy)][prop(buoy-shape)=spar][seamark:buoy_cardinal:category=east] { icon-image: "images/Cardinal_Spar_East.png"; }
+node[prop(buoy)][prop(buoy-shape)=spar][seamark:buoy_cardinal:category=west] { icon-image: "images/Cardinal_Spar_West.png"; }
+node[prop(buoy)][prop(buoy-shape)=sparr][seamark:type=buoy_isolated_danger] { icon-image: "images/Cardinal_Spar_Single.png"; }
+
+node[prop(buoy)][prop(buoy-shape)=spherical][!is_prop_set(buoy-colour)] { icon-image: "images/Sphere_Buoy.png"; }
+node[prop(buoy)][prop(buoy-shape)=spherical][prop(buoy-colour)=red] { icon-image: "images/Lateral_Sphere_Red.png"; }
+node[prop(buoy)][prop(buoy-shape)=spherical][prop(buoy-colour)=green] { icon-image: "images/Lateral_Sphere_Green.png"; }
+node[prop(buoy)][prop(buoy-shape)=spherical][prop(buoy-colour)="red;green;red"] { icon-image: "images/Lateral_Sphere_Red_Green_Red.png"; }
+node[prop(buoy)][prop(buoy-shape)=spherical][prop(buoy-colour)="green;red;green"] { icon-image: "images/Lateral_Sphere_Green_Red_Green.png"; }
+node[prop(buoy)][prop(buoy-shape)=spherical][prop(buoy-colour)="red;white;red;white"] { icon-image: "images/Lateral_Sphere_Red_White_Red_White.png"; }
+node[prop(buoy)][prop(buoy-shape)=spherical][prop(buoy-colour)="green;white;green;white"] { icon-image: "images/Lateral_Sphere_Green_White_Green_White.png"; }
+node[prop(buoy)][prop(buoy-shape)=spherical][prop(buoy-colour)="yellow"] { icon-image: "images/Special_Purpose_Sphere.png"; }
+node[prop(buoy)][prop(buoy-shape)=spherical][prop(buoy-colour)="red;green;red;green"] { icon-image: "images/Special_Purpose_Sphere_Red_Green_Red_Green.png"; }
+node[prop(buoy)][prop(buoy-shape)=spherical][seamark:buoy_safe_water:colour=~/red;white|white;red/] { icon-image: "images/Safe_Water_Sphere.png"; }
+node[prop(buoy)][prop(buoy-shape)=spherical][seamark:buoy_cardinal:category=north] { icon-image: "images/Cardinal_Sphere_North.png"; }
+node[prop(buoy)][prop(buoy-shape)=spherical][seamark:buoy_cardinal:category=south] { icon-image: "images/Cardinal_Sphere_South.png"; }
+node[prop(buoy)][prop(buoy-shape)=spherical][seamark:buoy_cardinal:category=east] { icon-image: "images/Cardinal_Sphere_East.png"; }
+node[prop(buoy)][prop(buoy-shape)=spherical][seamark:buoy_cardinal:category=west] { icon-image: "images/Cardinal_Sphere_West.png"; }
+
+node[prop(buoy)][prop(buoy-shape)=barrel][prop(buoy-colour)=yellow] { icon-image: "images/Special_Purpose_Barrel.png"; }
+node[prop(buoy)][prop(buoy-shape)=barrel][!(prop(buoy-colour)=yellow)] { icon-image: "images/Barrel_Buoy.png"; }
+
+node[prop(beacon)][seamark:beacon_lateral:shape=~/stake|pole|post/][!seamark:beacon_lateral:colour] { icon-image: "images/Stake.png"; }
+node[prop(beacon)][seamark:beacon_lateral:shape=~/stake|pole|post/][seamark:beacon_lateral:colour=red] { icon-image: "images/Stake_Red.png"; }
+node[prop(beacon)][seamark:beacon_lateral:shape=~/stake|pole|post/][seamark:beacon_lateral:colour=green] { icon-image: "images/Stake_Green.png"; }
+node[prop(beacon)][seamark:beacon_lateral:shape=~/stake|pole|post/][seamark:beacon_lateral:colour=yellow] { icon-image: "images/Stake_Yellow.png"; }
+node[prop(beacon)][prop(beacon-shape)=perch][!seamark:beacon_lateral:category] { icon-image: "images/Stake.png"; }
+node[prop(beacon)][prop(beacon-shape)=perch][seamark:beacon_lateral:category=port] { icon-image: "images/Lateral_Perch_Port.png"; }
+node[prop(beacon)][prop(beacon-shape)=perch][seamark:beacon_lateral:category=starboard] { icon-image: "images/Lateral_Perch_Starboard.png"; }
+
+node[prop(beacon)][prop(beacon-shape)=tower][!is_prop_set(beacon-colour)] { icon-image: "images/Tower.png"; }
+node[prop(beacon)][prop(beacon-shape)=tower][prop(beacon-colour)=red] { icon-image: "images/Lateral_Tower_Red.png"; }
+node[prop(beacon)][prop(beacon-shape)=tower][prop(beacon-colour)=green] { icon-image: "images/Lateral_Tower_Green.png"; }
+node[prop(beacon)][prop(beacon-shape)=tower][prop(beacon-colour)="red;green;red"] { icon-image: "images/Lateral_Tower_Red_Green_Red.png"; }
+node[prop(beacon)][prop(beacon-shape)=tower][prop(beacon-colour)="green;red;green"] { icon-image: "images/Lateral_Tower_Green_Red_Green.png"; }
+node[prop(beacon)][prop(beacon-shape)=tower][prop(beacon-colour)="red;white;red;white"] { icon-image: "images/Lateral_Tower_Red_White_Red_White.png"; }
+node[prop(beacon)][prop(beacon-shape)=tower][prop(beacon-colour)="green;white;green;white"] { icon-image: "images/Lateral_Tower_Green_White_Green_White.png"; }
+node[prop(beacon)][prop(beacon-shape)=tower][prop(beacon-colour)="yellow"] { icon-image: "images/Special_Purpose_Tower.png"; }
+node[prop(beacon)][prop(beacon-shape)=tower][seamark:beacon_cardinal:category=north] { icon-image: "images/Cardinal_Tower_North.png"; }
+node[prop(beacon)][prop(beacon-shape)=tower][seamark:beacon_cardinal:category=south] { icon-image: "images/Cardinal_Tower_South.png"; }
+node[prop(beacon)][prop(beacon-shape)=tower][seamark:beacon_cardinal:category=east] { icon-image: "images/Cardinal_Tower_East.png"; }
+node[prop(beacon)][prop(beacon-shape)=tower][seamark:beacon_cardinal:category=west] { icon-image: "images/Cardinal_Tower_West.png"; }
+node[prop(beacon)][prop(beacon-shape)=tower][seamark:type=beacon_isolated_danger] { icon-image: "images/Cardinal_Tower_Single.png"; }
+
+node[prop(beacon)][!(prop(beacon-shape)=tower)][!(prop(beacon-shape)=perch)][!is_prop_set(beacon-colour)] { icon-image: "images/Beacon.png"; }
+node[prop(beacon)][!(prop(beacon-shape)=tower)][!(prop(beacon-shape)=perch)][prop(beacon-colour)=red] { icon-image: "images/Lateral_Beacon_Red.png"; }
+node[prop(beacon)][!(prop(beacon-shape)=tower)][!(prop(beacon-shape)=perch)][prop(beacon-colour)=green] { icon-image: "images/Lateral_Beacon_Green.png"; }
+node[prop(beacon)][!(prop(beacon-shape)=tower)][!(prop(beacon-shape)=perch)][prop(beacon-colour)="red;green;red"] { icon-image: "images/Lateral_Beacon_Red_Green_Red.png"; }
+node[prop(beacon)][!(prop(beacon-shape)=tower)][!(prop(beacon-shape)=perch)][prop(beacon-colour)="green;red;green"] { icon-image: "images/Lateral_Beacon_Green_Red_Green.png"; }
+node[prop(beacon)][!(prop(beacon-shape)=tower)][!(prop(beacon-shape)=perch)][prop(beacon-colour)="red;white;red;white"] { icon-image: "images/Lateral_Beacon_Red_White_Red_White.png"; }
+node[prop(beacon)][!(prop(beacon-shape)=tower)][!(prop(beacon-shape)=perch)][prop(beacon-colour)="green;white;green;white"] { icon-image: "images/Lateral_Beacon_Green_White_Green_White.png"; }
+node[prop(beacon)][!(prop(beacon-shape)=tower)][!(prop(beacon-shape)=perch)][prop(beacon-colour)="yellow"] { icon-image: "images/Special_Purpose_Beacon.png"; }
+node[prop(beacon)][!(prop(beacon-shape)=tower)][!(prop(beacon-shape)=perch)][prop(beacon-colour)="red;green;red;green"] { icon-image: "images/Special_Purpose_Beacon_Red_Green_Red_Green.png"; }
+node[prop(beacon)][!(prop(beacon-shape)=tower)][!(prop(beacon-shape)=perch)][seamark:beacon_safe_water:colour=~/red;white|white;red/] { icon-image: "images/Safe_Water_Beacon.png"; }
+node[prop(beacon)][!(prop(beacon-shape)=tower)][seamark:beacon_cardinal:category=north] { icon-image: "images/Cardinal_Beacon_North.png"; }
+node[prop(beacon)][!(prop(beacon-shape)=tower)][seamark:beacon_cardinal:category=south] { icon-image: "images/Cardinal_Beacon_South.png"; }
+node[prop(beacon)][!(prop(beacon-shape)=tower)][seamark:beacon_cardinal:category=east] { icon-image: "images/Cardinal_Beacon_East.png"; }
+node[prop(beacon)][!(prop(beacon-shape)=tower)][seamark:beacon_cardinal:category=west] { icon-image: "images/Cardinal_Beacon_West.png"; }
+node[prop(beacon)][!(prop(beacon-shape)=tower)][seamark:type=beacon_isolated_danger] { icon-image: "images/Cardinal_Beacon_Single.png"; }
+
+node[prop(beacon)][!is_prop_set(beacon-shape)][!is_prop_set(beacon-colour)] { icon-image: "images/Beacon.png"; }
+node[prop(beacon)][!is_prop_set(beacon-shape)][prop(beacon-colour)=red] { icon-image: "images/Lateral_Beacon_Red.png"; }
+node[prop(beacon)][!is_prop_set(beacon-shape)][prop(beacon-colour)=green] { icon-image: "images/Lateral_Beacon_Green.png"; }
+node[prop(beacon)][!is_prop_set(beacon-shape)][prop(beacon-colour)="red;green;red"] { icon-image: "images/Lateral_Beacon_Red_Green_Red.png"; }
+node[prop(beacon)][!is_prop_set(beacon-shape)][prop(beacon-colour)="green;red;green"] { icon-image: "images/Lateral_Beacon_Green_Red_Green.png"; }
+node[prop(beacon)][!is_prop_set(beacon-shape)][prop(beacon-colour)="red;white;red;white"] { icon-image: "images/Lateral_Beacon_Red_White_Red_White.png"; }
+node[prop(beacon)][!is_prop_set(beacon-shape)][prop(beacon-colour)="green;white;green;white"] { icon-image: "images/Lateral_Beacon_Green_White_Green_White.png"; }
+node[prop(beacon)][!is_prop_set(beacon-shape)][prop(beacon-colour)="yellow"] { icon-image: "images/Special_Purpose_Beacon.png"; }
+node[prop(beacon)][!is_prop_set(beacon-shape)][prop(beacon-colour)="red;green;red;green"] { icon-image: "images/Special_Purpose_Beacon_Red_Green_Red_Green.png"; }
+node[prop(beacon)][!is_prop_set(beacon-shape)][seamark:beacon_safe_water:colour=~/red;white|white;red/] { icon-image: "images/Safe_Water_Beacon.png"; }
+node[prop(beacon)][!is_prop_set(beacon-shape)][seamark:beacon_cardinal:category=north] { icon-image: "images/Cardinal_Beacon_North.png"; }
+node[prop(beacon)][!is_prop_set(beacon-shape)][seamark:beacon_cardinal:category=south] { icon-image: "images/Cardinal_Beacon_South.png"; }
+node[prop(beacon)][!is_prop_set(beacon-shape)][seamark:beacon_cardinal:category=east] { icon-image: "images/Cardinal_Beacon_East.png"; }
+node[prop(beacon)][!is_prop_set(beacon-shape)][seamark:beacon_cardinal:category=west] { icon-image: "images/Cardinal_Beacon_West.png"; }
+node[prop(beacon)][!is_prop_set(beacon-shape)][seamark:type=beacon_isolated_danger] { icon-image: "images/Cardinal_Beacon_Single.png"; }
+
+node[seamark:type=light_float][seamark:light_float:colour="red"] { icon-image: "images/Lateral_Float_Red.png"; }
+node[seamark:type=light_float][seamark:light_float:colour="green"] { icon-image: "images/Lateral_Float_Green.png"; }
+node[seamark:type=light_float][seamark:light_float:colour="red;green;red"] { icon-image: "images/Lateral_Float_Red_Green_Red.png"; }
+node[seamark:type=light_float][seamark:light_float:colour="green;red;green"] { icon-image: "images/Lateral_Float_Green_Red_Green.png"; }
+node[seamark:type=light_float][seamark:light_float:colour="black;yellow"] { icon-image: "images/Cardinal_Float_North.png"; }
+node[seamark:type=light_float][seamark:light_float:colour="yellow;black"] { icon-image: "images/Cardinal_Float_South.png"; }
+node[seamark:type=light_float][seamark:light_float:colour="black;yellow;black"] { icon-image: "images/Cardinal_Float_East.png"; }
+node[seamark:type=light_float][seamark:light_float:colour="black;red;black"] { icon-image: "images/Cardinal_Float_Single.png"; }
+node[seamark:type=light_float][seamark:light_float:colour="yellow;black;yellow"] { icon-image: "images/Cardinal_Float_West.png"; }
+node[seamark:type=light_float][seamark:light_float:colour=~/red;white|white;red/] { icon-image: "images/Safe_Water_Float.png"; }
+node[seamark:type=light_float][seamark:light_float:colour="yellow"] { icon-image: "images/Special_Purpose_Float.png"; }
+node[seamark:type=light_float][!seamark:light_float:colour] { icon-image: "images/Float_Minor.png"; }
+
+node[seamark:type=mooring][seamark:mooring:category="mooring_buoy"][!seamark:mooring:shape] { icon-image: "images/Sphere_Buoy.png"; }
+node[seamark:type=mooring][seamark:mooring:category="mooring_buoy"][seamark:mooring:shape=spherical] { icon-image: "images/Sphere_Buoy.png"; }
+node[seamark:type=mooring][seamark:mooring:category="mooring_buoy"][seamark:mooring:shape=can] { icon-image: "images/Can_Buoy.png"; }
+node[seamark:type=mooring][seamark:mooring:category="mooring_buoy"][seamark:mooring:shape=barrel] { icon-image: "images/Barrel_Buoy.png"; }
+node[seamark:type=mooring][seamark:mooring:category="mooring_buoy"][seamark:mooring:shape=super-buoy] { icon-image: "images/Float_Major_Black.png"; }
+
+node[seamark:type=light_minor] { icon-image: "images/Light_Minor.png"; }
+node[seamark:type=light_major] { icon-image: "images/Light_Major.png"; }
+node[seamark:type=landmark][seamark:light:colour] { icon-image: "images/Light_House.png"; }
+node[seamark:type=landmark]["seamark:light:1:colour"] { icon-image: "images/Light_House.png"; }
+
+node[seamark:type=signal_station_traffic] { icon-image: "images/Signal_Station.png"; }
+node[seamark:type=signal_station_warning] { icon-image: "images/Signal_Station.png"; }
+
+way[seamark:type=shoreline_construction][seamark:shoreline_construction:category=training_wall][seamark:shoreline_construction:water_level!=covers] { width: 5; color: brown; }
+way[seamark:type=shoreline_construction][seamark:shoreline_construction:category=training_wall][seamark:shoreline_construction:water_level=covers] { width: 5; color: brown; dashes:20,20; }
+
+way[seamark:type=navigation_line] { width: 3; color: black; dashes: 8,8; }
+way[seamark:type=recommended_track] { width: 3; color: black; }
+
+way[seamark:type=separation_boundary] { width: 4; color: #c480ff; dashes:10,10; }
+way[seamark:type=separation_line] { width: 8; color: #c480ff; }
+way[seamark:type=separation_lane] { width: 6; color: #c480ff; dashes:20,20; }
+area[seamark:type=separation_zone] { fill-color: #c480ff; }
