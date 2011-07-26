@@ -495,13 +495,11 @@
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Light_House.png" priority="10"/>
   </rule>
  
-    <!-- major light -->
 	<rule>
 		<condition k="seamark:type" v="light_major"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Light_Major.png" priority="10"/>
   </rule>
  
-    <!-- minor light -->
 	<rule>
 		<condition k="seamark:type" v="light_minor"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Light_Minor.png" priority="10"/>
@@ -666,4 +664,29 @@
     <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Float_Major_Black.png" priority="10"/>
   </rule>
 
+  <rule>
+    <condition k="seamark:light_radial" />
+    <line width="2" colour="#000000" dashed="4,4" />
+  </rule>
+  
+  <rule>
+    <condition k="seamark:light_arc" v="white" />
+    <line width="8" colour="#ffff00" />
+  </rule>
+  
+  <rule>
+    <condition k="seamark:light_arc" v="yellow" />
+    <line width="8" colour="#ffff00" />
+  </rule>
+  
+  <rule>
+    <condition k="seamark:light_arc" v="red" />
+    <line width="8" colour="#ff0000" />
+  </rule>
+  
+  <rule>
+    <condition k="seamark:light_arc" v="green" />
+    <line width="8" colour="#00ff00" />
+  </rule>
+  
 </rules>
