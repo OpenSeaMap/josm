@@ -208,6 +208,23 @@
   </rule>	
 
 	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="stake"/>
+		<condition k="seamark:beacon_lateral:colour" v="red"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Stake_Red.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="stake"/>
+		<condition k="seamark:beacon_lateral:colour" v="green"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Stake_Green.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:beacon_lateral:shape" v="stake"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Stake.png" priority="5"/>
+  </rule>
+  
+	<rule>
 		<condition k="seamark:beacon_lateral:colour" v="red"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Beacon_Red.png" priority="5"/>
   </rule>
@@ -518,7 +535,18 @@
 		<condition k="seamark:beacon_special_purpose:shape" v="tower"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Tower_Yellow.png" priority="10"/>
   </rule>
- 
+  
+	<rule>
+		<condition k="seamark:beacon_special_purpose:shape" v="stake"/>
+		<condition k="seamark:beacon_special_purpose:colour" v="yellow"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Stake_Yellow.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:beacon_special_purpose:shape" v="stake"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Stake.png" priority="5"/>
+  </rule>
+  
 	<rule>
 		<condition k="seamark:type" v="beacon_special_purpose"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Beacon_Yellow.png" priority="5"/>
