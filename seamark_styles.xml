@@ -650,6 +650,11 @@
   </rule>
   
 	<rule>
+		<condition k="seamark:beacon_special_purpose:shape" v="cairn"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cairn.png" priority="10"/>
+  </rule>
+  
+	<rule>
 		<condition k="seamark:beacon_special_purpose:shape" v="stake"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Stake.png" priority="5"/>
   </rule>
