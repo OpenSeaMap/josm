@@ -715,7 +715,7 @@
 	<rule>
 		<condition k="seamark:type" v="beacon_special_purpose"/>
 		<condition k="seamark:beacon_special_purpose:colour" v="yellow"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Beacon_Yellow.png" priority="10"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Beacon_Yellow.png" priority="5"/>
   </rule>
   
 	<rule>
