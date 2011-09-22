@@ -793,6 +793,16 @@
   </rule>
   
   <rule>
+    <condition k="seamark:type" v="navigation_line"/>
+    <line width="3" colour="#000000" dashed="8,8" />
+  </rule>
+  
+  <rule>
+    <condition k="seamark:type" v="production_area"/>
+    <line width="3" colour="#000000" dashed="8,8" />
+  </rule>
+  
+  <rule>
     <condition k="seamark:type" v="separation_boundary"/>
     <line width="4" colour="#c480ff" dashed="10,10" />
   </rule>

@@ -224,6 +224,8 @@ way[seamark:type=shoreline_construction][seamark:shoreline_construction:category
 way[seamark:type=navigation_line] { width: 3; color: black; dashes: 8,8; }
 way[seamark:type=recommended_track] { width: 3; color: black; }
 
+way[seamark:type=production_area] { width: 3; color: #000000; dashes:8,8; }
+
 way[seamark:type=separation_boundary] { width: 4; color: #c480ff; dashes:10,10; }
 way[seamark:type=separation_line] { width: 8; color: #c480ff; }
 way[seamark:type=separation_lane] { width: 6; color: #c480ff; dashes:20,20; }
