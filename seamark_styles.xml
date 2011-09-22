@@ -735,9 +735,15 @@
   
 	<rule>
 		<condition k="seamark:type" v="landmark"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Light_House.png" priority="10"/>
+		<condition k="seamark:landmark:category" v="windmotor"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Wind_Motor.png" priority="10"/>
   </rule>
- 
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Light_House.png" priority="5"/>
+  </rule>
+  
 	<rule>
 		<condition k="seamark:type" v="light_vessel"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Super.png" priority="10"/>

@@ -212,7 +212,8 @@ node[seamark:type=mooring][seamark:mooring:category="mooring_buoy"][seamark:moor
 node[seamark:type=light_vessel] { icon-image: http://dev.openseamap.org/josm/icons/Light_Major.png; }
 node[seamark:type=light_minor] { icon-image: http://dev.openseamap.org/josm/icons/Light_Minor.png; }
 node[seamark:type=light_major] { icon-image: http://dev.openseamap.org/josm/icons/Light_Major.png; }
-node[seamark:type=landmark] { icon-image: http://dev.openseamap.org/josm/icons/Light_House.png; }
+node[seamark:type=landmark][seamark:landmark:category=windmotor] { icon-image: http://dev.openseamap.org/josm/icons/Wind_Motor.png; }
+node[seamark:type=landmark][!seamark:landmark:category] { icon-image: http://dev.openseamap.org/josm/icons/Light_House.png; }
 
 node[seamark:type=signal_station_traffic] { icon-image: http://dev.openseamap.org/josm/icons/Signal_Station.png; }
 node[seamark:type=signal_station_warning] { icon-image: http://dev.openseamap.org/josm/icons/Signal_Station.png; }
