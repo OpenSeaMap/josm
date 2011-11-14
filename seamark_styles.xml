@@ -735,6 +735,60 @@
   
 	<rule>
 		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="cairn"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cairn.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="chimney"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Chimney.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="dish_aerial"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/DishAerial.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="flagstaff"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Flagstaff.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="flare_stack"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/FlareStack.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="monument"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Monument.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="tower"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/LandTower.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="radio_mast"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/RadioMast.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="water_tower"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/WaterTower.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
 		<condition k="seamark:landmark:category" v="windmotor"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Wind_Motor.png" priority="10"/>
   </rule>

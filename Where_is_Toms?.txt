@@ -1,2 +1,0 @@
-It resides on the OpenStreetMap subversion repository: http://svn.openstreetmap.org/applications/editors/josm/plugins/toms/
-
