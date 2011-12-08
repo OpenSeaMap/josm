@@ -45,20 +45,105 @@
  -->
 <annotations shortdescription="Water Sports" de.shortdescription="Wassersport" description="OpenSeaMap Sport layer elements" author="Malcolm Herring" version="1.0_2011.11.30">
   <separator/>
-  <group name="Water Sports" de.name="Wassersport" fr.name="Sports nautiques" icon="presets/water_sport.png">
-    <item name="Sport" de.name="Sport" fr.name="Sport" icon="http://dev.openseamap.org/josm/icons/Sports16.png" type="node,closedway">
+  <group name="Water Sports" de.name="Wassersport" fr.name="Sports nautiques" icon="http://dev.openseamap.org/josm/icons/Sports16.png">
+    <item name="Fishing" de.name="Angeln" fr.name="Pêche" icon="http://dev.openseamap.org/josm/icons/Fishing16.png" type="node,closedway">
       <link href="http://wiki.openstreetmap.org/wiki/Sport" de.href="http://wiki.openstreetmap.org/wiki/DE:Key:sport" fr.href="http://wiki.openstreetmap.org/wiki/FR:Key:sport"/>
       <label text="Edit sport" de.text="Sport bearbeiten" fr.text="Modifier le sport"/>
       <space/>
+      <key key="sport" value="fishing"/>
       <text key="name" text="Name" de.text="Name" fr.text="Nom" default="" delete_if_empty="true"/>
-      <combo key="sport" text="Type of Sport" de.text="Sport-Art" fr.text="Type de Sport"
-      values="fishing,kitesurfing,canoeing,rowing,sailing,scuba_diving,surfing,swimming,water_ski,windsurfing,water_sport"
-      display_values="Fishing,Kite-surfing,Canoeing,Rowing,Sailing,Scuba Diving,Surfing,Swimming,Water-skiing,Wind-surfing,WaterSport"
-      de.display_values="Angeln,Kite-Surfen,Kanufahren,Rudern,Segeln,Scuba Diving,Surfen,Schwimmen,Wasserski,Wind-Surfen,Wassersport"
-      fr.display_values="Pêche,Kite-surf,Canoë-kayak,Aviron,Voile,Plongée sous-marine,Surf,Natation,Ski nautique,Wind-surf,Sports nautiques"
-      use_last_as_default="true"/>
       <space/>
-      <check key="seamark:type" value_on="restricted_area" value_off="" text="Marine Traffic Restricted Area" de.text="Sperrgebiet" fr.text="Zone de Restriction" default="off" delete_if_empty="true"/>
+      <check key="seamark:type" value_on="restricted_area" value_off="" text="Marine Traffic Restricted Area" de.text="Schiffsverkehr Sperrgebiet" fr.text="Zone de trafic maritime restreint" default="off" delete_if_empty="true"/>
+    </item>
+    <item name="Kite-surfing" de.name="Kite-Surfen" fr.name="Kite-surf" icon="http://dev.openseamap.org/josm/icons/KiteSurfing16.png" type="node,closedway">
+      <link href="http://wiki.openstreetmap.org/wiki/Sport" de.href="http://wiki.openstreetmap.org/wiki/DE:Key:sport" fr.href="http://wiki.openstreetmap.org/wiki/FR:Key:sport"/>
+      <label text="Edit sport" de.text="Sport bearbeiten" fr.text="Modifier le sport"/>
+      <space/>
+      <key key="sport" value="kitesurfing"/>
+      <text key="name" text="Name" de.text="Name" fr.text="Nom" default="" delete_if_empty="true"/>
+      <space/>
+      <check key="seamark:type" value_on="restricted_area" value_off="" text="Marine Traffic Restricted Area" de.text="Schiffsverkehr Sperrgebiet" fr.text="Zone de trafic maritime restreint" default="off" delete_if_empty="true"/>
+    </item>
+    <item name="Canoeing" de.name="Kanufahren" fr.name="Canoë-kayak" icon="http://dev.openseamap.org/josm/icons/Canoeing16.png" type="node,closedway">
+      <link href="http://wiki.openstreetmap.org/wiki/Sport" de.href="http://wiki.openstreetmap.org/wiki/DE:Key:sport" fr.href="http://wiki.openstreetmap.org/wiki/FR:Key:sport"/>
+      <label text="Edit sport" de.text="Sport bearbeiten" fr.text="Modifier le sport"/>
+      <space/>
+      <key key="sport" value="canoeing"/>
+      <text key="name" text="Name" de.text="Name" fr.text="Nom" default="" delete_if_empty="true"/>
+      <space/>
+      <check key="seamark:type" value_on="restricted_area" value_off="" text="Marine Traffic Restricted Area" de.text="Schiffsverkehr Sperrgebiet" fr.text="Zone de trafic maritime restreint" default="off" delete_if_empty="true"/>
+    </item>
+    <item name="Rowing" de.name="Rudern" fr.name="Aviron" icon="http://dev.openseamap.org/josm/icons/Rowing16.png" type="node,closedway">
+      <link href="http://wiki.openstreetmap.org/wiki/Sport" de.href="http://wiki.openstreetmap.org/wiki/DE:Key:sport" fr.href="http://wiki.openstreetmap.org/wiki/FR:Key:sport"/>
+      <label text="Edit sport" de.text="Sport bearbeiten" fr.text="Modifier le sport"/>
+      <space/>
+      <key key="sport" value="rowing"/>
+      <text key="name" text="Name" de.text="Name" fr.text="Nom" default="" delete_if_empty="true"/>
+      <space/>
+      <check key="seamark:type" value_on="restricted_area" value_off="" text="Marine Traffic Restricted Area" de.text="Schiffsverkehr Sperrgebiet" fr.text="Zone de trafic maritime restreint" default="off" delete_if_empty="true"/>
+    </item>
+    <item name="Sailing" de.name="Segeln" fr.name="Voile" icon="http://dev.openseamap.org/josm/icons/Sailing16.png" type="node,closedway">
+      <link href="http://wiki.openstreetmap.org/wiki/Sport" de.href="http://wiki.openstreetmap.org/wiki/DE:Key:sport" fr.href="http://wiki.openstreetmap.org/wiki/FR:Key:sport"/>
+      <label text="Edit sport" de.text="Sport bearbeiten" fr.text="Modifier le sport"/>
+      <space/>
+      <key key="sport" value="sailing"/>
+      <text key="name" text="Name" de.text="Name" fr.text="Nom" default="" delete_if_empty="true"/>
+      <space/>
+      <check key="seamark:type" value_on="restricted_area" value_off="" text="Marine Traffic Restricted Area" de.text="Schiffsverkehr Sperrgebiet" fr.text="Zone de trafic maritime restreint" default="off" delete_if_empty="true"/>
+    </item>
+    <item name="Scuba Diving" de.name="Scuba Diving" fr.name="Plongée sous-marine" icon="http://dev.openseamap.org/josm/icons/ScubaDiving16.png" type="node,closedway">
+      <link href="http://wiki.openstreetmap.org/wiki/Sport" de.href="http://wiki.openstreetmap.org/wiki/DE:Key:sport" fr.href="http://wiki.openstreetmap.org/wiki/FR:Key:sport"/>
+      <label text="Edit sport" de.text="Sport bearbeiten" fr.text="Modifier le sport"/>
+      <space/>
+      <key key="sport" value="scuba_diving"/>
+      <text key="name" text="Name" de.text="Name" fr.text="Nom" default="" delete_if_empty="true"/>
+      <space/>
+      <check key="seamark:type" value_on="restricted_area" value_off="" text="Marine Traffic Restricted Area" de.text="Schiffsverkehr Sperrgebiet" fr.text="Zone de trafic maritime restreint" default="off" delete_if_empty="true"/>
+    </item>
+    <item name="Surfing" de.name="Surfen" fr.name="Surf" icon="http://dev.openseamap.org/josm/icons/Surfing16.png" type="node,closedway">
+      <link href="http://wiki.openstreetmap.org/wiki/Sport" de.href="http://wiki.openstreetmap.org/wiki/DE:Key:sport" fr.href="http://wiki.openstreetmap.org/wiki/FR:Key:sport"/>
+      <label text="Edit sport" de.text="Sport bearbeiten" fr.text="Modifier le sport"/>
+      <space/>
+      <key key="sport" value="surfing"/>
+      <text key="name" text="Name" de.text="Name" fr.text="Nom" default="" delete_if_empty="true"/>
+      <space/>
+      <check key="seamark:type" value_on="restricted_area" value_off="" text="Marine Traffic Restricted Area" de.text="Schiffsverkehr Sperrgebiet" fr.text="Zone de trafic maritime restreint" default="off" delete_if_empty="true"/>
+    </item>
+    <item name="Swimming" de.name="Schwimmen" fr.name="Natation" icon="http://dev.openseamap.org/josm/icons/Swimming16.png" type="node,closedway">
+      <link href="http://wiki.openstreetmap.org/wiki/Sport" de.href="http://wiki.openstreetmap.org/wiki/DE:Key:sport" fr.href="http://wiki.openstreetmap.org/wiki/FR:Key:sport"/>
+      <label text="Edit sport" de.text="Sport bearbeiten" fr.text="Modifier le sport"/>
+      <space/>
+      <key key="sport" value="swimming"/>
+      <text key="name" text="Name" de.text="Name" fr.text="Nom" default="" delete_if_empty="true"/>
+      <space/>
+      <check key="seamark:type" value_on="restricted_area" value_off="" text="Marine Traffic Restricted Area" de.text="Schiffsverkehr Sperrgebiet" fr.text="Zone de trafic maritime restreint" default="off" delete_if_empty="true"/>
+    </item>
+    <item name="Water-skiing" de.name="Wasserski" fr.name="Ski nautique" icon="http://dev.openseamap.org/josm/icons/WaterSkiing16.png" type="node,closedway">
+      <link href="http://wiki.openstreetmap.org/wiki/Sport" de.href="http://wiki.openstreetmap.org/wiki/DE:Key:sport" fr.href="http://wiki.openstreetmap.org/wiki/FR:Key:sport"/>
+      <label text="Edit sport" de.text="Sport bearbeiten" fr.text="Modifier le sport"/>
+      <space/>
+      <key key="sport" value="water_ski"/>
+      <text key="name" text="Name" de.text="Name" fr.text="Nom" default="" delete_if_empty="true"/>
+      <space/>
+      <check key="seamark:type" value_on="restricted_area" value_off="" text="Marine Traffic Restricted Area" de.text="Schiffsverkehr Sperrgebiet" fr.text="Zone de trafic maritime restreint" default="off" delete_if_empty="true"/>
+    </item>
+    <item name="Wind-surfing" de.name="Wind-Surfen" fr.name="Wind-surf" icon="http://dev.openseamap.org/josm/icons/WindSurfing16.png" type="node,closedway">
+      <link href="http://wiki.openstreetmap.org/wiki/Sport" de.href="http://wiki.openstreetmap.org/wiki/DE:Key:sport" fr.href="http://wiki.openstreetmap.org/wiki/FR:Key:sport"/>
+      <label text="Edit sport" de.text="Sport bearbeiten" fr.text="Modifier le sport"/>
+      <space/>
+      <key key="sport" value="windsurfing"/>
+      <text key="name" text="Name" de.text="Name" fr.text="Nom" default="" delete_if_empty="true"/>
+      <space/>
+      <check key="seamark:type" value_on="restricted_area" value_off="" text="Marine Traffic Restricted Area" de.text="Schiffsverkehr Sperrgebiet" fr.text="Zone de trafic maritime restreint" default="off" delete_if_empty="true"/>
+    </item>
+    <item name="Water Sports" de.name="Wassersport" fr.name="Sports nautiques" icon="http://dev.openseamap.org/josm/icons/Sports16.png" type="node,closedway">
+      <link href="http://wiki.openstreetmap.org/wiki/Sport" de.href="http://wiki.openstreetmap.org/wiki/DE:Key:sport" fr.href="http://wiki.openstreetmap.org/wiki/FR:Key:sport"/>
+      <label text="Edit sport" de.text="Sport bearbeiten" fr.text="Modifier le sport"/>
+      <space/>
+      <key key="sport" value="water_sports"/>
+      <text key="name" text="Name" de.text="Name" fr.text="Nom" default="" delete_if_empty="true"/>
+      <space/>
+      <check key="seamark:type" value_on="restricted_area" value_off="" text="Marine Traffic Restricted Area" de.text="Schiffsverkehr Sperrgebiet" fr.text="Zone de trafic maritime restreint" default="off" delete_if_empty="true"/>
     </item>
 	</group>
 </annotations>
