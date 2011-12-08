@@ -43,7 +43,7 @@
  
  See also http://josm.openstreetmap.de/wiki/TaggingPresets.
  -->
-<annotations shortdescription="Water Sports" de.shortdescription="Wassersport" description="OpenSeaMap Sport layer elements" author="Malcolm Herring" version="1.0_2011.11.30">
+<annotations shortdescription="Water Sports" de.shortdescription="Wassersport" description="Water Sports layer elements for OpenSeaMap" author="Malcolm Herring" version="1.0_2011.11.30">
   <separator/>
   <group name="Water Sports" de.name="Wassersport" fr.name="Sports nautiques" icon="http://dev.openseamap.org/josm/icons/Sports16.png">
     <item name="Fishing" de.name="Angeln" fr.name="Pêche" icon="http://dev.openseamap.org/josm/icons/Fishing16.png" type="node,closedway">
