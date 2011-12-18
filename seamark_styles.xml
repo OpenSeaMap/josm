@@ -777,7 +777,7 @@
   
 	<rule>
 		<condition k="seamark:type" v="landmark"/>
-		<condition k="seamark:landmark:category" v="radio_mast"/>
+		<condition k="seamark:landmark:category" v="mast"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/RadioMast.png" priority="10"/>
   </rule>
   
