@@ -822,7 +822,12 @@
     <condition k="seamark:type" v="signal_station_warning"/>
     <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Signal_Station.png" priority="10"/>
   </rule>
- 
+  
+	<rule>
+    <condition k="seamark:type" v="platform"/>
+    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Platform.png" priority="10"/>
+  </rule>
+  
   <rule>
     <condition k="seamark:type" v="shoreline_construction"/>
     <condition k="seamark:shoreline_construction:category" v="training_wall"/>
