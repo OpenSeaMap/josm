@@ -140,7 +140,7 @@
 		<condition k="seamark:buoy_lateral:colour" v="green"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Green.png" priority="10"/>
   </rule>
-    
+  
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
 		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
@@ -155,20 +155,62 @@
   
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Red.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Green.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Red_Green_Red.png" priority="10"/>
+  </rule>	
+  
+	<rule>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<condition k="seamark:buoy_lateral:colour" v="red"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Red.png" priority="5"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<condition k="seamark:buoy_lateral:colour" v="green"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Green.png" priority="5"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;green;red"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Red_Green_Red.png" priority="5"/>
+  </rule>	
+  
+	<rule>
+		<condition k="seamark:type" v="buoy_lateral"/>
+		<condition k="seamark:buoy_lateral:colour" v="red;white;red;white"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Red_White_Red_White.png" priority="5"/>
+  </rule>	
+  
+	<rule>
+		<condition k="seamark:type" v="buoy_lateral"/>
 		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Green_Red_Green.png" priority="10"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Green_Red_Green.png" priority="5"/>
   </rule>	
   
 	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
 		<condition k="seamark:buoy_lateral:colour" v="green;white;green;white"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Green_White_Green_White.png" priority="10"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Green_White_Green_White.png" priority="5"/>
   </rule>	
   
 	<rule>
-		<condition k="seamark:buoy_lateral:shape" v="pillar"/>
+		<condition k="seamark:type" v="buoy_lateral"/>
 		<condition k="seamark:buoy_lateral:colour" v="red;green;red;green"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Red_Green_Red_Green.png" priority="10"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Red_Green_Red_Green.png" priority="5"/>
   </rule>	
   
 	<rule>
@@ -358,7 +400,12 @@
 		<condition k="seamark:buoy_safe_water:shape" v="pillar"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Red_White.png" priority="10"/>
   </rule>
-    
+  
+	<rule>
+		<condition k="seamark:type" v="buoy_safe_water"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Red_White.png" priority="5"/>
+  </rule>
+  
 	<rule>
 		<condition k="seamark:buoy_safe_water:shape" v="spar"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Spar_Red_White.png" priority="10"/>
@@ -389,25 +436,49 @@
 		<condition k="seamark:buoy_cardinal:category" v="north"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Black_Yellow.png" priority="10"/>
   </rule>
-    
+  
 	<rule>
 		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
 		<condition k="seamark:buoy_cardinal:category" v="east"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Black_Yellow_Black.png" priority="10"/>
   </rule>
-    
+  
 	<rule>
 		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
 		<condition k="seamark:buoy_cardinal:category" v="south"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Yellow_Black.png" priority="10"/>
   </rule>
-    
+  
 	<rule>
 		<condition k="seamark:buoy_cardinal:shape" v="pillar"/>
 		<condition k="seamark:buoy_cardinal:category" v="west"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Yellow_Black_Yellow.png" priority="10"/>
   </rule>
-    
+  
+	<rule>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<condition k="seamark:buoy_cardinal:category" v="north"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Black_Yellow.png" priority="5"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<condition k="seamark:buoy_cardinal:category" v="east"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Black_Yellow_Black.png" priority="5"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<condition k="seamark:buoy_cardinal:category" v="south"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Yellow_Black.png" priority="5"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="buoy_cardinal"/>
+		<condition k="seamark:buoy_cardinal:category" v="west"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Yellow_Black_Yellow.png" priority="5"/>
+  </rule>
+  
 	<rule>
 		<condition k="seamark:buoy_cardinal:shape" v="spar"/>
 		<condition k="seamark:buoy_cardinal:category" v="north"/>
@@ -572,7 +643,12 @@
 		<condition k="seamark:buoy_isolated_danger:shape" v="pillar"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Black_Red_Black.png" priority="10"/>
   </rule>
-    
+  
+	<rule>
+		<condition k="seamark:type" v="buoy_isolated_danger"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Black_Red_Black.png" priority="5"/>
+  </rule>
+  
 	<rule>
 		<condition k="seamark:buoy_isolated_danger:shape" v="spar"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Spar_Black_Red_Black.png" priority="10"/>
@@ -615,8 +691,19 @@
   </rule>
   
 	<rule>
+		<condition k="seamark:type" v="buoy_special_purpose"/>
+		<condition k="seamark:buoy_special_purpose:colour" v="yellow"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar_Yellow.png" priority="8"/>
+  </rule>
+  
+	<rule>
 		<condition k="seamark:buoy_special_purpose:shape" v="pillar"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar.png" priority="5"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar.png" priority="6"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="buoy_special_purpose"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pillar.png" priority="4"/>
   </rule>
   
 	<rule>
