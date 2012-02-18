@@ -179,6 +179,7 @@
         <label text="Edit Rapid" />
         <space/>
         <combo key="whitewater:rapid_grade" text="Rapid grade" values="3,4,5,6" default="3"/>
+        <text key="whitewater:name" text="Rapid name" default="" delete_if_empty="true"/>
         <text key="whitewater:description" text="Description" default="" delete_if_empty="true"/>
       </item>
       <item name="Section" icon="http://dev.openseamap.org/josm/icons/section16.png" type="way">
@@ -186,6 +187,7 @@
         <label text="Edit Section" />
         <space/>
         <combo key="whitewater:section_grade" text="Section grade" values="1,1+,2-,2,2+,3-,3,3+,4-,4,4+,5-,5,5+,6-,6" default="1"/>
+        <text key="whitewater:section_name" text="Section name" default="" delete_if_empty="true"/>
         <text key="whitewater:description" text="Description" default="" delete_if_empty="true"/>
       </item>
     </group>
