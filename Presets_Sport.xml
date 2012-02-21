@@ -145,50 +145,58 @@
       <space/>
       <check key="seamark:type" value_on="restricted_area" value_off="" text="Marine Traffic Restricted Area" de.text="Schiffsverkehr Sperrgebiet" fr.text="Zone de trafic maritime restreint" default="off" delete_if_empty="true"/>
     </item>
-    <group name="Whitewater" icon="http://dev.openseamap.org/josm/icons/rapid16.png">
-      <item name="Put-in" icon="http://dev.openseamap.org/josm/icons/put_in16.png" type="node">
+    <group name="Whitewater" de.name="Wildwasser" icon="http://dev.openseamap.org/josm/icons/rapid16.png">
+      <item name="Put-in" de.name="Einstieg" icon="http://dev.openseamap.org/josm/icons/put_in16.png" type="node">
         <link href="http://wiki.openstreetmap.org/wiki/Whitewater" />
-        <label text="Edit Put-in" />
+        <label text="Edit Put-in" de.text="Einstieg bearbeiten" />
         <space/>
         <key key="whitewater" value="put_in"/>
-        <text key="whitewater:description" text="Description" default="" delete_if_empty="true"/>
+        <text key="whitewater:description" text="Description" de.text="Beschreibung" default="" delete_if_empty="true"/>
       </item>
-      <item name="Put-in/egress" icon="http://dev.openseamap.org/josm/icons/put_in_egress16.png" type="node">
+      <item name="Put-in/egress" de.name="Ein-/Ausstieg" icon="http://dev.openseamap.org/josm/icons/put_in_egress16.png" type="node">
         <link href="http://wiki.openstreetmap.org/wiki/Whitewater" />
-        <label text="Edit Put-in/Egress" />
+        <label text="Edit Put-in/Egress" de.text="Ein-/Ausstieg bearbeiten" />
         <space/>
         <key key="whitewater" value="put_in;egress"/>
-        <text key="whitewater:description" text="Description" default="" delete_if_empty="true"/>
+        <text key="whitewater:description" text="Description" de.text="Beschreibung" default="" delete_if_empty="true"/>
       </item>
-      <item name="Egress" icon="http://dev.openseamap.org/josm/icons/egress16.png" type="node">
+      <item name="Egress" de.name="Ausstieg" icon="http://dev.openseamap.org/josm/icons/egress16.png" type="node">
         <link href="http://wiki.openstreetmap.org/wiki/Whitewater" />
-        <label text="Edit Egress" />
+        <label text="Edit Egress" de.text="Ausstieg bearbeiten" />
         <space/>
         <key key="whitewater" value="egress"/>
-        <text key="whitewater:description" text="Description" default="" delete_if_empty="true"/>
+        <text key="whitewater:description" text="Description" de.text="Beschreibung" default="" delete_if_empty="true"/>
       </item>
-      <item name="Hazard" icon="http://dev.openseamap.org/josm/icons/hazard16.png" type="node">
+      <item name="Hazard" de.name="Gefahrenstelle" icon="http://dev.openseamap.org/josm/icons/hazard16.png" type="node">
         <link href="http://wiki.openstreetmap.org/wiki/Whitewater" />
-        <label text="Edit Hazard" />
+        <label text="Edit Hazard" de.text="Gefahrenstelle bearbeiten" />
         <space/>
         <key key="whitewater" value="hazard"/>
-        <text key="whitewater:description" text="Description" default="" delete_if_empty="true"/>
+        <text key="whitewater:description" text="Description" de.text="Beschreibung" default="" delete_if_empty="true"/>
       </item>
-      <item name="Rapid" icon="http://dev.openseamap.org/josm/icons/rapid16.png" type="node">
+      <item name="Ungraded Rapid" de.name="Stromschnelle unbewertet" icon="http://dev.openseamap.org/josm/icons/rapid16.png" type="node">
         <link href="http://wiki.openstreetmap.org/wiki/Whitewater" />
-        <label text="Edit Rapid" />
+        <label text="Edit Rapid" de.text="Stromschnelle unbewertet bearbeiten" />
+        <space/>
+        <key key="whitewater" value="rapid"/>
+        <text key="whitewater:name" text="Rapid name" de.text="Stromschnelle Name" default="" delete_if_empty="true"/>
+        <text key="whitewater:description" text="Description" de.text="Beschreibung" default="" delete_if_empty="true"/>
+      </item>
+      <item name="Graded Rapid" de.name="Stromschnelle Schwierigkeit" icon="http://dev.openseamap.org/josm/icons/rapid16.png" type="node">
+        <link href="http://wiki.openstreetmap.org/wiki/Whitewater" />
+        <label text="Edit Rapid" de.text="Stromschnelle Schwierigkeit bearbeiten" />
         <space/>
         <combo key="whitewater:rapid_grade" text="Rapid grade" values="3,4,5,6" default="3"/>
-        <text key="whitewater:name" text="Rapid name" default="" delete_if_empty="true"/>
-        <text key="whitewater:description" text="Description" default="" delete_if_empty="true"/>
+        <text key="whitewater:name" text="Rapid name" de.text="Stromschnelle Name" default="" delete_if_empty="true"/>
+        <text key="whitewater:description" text="Description" de.text="Beschreibung" default="" delete_if_empty="true"/>
       </item>
-      <item name="Section" icon="http://dev.openseamap.org/josm/icons/section16.png" type="way">
+      <item name="Section" de.name="Abschnitt Schwierigkeit" icon="http://dev.openseamap.org/josm/icons/section16.png" type="way">
         <link href="http://wiki.openstreetmap.org/wiki/Whitewater" />
-        <label text="Edit Section" />
+        <label text="Edit Section" de.text="Abschnitt Schwierigkeitg bearbeiten" />
         <space/>
         <combo key="whitewater:section_grade" text="Section grade" values="1,1+,2-,2,2+,3-,3,3+,4-,4,4+,5-,5,5+,6-,6" default="1"/>
-        <text key="whitewater:section_name" text="Section name" default="" delete_if_empty="true"/>
-        <text key="whitewater:description" text="Description" default="" delete_if_empty="true"/>
+        <text key="whitewater:section_name" text="Section name" de.text="Abschnitt Name" default="" delete_if_empty="true"/>
+        <text key="whitewater:description" text="Description" de.text="Beschreibung" default="" delete_if_empty="true"/>
       </item>
     </group>
 	</group>
