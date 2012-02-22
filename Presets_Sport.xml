@@ -151,6 +151,7 @@
         <label text="Edit Put-in" de.text="Einstieg bearbeiten" />
         <space/>
         <key key="whitewater" value="put_in"/>
+        <text key="whitewater:name" text="Put-in name" de.text="Einsteig Name" default="" delete_if_empty="true"/>
         <text key="whitewater:description" text="Description" de.text="Beschreibung" default="" delete_if_empty="true"/>
       </item>
       <item name="Put-in/egress" de.name="Ein-/Ausstieg" icon="http://dev.openseamap.org/josm/icons/put_in_egress16.png" type="node">
@@ -158,6 +159,7 @@
         <label text="Edit Put-in/Egress" de.text="Ein-/Ausstieg bearbeiten" />
         <space/>
         <key key="whitewater" value="put_in;egress"/>
+        <text key="whitewater:name" text="Put-in/Egres name" de.text="Ein-/Ausstieg Name" default="" delete_if_empty="true"/>
         <text key="whitewater:description" text="Description" de.text="Beschreibung" default="" delete_if_empty="true"/>
       </item>
       <item name="Egress" de.name="Ausstieg" icon="http://dev.openseamap.org/josm/icons/egress16.png" type="node">
@@ -165,6 +167,7 @@
         <label text="Edit Egress" de.text="Ausstieg bearbeiten" />
         <space/>
         <key key="whitewater" value="egress"/>
+        <text key="whitewater:name" text="Egress name" de.text="Ausstieg Name" default="" delete_if_empty="true"/>
         <text key="whitewater:description" text="Description" de.text="Beschreibung" default="" delete_if_empty="true"/>
       </item>
       <item name="Hazard" de.name="Gefahrenstelle" icon="http://dev.openseamap.org/josm/icons/hazard16.png" type="node">
@@ -172,6 +175,7 @@
         <label text="Edit Hazard" de.text="Gefahrenstelle bearbeiten" />
         <space/>
         <key key="whitewater" value="hazard"/>
+        <text key="whitewater:name" text="Hazard name" de.text="Gefahrenstelle Name" default="" delete_if_empty="true"/>
         <text key="whitewater:description" text="Description" de.text="Beschreibung" default="" delete_if_empty="true"/>
       </item>
       <item name="Ungraded Rapid" de.name="Stromschnelle unbewertet" icon="http://dev.openseamap.org/josm/icons/rapid16.png" type="node">
