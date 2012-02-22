@@ -159,7 +159,7 @@
         <label text="Edit Put-in/Egress" de.text="Ein-/Ausstieg bearbeiten" />
         <space/>
         <key key="whitewater" value="put_in;egress"/>
-        <text key="whitewater:name" text="Put-in/Egres name" de.text="Ein-/Ausstieg Name" default="" delete_if_empty="true"/>
+        <text key="whitewater:name" text="Put-in/Egress name" de.text="Ein-/Ausstieg Name" default="" delete_if_empty="true"/>
         <text key="whitewater:description" text="Description" de.text="Beschreibung" default="" delete_if_empty="true"/>
       </item>
       <item name="Egress" de.name="Ausstieg" icon="http://dev.openseamap.org/josm/icons/egress16.png" type="node">
