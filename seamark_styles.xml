@@ -911,8 +911,33 @@
   </rule>
   
 	<rule>
+    <condition k="seamark:type" v="coastguard_station"/>
+    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Signal_Station.png" priority="10"/>
+  </rule>
+  
+	<rule>
+    <condition k="seamark:type" v="rescue_station"/>
+    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Rescue.png" priority="10"/>
+  </rule>
+  
+	<rule>
+    <condition k="seamark:type" v="radar_station"/>
+    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Signal_Station.png" priority="10"/>
+  </rule>
+  
+	<rule>
+    <condition k="seamark:platform:category" v="fpso"/>
+    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Storage.png" priority="10"/>
+  </rule>
+  
+	<rule>
     <condition k="seamark:type" v="platform"/>
-    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Platform.png" priority="10"/>
+    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Platform.png" priority="5"/>
+  </rule>
+  
+	<rule>
+    <condition k="seamark:type" v="pilot_boarding"/>
+    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Pilot.png" priority="5"/>
   </rule>
   
   <rule>
@@ -1041,39 +1066,59 @@
   </rule>
   
   <rule>
-    <condition k="seamark:type" v="mooring"/>
     <condition k="seamark:mooring:category" v="buoy"/>
     <icon annotate="true" src="http://dev.openseamap.org/josm/icons//Sphere.png" priority="1"/>
   </rule>
   
   <rule>
-    <condition k="seamark:type" v="mooring"/>
     <condition k="seamark:mooring:category" v="buoy"/>
     <condition k="seamark:mooring:shape" v="spherical"/>
     <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere.png" priority="10"/>
   </rule>
   
   <rule>
-    <condition k="seamark:type" v="mooring"/>
     <condition k="seamark:mooring:category" v="buoy"/>
     <condition k="seamark:mooring:shape" v="can"/>
     <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Can.png" priority="10"/>
   </rule>
   
   <rule>
-    <condition k="seamark:type" v="mooring"/>
     <condition k="seamark:mooring:category" v="buoy"/>
     <condition k="seamark:mooring:shape" v="barrel"/>
     <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Barrel.png" priority="10"/>
   </rule>
   
   <rule>
-    <condition k="seamark:type" v="mooring"/>
     <condition k="seamark:mooring:category" v="buoy"/>
     <condition k="seamark:mooring:shape" v="super-buoy"/>
     <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Super_Black.png" priority="10"/>
   </rule>
-
+  
+  <rule>
+    <condition k="seamark:mooring:category" v="dolphin"/>
+    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Dolphin.png" priority="10"/>
+  </rule>
+  
+  <rule>
+    <condition k="seamark:mooring:category" v="deviation_dolphin"/>
+    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/DeviationDolphin.png" priority="10"/>
+  </rule>
+  
+  <rule>
+    <condition k="seamark:mooring:category" v="post"/>
+    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Post.png" priority="10"/>
+  </rule>
+  
+  <rule>
+    <condition k="seamark:mooring:category" v="pile"/>
+    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Post.png" priority="10"/>
+  </rule>
+  
+  <rule>
+    <condition k="seamark:type" v="buoy_installation"/>
+    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Super_Black.png" priority="10"/>
+  </rule>
+  
   <rule>
     <condition k="seamark:light_radial" />
     <line width="2" colour="#000000" dashed="4,4" />

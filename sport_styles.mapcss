@@ -25,6 +25,7 @@ node[whitewater="egress;put_in"], node[whitewater="put_in;egress"] { icon-image:
 node[whitewater=hazard] { icon-image: http://dev.openseamap.org/josm/icons/hazard16.png; }
 node[whitewater=rapid], node[whitewater:rapid_grade] { icon-image: http://dev.openseamap.org/josm/icons/rapid16.png; }
 
+way[whitewater:section_grade=~/0/] { width: 6; color: #0080ff; }
 way[whitewater:section_grade=~/1|1+/] { width: 6; color: #00d400; }
 way[whitewater:section_grade=~/2|2-|2+/] { width: 6; color: #ffd400; }
 way[whitewater:section_grade=~/3|3-|3+/] { width: 6; color: #ff8000; }
