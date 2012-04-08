@@ -840,6 +840,12 @@
   
 	<rule>
 		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="mast"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/RadioMast.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
 		<condition k="seamark:landmark:category" v="flagstaff"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Flagstaff.png" priority="10"/>
   </rule>
@@ -852,6 +858,30 @@
   
 	<rule>
 		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="column"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Monument.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="obelisk"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Monument.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="pillar"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Monument.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="statue"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Monument.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
 		<condition k="seamark:landmark:category" v="monument"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Monument.png" priority="10"/>
   </rule>
@@ -859,13 +889,124 @@
 	<rule>
 		<condition k="seamark:type" v="landmark"/>
 		<condition k="seamark:landmark:category" v="tower"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/LandTower.png" priority="10"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/LandTower.png" priority="5"/>
   </rule>
   
 	<rule>
 		<condition k="seamark:type" v="landmark"/>
-		<condition k="seamark:landmark:category" v="mast"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/RadioMast.png" priority="10"/>
+		<condition k="seamark:landmark:category" v="tower"/>
+		<condition k="seamark:landmark:function" v="church"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/ChurchTower.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="spire"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Spire.png" priority="5"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="spire"/>
+		<condition k="seamark:landmark:function" v="church"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/ChurchSpire.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="dome"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Dome.png" priority="5"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="dome"/>
+		<condition k="seamark:landmark:function" v="church"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/ChurchDome.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="spire"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Spire.png" priority="5"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="cross"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cross.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="radar_scanner"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Signal_Station.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="windmill"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Windmill.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="windsock"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Windsock.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:category" v="minaret"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Minaret.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:function" v="church"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Church.png" priority="5"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:function" v="chapel"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Church.png" priority="5"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:function" v="mosque"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Minaret.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:function" v="temple"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Temple.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:function" v="shinto_shrine"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Temple.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:function" v="pagoda"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Temple.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:function" v="buddhist_temple"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Temple.png" priority="10"/>
+  </rule>
+  
+	<rule>
+		<condition k="seamark:type" v="landmark"/>
+		<condition k="seamark:landmark:function" v="marabout"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Spire.png" priority="10"/>
   </rule>
   
 	<rule>
