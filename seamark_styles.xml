@@ -1573,6 +1573,16 @@
   </rule>
   
   <rule>
+    <condition k="seamark:type" v="distance_mark"/>
+    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/DistanceI.png" priority="5"/>
+  </rule>
+  
+  <rule>
+    <condition k="seamark:distance_mark:category" v="not_installed"/>
+    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/DistanceU.png" priority="10"/>
+  </rule>
+  
+  <rule>
     <condition k="seamark:light_radial" />
     <line width="2" colour="#000000" dashed="4,4" />
   </rule>
