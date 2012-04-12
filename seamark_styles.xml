@@ -46,6 +46,11 @@
   </rule>
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="can"/>
+		<condition k="seamark:buoy_lateral:colour" v="yellow"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Can_Yellow.png" priority="10"/>
+  </rule>
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="can"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Can.png" priority="5"/>
   </rule>
 	<rule>
@@ -73,6 +78,11 @@
 		<condition k="seamark:buoy_lateral:colour" v="green;red;green"/>
 		<condition k="seamark:type" v="buoy_lateral"/>		
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cone_Green_Red_Green.png" priority="10"/>
+  </rule>
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="conical"/>
+		<condition k="seamark:buoy_lateral:colour" v="yellow"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cone_Yellow.png" priority="10"/>
   </rule>
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="conical"/>
@@ -112,6 +122,11 @@
 		<condition k="seamark:buoy_lateral:shape" v="spherical"/>
 		<condition k="seamark:buoy_lateral:colour" v="red;green;red;green"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Red_Green_Red_Green.png" priority="10"/>
+  </rule>
+	<rule>
+		<condition k="seamark:buoy_lateral:shape" v="spherical"/>
+		<condition k="seamark:buoy_lateral:colour" v="yellow"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Yellow.png" priority="10"/>
   </rule>
 	<rule>
 		<condition k="seamark:buoy_lateral:shape" v="spherical"/>
@@ -352,6 +367,11 @@
   </rule>
 	<rule>
 		<condition k="seamark:buoy_waterway:shape" v="can"/>
+		<condition k="seamark:buoy_waterway:colour" v="yellow"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Can_Yellow.png" priority="10"/>
+  </rule>
+	<rule>
+		<condition k="seamark:buoy_waterway:shape" v="can"/>
 		<condition k="seamark:buoy_waterway:colour" v="red;green;red;green"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Can_Red_Green_Red_Green.png" priority="10"/>
   </rule>
@@ -392,6 +412,11 @@
   </rule>
 	<rule>
 		<condition k="seamark:buoy_waterway:shape" v="conical"/>
+		<condition k="seamark:buoy_waterway:colour" v="yellow"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cone_Yellow.png" priority="10"/>
+  </rule>
+	<rule>
+		<condition k="seamark:buoy_waterway:shape" v="conical"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Cone.png" priority="5"/>
   </rule>
 	<rule>
@@ -423,6 +448,11 @@
 		<condition k="seamark:buoy_waterway:shape" v="spherical"/>
 		<condition k="seamark:buoy_waterway:colour" v="red;green;red;green"/>
 		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Red_Green_Red_Green.png" priority="10"/>
+  </rule>
+	<rule>
+		<condition k="seamark:buoy_waterway:shape" v="spherical"/>
+		<condition k="seamark:buoy_waterway:colour" v="yellow"/>
+		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/Sphere_Yellow.png" priority="10"/>
   </rule>
 	<rule>
 		<condition k="seamark:buoy_waterway:shape" v="spherical"/>
