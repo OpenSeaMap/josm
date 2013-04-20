@@ -1462,6 +1462,16 @@
   </rule>
 
   <rule>
+    <condition k="seamark:type" v="separation_crossing"/>
+    <area colour="#c480ff" />
+  </rule>
+
+  <rule>
+    <condition k="seamark:type" v="separation_roundabout"/>
+    <area colour="#c480ff" />
+  </rule>
+
+  <rule>
     <condition k="seamark:type" v="anchor_berth"/>
     <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Anchor_Berth.png"/>
   </rule>
