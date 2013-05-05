@@ -1,309 +1,100 @@
-  <!--
-	    Pics have been derived from
-	    http://de.wikipedia.org/wiki/Bildtafel_der_Verkehrszeichen_in_Deutschland (german street sign SVGs)
-	    http://commons.wikimedia.org/wiki/Image:National_Park_Service_sample_pictographs.svg (various monochrome pictograms)
-	    http://www.kde.org
-	    http://openclipart.org/media/view/media/clip_art
-	    http://www.sjjb.co.uk/mapicons/ (meanwhile in osm svn)
-	-->
-  <!--
-	item:
-  name: the text to display
-  icon: the icon to display
-	  - relative to the icon path
-	  - URL's are also supported to allow remote icons (are cached locally)
-	  type: the data types - way,node,relation,closedway (separated by comma)
-	  name_template: define custom formatting for OSM primitives
-	                 see http://josm.openstreetmap.de/wiki/NameTemplate
-
-	link: link to the relating map features website
-	  href: the URL
-
-	label: simple static text label
-	  text: the text to display
-
-	key: fixed key/value pair to be set
-	  key: key to set
-	  value: value to set
-	  match: none/key/key!/keyvalue (default is "keyvalue", see below for more information)
-
-	text: text box
-	  key: key to set
-	  text: fixed label to display
-	  default: default string to display (defaults to "")
-	  use_last_as_default: true/false/force (default is "false")
-	  match: none/key/key!/keyvalue (default is "none", see below for more information)
-
-	combo: combo box, with multiple choices and possible to enter free form text
-	  key: key to set
-	  text: fixed label to display
-	  values: comma separated list of values
-	  display_values: comma separated list of values to be displayed instead of the
-	                  database values, order and number must be equal to values
-	  short_descriptions: comma separated list of texts to be displayed below each
-	                      display_value. (Only if it is not possible to describe
-	                      the entry in 2-3 words.) Instead of comma separeted list
-	  instead using values, display_values and short_descriptions, the following form is also supported:
-	    <list_entry value="" display_value="' short_description="" icon=""/>
-	  default: default string to display (defaults to "")
-	  use_last_as_default: true/false/force (default is "false")
-	  match: none/key/key!/keyvalue (default is none, see below for more information)
-
-	multiselect: list of values from which zero or more can be selected
-	  key: key to set
-	  text: fixed label to display
-	  delimiter: character that separates values (default: semicolon) - this
-	             will also be used to separate selected values in the tag.
-	  values: delimiter-separated list of values (delimiter can be escaped with backslash)
-	  rows: specify the number of rows to display (default -1)
-	  display_values: delimiter-separated list of values to be displayed instead of the
-	                  database values, order and number must be equal to values
-	  short_descriptions: delimiter-separated list of texts to be displayed below each
-	                      display_value. (Only if it is not possible to describe
-	                      the entry in 2-3 words.) Instead of a separated list
-	  instead using values, display_values and short_descriptions, the following form is also supported:
-	    <list_entry value="" display_value="' short_description="" icon=""/>
-	  default: default string to display (defaults to "")
-	  use_last_as_default: true/false/force (default is "false")
-	  match: none/key/key!/keyvalue (default is "none", see below for more information)
-
-	check: checkbox
-	  key: key to set
-	  text: fixed label to display
-	  default: ticked on/off
-	  value_on: the value to set when checked (default is "yes")
-	  value_off: the value to set when unchecked (default is "no")
-	  match: none/key/key!/keyvalue (default is "none", see below for more information)
-
-	role: type to specify possible roles in relations
-	  key: the role name used in relation
-	  text: fixed label to display
-	  requisite: optional/required (default is "optional")
-	  count: how often can the role occur (if not given unlimited number is assumed)
-	  type: the data types - way,node,relation,closedway (separated by comma)
-
-	 presets: For external files <presets> should have following attributes:
-	   author: the author of the preset
-	   version: a version number of some sort (e.g. creation date)
-	   description: what is your preset meant to be
-	   shortdescription: very short description
-	   link: a link to a helpful website (optional)
-	 The fields description, shortdescription and link may also be localized (e.g. de.link)
-
-	See also http://josm.openstreetmap.de/wiki/TaggingPresets.
-
-	The fields "name", "text", "display_values" may also be localized (e.g. de.name).
-	When translations of equal words but different meanings may conflict, a translation
-	context should be specified. Use "name_context", "text_context" or "values_context"
-	for this. The context should be a meaningful short description to help translators.
-
-	In JOSM internally all "name", "text" and "display_values" are translated when
-	no specific translation has been given in XML file. When no "display_values"
-	are supplied, then "values" will be treated as "display_values" and translated instead.
-	
-	The match attribute allows to change the matching process, i.e., determining whether
-	the tags of an OSM object fit into this preset.
-	 - none: neutral, i.e., do not consider this item for matching
-	 - key: positive if key matches, neutral otherwise
-	 - key!: positive if key matches, negative otherwise
-	 - keyvalue: positive if key and value matches, negative otherwise
-	Note that for a match, at least one positive and no negative is required.
-	-->
-
-<annotations shortdescription="Harbour" de.shortdescription="Hafen" description="Harbour and sea related elements (OpenSeaMap)" author="Markus Bärlocher" version="1.0_2009.07.07">
+<?xml version="1.0" encoding="UTF-8"?>
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
   <separator/>
   <group name="Harbour" de.name="Hafen" fr.name="Port" icon="presets/marina.png">
-    <item name="Harbour" de.name="Hafen" fr.name="Port" icon="http://dev.openseamap.org/josm/icons/Harbour16.png" type="node,closedway">
-      <link href="http://wiki.openstreetmap.org/wiki/Harbour" de.href="http://wiki.openstreetmap.org/wiki/de:Hafen#Hafenbecken_als_Punkt"/>
-      <label text="Edit harbour" de.text="Hafen bearbeiten" fr.text="Editer un port"/>
+    <item name="General Information" icon="http://dev.openseamap.org/josm/icons/Harbour16.png" type="node,closedway">
+      <key key="harbour" value="yes" />
+      <key key="seamark:type" value="harbour" />
       <space/>
-      <key key="harbour" value="yes"/>
-      <key key="seamark:type" value="harbour"/>
-      <text key="harbour:namenational" text="Name national" de.text="Name in Landessprache" fr.text="Nom national" default="" delete_if_empty="true"/>
-      <text key="harbour:name" text="Name english" de.text="Name englisch" fr.text="Nom anglais" default="" delete_if_empty="true"/>
-      <text key="harbour:locode" text="LOCODE" de.text="LOCODE" fr.text="LOCODE" default="" delete_if_empty="true"/>
-      <text key="harbour:portindex" text="World Port Index" de.text="World port index" fr.text="World port index" default="" delete_if_empty="true"/>
-      <text key="harbour:entrance:LAT" text="Entrance LAT" de.text="Eingang LAT" fr.text="Entrée LAT" default="" delete_if_empty="true"/>
-      <text key="harbour:entrance:LON" text="Entrance LON" de.text="Eingang LON" fr.text="Entrée LON" default="" delete_if_empty="true"/>
-			<combo key="harbour:size" text="Size of harbour" de.text="Hafen-Grösse" fr.text="Grandeur du port" values="big,medium,small,very small,unknown" de.display_values="gross,mittel,klein,sehr klein,unbekannt" fr.display_values="grand,medium,petit,très petit,inconnu" default=""/>
-      <combo key="harbour:category" text="Type of harbour" de.text="Hafen-Art" fr.text="Type du port" values="RoRo,Ferry,Container,Tanker,Naval_Base,general" de.display_values="RoRo-Hafen,Fähr-Hafen,Container,Öltanker,Armee-Hafen,allgemeiner Hafen" fr.display_values="RoRo,Ferry,Container,Pétrolier,Port militaire,Port générale" default=""/>
-      <text key="harbour:operator" text="Operator" de.text="Betreiber" fr.text="Opérateur" default="" delete_if_empty="true"/>
-			<check key="harbour:port_of_entry" text="Port of entry" de.text="Einklarierungshafen" fr.text="Port de duane" default="off" delete_if_empty="true"/>
-			<check key="harbour:main" text="Main port" de.text="Haupthafen" fr.text="Port premier" default="off" delete_if_empty="true"/>
-			<check key="harbour:sub" text="or Sub port" de.text="oder Sub-Hafen" fr.text="ou Port subord." default="off" delete_if_empty="true"/>
+      <text key="harbour:name" text="Harbour Name" />
       <space/>
-      <label text="Entrance restriction" de.text="Zufahrsbeschränkung" fr.text="Accès restriction"/>
-			<check key="harbour:access:tide" text="Tide" de.text="Tide" fr.text="Tide" default="off" delete_if_empty="true"/>
-			<check key="harbour:access:swell" text="Swell" de.text="Schwell" fr.text="Vagues" default="off" delete_if_empty="true"/>
-      <check key="harbour:access:ice" text="Ice" de.text="Eis" fr.text="Glace" default="off" delete_if_empty="true"/>
-      <text key="harbour:tide" text="Tidal range" de.text="Tidenhub" fr.text="différence marée" default="" delete_if_empty="true"/>
-      <text key="harbour:ship:maxlength" text="max. length (m)" de.text="max. Länge (m)" fr.text="Longueur max. (m)" default="" delete_if_empty="true"/>
-      <text key="harbour:ship:maxdraft" text="max. draft (m)" de.text="max. Tiefgang (m)" fr.text="Tirant d'eau (m)" default="" delete_if_empty="true"/>
-      <text key="harbour:ship:maxspeed" text="max. speed (kt)" de.text="max. Geschwindigkeit (kt)" fr.text="Vitesse max." default="" delete_if_empty="true"/>
-      <space/>
-      <text key="harbour:VHF_channel" text="VHF-channel" de.text="UKW-Kanal" fr.text="OUW-chaine" default="" delete_if_empty="true"/>
-      <text key="harbour:MMSI" text="No. MMSI" de.text="MMSI-Nr." fr.text="Numéro MMSI" default="00" delete_if_empty="true"/>
-			<text key="harbour:phone" text="Call number" de.text="Tel-Nr." fr.text="Numéro de téléphone" default="+" delete_if_empty="true"/>
-			<text key="harbour:web" text="Internet" de.text="Internet" fr.text="Internet" default="http://" delete_if_empty="true"/>
-      <label text="(with area code internat. example: +49-345-67890)" de.text="(mit internat. Vorwahl. Beispiel: +49-345-67890)" fr.text="(avec indicatif internat. exemple: +49-345-67890)"/>
-      <space/>
-			<text key="harbour:note" text="Note" de.text="Bemerkung" fr.text="Remarque" default="FIXME" delete_if_empty="true"/>
-    </item>
-    <item name="Marina" de.name="Jachthafen" fr.name="Marina" icon="http://dev.openseamap.org/josm/icons/Marina16.png" type="node,closedway">
-      <link href="http://wiki.openstreetmap.org/wiki/Harbour" de.href="http://wiki.openstreetmap.org/wiki/de:Hafen#Hafenbecken_als_Punkt"/>
-      <label text="Edit marina" de.text="Marina bearbeiten" fr.text="Editer une marina"/>
-      <space/>
-      <key key="leisure" value="marina"/>
-      <key key="harbour" value="yes"/>
-      <key key="seamark:type" value="harbour"/>
-      <key key="seamark:harbour:category" value="marina"/>
-      <key key="harbour:category" value="marina"/>
-      <text key="harbour:namenational" text="Name national" de.text="Name in Landessprache" fr.text="Nom national" default="" delete_if_empty="true"/>
-      <text key="harbour:name" text="Name english" de.text="Name englisch" fr.text="Nom anglais" default="" delete_if_empty="true"/>
-      <text key="harbour:locode" text="LOCODE" de.text="LOCODE" fr.text="LOCODE" default="" delete_if_empty="true"/>
-			<check key="harbour:port_of_entry" text="Port of entry" de.text="Einklarierungshafen" fr.text="Port de duane" default="off" delete_if_empty="true"/>
-			<check key="harbour:sub" text="Sub port" de.text="Sub-Hafen" fr.text="Port subord." default="off" delete_if_empty="true"/>
-      <text key="harbour:operator" text="Operator" de.text="Betreiber" fr.text="Opérateur" default="" delete_if_empty="true"/>
-      <space/>
-      <text key="harbour:ship:maxlength" text="max. length (m)" de.text="max. Länge (m)" fr.text="Longueur max. (m)" default="" delete_if_empty="true"/>
-      <text key="harbour:ship:maxdraft" text="max. draft (m)" de.text="max. Tiefgang (m)" fr.text="Tirant d'eau (m)" default="" delete_if_empty="true"/>
-      <text key="harbour:ship:maxspeed" text="max. speed (kt)" de.text="max. Geschwindigkeit (kt)" fr.text="Vitesse max." default="" delete_if_empty="true"/>
-      <space/>
-      <text key="harbour:VHF_channel" text="VHF-channel" de.text="UKW-Kanal" fr.text="OUW-chaine" default="" delete_if_empty="true"/>
-      <text key="harbour:MMSI" text="No. MMSI" de.text="MMSI-Nr." fr.text="Numéro MMSI" default="00" delete_if_empty="true"/>
-			<text key="harbour:phone" text="Call number" de.text="Tel-Nr." fr.text="Numéro de téléphone" default="+" delete_if_empty="true"/>
-			<text key="harbour:web" text="Internet" de.text="Internet" fr.text="Internet" default="http://" delete_if_empty="true"/>
-      <label text="(with area code internat. example: +49-345-67890)" de.text="(mit internat. Vorwahl. Beispiel: +49-345-67890)" fr.text="(avec indicatif internat. exemple: +49-345-67890)"/>
-      <space/>
-			<text key="harbour:note" text="Note" de.text="Bemerkung" fr.text="Remarque" default="FIXME" delete_if_empty="true"/>
-    </item>
-    <item name="Fishing port" de.name="Fischerhafen" fr.name="Port de pèche" icon="http://dev.openseamap.org/josm/icons/Fishing_Harbour16.png" type="node,closedway">
-      <link href="http://wiki.openstreetmap.org/wiki/Harbour" de.href="http://wiki.openstreetmap.org/wiki/de:Hafen#Hafenbecken_als_Punkt"/>
-      <label text="Edit fishing port" de.text="Fischerhafen bearbeiten" fr.text="Editer un port de pèche"/>
-      <space/>
-      <key key="harbour" value="yes"/>
-      <key key="harbour:category" value="fishing"/>
-      <key key="seamark:type" value="harbour"/>
-      <key key="seamark:harbour:category" value="fishing"/>
-      <text key="harbour:namenational" text="Name national" de.text="Name in Landessprache" fr.text="Nom national" default="" delete_if_empty="true"/>
-      <text key="harbour:name" text="Name english" de.text="Name englisch" fr.text="Nom anglais" default="" delete_if_empty="true"/>
-      <text key="harbour:locode" text="LOCODE" de.text="LOCODE" fr.text="LOCODE" default="" delete_if_empty="true"/>
-			<check key="harbour:port_of_entry" text="Port of entry" de.text="Einklarierungshafen" fr.text="Port de duane" default="off" delete_if_empty="true"/>
-			<check key="harbour:sub" text="Sub port" de.text="Sub-Hafen" fr.text="Port subord." default="off" delete_if_empty="true"/>
-      <text key="harbour:operator" text="Operator" de.text="Betreiber" fr.text="Opérateur" default="" delete_if_empty="true"/>
-      <space/>
-      <text key="harbour:ship:maxlength" text="max. length (m)" de.text="max. Länge (m)" fr.text="Longueur max. (m)" default="" delete_if_empty="true"/>
-      <text key="harbour:ship:maxdraft" text="max. draft (m)" de.text="max. Tiefgang (m)" fr.text="Tirant d'eau (m)" default="" delete_if_empty="true"/>
-      <text key="harbour:ship:maxspeed" text="max. speed (kt)" de.text="max. Geschwindigkeit (kt)" fr.text="Vitesse max." default="" delete_if_empty="true"/>
-      <space/>
-      <text key="harbour:VHF_channel" text="VHF-channel" de.text="UKW-Kanal" fr.text="OUW-chaine" default="" delete_if_empty="true"/>
-      <text key="harbour:MMSI" text="No. MMSI" de.text="MMSI-Nr." fr.text="Numéro MMSI" default="00" delete_if_empty="true"/>
-			<text key="harbour:phone" text="Call number" de.text="Tel-Nr." fr.text="Numéro de téléphone" default="+" delete_if_empty="true"/>
-			<text key="harbour:web" text="Internet" de.text="Internet" fr.text="Internet" default="http://" delete_if_empty="true"/>
-      <label text="(with area code internat. example: +49-345-67890)" de.text="(mit internat. Vorwahl. Beispiel: +49-345-67890)" fr.text="(avec indicatif internat. exemple: +49-345-67890)"/>
-      <space/>
-			<text key="harbour:note" text="Note" de.text="Bemerkung" fr.text="Remarque" default="FIXME" delete_if_empty="true"/>
-    </item>
-    <item name="Anchorage" de.name="Ankerplatz" fr.name="Mouillage" icon="http://dev.openseamap.org/josm/icons/Anchorage_Area16.png" type="node,closedway">
-      <link href="http://wiki.openstreetmap.org/wiki/Harbour" de.href="http://wiki.openstreetmap.org/wiki/de:Hafen#Ankerplatz"/>
-      <label text="Edit anchorage" de.text="Ankerplatz bearbeiten" fr.text="Editer place de mouillage"/>
-      <space/>
-      <key key="harbour" value="yes"/>
-      <key key="harbour:category" value="anchorage"/>
-      <key key="seamark:type" value="anchorage"/>
-      <text key="harbour:anchorage:namenational" text="Name national" de.text="Name in Landessprache" fr.text="Nom national" default="" delete_if_empty="true"/>
-      <text key="harbour:anchorage:name" text="Name english" de.text="Name englisch" fr.text="Nom anglais" default="" delete_if_empty="true"/>
-      <text key="harbour:anchorage:operator" text="Operator" de.text="Betreiber" fr.text="Opérateur" default="" delete_if_empty="true"/>
-      <text key="harbour:anchorage:ship:maxlength" text="max. length (m)" de.text="max. Länge (m)" fr.text="Longueur max. (m)" default="" delete_if_empty="true"/>
-      <text key="harbour:anchorage:ship:maxdraft" text="max. draft (m)" de.text="max. Tiefgang (m)" fr.text="Tirant d'eau (m)" default="" delete_if_empty="true"/>
-      <text key="harbour:anchorage:ship:maxspeed" text="max. speed (kt)" de.text="max. Geschwindigkeit (kt)" fr.text="Vitesse max." default="" delete_if_empty="true"/>
-      <text key="harbour:anchorage:note" text="Note" de.text="Bemerkung" fr.text="Remarque" default="FIXME" delete_if_empty="true"/>
-    </item>
-    <item name="Harbour master" de.text="Hafenmeister" fr.text="Capitaine de port" icon="http://dev.openseamap.org/josm/icons/harbour_master16.png" type="node,closedway">
-      <link href="http://wiki.openstreetmap.org/wiki/Marine_Mapping" de.href="http://wiki.openstreetmap.org/wiki/de:Segler" it.href="http://wiki.openstreetmap.org/wiki/it:Marine_Mapping" ru.href="http://wiki.openstreetmap.org/wiki/ru:Marine_Mapping"/>
-      <label text="Edit harbour master" de.text="Hafenmeister bearbeiten" fr.text="Editer capitaine de port"/>
-      <space/>
-      <key key="harbour" value="harbour_master"/>
-			<check key="building" text="Building" de.text="Gebäude" fr.text="Maison" default="off" delete_if_empty="true"/>
-      <key key="seamark:type" value="building"/>
-      <key key="seamark:building:function" value="harbour-master"/>
-      <text key="harbour:harbour_master:note" text="Note" de.text="Bemerkung" fr.text="Remarque" default="FIXME" delete_if_empty="true"/>
-    </item>
-    <item name="Customs" de.name="Zoll" fr.name="Douane" icon="http://dev.openseamap.org/josm/icons/Custom_Office16.png" type="node,closedway">
-      <link href="http://wiki.openstreetmap.org/wiki/Marine_Mapping" de.href="http://wiki.openstreetmap.org/wiki/de:Segler" it.href="http://wiki.openstreetmap.org/wiki/it:Marine_Mapping" ru.href="http://wiki.openstreetmap.org/wiki/ru:Marine_Mapping"/>
-      <label text="Edit customs" de.text="Zoll bearbeiten" fr.text="Editer douane"/>
-      <space/>
-      <key key="harbour" value="customs"/>
-      <key key="seamark:type" value="building"/>
-      <key key="seamark:building:function" value="customs"/>
-			<text key="harbour:customs:phone" text="Call number" de.text="Tel-Nr." fr.text="Numéro de téléphone" default="+" delete_if_empty="true"/>
-      <label text="(with area code internat. example: +49-345-67890)" de.text="(mit internat. Vorwahl. Beispiel: +49-345-67890)" fr.text="(avec indicatif internat. exemple: +49-345-67890)"/>
-			<check key="building" text="Building" de.text="Gebäude" fr.text="Maison" default="off" delete_if_empty="true"/>
-      <text key="harbour:customs:note" text="Note" de.text="Bemerkung" fr.text="Remarque" default="FIXME" delete_if_empty="true"/>
-    </item>
-    <!--
-    <item name="Drinking water" de.name="Frischwasser" fr.name="Eau frâiche" icon="presets/drinking_water.png" type="node">
-      <link href="http://wiki.openstreetmap.org/wiki/Marine_Mapping" de.href="http://wiki.openstreetmap.org/wiki/de:Segler" it.href="http://wiki.openstreetmap.org/wiki/it:Marine_Mapping" ru.href="http://wiki.openstreetmap.org/wiki/ru:Marine_Mapping"/>
-      <label text="Edit drinking water" de.text="Frischwasserstelle bearbeiten" fr.text="Editer eau frâiche"/>
-      <key key="harbour" value="drinking water"/>
-			<check key="harbour:drinking_water:access:key" text="only with key" de.text="nur mit Schlüssel" fr.text="que avev clé" default="off" delete_if_empty="true"/>
-			<check key="harbour:drinking_water:access:car" text="by car" de.text="mit Tankwagen" fr.text="avev camion-citerne" default="off" delete_if_empty="true"/>
-			<text key="harbour:drinking_water:phone" text="Call number" de.text="Tel-Nr." fr.text="Numéro de téléphone" default="+" delete_if_empty="true"/>
-      <label text="(with area code internat. example: +49-345-67890)" de.text="(mit internat. Vorwahl. Beispiel: +49-345-67890)" fr.text="(avec indicatif internat. exemple: +49-345-67890)"/>
-      <text key="harbour:drinking_water:note" text="Note" de.text="Bemerkung" fr.text="Remarque" default="FIXME" delete_if_empty="true"/>
-		</item>
-    <item name="Waste container" de.name="Müllcontainer" fr.name="Container d'ordures" icon="presets/recycling.png" type="node">
-      <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=recycling" de.href="http://wiki.openstreetmap.org/wiki/de:Tag:amenity=recycling" fi.href="http://wiki.openstreetmap.org/wiki/Fi:Tag:amenity=recycling"/>
-      <label text="Edit waste container" de.text="Müllcontainer bearbeiten" fr.text="Editer container d'ordures"/>
-      <space/>
-      <key key="amenity" value="recycling"/>
-      <check key="recycling:waste" text="normal waste" de.text="normaler Müll" ft.text="Ordures normale" default="on" delete_if_empty="true"/>
-      <label text="Waste seperation:" de.text="Mülltrennung:" fr.text="Tri des ordures:"/>
-      <check key="recycling:glass" text="Glass" de.text="Glas" fr.text="Verre" default="off" delete_if_empty="true"/>
-      <check key="recycling:scrap_metal" text="Metal" de.text="Metall" fr.text="Metal" default="off" delete_if_empty="true"/>
-      <check key="recycling:paper" text="Paper" de.text="Papier" fr.text="Papier" default="off" delete_if_empty="true"/>
-      <check key="recycling:cans" text="Cans" de.text="Dosen" fr.text="Boîtes" default="off" delete_if_empty="true"/>
-      <check key="recycling:clothes" text="clothes" de.text="Kleidung" fr.text="Vêtements" default="off" delete_if_empty="true"/>
-      <text key="note" text="Note" de.text="Bemerkung" fr.text="Remarque" default="FIXME" delete_if_empty="true"/>
-    </item>
-    <item name="petrol station" de.name="Tankstelle" fr.name="Poste d'essence" icon="presets/fuel.png" type="node,way">
-      <link href="http://wiki.openstreetmap.org/wiki/Harbour" de.href="http://wiki.openstreetmap.org/wiki/de:Hafen"/>
-      <label text="Edit petrol station" de.text="Tankstelle bearbeiten" fr.text="Editer une poste d'essence"/>
-      <space/>
-      <key key="harbour" value="fuel"/>
-			<check key="harbour:fuel:diesel" text="Diesel" de.text="Diesel" fr.text="Gasoil" default="off" delete_if_empty="true"/>
-			<check key="harbour:fuel:benzine" text="Benzine" de.text="Benzin" fr.text="Essence" default="off" delete_if_empty="true"/>
-      <text key="harbour:fuel:ship:maxlength" text="Ship max. length (m)" de.text="Schiff max. Länge (m)" fr.text="Bateau longueur max. (m)" default="" delete_if_empty="true"/>
-      <text key="harbour:fuel:ship:maxdraft" text="Ship max. draft (m)" de.text="Schiff max. Tiefgang (m)" fr.text="Bateau tirant d'eau (m)" default="" delete_if_empty="true"/>
-      <space/>
-      <text key="harbour:fuel:name" text="Name" de.text="Name" fr.text="Nom" default="" delete_if_empty="true"/>
-      <text key="harbour:fuel:operator" text="Operator" de.text="Betreiber" fr.text="Opérateur" default="" delete_if_empty="true"/>
-      <text key="harbour:fuel:note" text="Note" de.text="Bemerkung" fr.text="Remarque" default="FIXME" delete_if_empty="true"/>
-    </item>
-    <item name="Slipway" de.name="Slipstelle" fr.name="Slip" icon="http://dev.openseamap.org/josm/icons/Slipway16.png" type="node,way">
-      <link href="http://wiki.openstreetmap.org/wiki/Tag:leisure=slipway" de.href="http://wiki.openstreetmap.org/wiki/de:Tag:leisure=slipway" fi.href="http://wiki.openstreetmap.org/wiki/fi:Tag:leisure=slipway"/>
-      <label text="Edit slipway" de.text="Slip bearbeiten" fr.text="Editer un slip"/>
-      <combo key="harbour:slipway:type" text="Slipway type" de.text="Slipway-Art" fr.text="Type du slip" values="manually,by car,cable winch" de.display_values="Handbetrieb,mit Hängerkupplung,Drahtseilwinde" fr.display_values="manuel,avec atelage,treuil à câble" default=""/>
-      <text key="harbour:slipway:maxload" text="Payload (to)" de.text="max. Ladegewicht (to)" fr.text="Charge limite (to)" default="" delete_if_empty="true"/>
-      <text key="harbour:slipway:note" text="Note" de.text="Bemerkung" fr.text="Remarque" default="FIXME" delete_if_empty="true"/>
-    </item>
-     -->
-    <item name="Marina Facilities" de.name="Hafenanlagen" fr.name="Installations de la marina" icon="http://dev.openseamap.org/josm/icons/Marina16.png" type="node,closedway,way">
-      <key key="seamark:type" value="small_craft_facility"/>
-      <multiselect key="seamark:small_craft_facility:category" text="Facilities" de.text="Anlagen" fr.text="Installations">
-        <list_entry value="boat_hoist" display_value="Boat hoist" de.display_value="Bootskran" fr.display_value="Grue de bateau" icon="http://dev.openseamap.org/josm/icons/Crane_16.png"/>
-        <list_entry value="boatyard" display_value="Boatyard" de.display_value="Werft" fr.display_value="Chantier" icon="http://dev.openseamap.org/josm/icons/Boatyard_16.png"/>
-        <list_entry value="chandler" display_value="Chandlery" de.display_value="Yachtausrüster" fr.display_value="Shipchandler" icon="http://dev.openseamap.org/josm/icons/Chandler_16.png"/>
-        <list_entry value="fuel_station" display_value="Fuel" de.display_value="Kraftstoff" fr.display_value="Carburant" icon="http://dev.openseamap.org/josm/icons/Fuel_16.png"/>
-        <list_entry value="laundrette" display_value="Laundrette" de.display_value="Waschgelegenheit" fr.display_value="Laverie" icon="http://dev.openseamap.org/josm/icons/Laundrette_16.png"/>
-        <list_entry value="pump-out" display_value="Pump-out" de.display_value="Fäkalienabsauganlage" fr.display_value="Excrément evacuation" icon="http://dev.openseamap.org/josm/icons/Pump_Out_16.png"/>
-        <list_entry value="nautical_club" display_value="Sailing club" de.display_value="Segelclub" fr.display_value="Club de voile" icon="http://dev.openseamap.org/josm/icons/SailingClub_16.png"/>
-        <list_entry value="showers" display_value="Shower" de.display_value="Dusche" fr.display_value="Douche" icon="http://dev.openseamap.org/josm/icons/Shower_16.png"/>
-        <list_entry value="slipway" display_value="Slipway" de.display_value="Slipstelle" fr.display_value="Slip" icon="http://dev.openseamap.org/josm/icons/Slipway_16.png"/>
-        <list_entry value="toilets" display_value="Toilets" de.display_value="Toiletten" fr.display_value="Toilettes" icon="http://dev.openseamap.org/josm/icons/Toilet_16.png"/>
-        <list_entry value="visitor_berth" display_value="Visitor berth" de.display_value="Visitor Anlegeplatz" fr.display_value="Visiteur mouillage" icon="http://dev.openseamap.org/josm/icons/Visitor_Berth_16.png"/>
-        <list_entry value="visitors_mooring" display_value="Visitor mooring" de.display_value="Visitor Anlegen" fr.display_value="Visiteur amarrage" icon="http://dev.openseamap.org/josm/icons/Visitor_Mooring_16.png"/>
+      <multiselect key="seamark:harbour:category" text="Harbour type" >
+        <list_entry value="marina" display_value="Marina" />
+        <list_entry value="marina_no_facilities" display_value="Marina - berths only" />
+        <list_entry value="fishing" display_value="Fishing Harbour" />
+        <list_entry value="passenger" display_value="Passenger Terminal" />
+        <list_entry value="ferry" display_value="Ferries" />
+        <list_entry value="roro" display_value="RoRo Terminal" />
+        <list_entry value="cargo" display_value="Cargo" />
+        <list_entry value="container" display_value="Container" />
+        <list_entry value="naval" display_value="Naval Base" />
+        <list_entry value="tanker" display_value="Tanker" />
+        <list_entry value="bulk" display_value="Bulk" />
+        <list_entry value="timber" display_value="Timer" />
+        <list_entry value="quarantine" display_value="Quarantine" />
+        <list_entry value="seaplane" display_value="Seaplane" />
+        <list_entry value="syncrolift" display_value="Syncro Lift" />
+        <list_entry value="straddle_carrier" display_value="Straddle Carrier" />
+        <list_entry value="lay_up" display_value="Lay-up" />
+        <list_entry value="service_repair" display_value="Service and Repair" />
+        <list_entry value="port_support_base" display_value="Port support base" />
+        <list_entry value="offshore_support" display_value="Offshore support base" />
       </multiselect>
+      <space/>
+      <text key="harbour:operator" text="Harbour Operator" />
+      <space/>
+      <label text="Harbour Access Restrictions" />
+      <space />
+      <text key="harbour:tide" text="Tide state" />
+      <text key="harbour:tidal_range" text="Tidal range" />
+      <text key="harbour:sill_height" text="Sill height" />
+      <text key="harbour:swell" text="Swell conditions" />
+      <text key="harbour:ice" text="Ice conditions" />
+      <text key="harbour:time" text="Time limits" />
+      <space/>
+      <label text="Ship Size Restrictions" />
+      <space/>
+      <text key="harbour:length" text="Maximum length" />
+      <text key="harbour:width" text="Maximum beam" />
+      <text key="harbour:draft" text="Maximum draft" />
+      <text key="harbour:air_draft" text="Maximum height AWL" />
+      <text key="harbour:speed" text="Maximum speed within harbour" />
+      <space/>
+      <label text="Contact Information" />
+      <space/>
+      <text key="harbour:phone" text="Phone" />
+      <text key="harbour:email" text="Email" />
+      <text key="harbour:web" text="Web site" />
+      <text key="harbour:channel" text="VHF channel" />
+      <text key="harbour:mmsi" text="VHF MMSI" />
+      <space/>
+      <text key="harbour:information" text="General Information" />
     </item>
-	</group> <!-- Hafen -->
-</annotations>
+    <item name="Marina Facilities" icon="http://dev.openseamap.org/josm/icons/Marina16.png" type="node,closedway">
+      <label text="Marina Facilities" />
+      <space/>
+      <text key="harbour:visitor_berth" text="Visitors berth" />
+      <text key="harbour:visitors_mooring" text="Visitors mooring" />
+      <text key="harbour:scrubbing_berth" text="Scrubbing berth" />
+      <text key="harbour:electricity" text="Electricity" />
+      <text key="harbour:water_tap" text="Drinking Water" />
+      <text key="harbour:showers" text="Showers" />
+      <text key="harbour:toilets" text="Toilets" />
+      <text key="harbour:laundrette" text="Laundrette" />
+      <text key="harbour:public_inn" text="Inn" />
+      <text key="harbour:restaurant" text="Resturant" />
+      <text key="harbour:nautical_club" text="Sailing club" />
+      <text key="harbour:fuel_station" text="Fuel" />
+      <text key="harbour:chandler" text="Chandler" />
+      <text key="harbour:provisions" text="Provisions" />
+      <text key="harbour:bottle_gas" text="Bottled gas" />
+      <text key="harbour:doctor" text="Doctor" />
+      <text key="harbour:pharmacy" text="Pharmacy" />
+      <text key="harbour:emergency_telephone" text="Emergency telephone" />
+      <text key="harbour:post_box" text="Post box" />
+      <text key="harbour:telephone" text="Telephone" />
+      <text key="harbour:refuse_bin" text="Refuse disposal" />
+      <text key="harbour:pump-out" text="Pump-out" />
+      <text key="harbour:car_park" text="Car park" />
+      <text key="harbour:boat_trailers_park" text="Boat trailer park" />
+      <text key="harbour:caravan_site" text="Caravan site" />
+      <text key="harbour:camping_site" text="Camping site" />
+      <text key="harbour:picnic_area" text="Picnic area" />
+      <text key="harbour:sailmaker" text="Sailmaker" />
+      <text key="harbour:boatyard" text="Boatyard" />
+      <text key="harbour:boat_hoist" text="Boat hoist" />
+      <text key="harbour:slipway" text="Slipway" />
+      <text key="harbour:mechanics_workshop" text="Mechanics workshop" />
+    </item>
+  </group>
+</presets>
