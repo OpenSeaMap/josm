@@ -131,6 +131,7 @@
         <text key="harbour:visitors_mooring" text="Visitors mooring" />
         <text key="harbour:scrubbing_berth" text="Scrubbing berth" />
         <text key="harbour:electricity" text="Electricity" />
+        <text key="harbour:wifi" text="WiFi" />
         <text key="harbour:water_tap" text="Drinking Water" />
         <text key="harbour:showers" text="Showers" />
         <text key="harbour:toilets" text="Toilets" />

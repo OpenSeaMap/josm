@@ -1489,8 +1489,13 @@
   
   <rule>
     <condition k="seamark:type" v="harbour"/>
-    <condition k="seamark:harbour:category" v="yacht"/>
-    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Marina.png" priority="10"/>}
+    <condition k="seamark:harbour:category" v="fishing"/>
+    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Fishing_Harbour.png" priority="10"/>}
+  </rule>
+  
+  <rule>
+    <condition k="seamark:type" v="harbour"/>
+    <icon annotate="true" src="http://dev.openseamap.org/josm/icons/Harbour.png" priority="5"/>}
   </rule>
   
   <rule>
