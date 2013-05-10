@@ -1,33 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
+<presets shortdescription="Harbours" de.shortdescription="Hafen" description="Harbour elements for OpenSeaMap" author="Malcolm Herring" version="1.0_2013-05-09" xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
   <separator/>
   <group name="Harbour" de.name="Hafen" fr.name="Port" icon="presets/marina.png">
     <item name="Harbour" de.name="Hafen" fr.name="Port" icon="http://dev.openseamap.org/josm/icons/Harbour16.png" type="node,way">
       <key key="seamark:type" value="harbour" />
       <text key="seamark:name" text="Harbour Name" />
       <space/>
-      <multiselect key="seamark:harbour:category" text="Harbour type" >
-        <list_entry value="marina" display_value="Marina" />
-        <list_entry value="marina_no_facilities" display_value="Marina - berths only" />
-        <list_entry value="fishing" display_value="Fishing Harbour" />
-        <list_entry value="passenger" display_value="Passenger Terminal" />
-        <list_entry value="ferry" display_value="Ferries" />
-        <list_entry value="roro" display_value="RoRo Terminal" />
-        <list_entry value="cargo" display_value="Cargo" />
-        <list_entry value="container" display_value="Container" />
-        <list_entry value="naval" display_value="Naval Base" />
-        <list_entry value="tanker" display_value="Tanker" />
-        <list_entry value="bulk" display_value="Bulk" />
-        <list_entry value="timber" display_value="Timer" />
-        <list_entry value="quarantine" display_value="Quarantine" />
-        <list_entry value="seaplane" display_value="Seaplane" />
-        <list_entry value="syncrolift" display_value="Syncro Lift" />
-        <list_entry value="straddle_carrier" display_value="Straddle Carrier" />
-        <list_entry value="lay_up" display_value="Lay-up" />
-        <list_entry value="service_repair" display_value="Service and Repair" />
-        <list_entry value="port_support_base" display_value="Port support base" />
-        <list_entry value="offshore_support" display_value="Offshore support base" />
-      </multiselect>
+      <multiselect key="seamark:harbour:category" text="Harbour type"
+        values="marina;marina_no_facilities;fishing;passenger;ferry;roro;cargo;container;naval;tanker;bulk;timber;quarantine;seaplane;syncrolift;straddle_carrier;lay_up;service_repair;port_support_base;offshore_support"
+        display_values="Marina;Marina - berths only;Fishing Harbour;Passenger Terminal;Ferries;RoRo Terminal;Cargo;Container;Naval Base;Tanker;Bulk;Timber;Quarantine;Seaplane;Syncro Lift;Straddle Carrier;Lay-up;Service and Repair;Port support base;Offshore support base"
+      />
       <space/>
       <text key="harbour:operator" text="Harbour Operator" />
       <space/>
@@ -67,21 +49,10 @@
       <space/>
       <text key="seamark:name" text="Anchorage Name" />
       <space/>
-      <multiselect key="seamark:anchorage:category" text="Anchorage type" >
-        <list_entry value="small_craft" display_value="Small craft" />
-        <list_entry value="small_craft_mooring" display_value="Small craft moorings" />
-        <list_entry value="24_hour" display_value="24 hour stay" />
-        <list_entry value="limited_period" display_value="Limited period stay" />
-        <list_entry value="unrestricted" display_value="Unrestricted" />
-        <list_entry value="deep_water" display_value="Deep water" />
-        <list_entry value="tanker" display_value="Tankers" />
-        <list_entry value="explosives" display_value="Explosive cargos" />
-        <list_entry value="quarantine" display_value="Quarantine" />
-        <list_entry value="seaplane" display_value="Seaplane" />
-        <list_entry value="non_pushing" display_value="Non-pushing vessels" />
-        <list_entry value="dry_cargo" display_value="Dry cargo vessels" />
-        <list_entry value="raft" display_value="Rafts" />
-      </multiselect>
+      <multiselect key="seamark:anchorage:category" text="Anchorage type"
+        values="small_craft;small_craft_mooring;24_hour;limited_period;unrestricted;deep_water;tanker;explosives;quarantine;seaplane;non_pushing;dry_cargo;raft"
+        display_values="Small craft;Small craft moorings;24 hour stay;Limited period stay;Unrestricted;Deep water;Tankers;Explosive cargos;Quarantine;Seaplane;Non-pushing vessels;Dry cargo vessels;Rafts"
+      />
       <space/>
       <text key="seamark:information" text="General Information" />
     </item>
@@ -166,27 +137,10 @@
       <key key="seamark:type" value="small_craft_facility" />
       <label text="Location of particular marina facilities" />
       <space/>
-      <multiselect key="seamark:small_craft_facility:category" text="Facility type(s)" >
-        <list_entry value="visitor_berth" display_value="Visitors berth" />
-        <list_entry value="visitors_mooring" display_value="Visitors mooring" />
-        <list_entry value="scrubbing_berth" display_value="Scrubbing berth" />
-        <list_entry value="electricity" display_value="Electricity" />
-        <list_entry value="water_tap" display_value="Drinking Water" />
-        <list_entry value="showers" display_value="Showers" />
-        <list_entry value="toilets" display_value="Toilets" />
-        <list_entry value="laundrette" display_value="Laundrette" />
-        <list_entry value="nautical_club" display_value="Sailing club" />
-        <list_entry value="fuel_station" display_value="Fuel" />
-        <list_entry value="chandler" display_value="Chandler" />
-        <list_entry value="provisions" display_value="Provisions" />
-        <list_entry value="bottle_gas" display_value="Bottled gas" />
-        <list_entry value="refuse_bin" display_value="Refuse disposal" />
-        <list_entry value="pump-out" display_value="Pump-out" />
-        <list_entry value="sailmaker" display_value="Sailmaker" />
-        <list_entry value="boatyard" display_value="Boatyard" />
-        <list_entry value="boat_hoist" display_value="Boat hoist" />
-        <list_entry value="slipway" display_value="Slipway" />
-      </multiselect>
+      <multiselect key="seamark:small_craft_facility:category" text="Facility type(s)"
+        values="visitor_berth;visitors_mooring;scrubbing_berth;electricity;water_tap;showers;toilets;laundrette;nautical_club;fuel_station;chandler;provisions;bottle_gas;refuse_bin;pump-out;sailmaker;boatyard;boat_hoist;slipway"
+        display_values="Visitors berth;Visitors mooring;Scrubbing berth;Electricity;Drinking Water;Showers;Toilets;Laundrette;Sailing club;Fuel;Chandler;Provisions;Bottled gas;Refuse disposal;Pump-out;Sailmaker;Boatyard;Boat hoist;Slipway"
+      />
       <space/>
       <text key="seamark:information" text="Supplimentary Information" />
     </item>
