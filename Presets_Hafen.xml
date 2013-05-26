@@ -143,11 +143,36 @@
       <label text="Location of particular marina facilities" />
       <space/>
       <multiselect key="seamark:small_craft_facility:category" text="Facility type(s)"
-        values="visitor_berth;visitors_mooring;scrubbing_berth;electricity;water_tap;showers;toilets;laundrette;nautical_club;fuel_station;chandler;provisions;bottle_gas;refuse_bin;pump-out;sailmaker;boatyard;boat_hoist;slipway"
-        display_values="Visitors berth;Visitors mooring;Scrubbing berth;Electricity;Drinking Water;Showers;Toilets;Laundrette;Sailing club;Fuel;Chandler;Provisions;Bottled gas;Refuse disposal;Pump-out;Sailmaker;Boatyard;Boat hoist;Slipway"
+      values="visitor_berth;visitors_mooring;scrubbing_berth;electricity;water_tap;showers;toilets;laundrette;nautical_club;fuel_station;chandler;provisions;bottle_gas;refuse_bin;pump-out;sailmaker;boatyard;boat_hoist;slipway"
+      display_values="Visitors berth;Visitors mooring;Scrubbing berth;Electricity;Drinking Water;Showers;Toilets;Laundrette;Sailing club;Fuel;Chandler;Provisions;Bottled gas;Refuse disposal;Pump-out;Sailmaker;Boatyard;Boat hoist;Slipway"
       />
       <space/>
       <text key="seamark:information" text="Supplimentary Information" />
     </item>
+    <group name="Port Facility" icon="http://dev.openseamap.org/josm/icons/HarbourMaster16.png" type="node,way,relation">
+      <item name="Port Offices" icon="http://dev.openseamap.org/josm/icons/HarbourMaster16.png" type="node,way,relation">
+        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Buildings" />
+        <key key="seamark:type" value="building" />
+        <label text="Location of particular port offices" />
+        <space/>
+        <multiselect key="seamark:building:function" text="Office type(s)"
+        values="harbour_master;customs;health;pilot_office;water-police_station"
+        display_values="Harbour Master;Customs;Health;Pilot;Water Police"
+        />
+        <space/>
+        <text key="seamark:information" text="Supplimentary Information" />
+      </item>
+      <item name="Cranes" icon="http://dev.openseamap.org/josm/icons/Crane16.png" type="node,way,relation">
+        <key key="seamark:type" value="crane" />
+        <combo key="seamark:crane:category" text="Crane type"
+        values="container,sheerlegs,travelling,a-frame"
+        display_values="Container Crane,Sheerlegs,Travelling Crane,A-Frame"
+        />
+      </item>
+      <item name="Berth" icon="http://dev.openseamap.org/josm/icons/Berth16.png" type="node,way,relation">
+        <key key="seamark:type" value="berth" />
+        <text key="seamark:name" text="Berth Number" />
+      </item>
+    </group>
   </group>
 </presets>
