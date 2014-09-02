@@ -201,7 +201,7 @@
           <check key="seasonal" text="Seasonal" default="off"/>
         </optional>
       </item>
-      <item name="Large Rivers (C20)" icon="presets/empty.png" type="way,closedway,relation">
+      <item name="Large Rivers (C20)" icon="presets/empty.png" type="closedway,relation">
         <label text="C20: Large River"/>
         <key key="waterway" value="riverbank"/>
         <key key="water" value="river"/>
