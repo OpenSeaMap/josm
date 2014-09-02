@@ -16,6 +16,7 @@
           <list_entry value="horizontal_main"/>
           <list_entry value="horizontal_secondary"/>
         </combo>
+        <space/>
         <text key="name" text="Name"/>
         <text key="ref" text="Reference"/>
         <text key="ele" text="Elevation"/>
@@ -31,6 +32,7 @@
         <label text="B24: Boundary Mark"/>
         <key key="seamark:type" value="control_point"/>
         <key key="seamark:control_point:category" value="boundary"/>
+        <space/>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Categories_of_Objects#Control_Points_.28CATCTR.29"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:historic=boundary_stone"/>
         <check key="historic" value_on="boundary_stone" value_off="" text="Historic Boundary Stone" default="off"/>
@@ -64,7 +66,7 @@
       </item>
       <item name="Distance Mark (B25)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/B/B25.1.svg" type="node">
         <label text="B25: Distance Mark"/>
-        <key key="seamark:type" value="distance_mark"/>
+        <check key="seamark:type" value_on="distance_mark" value_off="" text="Seamap Distance Mark" default="on"/>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Distance_Marks"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:waterway=milestone"/>
         <combo key="seamark:distance_mark:category" text="Category" use_last_as_default="true">
@@ -82,6 +84,8 @@
           <list_entry value="meters"/>
           <list_entry value="feet"/>
         </combo>
+        <space/>
+        <label text="Streetmap Distance Mark"/>
         <check key="waterway" value_on="milestone" value_off="" text="Milestone" default="off"/>
         <check key="sign" text="Signed" use_last_as_default="true"/>
         <text key="ref" text="Reference"/>
@@ -559,6 +563,84 @@
         </combo>
       </item>
     </group>
+    <chunk id="function">
+      <list_entry value="harbour_master"/>
+      <list_entry value="customs"/>
+      <list_entry value="health"/>
+      <list_entry value="hospital"/>
+      <list_entry value="post_office"/>
+      <list_entry value="hotel"/>
+      <list_entry value="railway_station"/>
+      <list_entry value="police_station"/>
+      <list_entry value="water-police_station"/>
+      <list_entry value="pilot_office"/>
+      <list_entry value="pilot_lookout"/>
+      <list_entry value="bank"/>
+      <list_entry value="district_control"/>
+      <list_entry value="transit_shed"/>
+      <list_entry value="factory"/>
+      <list_entry value="power_station"/>
+      <list_entry value="administrative"/>
+      <list_entry value="educational"/>
+      <list_entry value="church"/>
+      <list_entry value="chapel"/>
+      <list_entry value="temple"/>
+      <list_entry value="pagoda"/>
+      <list_entry value="shinto_shrine"/>
+      <list_entry value="buddhist_temple"/>
+      <list_entry value="mosque"/>
+      <list_entry value="marebout"/>
+      <list_entry value="lookout"/>
+      <list_entry value="communication"/>
+      <list_entry value="television"/>
+      <list_entry value="radio"/>
+      <list_entry value="radar"/>
+      <list_entry value="light_support"/>
+      <list_entry value="microwave"/>
+      <list_entry value="cooling"/>
+      <list_entry value="observation"/>
+      <list_entry value="time_ball"/>
+      <list_entry value="clock"/>
+      <list_entry value="control"/>
+      <list_entry value="airship_mooring"/>
+      <list_entry value="stadium"/>
+      <list_entry value="bus_station"/>
+    </chunk>
+    <chunk id="construction">
+      <list_entry value="masonry"/>
+      <list_entry value="concreted"/>
+      <list_entry value="loose_boulders"/>
+      <list_entry value="hard-surfaced"/>
+      <list_entry value="wooden"/>
+      <list_entry value="metal"/>
+      <list_entry value="grp"/>
+      <list_entry value="painted"/>
+      <list_entry value="framework"/>
+    </chunk>
+    <chunk id="product">
+      <list_entry value="oil"/>
+      <list_entry value="gas"/>
+      <list_entry value="water"/>
+      <list_entry value="stone"/>
+      <list_entry value="coal"/>
+      <list_entry value="ore"/>
+      <list_entry value="chemicals"/>
+      <list_entry value="drinking_water"/>
+      <list_entry value="milk"/>
+      <list_entry value="bauxite"/>
+      <list_entry value="coke"/>
+      <list_entry value="iron_ingots"/>
+      <list_entry value="salt"/>
+      <list_entry value="sand"/>
+      <list_entry value="timber"/>
+      <list_entry value="sawdust"/>
+      <list_entry value="scrap"/>
+      <list_entry value="lng"/>
+      <list_entry value="lpg"/>
+      <list_entry value="wine"/>
+      <list_entry value="cement"/>
+      <list_entry value="grain"/>
+    </chunk>
     <group name="D: Cultural Features" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/D/Db_uk.svg">
       <item name="Places (D1, D3, D4)" icon="presets/empty.png" type="node,closedway,relation">
         <label text="D1: Places"/>
@@ -590,9 +672,25 @@
           <list_entry value="BR" display_value="Brazil"/>
         </combo>
       </item>
-      <item name="Scattered Buildings (D2, D5, D6)" icon="presets/empty.png" type="closedway,relation">
+      <item name="Scattered Buildings (D2, D5, D6)" icon="presets/empty.png" type="node,closedway,relation">
         <label text="D2: Scattered Buildings"/>
-        <key key="seamark:type" value="building"/>
+        <check key="seamark:type" value_on="building" value_off="" text="Seamap Building" default="on"/>
+        <combo key="seamark:building:function" text="Seamark Building Function" default="" match="key">
+          <reference ref="function"/>
+        </combo>
+        <combo key="seamark:building:shape" text="Seamark Building Shape" default="">
+          <list_entry value="high-rise"/>
+          <list_entry value="pyramid"/>
+          <list_entry value="cylindrical"/>
+          <list_entry value="spherical"/>
+          <list_entry value="cubic"/>
+        </combo>
+        <combo key="seamark:building:construction" text="Nature of Construction">
+          <reference ref="construction"/>
+        </combo>
+        <space/>
+        <label text="Streetmap Building"/>
+        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Buildings"/>
         <combo key="building" text="Building" default="yes" required="true">
           <list_entry value="yes" short_description="Generic building value"/>
           <list_entry value="apartments"/>
@@ -639,69 +737,6 @@
         <text key="name" text="Name"/>
         <text key="height" text="Height"/>
         <text key="building:levels" text="Number of floors"/>
-        <combo key="seamark:building:function" text="Seamark Building Function" default="" match="key">
-          <list_entry value="harbour_master"/>
-          <list_entry value="customs"/>
-          <list_entry value="health"/>
-          <list_entry value="hospital"/>
-          <list_entry value="post_office"/>
-          <list_entry value="hotel"/>
-          <list_entry value="railway_station"/>
-          <list_entry value="police_station"/>
-          <list_entry value="water-police_station"/>
-          <list_entry value="pilot_office"/>
-          <list_entry value="pilot_lookout"/>
-          <list_entry value="bank"/>
-          <list_entry value="district_control"/>
-          <list_entry value="transit_shed"/>
-          <list_entry value="factory"/>
-          <list_entry value="power_station"/>
-          <list_entry value="administrative"/>
-          <list_entry value="educational"/>
-          <list_entry value="church"/>
-          <list_entry value="chapel"/>
-          <list_entry value="temple"/>
-          <list_entry value="pagoda"/>
-          <list_entry value="shinto_shrine"/>
-          <list_entry value="buddhist_temple"/>
-          <list_entry value="mosque"/>
-          <list_entry value="marebout"/>
-          <list_entry value="lookout"/>
-          <list_entry value="communication"/>
-          <list_entry value="television"/>
-          <list_entry value="radio"/>
-          <list_entry value="radar"/>
-          <list_entry value="light_support"/>
-          <list_entry value="microwave"/>
-          <list_entry value="cooling"/>
-          <list_entry value="observation"/>
-          <list_entry value="time_ball"/>
-          <list_entry value="clock"/>
-          <list_entry value="control"/>
-          <list_entry value="airship_mooring"/>
-          <list_entry value="stadium"/>
-          <list_entry value="bus_station"/>
-        </combo>
-        <combo key="seamark:building:shape" text="Seamark Building Shape" default="">
-          <list_entry value="high-rise"/>
-          <list_entry value="pyramid"/>
-          <list_entry value="cylindrical"/>
-          <list_entry value="spherical"/>
-          <list_entry value="cubic"/>
-        </combo>
-        <combo key="seamark:building:construction" text="Nature of Construction">
-          <list_entry value="masonry"/>
-          <list_entry value="concreted"/>
-          <list_entry value="loose_boulders"/>
-          <list_entry value="hard-surfaced"/>
-          <list_entry value="wooden"/>
-          <list_entry value="metal"/>
-          <list_entry value="grp" short_description="glass reinficed plastic"/>
-          <list_entry value="painted"/>
-          <list_entry value="framework"/>
-        </combo>
-        <combo key="seamark:building:category" text="Seamark Building Category" default="">
-        </combo>
         <check key="denotation" value_on="landmark" text="Denoted Landmark" default="off"/>
         <combo key="landmark" text="Type of Landmark" readonly="false">
           <list_entry value="" short_description="Not a landmark"/>
@@ -1109,26 +1144,30 @@
         <check key="landuse" text="On Military ground" value_on="military" value_off="" delete_if_empty="true"/>
         <check key="type" text="Military use only" value_on="military" value_off="" delete_if_empty="true"/>
       </item>
-      <item name="Vertical Clearance (D20)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/D/D20.svg" type="node,way,closedway,relation">
-        <label text="D20: Vertical Clearance"/>
-        <text key="maxheight:marine" text="Max free Sailing Height under object" match="key"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Key:maxheight:marine"/>
-        <text key="seamark:bridge:vertical_clearance_height" text="Bridge Clearance" match="key"/>
-        <text key="seamark:bridge:vertical_clearance_height_open" text="Bridge Clearance Open" match="key"/>
-        <text key="seamark:bridge:vertical_clearance_height_closed" text="Bridge Clearance Closed" match="key"/>
-        <text key="seamark:cable_overhead:vertical_clearance_height" text="Cable Clearance (not power cable)" match="key"/>
-        <text key="seamark:cable_overhead:vertical_clearance_height_safe" text="Safe Clearance of Cable" match="key"/>
-        <text key="seamark:pipeline_overhead:vertical_clearance_height" text="Pipeline Clearance" match="key"/>
-      </item>
-      <item name="Horizontal Clearance (D21)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/D/D21.svg" type="node,way,closedway,relation">
-        <label text="D21: Horizontal Clearance"/>
-        <text key="seamark:bridge:clearance_width" text="Horizontal Clearance (bridge)" match="key"/>
-        <text key="seamark:cable_overhead:clearance_width" text="Horizontal Clearance (Cable)" match="key"/>
-        <text key="seamark:pipeline_overhead:clearance_width" text="Horizontal Clearance (Pipeline)" match="key"/>
-      </item>
-      <item name="Bridge (D22-D24) (On Bridge)" icon="presets/empty.png" type="way,relation">
-        <label text="D22, D23.x, D24: Bridge, to be tagged on the bridge itself"/>
-        <key key="seamark:type" value="bridge"/>
+      <item name="Bridge (D20-D24)" icon="presets/empty.png" type="node,way,closedway,relation">
+        <label text="D20-D24: Bridge"/>
+        <check key="seamark:type" value_on="bridge" value_off="" text="Seamap Bridge" default="on"/>
+        <combo key="seamark:bridge:category" text="Bridge Type" match="key">
+          <list_entry value="fixed"/>
+          <list_entry value="opening"/>
+          <list_entry value="swing"/>
+          <list_entry value="lift"/>
+          <list_entry value="bascule"/>
+          <list_entry value="pontoon"/>
+          <list_entry value="drawbridge"/>
+          <list_entry value="transporter"/>
+          <list_entry value="footbridge"/>
+          <list_entry value="viaduct"/>
+          <list_entry value="aqueduct"/>
+          <list_entry value="suspension"/>
+        </combo>
+        <text key="seamark:bridge:clearance_height" text="Vertical Clearance" match="key"/>
+        <text key="seamark:bridge:clearance_height_open" text="Vertical Clearance Open" match="key"/>
+        <text key="seamark:bridge:clearance_height_closed" text="Vertical Clearance Closed" match="key"/>
+        <text key="seamark:bridge:clearance_width" text="Horizontal Clearance" match="key"/>
+        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Bridges"/>
+        <space/>
+        <label text="Streetmap Bridge"/>
         <combo key="bridge" text="Bridge" required="true" match="key">
           <list_entry value="yes"/>
           <list_entry value="arch"/>
@@ -1141,6 +1180,7 @@
           <list_entry value="drawbridge"/>
           <list_entry value="transporter"/>
         </combo>
+        <label text="D22, D23.x, D24: Bridge, to be tagged on the bridge itself"/>
         <link href="http://wiki.openstreetmap.org/wiki/Key:bridge"/>
         <text key="bridge_name" text="Name (of bridge)"/>
         <text key="name" text="Name (of road, etc. passing bridge)"/>
@@ -1158,45 +1198,17 @@
           <list_entry value="-4"/>
           <list_entry value="-5"/>
         </combo>
-        <text key="maxheight:marine" text="Clearance under bridge"/>
-        <text key="seamark:bridge:vertical_clearance_height" text="Clearance"/>
-        <text key="seamark:bridge:vertical_clearance_height_open" text="Clearance Open"/>
-        <text key="seamark:bridge:vertical_clearance_height_closed" text="Clearance Closed"/>
-        <text key="seamark:bridge:clearance_width" text="Horizontal Clearance"/>
-        <text key="seamark:bridge:clearance_length" text="Longitudal clearance"/>
-      </item>
-      <item name="Bridge (D22-D24) (Under Bridge)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/D/D26.svg" type="node,way,closedway">
-        <label text="D22, D23.x, D24: Bridge"/>
-        <key key="seamark:type" value="bridge"/>
-        <combo key="seamark:bridge:category" text="Bridge Type" match="key">
-          <list_entry value="fixed"/>
-          <list_entry value="opening"/>
-          <list_entry value="swing"/>
-          <list_entry value="lift"/>
-          <list_entry value="bascule"/>
-          <list_entry value="pontoon"/>
-          <list_entry value="drawbridge"/>
-          <list_entry value="transporter"/>
-          <list_entry value="footbridge"/>
-          <list_entry value="viaduct"/>
-          <list_entry value="aqueduct"/>
-          <list_entry value="suspension"/>
-          <list_entry value="humpback"/>
-          <list_entry value="covered"/>
-          <list_entry value="cable-stayed"/>
-          <list_entry value="abandoned"/>
-        </combo>
-        <text key="seamark:name" text="Name"/>
-        <text key="seamark:bridge:clearance_height" text="Clearance"/>
-        <text key="seamark:bridge:clearance_height_open" text="Clearance Open"/>
-        <text key="seamark:bridge:clearance_height_closed" text="Clearance Closed"/>
-        <text key="seamark:bridge:clearance_width" text="Horizontal Clearance"/>
-        <text key="seamark:bridge:clearance_length" text="Longitudal clearance"/>
       </item>
       <item name="Overhead transporter or Telepheric (D25)" icon="presets/empty.png" type="way">
         <label text="D25: Overhead transporter or Telepheric"/>
         <key key="seamark:type" value="conveyor"/>
         <key key="seamark:conveyor:category" value="aerial"/>
+        <text key="seamark:conveyor:clearance_height" text="Vertical Clearance" match="key"/>
+        <combo key="seamark:conveyor:product" text="Cargo">
+          <reference ref="product"/>
+        </combo>
+        <space/>
+        <label text="Streetmap Aerialway"/>
         <combo key="aerialway" text="Type" required="true" match="key">
           <list_entry value="gondola"/>
           <list_entry value="cable_car"/>
@@ -1209,9 +1221,6 @@
           <list_entry value="rope-tow"/>
           <list_entry value="mixed_lift"/>
         </combo>
-        <combo key="seamark:conveyor:product" text="Cargo">
-          <list_entry value="" display_value="unknown"/>
-        </combo>
         <text key="name" text="Name"/>
         <text key="ref" text="Reference"/>
         <optional>
@@ -1220,38 +1229,41 @@
           <text key="aerialway:duration" text="Duration of ride"/>
         </optional>
       </item>
+      <!--
       <item name="Overhead transporter - conveyor belt (D25)" icon="presets/empty.png" type="way,closedway">
         <label text="D25: Overhead transporter - conveyor belt"/>
         <key key="seamark:type" value="conveyor"/>
         <key key="seamark:conveyor:category" value="belt"/>
         <key key="man_made" value="conveyor"/>
         <combo key="seamark:conveyor:product" text="Cargo">
-          <list_entry value="" display_value="unknown"/>
-          <list_entry value="stone"/>
-          <list_entry value="coal"/>
-          <list_entry value="ore"/>
-          <list_entry value="bauxite"/>
-          <list_entry value="coke"/>
-          <list_entry value="iron_ingots"/>
-          <list_entry value="salt"/>
-          <list_entry value="sand"/>
-          <list_entry value="timber"/>
-          <list_entry value="sawdust"/>
-          <list_entry value="scrap"/>
-          <list_entry value="cement"/>
-          <list_entry value="grain"/>
+          <reference ref="product"/>
         </combo>
       </item>
+       <item name="Vertical Clearance (D20)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/D/D20.svg" type="node,way,closedway,relation">
+       <text key="seamark:cable_overhead:vertical_clearance_height" text="Cable Clearance (not power cable)" match="key"/>
+       <text key="seamark:cable_overhead:vertical_clearance_height_safe" text="Safe Clearance of Cable" match="key"/>
+       <text key="seamark:pipeline_overhead:vertical_clearance_height" text="Pipeline Clearance" match="key"/>
+       </item>
+       <item name="Horizontal Clearance (D21)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/D/D21.svg" type="node,way,closedway,relation">
+       <label text="D21: Horizontal Clearance"/>
+       <text key="seamark:cable_overhead:clearance_width" text="Horizontal Clearance (Cable)" match="key"/>
+       <text key="seamark:pipeline_overhead:clearance_width" text="Horizontal Clearance (Pipeline)" match="key"/>
+       </item>
+       -->
       <item name="Power Transmission Line (D26)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/D/D26.svg" type="way">
         <label text="D26: Power Transmission Line"/>
-        <key key="power" value="line"/>
-        <key key="seamark:type" value="cable_overhead"/>
+        <check key="seamark:type" value_on="cable_overhead" value_off="" text="Seamap Power Line" default="on"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:power=line"/>
-        <text key="name" text="Name"/>
-        <combo key="seamark:cable_overhead:category" text="Category" required="true">
+        <combo key="seamark:cable_overhead:category" text="Category">
           <list_entry value="power"/>
           <list_entry value="transmission"/>
         </combo>
+        <text key="seamark:cable_overhead:clearance_height" text="Vertical Clearance" match="key"/>
+        <text key="seamark:cable_overhead:clearance_height_safe" text="Safe Vertical Clearance" match="key"/>
+        <space/>
+        <label text="Streetmap Power Line"/>
+        <key key="power" value="line"/>
+        <text key="name" text="Name"/>
         <text key="ref" text="Reference"/>
         <combo key="operator" text="Operator" readonly="false">
         </combo>
@@ -1261,22 +1273,23 @@
         <text key="maxheight:marine" text="Clearance under Cable"/>
         <text key="seamark:cable_overhead:vertical:clearance_height" text="Vertical Clearance of Cable"/>
         <text key="seamark:cable_overhead:vertical:clearance_height_safe" text="Safe Clearance of Cable"/>
-        <label text="Mark waterway under with appropriate Vertical Clearance (D20)"/>
       </item>
       <item name="Power Pylon (D26)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/D/D26.svg" type="node">
         <label text="D26: Power Pylon"/>
-        <key key="power" value="tower"/>
-        <key key="seamark:type" value="pylon"/>
-        <text key="ref" text="Pylon reference" />
-        <combo key="seamark:pylon:category" required="true">
+        <check key="seamark:type" value_on="pylon" value_off="" text="Seamap Pylon" default="on"/>
+        <combo key="seamark:pylon:category" text="Category">
           <list_entry value="power"/>
           <list_entry value="telecom"/>
         </combo>
-        <combo key="seamark:pylon:water_level">
+        <combo key="seamark:pylon:water_level" text="Water Level">
           <list_entry value="" display_value="default"/>
           <list_entry value="part-submerged"/>
           <list_entry value="dry"/>
         </combo>
+        <space/>
+        <label text="Streetmap Pylon"/>
+        <key key="power" value="tower"/>
+        <text key="ref" text="Pylon reference" />
         <combo key="structure" text="Structure" readonly="false">
           <list_entry value="lattice"/>
           <list_entry value="tubular"/>
@@ -1292,45 +1305,39 @@
       </item>
       <item name="Telephone Line (D27)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/D/D26.svg" type="way">
         <label text="D27: Telephone Line"/>
-        <key key="seamark:type" value="cable_overhead"/>
-        <combo key="seamark:cable_overhead:category" text="Category" required="true">
+        <check key="seamark:type" value_on="cable_overhead" value_off="" text="Seamap Telephone Line" default="on"/>
+        <combo key="seamark:cable_overhead:category" text="Category">
           <list_entry value="telephone"/>
           <list_entry value="telegraph"/>
           <list_entry value="optical"/>
         </combo>
+        <text key="seamark:cable_overhead:vertical:clearance_height" text="Vertical Clearance of Cable"/>
+        <text key="seamark:cable_overhead:vertical:clearance_height_safe" text="Safe Clearance of Cable"/>
+        <space/>
+        <label text="Streetmap Telephone Line"/>
         <text key="ref" text="Reference"/>
         <combo key="operator" text="Operator" readonly="false">
         </combo>
-        <text key="maxheight:marine" text="Clearance under Cable"/>
-        <text key="seamark:cable_overhead:vertical:clearance_height" text="Vertical Clearance of Cable"/>
-        <text key="seamark:cable_overhead:vertical:clearance_height_safe" text="Safe Clearance of Cable"/>
-        <label text="Mark waterway under with appropriate Vertical Clearance (D20)"/>
       </item>
       <item name="Pipeline (Overhead) (D28)" icon="presets/empty.png" type="way">
         <label text="D28: Pipeline (Overhead)"/>
-        <key key="man_made" value="pipeline"/>
-        <key key="seamark:type" value="pipeline_overhead"/>
-        <key key="location" value="overhead"/>
-        <text key="name" text="Name"/>
+        <check key="seamark:type" value_on="pipeline_overhead" value_off="" text="Seamap Pipeline" default="on"/>
         <combo key="seamark:pipeline_overhead:category" text="Category">
-          <list_entry value="" display_value="unknown"/>
           <list_entry value="outfall"/>
           <list_entry value="intake"/>
           <list_entry value="sewer"/>
+          <list_entry value="bubbler"/>
           <list_entry value="supply"/>
         </combo>
         <combo key="seamark:pipeline_overhead:product" text="Product">
-          <list_entry value="" display_value="unknwon"/>
-          <list_entry value="oil"/>
-          <list_entry value="gas"/>
-          <list_entry value="water"/>
-          <list_entry value="chemicals"/>
-          <list_entry value="drinking_water"/>
-          <list_entry value="milk"/>
-          <list_entry value="lng"/>
-          <list_entry value="lpg"/>
-          <list_entry value="wine"/>
+          <reference ref="product"/>
         </combo>
+        <text key="seamark:pipeline_overhead:vertical:clearance_height" text="Vertical Clearance"/>
+        <space/>
+        <label text="Streetmap Pipeline"/>
+        <key key="man_made" value="pipeline"/>
+        <key key="location" value="overhead"/>
+        <text key="name" text="Name"/>
         <text key="ref" text="Reference"/>
         <combo key="type" text="Type">
           <list_entry value="gas"/>
@@ -1346,13 +1353,22 @@
         <combo key="operator" text="Operator" readonly="false">
         </combo>
         <label text="For underwater pipelines, see L40-L44"/>
-        <text key="maxheight:marine" text="Clearance under bridge"/>
-        <text key="seamark:pipeline_overhead:vertical:clearance_height" text="Vertical Clearance of Cable"/>
-        <text key="seamark:pipeline_overhead:vertical:clearance_height_safe" text="Safe Clearance of Cable"/>
-        <label text="Mark waterway under with appropriate Vertical Clearance (D20)"/>
       </item>
       <item name="Pipeline (On Land) (D29)" icon="presets/empty.png" type="way">
         <label text="D29: Pipeline (On Land)"/>
+        <check key="seamark:type" value_on="pipeline_submarine" value_off="" text="Seamap Pipeline" default="on"/>
+        <combo key="seamark:pipeline_submarine:category" text="Category">
+          <list_entry value="outfall"/>
+          <list_entry value="intake"/>
+          <list_entry value="sewer"/>
+          <list_entry value="bubbler"/>
+          <list_entry value="supply"/>
+        </combo>
+        <combo key="seamark:pipeline_submarine:product" text="Product">
+          <reference ref="product"/>
+        </combo>
+        <space/>
+        <label text="Streetmap Pipeline"/>
         <key key="man_made" value="pipeline"/>
         <text key="name" text="Name"/>
         <text key="ref" text="Reference"/>
@@ -1374,7 +1390,6 @@
           <list_entry value="underground"/>
         </combo>
         <label text="For underwater pipelines, see L40-L44"/>
-        <label text="Mark waterway under with appropriate Vertical Clearance (D20)"/>
       </item>
       <item name="Helicopter Landing Site, Heliport (Db UK)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/D/Db_uk.svg" type="node,closedway">
         <label text="Db: Helicopter Landing Site, Heliport"/>
@@ -1425,21 +1440,7 @@
         </combo>
         <check key="seamark:landmark:conspicuity" text="Conspicuous" value_on="conspicuous" value_off="not_conspicuous"/>
         <combo key="seamark:landmark:function" text="Function" match="key">
-          <list_entry value="church"/>
-          <list_entry value="chapel"/>
-          <list_entry value="factory"/>
-          <list_entry value="power_staition"/>
-          <list_entry value="administrative"/>
-          <list_entry value="communication"/>
-          <list_entry value="temple"/>
-          <list_entry value="pagoda"/>
-          <list_entry value="shinto_shrine"/>
-          <list_entry value="buddhist_temple"/>
-          <list_entry value="mosque"/>
-          <list_entry value="marabout"/>
-          <list_entry value="radio"/>
-          <list_entry value="radar"/>
-          <list_entry value="television"/>
+          <reference ref="function"/>
         </combo>
         <combo key="seamark:landmark:colour" text="Color">
           <list_entry value="white"/>
@@ -2750,7 +2751,7 @@
         <label text="F31: Works at sea"/>
         <key key="seamark:type" value="shoreline_construction"/>
         <text key="name" text="Name"/>
-        <combo key="seamark:shoreline_construction:category" text="Construction">
+        <combo key="seamark:shoreline_construction:category" text="Category">
           <list_entry value="breakwater"/>
           <list_entry value="pier"/>
           <list_entry value="training_wall"/>
@@ -3218,12 +3219,7 @@
           <list_entry value="supply"/>
         </combo>
         <combo key="seamark:pipeline_submarine:product" text="Product">
-          <list_entry value="water" />
-          <list_entry value="sewer" />
-          <list_entry value="oil" />
-          <list_entry value="gas" />
-          <list_entry value="chemicals"/>
-          <list_entry value="drinking_water"/>
+          <reference ref="product"/>
         </combo>
         <combo key="operator" text="Operator" readonly="false">
         </combo>
