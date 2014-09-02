@@ -1,2 +1,0 @@
-for i in ../renderer/searender/symbols/*.svg; do \
-inkscape $i -d 18 -e `echo $i | sed -e 'sX^../renderer/searender/symbolsXiconsX' -e 's/.svg$/.png/'`; done
