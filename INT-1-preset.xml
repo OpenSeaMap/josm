@@ -114,6 +114,8 @@
         <text key="river:waterway_distance" text="river:waterway_distance"/>
       </item>
     </group>
+    
+    
     <group name="C: Natural Features" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/C/C31.1.s.svg">
       <item name="Coastline (C1-C2)" icon="presets/empty.png" type="way,closedway">
         <label text="C1-C2: Coastline"/>
@@ -563,6 +565,8 @@
         </combo>
       </item>
     </group>
+    
+    
     <chunk id="function">
       <list_entry value="harbour_master"/>
       <list_entry value="customs"/>
@@ -641,6 +645,8 @@
       <list_entry value="cement"/>
       <list_entry value="grain"/>
     </chunk>
+    
+    
     <group name="D: Cultural Features" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/D/Db_uk.svg">
       <item name="Places (D1, D3, D4)" icon="presets/empty.png" type="node,closedway,relation">
         <label text="D1: Places"/>
@@ -1229,27 +1235,6 @@
           <text key="aerialway:duration" text="Duration of ride"/>
         </optional>
       </item>
-      <!--
-      <item name="Overhead transporter - conveyor belt (D25)" icon="presets/empty.png" type="way,closedway">
-        <label text="D25: Overhead transporter - conveyor belt"/>
-        <key key="seamark:type" value="conveyor"/>
-        <key key="seamark:conveyor:category" value="belt"/>
-        <key key="man_made" value="conveyor"/>
-        <combo key="seamark:conveyor:product" text="Cargo">
-          <reference ref="product"/>
-        </combo>
-      </item>
-       <item name="Vertical Clearance (D20)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/D/D20.svg" type="node,way,closedway,relation">
-       <text key="seamark:cable_overhead:vertical_clearance_height" text="Cable Clearance (not power cable)" match="key"/>
-       <text key="seamark:cable_overhead:vertical_clearance_height_safe" text="Safe Clearance of Cable" match="key"/>
-       <text key="seamark:pipeline_overhead:vertical_clearance_height" text="Pipeline Clearance" match="key"/>
-       </item>
-       <item name="Horizontal Clearance (D21)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/D/D21.svg" type="node,way,closedway,relation">
-       <label text="D21: Horizontal Clearance"/>
-       <text key="seamark:cable_overhead:clearance_width" text="Horizontal Clearance (Cable)" match="key"/>
-       <text key="seamark:pipeline_overhead:clearance_width" text="Horizontal Clearance (Pipeline)" match="key"/>
-       </item>
-       -->
       <item name="Power Transmission Line (D26)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/D/D26.svg" type="way">
         <label text="D26: Power Transmission Line"/>
         <check key="seamark:type" value_on="cable_overhead" value_off="" text="Seamap Power Line" default="on"/>
@@ -1459,6 +1444,8 @@
           <list_entry value="metal"/>
         </combo>
       </item>
+      
+      
       <item name="Church (E10-E11)/(E10.2-E10.4)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E10.svg" type="node,closedway">
         <label text="E10-E11: Church"/>
         <key key="amenity" value="place_of_worship"/>
