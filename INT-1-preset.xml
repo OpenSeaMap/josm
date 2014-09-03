@@ -114,7 +114,7 @@
   
   <group name="INT-1" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/IHO_c.svg">
     
-    <!---***********************Section B***************************-->
+    <!--***********************Section B: Positions, Distances, Directions, Compass***************************-->
     
     <group name="B: Positions, Distances, Directions, Compass" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/B/B21.svg">
       <item name="Survey Point (B20-B23)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/B/B20.svg" type="node">
@@ -233,7 +233,7 @@
       
     </group>
     
-    <!---***********************Section C***************************-->
+    <!--***********************Section C: Natural Features***************************-->
     
     <group name="C: Natural Features" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/C/C31.1.s.svg">
       <item name="Coastline (C1-C2)" icon="presets/empty.png" type="way,closedway">
@@ -715,7 +715,7 @@
       
     </group>
     
-    <!---***********************Section D***************************-->
+    <!--***********************Section D: Cultural Features***************************-->
     
     <group name="D: Cultural Features" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/D/Db_uk.svg">
       <item name="Places (D1, D3, D4)" icon="presets/empty.png" type="node,closedway,relation">
@@ -1489,7 +1489,7 @@
       
     </group>
     
-    <!---***********************Section E***************************-->
+    <!--***********************Section E: Landmarks***************************-->
     
     <group name="E: Landmarks" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E10.svg">
       <item name="Landmarks in General" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E23_colour.svg" type="node,closedway">
@@ -2447,7 +2447,7 @@
       <!-- Ed Monastary - amenity=monastary -->
     </group>
     
-    <!---***********************Section F***************************-->
+    <!---***********************Section F: Ports***************************-->
 
     <group name="F: Ports" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/F/F.svg">
       <item name="Harbour" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/F/F.svg" type="node,closedway">
@@ -2994,7 +2994,7 @@
 
     </group>
     
-    <!---***********************Section I***************************-->
+    <!---***********************Section I: Depths***************************-->
 
     <group name="I: Depths" icon="presets/empty.png">
       <item name="Depth Source Quality" icon="presets/empty.png" type="node">
@@ -3027,7 +3027,7 @@
 
     </group>
     
-    <!---***********************Section J***************************-->
+    <!---***********************Section J: Nature of Seabed***************************-->
 
     <group name="J: Nature of Seabed" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/J/J15.svg">
       <item name="Seabed Surface (J1-J15)+(J30-J39)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/J/J14.svg" type="node,closedway">
@@ -3068,7 +3068,7 @@
 
     </group>
     
-    <!---***********************Section K***************************-->
+    <!---***********************Section K: Rocks, Wrecks, Obstructions***************************-->
 
     <group name="K: Rocks, Wrecks, Obstructions" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/K/K12.svg">
       <item name="Rock (K2-K15)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/K/K11.svg" type="node">
@@ -3215,7 +3215,7 @@
 
     </group>
     
-    <!---***********************Section L***************************-->
+    <!---***********************Section L: Offshore Installations***************************-->
 
     <group name="L: Offshore Installations" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/L/L17.svg">
       <item name="Offshore Oil and Gas Field (L1)" icon="presets/empty.png" type="closedway,node">
@@ -3428,7 +3428,7 @@
 
     </group>
     
-    <!---***********************Section M***************************-->
+    <!---***********************Section M: Tracks, Routes***************************-->
 
     <group name="M: Tracks, Routes" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/M/M10.svg">
       <item name="Leading Line (M1)" icon="presets/empty.png" type="way,relation">
@@ -3600,9 +3600,9 @@
 
     </group>
     
-    <!---***********************Section N***************************-->
+    <!---***********************Section N: Areas, Limits***************************-->
 
-    <group name="N: Areas, Limites" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/N/N21.svg">
+    <group name="N: Areas, Limits" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/N/N21.svg">
       <item name="Non-resitricted areas (N1)" icon="presets/empty.png" type="closedway">
         <label text="N1: Non-restricted areas"/>
         <key key="seamark:type" value="non-restricted_area"/>
@@ -3931,7 +3931,7 @@
 
     </group>
     
-    <!---***********************Section P***************************-->
+    <!---***********************Section P: Lights***************************-->
 
     <group name="P: Lights" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/P/P1.major.svg">
       <item name="Light (non-sectored)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/P/P10.2_green.svg" type="node">
@@ -4069,7 +4069,7 @@
 
     </group>
     
-    <!---***********************Section Q***************************-->
+    <!---***********************Section Q: Buoys, Beacons***************************-->
 
     <group name="Q: Buoys, Beacons" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/pillar/horizontal/yellow_black_yellow.svg">
       <item name="Topmarks (Q9)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q9/cone_point_up/generic.svg" type="node">
@@ -6149,7 +6149,7 @@
 
     </group>
     
-    <!---***********************Section R***************************-->
+    <!---***********************Section R: Fog Signals***************************-->
 
     <group name="R: Fog Signals" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/R/R1.svg">
       <item name="Fog Signal (R1-R22)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/R/R1.svg" type="node">
@@ -6183,7 +6183,7 @@
 
     </group>
     
-    <!---***********************Section S***************************-->
+    <!---***********************Section S: Electronic Position-Fixing Systems***************************-->
 
     <group name="S: Electronic Position-Fixing Systems" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/S/S1.svg">
       <item name="Coast Radar Station (S1)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/S/S1.svg" type="node">
@@ -6297,7 +6297,7 @@
 
     </group>
     
-    <!---***********************Section T***************************-->
+    <!---***********************Section T: Services***************************-->
 
     <group name="T: Services" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/T/T1.1.svg">
       <item name="Pilot Boarding Position (T1.1-T1.4)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/T/T1.1.svg" type="node,way,closedway,relation">
@@ -6447,7 +6447,7 @@
 
     </group>
     
-    <!---***********************Section U***************************-->
+    <!---***********************Section U: Small Craft (Leisure) Facilities***************************-->
 
     <group name="U: Small Craft (Leisure) Facilities" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/U/U1.1.svg">
       <item name="Marina (U1.1)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/U/U1.1.svg" type="node,way,closedway">
