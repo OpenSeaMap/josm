@@ -1539,20 +1539,12 @@
         </combo>
       </item>
       
-      <item name="Church (E10-E11)/(E10.2-E10.4)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E10.svg" type="node,closedway">
+      <item name="Church or Chapel (E10.1/E11)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E10.svg" type="node,closedway">
         <label text="E10-E11: Church"/>
-        <check key="seamark:type" text="Seamap Landmark" value_on="landmark" value_off="" default="on"/>
-        <key key="seamark:landmark:function" value="church"/>
-        <combo key="seamark:building:function" text="Building Function">
+        <key key="seamark:type" value="building"/>
+        <combo key="seamark:building:function" text="Church or Chapel">
           <list_entry value="church"/>
           <list_entry value="chapel"/>
-        </combo>
-        <label text="If the church has a tower, spire or cupola used as a landmark:"/>
-        <combo key="seamark:landmark:category" text="Landmark" readonly="true">
-          <list_entry value="dome" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E10.4.svg" />
-          <list_entry value="spire" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E10.3.svg" />
-          <list_entry value="tower" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E10.2.svg" />
-          <list_entry value="cross"/>
         </combo>
         <space/>
         <label text="Streetmap Church"/>
@@ -1629,23 +1621,39 @@
         <label text="If the church is mapped as an area, it might be desirable to mark the landmark separately in a node"/>
       </item>
       
+      <item name="Landmark Churches (E10.2-E10.4)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E10.svg" type="node,closedway">
+        <key key="seamark:building:function" value=""/>
+        <label text="E10-E11: Landmark Churches"/>
+        <key key="seamark:type" value="landmark"/>
+        <key key="seamark:landmark:function" value="church"/>
+        <combo key="seamark:landmark:category" text="Landmark" readonly="true">
+          <list_entry value="dome" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E10.4.svg" />
+          <list_entry value="spire" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E10.3.svg" />
+          <list_entry value="tower" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E10.2.svg" />
+        </combo>
+        <space/>
+      </item>
+      
       <item name="Cross or Calvary (E12)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E12.svg" type="node">
         <label text="E12: Cross or Calvary"/>
-        <key key="historic" value="wayside_cross"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:historic=wayside_cross"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="cross"/>
+        <space/>
+        <label text="Streetmap Cross"/>
+        <check key="historic" value_on="wayside_cross" value_off="" default="off" text="Historic Cross"/>
         <text key="name" text="Name"/>
         <text key="height" text="Height"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:historic=wayside_cross"/>
       </item>
       
       <item name="Temple (E13)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E13.svg" type="node,closedway">
         <label text="E13: Temple"/>
-        <key key="amenity" value="place_of_worship"/>
-        <key key="seamark:type" value="landmark"/>
+        <key key="seamark:type" value="building"/>
         <key key="seamakr:building:function" value="temple"/>
-        <key key="seamark:landmark:function" value="temple"/>
+        <space/>
+        <label text="Streetmap Temple"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=place_of_worship"/>
+        <key key="amenity" value="place_of_worship"/>
         <text key="name" text="Name"/>
         <key key="religion" value="jewish"/>
         <combo key="denomination" text="Denomination" readonly="false">
@@ -1696,11 +1704,12 @@
       
       <item name="Pagoda (E14)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E14.svg" type="node,closedway">
         <label text="E14: Pagoda"/>
-        <key key="amenity" value="place_of_worship"/>
-        <key key="seamark:type" value="landmark"/>
+        <key key="seamark:type" value="building"/>
         <key key="seamark:building:function" value="pagoda"/>
-        <key key="seamark:landmark:function" value="pagoda"/>
+        <space/>
+        <label text="Streetmap pagoda"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=place_of_worship"/>
+        <key key="amenity" value="place_of_worship"/>
         <text key="name" text="Name"/>
         <combo key="religion" text="Religion" readonly="true">
           <list_entry value="hindu"/>
@@ -1725,12 +1734,13 @@
       
       <item name="Shinto Shrine, Josshouse (E15)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E15.svg" type="node,closedway">
         <label text="E15: Shinto Shrine, Josshouse"/>
+        <key key="seamark:type" value="building"/>
+        <key key="seamark:building:function" value="shinto_shrine"/>
+        <space/>
+        <label text="Streetmap Shinto Shrine"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=place_of_worship"/>
         <key key="amenity" value="place_of_worship"/>
         <key key="religion" value="shinto"/>
-        <key key="seamark:type" value="landmark"/>
-        <key key="seamark:building:function" value="shinto_shrine"/>
-        <key key="seamark:landmark:function" value="shinto_shrine"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=place_of_worship"/>
         <text key="name" text="Name"/>
         <combo key="building" text="Building" readonly="true">
           <list_entry value="yes" short_description="Generic Building"/>
@@ -1743,12 +1753,14 @@
       
       <item name="Buddhist Temple (E16)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E16.svg" type="node,closedway">
         <label text="E16: Buddhist Temple"/>
-        <key key="amenity" value="place_of_worship"/>
-        <key key="religion" value="buddhist"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:building:function" value="buddhist_temple"/>
         <key key="seamark:landmark:function" value="buddhist_temple"/>
+        <space/>
+        <label text="Streetmap Buddhist Temple"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=place_of_worship"/>
+        <key key="amenity" value="place_of_worship"/>
+        <key key="religion" value="buddhist"/>
         <text key="name" text="Name"/>
         <combo key="denomination" text="Denomination">
           <list_entry value="nichiren"/>
@@ -1767,14 +1779,22 @@
         </combo>
       </item>
       
+      <item name="Minaret (E17)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E17.svg" type="node,closedway">
+        <label text="E17: Minaret"/>
+        <key key="seamark:type" value="landmark"/>
+        <key key="seamark:landmark:category" value="spire"/>
+        <key key="seamark:landmark:function" value="mosque"/>
+      </item>
+      
       <item name="Mosque (E17)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E17.svg" type="node,closedway">
         <label text="E17: Mosque"/>
+        <key key="seamark:type" value="building"/>
+        <key key="seamark:building:function" value="mosque"/>
+        <space/>
+        <label text="Streetmap Mosque"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=place_of_worship"/>
         <key key="amenity" value="place_of_worship"/>
         <key key="religion" value="muslim"/>
-        <key key="seamark:type" value="landmark"/>
-        <key key="seamark:building:function" value="mosque"/>
-        <key key="seamark:landmark:function" value="mosque"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=place_of_worship"/>
         <text key="name" text="Name"/>
         <combo key="denomination" text="Denomination">
           <list_entry value="ahmadiya"/>
@@ -1796,11 +1816,12 @@
       
       <item name="Marabout (E18)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E18.svg" type="node,closedway">
         <label text="E18: Marabout"/>
+        <key key="seamark:type" value="building"/>
+        <key key="seamakr:building:function" value="marabout"/>
+        <space/>
+        <label text="Streetmap Marabout"/>
         <key key="historic" value="tomb"/>
         <key key="religion" value="muslim"/>
-        <key key="seamark:type" value="landmark"/>
-        <key key="seamakr:building:function" value="marabout"/>
-        <key key="seamark:landmark:function" value="marabout"/>
         <text key="name" text="Name"/>
         <combo key="building" text="Building" readonly="true">
           <list_entry value="yes" short_description="Generic Building"/>
@@ -1812,10 +1833,12 @@
       
       <item name="Cemetery (E19)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E19.svg" type="closedway">
         <label text="E19: Cemetery"/>
-        <key key="landuse" value="cemetery"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:landuse=cemetery"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="cemetery"/>
+        <space/>
+        <label text="Streetmap Cemetery"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:landuse=cemetery"/>
+        <key key="landuse" value="cemetery"/>
         <text key="name" text="Name"/>
         <combo key="religion" text="Religion" readonly="false">
           <list_entry value="christian"/>
@@ -1828,10 +1851,18 @@
       
       <item name="Tower (E20)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E20.svg" type="node,closedway">
         <label text="E20: Tower"/>
-        <key key="man_made" value="tower"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="tower"/>
+        <combo key="seamark:landmark:function" text="Landmark Function">
+          <list_entry value="communication"/>
+          <list_entry value="radio"/>
+          <list_entry value="radar"/>
+          <list_entry value="television"/>
+        </combo>
+        <space/>
+        <label text="Streetmap Tower"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=tower"/>
+        <key key="man_made" value="tower"/>
         <text key="name" text="Name"/>
         <text key="ref" text="Reference"/>
         <combo key="operator" text="Operator" readonly="false">
@@ -1853,12 +1884,6 @@
           <list_entry value="television"/>
           <list_entry value="radar"/>
         </combo>
-        <combo key="seamark:landmark:function" text="Landmark Function">
-          <list_entry value="communication"/>
-          <list_entry value="radio"/>
-          <list_entry value="radar"/>
-          <list_entry value="television"/>
-        </combo>
         <combo key="tower:type" text="Type">
           <list_entry value="communication"/>
           <list_entry value="observation"/>
@@ -1874,11 +1899,12 @@
       
       <item name="Water Tower (E21)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E21.svg" type="node,closedway">
         <label text="E21: Water Tower"/>
-        <key key="man_made" value="water_tower"/>
-        <key key="seamark:type" value="landmark"/>
-        <key key="seamark:landmark:category" value="water_tower"/>
+        <key key="seamark:type" value="tank"/>
         <key key="seamark:tank:category" value="water_tower"/>
+        <space/>
+        <label text="Streetmap Water Tower"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=water_tower"/>
+        <key key="man_made" value="water_tower"/>
         <text key="name" text="Name"/>
         <text key="ref" text="Reference"/>
         <combo key="operator" text="Operator" readonly="false">
@@ -1889,10 +1915,12 @@
       
       <item name="Chimney (E22)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E22.svg" type="node">
         <label text="E22: Chimney"/>
-        <key key="man_made" value="chimney"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="chimney"/>
+        <space/>
+        <label text="Streetmap Chimney"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=chimney"/>
+        <key key="man_made" value="chimney"/>
         <text key="name" text="Name (if known)"/>
         <text key="ref" text="Reference"/>
         <text key="height" text="Height over ground"/>
@@ -1901,12 +1929,14 @@
         </combo>
       </item>
       
-      <item name="Flare (E23)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E23.svg" type="node">
-        <label text="E23: Flare"/>
-        <key key="man_made" value="flare"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=flare"/>
+      <item name="Flare Stack (E23)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E23.svg" type="node">
+        <label text="E23: Flare Stack"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="flare_stack"/>
+        <space/>
+        <label text="Streetmap Flare Stack"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=flare"/>
+        <key key="man_made" value="flare"/>
         <text key="name" text="Name"/>
         <text key="ref" text="Reference"/>
         <text key="height" text="Height over ground"/>
@@ -1915,27 +1945,30 @@
       
       <item name="Monument (E24)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E24.svg" type="node,closedway">
         <label text="E24: Monument"/>
-        <key key="historic" value="monument"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:historic=monument"/>
         <key key="seamark:type" value="landmark"/>
-        <combo key="seamark:landmark:category" text="Type Monyment" required="true">
+        <combo key="seamark:landmark:category" text="Monument Category" required="true">
           <list_entry value="monument"/>
           <list_entry value="column"/>
           <list_entry value="memorial"/>
           <list_entry value="obelisk"/>
           <list_entry value="statue"/>
         </combo>
+        <space/>
+        <label text="Streetmap Monument"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:historic=monument"/>
+        <key key="historic" value="monument"/>
         <text key="name" text="Name"/>
         <text key="historic:civilization" text="Who raised the monument"/>
       </item>
       
       <item name="Windmill (E25.1-E25.2)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E25.svg" type="node,closedway">
         <label text="E25.1-25.2: Windmill"/>
-        <key key="seamark:landmark:category" value="windmill"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="windmill"/>
-        <key key="man_made" value="windmill"/>
+        <space/>
+        <label text="Streetmap Windmwill"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=windmill"/>
+        <key key="man_made" value="windmill"/>
         <text key="name" text="Name"/>
         <check key="ruins" text="Ruined" value_on="yes" default="off"/>
         <check key="disused" text="Disused" default="off"/>
@@ -1943,13 +1976,15 @@
         <check key="windmill:vanes" text="Have wind wanes" default="off"/>
       </item>
       
-      <item name="Wind Farm (E26.1-E26.2)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E26.1.svg" type="node,closedway">
-        <label text="E26.1-26.2: Wind Farm"/>
-        <key key="power" value="generator"/>
-        <key key="seamark:landmark:category" value="windmotor"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:power=generator"/>
-        <key key="generator:source" value="wind"/>
+      <item name="Wind Turbine (E26.1)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E26.1.svg" type="node,closedway">
+        <label text="E26.1-26.2: Wind Turbine"/>
         <key key="seamark:type" value="landmark"/>
+        <key key="seamark:landmark:category" value="windmotor"/>
+        <space/>
+        <label text="Streetmap Wind Turbine"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:power=generator"/>
+        <key key="power" value="generator"/>
+        <key key="generator:source" value="wind"/>
         <text key="name" text="Name"/>
         <combo key="operator" text="Operator" readonly="false">
         </combo>
@@ -1960,12 +1995,29 @@
         </combo>
       </item>
       
-      <item name="Flag pole (E27)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E27.svg" type="node">
-        <label text="E27: Flag Pole"/>
+      <item name="Wind Farm (E26.2)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E26.1.svg" type="node,closedway">
+        <label text="E26.1-26.2: Wind Farm"/>
+        <key key="seamark:type" value="production_area"/>
+        <key key="seamark:production_area:category" value="wind_farm"/>
+        <space/>
+        <label text="Streetmap Wind Farm"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:power=generator"/>
+        <key key="power" value="generator"/>
+        <key key="generator:source" value="wind"/>
+        <text key="name" text="Name"/>
+        <combo key="operator" text="Operator" readonly="false">
+        </combo>
+        <text key="generator:output:electricity" text="Energy Output"/>
+      </item>
+      
+      <item name="Flagpole (E27)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E27.svg" type="node">
+        <label text="E27: Flagpole"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="flagstaff"/>
-        <key key="man_made" value="flagpole"/>
+        <space/>
+        <label text="Streetmap Flagpole"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=flagpole"/>
+        <key key="man_made" value="flagpole"/>
         <combo key="operator" text="Operator" readonly="false">
         </combo>
         <combo key="type" text="Type">
@@ -1979,13 +2031,19 @@
       
       <item name="Radio or Television Mast (E28)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E28_.svg" type="node">
         <label text="E28: Radio or Television Mast"/>
-        <key key="man_made" value="mast"/>
+        <key key="seamark:type" value="landmark"/>
+        <key key="seamark:landmark:category" value="mast"/>
+        <combo key="seamark:landmark:function" text="Type">
+          <list_entry value="radio"/>
+          <list_entry value="television"/>
+        </combo>
+        <space/>
+        <label text="Streetmap Mast"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=mast"/>
+        <key key="man_made" value="mast"/>
         <key key="tower:type" value="communication"/>
         <key key="tower:construction" value="freestanding"/>
-        <key key="seamark:landmark:category" value="mast"/>
-        <key key="seamark:type" value="landmark"/>
-        <text key="name" text="Name"/>
+       <text key="name" text="Name"/>
         <text key="ref" text="Reference"/>
         <combo key="operator" text="Operator" readonly="false">
         </combo>
@@ -1994,12 +2052,18 @@
       
       <item name="Radio or Television Tower (E29)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E29.svg" type="node">
         <label text="E29: Radio or Television Tower"/>
-        <key key="man_made" value="tower"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=tower"/>
-        <key key="tower:type" value="communication"/>
-        <key key="tower:construction" value="lettice"/>
-        <key key="seamark:landmark:category" value="tower"/>
         <key key="seamark:type" value="landmark"/>
+        <key key="seamark:landmark:category" value="tower"/>
+        <combo key="seamark:landmark:function" text="Type">
+          <list_entry value="radio"/>
+          <list_entry value="television"/>
+        </combo>
+        <space/>
+        <label text="Streetmap Tower"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=tower"/>
+        <key key="man_made" value="tower"/>
+        <key key="tower:type" value="communication"/>
+        <key key="tower:construction" value="freestanding"/>
         <text key="name" text="Name"/>
         <text key="ref" text="Reference"/>
         <combo key="operator" text="Operator" readonly="false">
@@ -2007,19 +2071,74 @@
         <text key="height" text="Height over ground"/>
       </item>
       
-      <item name="Radar mast (E30)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E29.svg" type="node">
-        <label text="E30: Radar Mast"/>
+      <item name="Radar mast (E30.1)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E29.svg" type="node">
+        <label text="E30.1: Radar Mast"/>
+        <key key="seamark:type" value="landmark"/>
+        <key key="seamark:landmark:category" value="mast"/>
+        <key key="seamark:landmark:function" value="radar"/>
+        <space/>
+        <label text="Streetmap Mast"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=mast"/>
+        <key key="man_made" value="mast"/>
+        <key key="tower:type" value="surveillance"/>
+        <key key="tower:construction" value="freestanding"/>
+        <text key="name" text="Name"/>
+        <text key="reference" text="Reference"/>
+        <text key="height" text="Height over ground"/>
+        <text key="surveillance:range" text="Radar Range"/>
+        <combo key="operator" text="Operator" readonly="false">
+        </combo>
+      </item>
+      
+      <item name="Radar Tower (E30.2)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E29.svg" type="node">
+        <label text="E30.1: Radar Tower"/>
+        <key key="seamark:type" value="landmark"/>
+        <key key="seamark:landmark:category" value="tower"/>
+        <key key="seamark:landmark:function" value="radar"/>
+        <space/>
+        <label text="Streetmap Tower"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=tower"/>
+        <key key="man_made" value="tower"/>
+        <key key="tower:type" value="surveillance"/>
+        <key key="tower:construction" value="freestanding"/>
+        <text key="name" text="Name"/>
+        <text key="reference" text="Reference"/>
+        <text key="height" text="Height over ground"/>
+        <text key="surveillance:range" text="Radar Range"/>
+        <combo key="operator" text="Operator" readonly="false">
+        </combo>
+      </item>
+      
+     <item name="Radar Scanner (E30.3)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E29.svg" type="node">
+        <label text="E30.1: Radar Scanner"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="radar_scanner"/>
-        <key key="man_made" value="tower"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=tower"/>
+        <key key="seamark:landmark:function" value="radar"/>
+        <space/>
+        <label text="Streetmap Scanner"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=mast"/>
+        <key key="man_made" value="mast"/>
         <key key="tower:type" value="surveillance"/>
-        <combo key="tower:construction" text="Construction" use_last_as_default="force">
-          <list_entry value="freestanding" display_value="Mast"/>
-          <list_entry value="tower" display_value="Tower"/>
-          <list_entry value="scanner" display_value="Scanner"/>
-          <list_entry value="dome" display_value="RaDome"/>
+        <key key="tower:construction" value="freestanding"/>
+        <text key="name" text="Name"/>
+        <text key="reference" text="Reference"/>
+        <text key="height" text="Height over ground"/>
+        <text key="surveillance:range" text="Radar Range"/>
+        <combo key="operator" text="Operator" readonly="false">
         </combo>
+      </item>
+      
+      <item name="Radar Dome (E30.4)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E29.svg" type="node">
+        <label text="E30.1: Radar Dome"/>
+        <key key="seamark:type" value="landmark"/>
+        <key key="seamark:landmark:category" value="dome"/>
+        <key key="seamark:landmark:function" value="radar"/>
+        <space/>
+        <label text="Streetmap Dome"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=dome"/>
+        <key key="man_made" value="dome"/>
+        <key key="tower:type" value="surveillance"/>
+        <key key="tower:construction" value="dome"/>
         <text key="name" text="Name"/>
         <text key="reference" text="Reference"/>
         <text key="height" text="Height over ground"/>
@@ -2030,12 +2149,14 @@
       
       <item name="Dish Aerial (E31)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E31.svg" type="node">
         <label text="E31: Dish Aerial"/>
-        <key key="man_made" value="tower"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=tower"/>
-        <key key="tower:type" value="communication"/>
-        <key key="tower:construction" value="dish"/>
         <key key="seamark:landmark:category" value="dish_aerial"/>
         <key key="seamark:type" value="landmark"/>
+        <space/>
+        <label text="Streetmap Tower"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=tower"/>
+        <key key="man_made" value="tower"/>
+        <key key="tower:type" value="communication"/>
+        <key key="tower:construction" value="dish"/>
         <text key="name" text="Name"/>
         <text key="ref" text="Reference"/>
         <combo key="operator" text="Operator" readonly="false">
@@ -2045,10 +2166,12 @@
       
       <item name="Tanks (E32)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E32.svg" type="node,closedway">
         <label text="E32: Tanks"/>
-        <key key="man_made" value="storage_tank"/>
         <key key="seamark:type" value="tank"/>
         <key key="seamark:tank:category" value="tank"/>
+        <space/>
+        <label text="Streetmap Tank"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=storage_tank"/>
+        <key key="man_made" value="storage_tank"/>
         <text key="name" text="Name"/>
         <text key="ref" text="Reference"/>
         <combo key="operator" text="Operator" readonly="false">
@@ -2061,10 +2184,12 @@
       
       <item name="Silos (E33)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E33.svg" type="node,closedway">
         <label text="E33: Silos"/>
-        <key key="man_made" value="silo"/>
         <key key="seamark:type" value="tank"/>
         <key key="seamark:tank:category" value="silo"/>
+        <space/>
+        <label text="Streetmap Silo"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=silo"/>
+        <key key="man_made" value="silo"/>
         <text key="name" text="Name"/>
         <text key="ref" text="Reference"/>
         <combo key="operator" text="Operator" readonly="false">
@@ -2077,7 +2202,6 @@
       
       <item name="Fortification (E34)" icon="presets/empty.png" type="node,closedway">
         <label text="E34: Fortification"/>
-        <key key="historic" value="castle"/>
         <key key="seamark:type" value="fortified_structure"/>
         <text key="name" text="Name"/>
         <combo key="seamark:fortified_structure:category" text="Category">
@@ -2088,6 +2212,9 @@
           <list_entry value="martello_tower"/>
           <list_entry value="redoubt"/>
         </combo>
+        <space/>
+        <label text="Streetmap Fort"/>
+        <check key="historic" value_on="castle" value_off="" default="off" text="Historic castle"/>
         <combo key="castle_type" text="Type">
           <list_entry value="defensive"/>
           <list_entry value="stately"/>
@@ -2104,12 +2231,14 @@
       </item>
 
 
-      <item name="Quarry (E35-E36)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E36.svg" type="node,closedway">
-        <label text="E35-36: Quarry (Surface Mine)"/>
-        <key key="landuse" value="quarry"/>
+      <item name="Quarry (E35)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E36.svg" type="node,closedway">
+        <label text="E35: Quarry (Surface Mine)"/>
         <key key="seamark:type" value="production_area"/>
         <key key="seamark:production_area:category" value="quarry"/>
+        <space/>
+        <label text="Streetmap Quarry"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:landuse=quarry"/>
+        <key key="landuse" value="quarry"/>
         <text key="name" text="Name"/>
         <combo key="operator" text="Operator" readonly="false">
         </combo>
@@ -2202,12 +2331,14 @@
       </item>
 
 
-      <item name="Mineshaft (E35-E36)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E36.svg" type="node,closedway">
-        <label text="E35-36: Mineshaft (Vertical)"/>
-        <key key="man_made" value="mineshaft"/>
+      <item name="Mine (E36)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E36.svg" type="node,closedway">
+        <label text="E36: Mine (Underground)"/>
         <key key="seamark:type" value="production_area"/>
         <key key="seamark:production_area" value="mine"/>
+        <space/>
+        <label text="Streetmap Mineshaft"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=mineshaft"/>
+        <key key="man_made" value="mineshaft"/>
         <text key="name" text="Name"/>
         <combo key="operator" text="Operator" readonly="false">
         </combo>
@@ -2306,107 +2437,6 @@
         <check key="headframe" text="Headframe" default="off"/>
         <check key="disused" text="Disused" default="off"/>
       </item>
-
-
-      <item name="Adit (E35-E36)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E36.svg" type="node,closedway">
-        <label text="E35-36: Adit (Horizontal Mine Access)"/>
-        <key key="man_made" value="adit"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=adit"/>
-        <text key="name" text="Name"/>
-        <combo key="operator" text="Operator" readonly="false">
-        </combo>
-        <combo key="resource" text="Resource">
-          <list_entry value="aggregate"/>
-          <list_entry value="bauxite"/>
-          <list_entry value="coal"/>
-          <list_entry value="copper"/>
-          <list_entry value="dimension_stone"/>
-          <list_entry value="gold"/>
-          <list_entry value="ilmenite"/>
-          <list_entry value="iron_ore"/>
-          <list_entry value="lead"/>
-          <list_entry value="limestone"/>
-          <list_entry value="nickel"/>
-          <list_entry value="rutile"/>
-          <list_entry value="salt"/>
-          <list_entry value="silver"/>
-          <list_entry value="tin"/>
-          <list_entry value="zinc"/>
-          <list_entry value="zircon"/>
-          <list_entry value="antimony"/>
-          <list_entry value="arsenic"/>
-          <list_entry value="asbestos"/>
-          <list_entry value="barite"/>
-          <list_entry value="bastnäsite"/>
-          <list_entry value="bentonite"/>
-          <list_entry value="beryl"/>
-          <list_entry value="bismuth"/>
-          <list_entry value="bitumen"/>
-          <list_entry value="borax"/>
-          <list_entry value="boron"/>
-          <list_entry value="bromide"/>
-          <list_entry value="caesium"/>
-          <list_entry value="chromite"/>
-          <list_entry value="cobalt"/>
-          <list_entry value="diamond"/>
-          <list_entry value="diatomite"/>
-          <list_entry value="dolomite"/>
-          <list_entry value="feldspar"/>
-          <list_entry value="fluorite"/>
-          <list_entry value="garnet"/>
-          <list_entry value="graphite"/>
-          <list_entry value="gypsum"/>
-          <list_entry value="iodine"/>
-          <list_entry value="jade"/>
-          <list_entry value="kaolinite"/>
-          <list_entry value="lanthanum"/>
-          <list_entry value="lithium"/>
-          <list_entry value="magnesite"/>
-          <list_entry value="magneisium"/>
-          <list_entry value="manganese"/>
-          <list_entry value="marble"/>
-          <list_entry value="mercury"/>
-          <list_entry value="mica"/>
-          <list_entry value="molybdenite"/>
-          <list_entry value="monazite"/>
-          <list_entry value="niobium"/>
-          <list_entry value="oil_sand"/>
-          <list_entry value="oil_shale"/>
-          <list_entry value="opal"/>
-          <list_entry value="palladium"/>
-          <list_entry value="peat"/>
-          <list_entry value="perlite"/>
-          <list_entry value="phospate"/>
-          <list_entry value="potash"/>
-          <list_entry value="platinum"/>
-          <list_entry value="radium"/>
-          <list_entry value="ruby"/>
-          <list_entry value="rubidium"/>
-          <list_entry value="sapphire"/>
-          <list_entry value="scandium"/>
-          <list_entry value="silica"/>
-          <list_entry value="sodium_carbonate"/>
-          <list_entry value="spongolite"/>
-          <list_entry value="strontium"/>
-          <list_entry value="sulphur"/>
-          <list_entry value="talc"/>
-          <list_entry value="terbium"/>
-          <list_entry value="tantalum"/>
-          <list_entry value="topaz"/>
-          <list_entry value="tungsten"/>
-          <list_entry value="uranium"/>
-          <list_entry value="vanadium"/>
-          <list_entry value="vermiculite"/>
-          <list_entry value="wollastonite"/>
-          <list_entry value="yttrium"/>
-          <list_entry value="zeolite"/>
-        </combo>
-        <text key="mine" text="Name of Mine"/>
-        <text key="depth" text="Depth of shaft"/>
-        <check key="disused" text="Disused" default="off"/>
-        <check key="collapsed" text="Collapsed" default="off"/>
-      </item>
-
 
       <item name="Stadium (Eb BR)" icon="presets/empty.png" type="node,closedway">
         <label text="Eb: Stadium"/>
