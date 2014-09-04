@@ -4441,20 +4441,20 @@
             <list_entry value="information"/>
           </combo>
           <combo key="seamark:notice:category" text="Notice Category">
-            <list_entry value="keep_to_starboard_margin" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/right/navigate_along_bank.svg" icon_size="16"/>
-            <list_entry value="cross_river_to_port" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/change_bank_left.svg" icon_size="16"/>
-            <list_entry value="cross_river_to_starboard" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/change_bank_right.svg" icon_size="16"/>
-            <list_entry value="keep_to_port_margin" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/right/navigate_along_oposite_bank.svg" icon_size="16"/>
-            <list_entry value="keep_to_keep_to_mid-river" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/navigate_mid_river.svg" icon_size="16"/>
-            <list_entry value="traffic_between_margins" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/crossing_traffic.svg" icon_size="16"/>
+            <list_entry value="keep_to_starboard_margin" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/right/keep_to_starboard_margin.svg" icon_size="16"/>
+            <list_entry value="cross_river_to_port" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/cross_river_to_port.svg" icon_size="16"/>
+            <list_entry value="cross_river_to_starboard" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/cross_river_to_starboard.svg" icon_size="16"/>
+            <list_entry value="keep_to_port_margin" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/right/keep_to_port_margin.svg" icon_size="16"/>
+            <list_entry value="keep_to_mid-river" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/keep_to_mid-river.svg" icon_size="16"/>
+            <list_entry value="traffic_between_margins" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/traffic_between_margins.svg" icon_size="16"/>
             <list_entry value="alignment" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/alignment.svg" icon_size="16"/>
             <list_entry value="reduce_speed" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/reduce_speed.svg" icon_size="16"/>
             <list_entry value="no_anchoring" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/no_anchoring.svg" icon_size="16"/>
             <list_entry value="limited_headroom" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/limited_headroom.svg" icon_size="16"/>
-            <list_entry value="opening_to_left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/left/bridge.svg" icon_size="16"/>
-            <list_entry value="opening_to_right" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/right/bridge.svg" icon_size="16"/>
-            <list_entry value="secondary_waterway_right" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/bifucation_right.svg" icon_size="16"/>
-            <list_entry value="secondary_waterway_left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/bifucation_left.svg" icon_size="16"/>
+            <list_entry value="opening_to_left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/left/opening_to_left.svg" icon_size="16"/>
+            <list_entry value="opening_to_right" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/right/opening_to_right.svg" icon_size="16"/>
+            <list_entry value="secondary_waterway_right" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/secondary_waterway_right.svg" icon_size="16"/>
+            <list_entry value="secondary_waterway_left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/secondary_waterway_left.svg" icon_size="16"/>
             <list_entry value="isolated_danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/isolated_danger.svg" icon_size="16"/>
             <list_entry value="unknown" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/unknown.svg" icon_size="16"/>
           </combo>
@@ -4469,7 +4469,7 @@
           <combo key="seamark:notice:1:bank" text="Bank (1)">
             <list_entry value="left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/left/navigate_along_bank.svg" icon_size="16"/>
             <list_entry value="right" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/right/navigate_along_bank.svg" icon_size="16"/>
-            <list_entry value="" display_value="independent" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/I_navigate_along_bank.svg" icon_size="16"/>
+            <list_entry value="" display_value="independent" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/navigate_along_bank.svg" icon_size="16"/>
           </combo>
           <combo key="seamark:notice:1:function" text="Notice Function (1)">
             <list_entry value="prohibition"/>
@@ -4479,20 +4479,20 @@
             <list_entry value="information"/>
           </combo>
           <combo key="seamark:notice:1:category" text="Notice Category (1)">
-            <list_entry value="keep_to_starboard_margin" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/right/navigate_along_bank.svg" icon_size="16"/>
-            <list_entry value="cross_rver_to_port" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/change_bank_left.svg" icon_size="16"/>
-            <list_entry value="cross_river_to_starboard" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/change_bank_right.svg" icon_size="16"/>
-            <list_entry value="keep_to_port_margin" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/left/navigate_along_bank.svg" icon_size="16"/>
-            <list_entry value="keep_to_keep_to_mid-river" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/navigate_mid_river.svg" icon_size="16"/>
-            <list_entry value="traffic_between_margins" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/crossing_traffic.svg" icon_size="16"/>
+            <list_entry value="keep_to_starboard_margin" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/right/keep_to_starboard_margin.svg" icon_size="16"/>
+            <list_entry value="cross_river_to_port" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/cross_river_to_port.svg" icon_size="16"/>
+            <list_entry value="cross_river_to_starboard" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/cross_river_to_starboard.svg" icon_size="16"/>
+            <list_entry value="keep_to_port_margin" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/left/keep_to_port_margin.svg" icon_size="16"/>
+            <list_entry value="keep_to_mid-river" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/keep_to_mid-river.svg" icon_size="16"/>
+            <list_entry value="traffic_between_margins" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/traffic_between_margins.svg" icon_size="16"/>
             <list_entry value="alignment" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/alignment.svg" icon_size="16"/>
             <list_entry value="reduce_speed" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/reduce_speed.svg" icon_size="16"/>
             <list_entry value="no_anchoring" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/no_anchoring.svg" icon_size="16"/>
             <list_entry value="limited_headroom" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/limited_headroom.svg" icon_size="16"/>
-            <list_entry value="opening_to_left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/left/bridge.svg" icon_size="16"/>
-            <list_entry value="opening_to_right" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/right/bridge.svg" icon_size="16"/>
-            <list_entry value="secondary_waterway_right" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/bifucation_right.svg" icon_size="16"/>
-            <list_entry value="secondary_waterway_left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/bifucation_left.svg" icon_size="16"/>
+            <list_entry value="opening_to_left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/left/opening_to_left.svg" icon_size="16"/>
+            <list_entry value="opening_to_right" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/right/opening_to_right.svg" icon_size="16"/>
+            <list_entry value="secondary_waterway_right" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/secondary_waterway_right.svg" icon_size="16"/>
+            <list_entry value="secondary_waterway_left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/secondary_waterway_left.svg" icon_size="16"/>
             <list_entry value="isolated_danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/isolated_danger.svg" icon_size="16"/>
             <list_entry value="unknown" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/unknown.svg" icon_size="16"/>
           </combo>
@@ -4516,20 +4516,20 @@
             <list_entry value="information"/>
           </combo>
           <combo key="seamark:notice:2:category" text="Notice Category (2)">
-            <list_entry value="keep_to_starboard_margin" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/right/navigate_along_bank.svg" icon_size="16"/>
-            <list_entry value="cross_rver_to_port" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/change_bank_left.svg" icon_size="16"/>
-            <list_entry value="cross_river_to_starboard" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/change_bank_right.svg" icon_size="16"/>
-            <list_entry value="keep_to_port_margin" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/left/navigate_along_bank.svg" icon_size="16"/>
-            <list_entry value="keep_to_keep_to_mid-river" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/navigate_mid_river.svg" icon_size="16"/>
-            <list_entry value="traffic_between_margins" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/crossing_traffic.svg" icon_size="16"/>
+            <list_entry value="keep_to_starboard_margin" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/right/keep_to_starboard_margin.svg" icon_size="16"/>
+            <list_entry value="cross_river_to_port" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/cross_river_to_port.svg" icon_size="16"/>
+            <list_entry value="cross_river_to_starboard" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/cross_river_to_starboard.svg" icon_size="16"/>
+            <list_entry value="keep_to_port_margin" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/left/keep_to_port_margin.svg" icon_size="16"/>
+            <list_entry value="keep_to_mid-river" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/keep_to_mid-river.svg" icon_size="16"/>
+            <list_entry value="traffic_between_margins" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/traffic_between_margins.svg" icon_size="16"/>
             <list_entry value="alignment" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/alignment.svg" icon_size="16"/>
             <list_entry value="reduce_speed" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/reduce_speed.svg" icon_size="16"/>
             <list_entry value="no_anchoring" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/no_anchoring.svg" icon_size="16"/>
             <list_entry value="limited_headroom" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/limited_headroom.svg" icon_size="16"/>
-            <list_entry value="opening_to_left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/left/bridge.svg" icon_size="16"/>
-            <list_entry value="opening_to_right" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/right/bridge.svg" icon_size="16"/>
-            <list_entry value="secondary_waterway_right" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/bifucation_right.svg" icon_size="16"/>
-            <list_entry value="secondary_waterway_left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/bifucation_left.svg" icon_size="16"/>
+            <list_entry value="opening_to_left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/left/opening_to_left.svg" icon_size="16"/>
+            <list_entry value="opening_to_right" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/right/opening_to_right.svg" icon_size="16"/>
+            <list_entry value="secondary_waterway_right" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/secondary_waterway_right.svg" icon_size="16"/>
+            <list_entry value="secondary_waterway_left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/secondary_waterway_left.svg" icon_size="16"/>
             <list_entry value="isolated_danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/isolated_danger.svg" icon_size="16"/>
             <list_entry value="unknown" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/unknown.svg" icon_size="16"/>
           </combo>
@@ -4560,7 +4560,7 @@
             <list_entry value="no_passing" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/no_passing.svg" icon_size="16"/>
             <list_entry value="no_convoy_passing" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/no_convoy_passing.svg" icon_size="16"/>
             <list_entry value="no_berthing" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/no_berthing.svg" icon_size="16"/>
-            <list_entry value="no_berthing_lateral_limit" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/no_berthing_lateral_limit_1.svg" icon_size="16"/>
+            <list_entry value="no_berthing_lateral_limit" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/no_berthing_lateral_limit.svg" icon_size="16"/>
             <list_entry value="no_anchoring" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/no_anchoring.svg" icon_size="16"/>
             <list_entry value="no_mooring" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/no_mooring.svg" icon_size="16"/>
             <list_entry value="no_turning" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/no_turning.svg" icon_size="16"/>
@@ -4573,7 +4573,7 @@
             <list_entry value="no_sailing_craft" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/no_sailing_craft.svg" icon_size="16"/>
             <list_entry value="no_unpowered_craft" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/no_unpowered_craft.svg" icon_size="16"/>
             <list_entry value="no_sailboards" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/no_sailboards.svg" icon_size="16"/>
-            <list_entry value="no_high_speeds" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/no_hight_speeds.svg" icon_size="16"/>
+            <list_entry value="no_high_speeds" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/no_high_speeds.svg" icon_size="16"/>
             <list_entry value="no_launching_beaching" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/no_launching_beaching.svg" icon_size="16"/>
             <list_entry value="no_waterbikes" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/no_waterbikes.svg" icon_size="16"/>
             <list_entry value="proceed_to_left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/proceed_to_left.svg" icon_size="16"/>
@@ -4646,14 +4646,14 @@
             <list_entry value="telephone" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/telephone.svg" icon_size="16"/>
             <list_entry value="motor_craft_permitted" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/motor_craft_permitted.svg" icon_size="16"/>
             <list_entry value="sport_craft_permitted" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/sport_craft_permitted.svg" icon_size="16"/>
-            <list_entry value="water_skiing_permitted" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/water_skiing_permitted.svg" icon_size="16"/>
+            <list_entry value="waterskiing_permitted" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/waterskiing_permitted.svg" icon_size="16"/>
             <list_entry value="sailing_craft_permitted" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/sailing_craft_permitted.svg" icon_size="16"/>
             <list_entry value="unpowered_craft_permitted" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/unpowered_craft_permitted.svg" icon_size="16"/>
             <list_entry value="sailboards_permitted" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/sailboards_permitted.svg" icon_size="16"/>
             <list_entry value="high_speeds_permitted" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/high_speeds_permitted.svg" icon_size="16"/>
             <list_entry value="launching_beaching_permitted" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/launching_beaching_permitted.svg" icon_size="16"/>
             <list_entry value="radio_information" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/radio_information.svg" icon_size="16"/>
-            <list_entry value="water_bikes_permitted" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/water_bikes_permitted.svg" icon_size="16"/>
+            <list_entry value="waterbikes_permitted" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/CEVNI/waterbikes_permitted.svg" icon_size="16"/>
           </combo>
           <combo key="seamark:notice:function" text="Function">
             <list_entry value="prohibition"/>
@@ -4833,10 +4833,10 @@
             <list_entry value="information"/>
           </combo>
           <combo key="seamark:notice:category" text="Notice Category" match="key!">
-            <list_entry value="keep_to_starboard_margin" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/PPWBC/right/navigate_along_bank.svg" icon_size="16"/>
+            <list_entry value="keep_to_starboard_margin" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/PPWBC/right/keep_to_starboard_margin.svg" icon_size="16"/>
             <list_entry value="cross_river_to_port" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/PPWBC/right/change_bank.svg" icon_size="16"/>
             <list_entry value="cross_river_to_starboard" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/PPWBC/left/change_bank.svg" icon_size="16"/>
-            <list_entry value="keep_to_port_margin" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/PPWBC/left/navigate_along_bank.svg" icon_size="16"/>
+            <list_entry value="keep_to_port_margin" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/PPWBC/left/keep_to_port_margin.svg" icon_size="16"/>
             <list_entry value="keep_to_mid-river" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/PPWBC/L_navigate_mid_river.svg" icon_size="16"/>
             <list_entry value="opening_to_left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/right/bridge.svg" icon_size="16"/>
             <list_entry value="opening_to_right" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/left/bridge.svg" icon_size="16"/>
