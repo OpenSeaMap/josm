@@ -98,6 +98,18 @@
         <text key="vhf_channel" text="VHF channel" />
         <text key="vhf_mmsi" text="VHF MMSI" />
         <space/>
+        <combo key="internet_access" text="Internet Access">
+          <list_entry value="yes"/>
+          <list_entry value="wlan"/>
+          <list_entry value="wired"/>
+          <list_entry value="terminal"/>
+        </combo>
+        <text key="internet_access:operator" text="Internet Operator"/>
+        <combo key="internet_access:fee" text="Internet Fee">
+          <list_entry value="yes"/>
+          <list_entry value="no"/>
+        </combo>
+        <space/>
         <text key="harbour:information" text="General Information" />
       </item>
       <item name="Marina Facilities" icon="http://dev.openseamap.org/josm/icons/Marina16.png" type="node,way,closedway,relation">
@@ -111,7 +123,6 @@
         <text key="harbour:visitors_mooring" text="Visitors mooring" />
         <text key="harbour:scrubbing_berth" text="Scrubbing berth" />
         <text key="harbour:electricity" text="Electricity" />
-        <text key="harbour:wifi" text="WiFi" />
         <text key="harbour:water_tap" text="Drinking Water" />
         <text key="harbour:showers" text="Showers" />
         <text key="harbour:toilets" text="Toilets" />
