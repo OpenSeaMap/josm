@@ -4315,7 +4315,7 @@
         <label text="ODAS is an abreviation for Ocean Data Acquisition System"/>
       </item>
 
-      <item name="Beacon (Q80-83)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/black.svg" type="node">
+      <item name="Beacon (Q80-83)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/black.svg" type="node">
         <label text="Q80-83: Beacon"/>
         <key key="man_made" value="beacon"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=beacon"/>
@@ -4961,7 +4961,7 @@
           <text key="seamark:light:range" text="Light Range"/>
         </item>
 
-        <item name="IALA Lateral Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/green.svg" type="node">
+        <item name="IALA Lateral Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/green.svg" type="node">
           <label text="Q130.1: Lateral Beacon"/>
           <combo key="seamark:beacon_lateral:system" text="IALA" use_last_as_default="force" required="true">
             <list_entry value="iala-a" short_description="Europe, Africa, Astralia and Asia except Korea, Japan and Philipines"/>
@@ -4978,16 +4978,16 @@
             <list_entry value="preferred_channel_starboard" short_description="RedGreenRed in IALA A, GreenRedGreen in IALA B; Cylindrical Topmark"/>
           </combo>
           <combo key="seamark:beacon_lateral:colour" text="Beacon Colour" use_last_as_default="force" required="true">
-            <list_entry value="red" short_description="Port side in IALA A, Starboard side in IALA B" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/red.svg" icon_size="16"/>
-            <list_entry value="green" short_description="Starboard side in IALA A, Port side in IALA B" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/green.svg" icon_size="16"/>
-            <list_entry value="red;green;red" short_description="Preferred Channel Starboard in IALA A, Port in IALA B" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/horizontal/red_green_red.svg" icon_size="16"/>
-            <list_entry value="green;red;green" short_description="Preferred Channel Port in IALA A, Starboard in IALA B" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/horizontal/green_red_green.svg" icon_size="16"/>
+            <list_entry value="red" short_description="Port side in IALA A, Starboard side in IALA B" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/red.svg" icon_size="16"/>
+            <list_entry value="green" short_description="Starboard side in IALA A, Port side in IALA B" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/green.svg" icon_size="16"/>
+            <list_entry value="red;green;red" short_description="Preferred Channel Starboard in IALA A, Port in IALA B" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/horizontal/red_green_red.svg" icon_size="16"/>
+            <list_entry value="green;red;green" short_description="Preferred Channel Port in IALA A, Starboard in IALA B" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/horizontal/green_red_green.svg" icon_size="16"/>
           </combo>
           <combo key="seamark:beacon_lateral:colour_pattern" text="Beacon Color Pattern">
             <list_entry value="horizontal"/>
           </combo>
           <combo key="seamark:beacon_lateral:shape" text="Beacon Shape" default="">
-            <list_entry value="tower" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/generic.svg" icon_size="16"/>
+            <list_entry value="tower" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/generic.svg" icon_size="16"/>
             <list_entry value="pole" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q90/black.svg" icon_size="16"/>
             <list_entry value="perch" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q91/port.svg" icon_size="16"/>
             <list_entry value="withy" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q92/port.svg" icon_size="16"/>
@@ -5091,7 +5091,7 @@
           <text key="seamark:light:range" text="Light Range"/>
         </item>
 
-        <item name="CEVNI Lateral Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/horizontal/red_green_red_green.svg" type="node">
+        <item name="CEVNI Lateral Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/horizontal/red_green_red_green.svg" type="node">
           <label text="CEVNI Lateral Beacon"/>
           <label text="Used on Inland Waterways in most European countries"/>
           <key key="seamark:beacon_lateral:system" value="cevni"/>
@@ -5117,17 +5117,17 @@
             <list_entry value="bridge_pier" />
           </combo>
           <combo key="seamark:beacon_lateral:colour" text="Beacon Colour" use_last_as_default="force" required="true">
-            <list_entry value="red" short_description="Port side, Right side" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/red.svg" icon_size="16"/>
-            <list_entry value="green" short_description="Starboard side, Left side" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/green.svg" icon_size="16"/>
-            <list_entry value="green;red;green" short_description="Preferred Port" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/horizontal/green_red_green.svg" icon_size="16"/>
-            <list_entry value="red;green;red" short_description="Preferred Starboard" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/horizontal/red_green_red.svg" icon_size="16"/>
-            <list_entry value="red;white;red;white" short_description="CEVNI left hand danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/horizontal/red_white_red_white.svg" icon_size="16"/>
-            <list_entry value="green;white;green;white" short_description="CEVNI right hand danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/horizontal/green_white_green_white.svg" icon_size="16"/>
-            <list_entry value="red;green;red;green" short_description="CEVNI Bifurcation" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/horizontal/red_green_red_green.svg" icon_size="16"/>
-            <list_entry value="yellow" short_description="Bridge or Pier Head" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/yellow.svg" icon_size="16"/>
+            <list_entry value="red" short_description="Port side, Right side" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/red.svg" icon_size="16"/>
+            <list_entry value="green" short_description="Starboard side, Left side" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/green.svg" icon_size="16"/>
+            <list_entry value="green;red;green" short_description="Preferred Port" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/horizontal/green_red_green.svg" icon_size="16"/>
+            <list_entry value="red;green;red" short_description="Preferred Starboard" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/horizontal/red_green_red.svg" icon_size="16"/>
+            <list_entry value="red;white;red;white" short_description="CEVNI left hand danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/horizontal/red_white_red_white.svg" icon_size="16"/>
+            <list_entry value="green;white;green;white" short_description="CEVNI right hand danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/horizontal/green_white_green_white.svg" icon_size="16"/>
+            <list_entry value="red;green;red;green" short_description="CEVNI Bifurcation" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/horizontal/red_green_red_green.svg" icon_size="16"/>
+            <list_entry value="yellow" short_description="Bridge or Pier Head" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/yellow.svg" icon_size="16"/>
           </combo>
           <combo key="seamark:beacon_lateral:shape" text="Beacon Shape" default="">
-            <list_entry value="tower" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/generic.svg" icon_size="16"/>
+            <list_entry value="tower" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/generic.svg" icon_size="16"/>
             <list_entry value="pole" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q90/black.svg" icon_size="16"/>
             <list_entry value="perch" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q91/port.svg" icon_size="16"/>
             <list_entry value="withy" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q92/port.svg" icon_size="16"/>
@@ -5243,7 +5243,7 @@
           <text key="seamark:light:range" text="Light Range"/>
         </item>
 
-        <item name="RIWR Lateral Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/green.svg" type="node">
+        <item name="RIWR Lateral Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/green.svg" type="node">
           <label text="RIWR Lateral Beacon"/>
           <label text="Used on Inland Waterways mainly in Russia"/>
           <key key="seamark:beacon_lateral:system" value="riwr"/>
@@ -5430,7 +5430,7 @@
           <text key="seamark:light:range" text="Light Range"/>
         </item>
 
-        <item name="OTHER Lateral Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/green.svg" type="node">
+        <item name="OTHER Lateral Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/green.svg" type="node">
           <label text="OTHER Lateral Beacon"/>
           <label text="Used on Inland Waterways where a distinct system not described are in use"/>
           <key key="seamark:beacon_lateral:system" value="other"/>
@@ -5456,14 +5456,14 @@
             <list_entry value="bridge_pier" />
           </combo>
           <combo key="seamark:beacon_lateral:colour" text="Beacon Colour" use_last_as_default="force" required="true">
-            <list_entry value="red" short_description="Port side, Right side" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/red.svg" icon_size="16"/>
-            <list_entry value="green" short_description="Starboard side, Left side" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/green.svg" icon_size="16"/>
-            <list_entry value="green;red;green" short_description="Preferred Port" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/horizontal/green_red_green.svg" icon_size="16"/>
-            <list_entry value="red;green;red" short_description="Preferred Starboard" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/horizontal/red_green_red.svg" icon_size="16"/>
-            <list_entry value="red;white;red;white" short_description="CEVNI left hand danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/horizontal/red_white_red_white.svg" icon_size="16"/>
-            <list_entry value="green;white;green;white" short_description="CEVNI right hand danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/horizontal/green_white_green_white.svg" icon_size="16"/>
-            <list_entry value="red;green;red;green" short_description="CEVNI Bifurcation" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/horizontal/red_green_red_green.svg" icon_size="16"/>
-            <list_entry value="yellow" short_description="Bridge or Pier Head" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/yellow.svg" icon_size="16"/>
+            <list_entry value="red" short_description="Port side, Right side" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/red.svg" icon_size="16"/>
+            <list_entry value="green" short_description="Starboard side, Left side" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/green.svg" icon_size="16"/>
+            <list_entry value="green;red;green" short_description="Preferred Port" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/horizontal/green_red_green.svg" icon_size="16"/>
+            <list_entry value="red;green;red" short_description="Preferred Starboard" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/horizontal/red_green_red.svg" icon_size="16"/>
+            <list_entry value="red;white;red;white" short_description="CEVNI left hand danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/horizontal/red_white_red_white.svg" icon_size="16"/>
+            <list_entry value="green;white;green;white" short_description="CEVNI right hand danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/horizontal/green_white_green_white.svg" icon_size="16"/>
+            <list_entry value="red;green;red;green" short_description="CEVNI Bifurcation" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/horizontal/red_green_red_green.svg" icon_size="16"/>
+            <list_entry value="yellow" short_description="Bridge or Pier Head" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/yellow.svg" icon_size="16"/>
           </combo>
           <check key="seamark:beacony_lateral:shape" text="Tower Beacon" value_on="tower" value_off="" default="off"/>
           <combo key="seamark:topmark:colour" text="Topmark Colour">
@@ -5569,7 +5569,7 @@
           <text key="seamark:light:range" text="Light Range"/>
         </item>
 
-        <item name="NONE Lateral Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/green.svg" type="node">
+        <item name="NONE Lateral Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/green.svg" type="node">
           <label text="NONE Lateral Beacon"/>
           <label text="Used on Inland Waterways where no distinct system is in use"/>
           <key key="seamark:beacon_lateral:system" value="none"/>
@@ -5595,14 +5595,14 @@
             <list_entry value="bridge_pier" />
           </combo>
           <combo key="seamark:beacon_lateral:colour" text="Beacon Colour" use_last_as_default="force" required="true">
-            <list_entry value="red" short_description="Port side, Right side" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/red.svg" icon_size="16"/>
-            <list_entry value="green" short_description="Starboard side, Left side" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/green.svg" icon_size="16"/>
-            <list_entry value="green;red;green" short_description="Preferred Port" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/horizontal/green_red_green.svg" icon_size="16"/>
-            <list_entry value="red;green;red" short_description="Preferred Starboard" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/horizontal/red_green_red.svg" icon_size="16"/>
-            <list_entry value="red;white;red;white" short_description="CEVNI left hand danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/horizontal/red_white_red_white.svg" icon_size="16"/>
-            <list_entry value="green;white;green;white" short_description="CEVNI right hand danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/horizontal/green_white_green_white.svg" icon_size="16"/>
-            <list_entry value="red;green;red;green" short_description="CEVNI Bifurcation" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/horizontal/red_green_red_green.svg" icon_size="16"/>
-            <list_entry value="yellow" short_description="Bridge or Pier Head" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/yellow.svg" icon_size="16"/>
+            <list_entry value="red" short_description="Port side, Right side" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/red.svg" icon_size="16"/>
+            <list_entry value="green" short_description="Starboard side, Left side" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/green.svg" icon_size="16"/>
+            <list_entry value="green;red;green" short_description="Preferred Port" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/horizontal/green_red_green.svg" icon_size="16"/>
+            <list_entry value="red;green;red" short_description="Preferred Starboard" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/horizontal/red_green_red.svg" icon_size="16"/>
+            <list_entry value="red;white;red;white" short_description="CEVNI left hand danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/horizontal/red_white_red_white.svg" icon_size="16"/>
+            <list_entry value="green;white;green;white" short_description="CEVNI right hand danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/horizontal/green_white_green_white.svg" icon_size="16"/>
+            <list_entry value="red;green;red;green" short_description="CEVNI Bifurcation" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/horizontal/red_green_red_green.svg" icon_size="16"/>
+            <list_entry value="yellow" short_description="Bridge or Pier Head" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/yellow.svg" icon_size="16"/>
           </combo>
           <check key="seamark:beacony_lateral:shape" text="Tower Beacon" value_on="tower" value_off="" default="off"/>
           <combo key="seamark:topmark:colour" text="Topmark Colour">
@@ -5664,7 +5664,7 @@
           <text key="seamark:light:range" text="Light Range"/>
         </item>
 
-        <item name="North Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/horizontal/black_yellow.svg" type="node">
+        <item name="North Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/horizontal/black_yellow.svg" type="node">
           <label text="Q130.3: North Cardinal Beacon"/>
           <key key="seamark:type" value="beacon_cardinal"/>
           <key key="seamark:beacon_cardinal:category" value="north"/>
@@ -5712,7 +5712,7 @@
           <text key="seamark:light:range" text="Light Range"/>
         </item>
 
-        <item name="East Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/horizontal/black_yellow_black.svg" type="node">
+        <item name="East Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/horizontal/black_yellow_black.svg" type="node">
           <label text="Q130.3: East Cardinal Beacon"/>
           <key key="seamark:type" value="beacon_cardinal"/>
           <key key="seamark:beacon_cardinal:category" value="east"/>
@@ -5762,7 +5762,7 @@
           <text key="seamark:light:range" text="Light Range"/>
         </item>
 
-        <item name="South Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/horizontal/yellow_black.svg" type="node">
+        <item name="South Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/horizontal/yellow_black.svg" type="node">
           <label text="Q130.3: South Cardinal Beacon"/>
           <key key="seamark:type" value="beacon_cardinal"/>
           <key key="seamark:beacon_cardinal:category" value="south"/>
@@ -5812,7 +5812,7 @@
           <text key="seamark:light:range" text="Light Range"/>
         </item>
 
-        <item name="West Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q110/horizontal/yellow_black_yellow.svg" type="node">
+        <item name="West Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/tower/horizontal/yellow_black_yellow.svg" type="node">
           <label text="Q130.3: West Cardinal Beacon"/>
           <key key="seamark:type" value="beacon_cardinal"/>
           <key key="seamark:beacon_cardinal:category" value="west"/>
@@ -5862,7 +5862,7 @@
           <text key="seamark:light:range" text="Light Range"/>
         </item>
 
-        <item name="Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/horizontal/black_red_black.svg" type="node">
+        <item name="Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/horizontal/black_red_black.svg" type="node">
           <label text="Q130.4: Isolated Danger Beacon"/>
           <key key="seamark:type" value="beacon_isolated_danger"/>
           <key key="seamark:beacon_isolated_danger:colour" value="black;red;black"/>
@@ -5909,7 +5909,7 @@
           <text key="seamark:light:range" text="Light Range"/>
         </item>
 
-        <item name="Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/vertical/red_white.svg" type="node">
+        <item name="Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/vertical/red_white.svg" type="node">
           <label text="Q130.5: Safe Water Beacon"/>
           <key key="seamark:type" value="beacon_safe_water"/>
           <key key="seamark:beacon_safe_water:colour" value="red;white"/>
@@ -6034,7 +6034,7 @@
           <text key="seamark:light:range" text="Light Range"/>
         </item>
 
-        <item name="Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q81/yellow.svg" type="node">
+        <item name="Beacon" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/buoyant/yellow.svg" type="node">
           <label text="Q130.6: Special Purpose Beacon"/>
           <key key="seamark:type" value="beacon_special_purpose"/>
           <key key="seamark:beacon_special_purpose:colour" value="yellow"/>
