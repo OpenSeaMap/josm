@@ -4456,7 +4456,7 @@
             <list_entry value="secondary_waterway_right" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/secondary_waterway_right.svg" icon_size="16"/>
             <list_entry value="secondary_waterway_left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/secondary_waterway_left.svg" icon_size="16"/>
             <list_entry value="isolated_danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/isolated_danger.svg" icon_size="16"/>
-            <list_entry value="unknown" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/unknown.svg" icon_size="16"/>
+            <list_entry value="unknown" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/generic.svg" icon_size="16"/>
           </combo>
           <combo key="seamark:notice:impact" text="Impact">
             <list_entry value="downstream"/>
@@ -4494,7 +4494,7 @@
             <list_entry value="secondary_waterway_right" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/secondary_waterway_right.svg" icon_size="16"/>
             <list_entry value="secondary_waterway_left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/secondary_waterway_left.svg" icon_size="16"/>
             <list_entry value="isolated_danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/isolated_danger.svg" icon_size="16"/>
-            <list_entry value="unknown" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/unknown.svg" icon_size="16"/>
+            <list_entry value="unknown" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/generic.svg" icon_size="16"/>
           </combo>
           <combo key="seamark:notice:1:impact" text="Impact (1)">
             <list_entry value="downstream"/>
@@ -4531,7 +4531,7 @@
             <list_entry value="secondary_waterway_right" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/secondary_waterway_right.svg" icon_size="16"/>
             <list_entry value="secondary_waterway_left" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/secondary_waterway_left.svg" icon_size="16"/>
             <list_entry value="isolated_danger" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/isolated_danger.svg" icon_size="16"/>
-            <list_entry value="unknown" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/BNIWR/unknown.svg" icon_size="16"/>
+            <list_entry value="unknown" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q126/generic.svg" icon_size="16"/>
           </combo>
           <combo key="seamark:notice:2:impact" text="Impact (2)">
             <list_entry value="downstream"/>
