@@ -2,10 +2,10 @@
 <rules description="Seamarks for OpenSeaMap" shortdescription="OpenSeaMap" author="OpenSeaMap" link="http://www.openseamap.org" version="2011-02-13" >
 	<rule>
 		<condition k="seamark:fixme"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/LLight.png" priority="100" />
+		<icon annotate="true" src="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/png/LLight.png" priority="100" />
 	  </rule>
 	<rule>
 		<condition k="seamark:type"/>
-		<icon annotate="true" src="http://dev.openseamap.org/josm/icons/OpenSeaMapLogo_16.png" priority="10"/>
+		<icon annotate="true" src="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/png/OpenSeaMapLogo_16.png" priority="10"/>
   </rule>
 </rules>
