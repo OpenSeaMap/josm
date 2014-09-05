@@ -3557,8 +3557,8 @@
 
     <group name="M: Tracks, Routes" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/M/M10.svg">
       
-      <item name="Leading Line (M1)" icon="presets/empty.png" type="way,relation">
-        <label text="M1: Leading Line"/>
+      <item name="Navigation Lines (M1, M2)" icon="presets/empty.png" type="way,relation">
+        <label text="M1-2: Navigation Lines"/>
         <key key="seamark:type" value="navigation_line"/>
         <text key="seamark:navigation_line:orientation" text="Orientation"/>
         <combo key="seamark:navigation_line:category" text="Category">
@@ -3567,34 +3567,40 @@
         </combo>
       </item>
 
-      <item name="Recommended Track (M3, M4)" icon="presets/empty.png" type="way">
-        <label text="M3: Recommended Track"/>
+      <item name="Recommended Track (M3-M6)" icon="presets/empty.png" type="way">
+        <label text="M3-4: Recommended Track"/>
         <key key="seamark:type" value="recommended_track"/>
         <text key="seamark:recommended_track:orientation" text="Orientation"/>
         <combo key="seamark:recommended_track:category" text="Category">
-          <list_entry value="leading"/>
+          <list_entry value="fixed_marks"/>
+          <list_entry value="no_fixed_marks"/>
         </combo>
-      </item>
-
-      <item name="Deepwater Routes (M5.*)" icon="presets/empty.png" type="way,closedway">
-        <label text="M5: Deepwater Routes"/>
-        <key key="seamark:type" value="deepwater_route"/>
-      </item>
-
-      <item name="Max Draught (M6)" icon="presets/empty.png" type="way,closedway">
-        <label text="M6: Max Draught"/>
+        <combo key="seamark:recommended_track:traffic_flow" text="Traffic Flow">
+          <list_entry value="inbound"/>
+          <list_entry value="outbound"/>
+          <list_entry value="one-way"/>
+          <list_entry value="two-way"/>
+        </combo>
+        <text key="seamark:information" text="Maximum Draft"/>
         <text key="maxdraught" text="Max Draught" match="key"/>
         <text key="draft" text="Draft" match="key"/>
         <text key="maxdraft" text="Maxdraft" match="key"/>
         <link href="http://wiki.openstreetmap.org/wiki/Key:maxdraught"/>
       </item>
-
-      <item name="Arrow for directions in TSS (M10, M11)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/M/M10.svg" type="way">
-        <label text="M10: Arrof for directions in TSS"/>
+      
+      <item name="Established direction in TSS (M10)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/M/M10.svg" type="way,closedway">
+        <label text="M10: Established  direction in TSS"/>
         <key key="seamark:type" value="separation_lane"/>
+        <text key="seamark:separation_lane:orientation" text="Orientation"/>
       </item>
-
-      <item name="Separation Line (M12)" icon="presets/empty.png" type="way,closedway">
+      
+      <item name="Recommended direction in TSS (M11)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/M/M10.svg" type="way,closedway">
+        <label text="M11: Recommended  direction in TSS"/>
+        <key key="seamark:type" value="recommended_traffic_lane"/>
+        <text key="seamark:recommended_traffic_lane:orientation" text="Orientation"/>
+      </item>
+      
+      <item name="Separation Line (M12)" icon="presets/empty.png" type="way">
         <label text="M12: Separation Line"/>
         <key key="seamark:type" value="separation_line"/>
       </item>
@@ -3608,83 +3614,67 @@
         </combo>
       </item>
 
-      <item name="Limit of Restricted Area (M14)" icon="presets/empty.png" type="closedway">
-        <label text="M14: Limit of Restricted Area"/>
-        <key key="seamark:type" value="restricted_area"/>
+      <item name="Inshore Traffic Zone (M14)" icon="presets/empty.png" type="closedway">
+        <label text="M14: Inshore Traffic Zone"/>
+        <key key="seamark:type" value="inshore_traffic_zone"/>
         <text key="seamark:name" text="Name"/>
-        <combo key="seamark:restricted_area:category" text="Category">
-          <list_entry value="military"/>
-          <list_entry value="nature_reserve"/>
-          <list_entry value="ecological_reserve"/>
-          <list_entry value="noise_limit"/>
-          <list_entry value="foul_ground"/>
-          <list_entry value="no_wake"/>
-        </combo>
-        <combo key="seamark:restricted_area:restriction" text="Restriction">
-          <list_entry value="berthing_prohibited"/>
-          <list_entry value="no_entry"/>
-          <list_entry value="no_anchoring"/>
-          <list_entry value="entry_prohibited"/>
-          <list_entry value="passing_or_overtaking_prohibited"/>
-          <list_entry value="restricted_fairway_depth"/>
-          <list_entry value="no_wake"/>
-          <list_entry value="restricted_speed"/>
-          <list_entry value="berthing_restricted"/>
-          <list_entry value="no_boating"/>
-          <list_entry value="no_fishing"/>
-          <list_entry value="overtaking_prohibited"/>
-          <list_entry value="turning_prohibited"/>
-        </combo>
       </item>
-
-      <item name="Limit of Routing Measures (M15)" icon="presets/empty.png" type="closedway">
+      
+      <item name="Limit of Routing Measures (M15)" icon="presets/empty.png" type="way,closedway">
         <label text="M15: Limit of Routing Measures"/>
         <key key="seamark:type" value="separation_boundary"/>
       </item>
-
-      <!-- M16 Danger Symbol -->
+      
+      <item name="Precautionary Area (M16)" icon="presets/empty.png" type="closedway">
+        <label text="M16: Precautionary Area"/>
+        <key key="seamark:type" value="precautionary_area"/>
+        <text key="seamark:precautionary_area" text="Precautions necessary"/>
+      </item>
+      
       <!-- M17 Archipelagic Sea Line (ASL) -->
+      
       <item name="Fairway (M18)" icon="presets/empty.png" type="closedway">
         <label text="M18: Fairway"/>
         <key key="seamark:type" value="fairway"/>
       </item>
 
       <!-- M21, M22, M23 Roundabout, Junction, Crossing in TSS -->
+      
       <item name="Separation Roundabout (M21)" icon="presets/empty.png" type="node,closedway">
         <label text="M21:Separation Roundabout"/>
         <key key="seamark:type" value="separation_roundabout"/>
       </item>
-
-      <!-- M24 Precaution area -->
+      
+      <item name="Separation Crossing (M22)" icon="presets/empty.png" type="node,closedway">
+        <label text="M22:Separation Crossing"/>
+        <key key="seamark:type" value="separation_crossing"/>
+      </item>
+      
       <item name="Radar Surveillance Station (M30)" icon="presets/empty.png" type="node">
         <label text="M30: Radar Surveillance Station"/>
         <key key="seamark:type" value="radar_station"/>
         <key key="seamark:radar_station:category" value="surveillance"/>
         <text key="seamark:name" text="Name"/>
       </item>
-
+      
       <item name="Radar Range (M31)" icon="presets/empty.png" type="way">
         <label text="M31: Radar Range" />
-        <key key="seamark:type" value="radar_line"/>
+        <key key="seamark:type" value="radar_range"/>
+        <text key="seamark:name" text="Name"/>
       </item>
-
-      <!-- M32.x Radar Reference Line -->
+      
+      <item name="Radar Line (M32)" icon="presets/empty.png" type="way">
+        <label text="M31: Radar Line" />
+        <key key="seamark:type" value="radar_line"/>
+        <text key="seamark:radar_line:orientation" text="Orientation"/>
+      </item>
+      
       <item name="Radio Reporting Point, Line (M40)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/M/M40.2.svg" type="node,way,closedway">
         <label text="M40: Radio Reporting Points and Lines"/>
         <key key="seamark:type" value="calling-in_point"/>
         <text key="seamark:calling-in_point:channel" text="VHF Channel"/>
         <text key="seamark:calling-in_point:orientation" text="Point Orientation"/>
-        <combo key="seamark:calling-in_point:category" text="Category">
-          <list_entry value="vts_centre"/>
-          <list_entry value="vts_sector"/>
-          <list_entry value="ivs_point"/>
-          <list_entry value="mib"/>
-          <list_entry value="lock"/>
-          <list_entry value="bridge"/>
-          <list_entry value="customs"/>
-          <list_entry value="harbour"/>
-        </combo>
-        <combo key="seamark:calling-in_point:flow" text="Flow">
+        <combo key="seamark:calling-in_point:traffic_flow" text="Traffic Flow">
           <list_entry value="one-way" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/M/M40.1.svg"/>
           <list_entry value="two-way" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/M/M40.2.svg"/>
         </combo>
@@ -3692,17 +3682,17 @@
 
       <item name="Ferry Route (M50-M51)" icon="presets/empty.png" type="way,relation">
         <label text="M50-M51: Ferry Route"/>
-        <key key="type" value="route"/>
-        <key key="route" value="ferry"/>
         <key key="seamark:type" value="ferry_route"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:route=ferry"/>
-        <text key="name" text="Name"/>
         <combo key="seamark:ferry_route:category" text="Category">
           <list_entry value="free"/>
           <list_entry value="cable"/>
           <list_entry value="ice"/>
-          <list_entry value="swinging"/>
+          <list_entry value="swinging_wire"/>
         </combo>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:route=ferry"/>
+        <text key="name" text="Name"/>
+        <key key="type" value="route"/>
+        <key key="route" value="ferry"/>
         <text key="ref" text="Reference"/>
         <text key="symbol" text="Symbol Description"/>
         <text key="description" text="Description"/>
