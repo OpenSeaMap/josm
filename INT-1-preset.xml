@@ -45,6 +45,44 @@
     <list_entry value="bus_station"/>
   </chunk>
   
+  <chunk id="restrictions">
+    <list_entry value="no_anchoring"/>
+    <list_entry value="restricted_anchoring"/>
+    <list_entry value="no_fishing"/>
+    <list_entry value="restricted_fishing"/>
+    <list_entry value="restricted_trawlingno_trawling"/>
+    <list_entry value="no_entry"/>
+    <list_entry value="restricted_entry"/>
+    <list_entry value="no_dredging"/>
+    <list_entry value="restricted_dredging"/>
+    <list_entry value="no_diving"/>
+    <list_entry value="restricted_diving"/>
+    <list_entry value="no_wake"/>
+    <list_entry value="to_be_avoided"/>
+    <list_entry value="no_construction"/>
+    <list_entry value="no_discharging"/>
+    <list_entry value="restricted_discharging"/>
+    <list_entry value="no_exploration_development"/>
+    <list_entry value="restricted_exploration_development"/>
+    <list_entry value="no_drilling"/>
+    <list_entry value="restricted_drilling"/>
+    <list_entry value="no_historical_artifacts_removal"/>
+    <list_entry value="no_lightering"/>
+    <list_entry value="no_dragging"/>
+    <list_entry value="no_stopping"/>
+    <list_entry value="no_landing"/>
+    <list_entry value="restricted_speed"/>
+    <list_entry value="no_overtaking"/>
+    <list_entry value="no_convoy_overtaking"/>
+    <list_entry value="no_passing_overtaking"/>
+    <list_entry value="no_berthing"/>
+    <list_entry value="restricted_berthing"/>
+    <list_entry value="no_making_fast"/>
+    <list_entry value="restricted_making_fast"/>
+    <list_entry value="no_turning"/>
+    <list_entry value="restricted_fairway_depth"/>
+  </chunk>
+  
   <chunk id="construction">
     <list_entry value="masonry"/>
     <list_entry value="concreted"/>
@@ -3720,23 +3758,7 @@
 
     <group name="N: Areas, Limits" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/N/N21.svg">
       
-      <item name="Non-resitricted areas (N1)" icon="presets/empty.png" type="closedway">
-        <label text="N1: Non-restricted areas"/>
-        <key key="seamark:type" value="non-restricted_area"/>
-        <text key="seamark:name" text="Name"/>
-        <combo key="seamark:non-restricted_area:category" text="Category">
-        </combo>
-      </item>
-
-      <item name="Precaution Area (N1)" icon="presets/empty.png" type="closedway">
-        <label text="N1: Caution areas"/>
-        <key key="seamark:type" value="precautionary_area"/>
-        <text key="seamark:name" text="Name"/>
-        <combo key="seamark:precautionary_area:restriction" text="Restriction">
-        </combo>
-      </item>
-
-      <item name="Restriction Area (N2.1)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/N/N2.1.svg" type="closedway">
+      <item name="Restricted Area (N2)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/N/N2.1.svg" type="closedway">
         <label text="N2.1: Limit of Restricted Area"/>
         <key key="seamark:type" value="restricted_area"/>
         <text key="seamark:name" text="Name"/>
@@ -3760,33 +3782,16 @@
           <list_entry value="no_wake"/>
           <list_entry value="swinging"/>
           <list_entry value="water_skiing"/>
+          <list_entry value="environmentally_sensitive"/>
+          <list_entry value="particularly_sensitive"/>
         </combo>
-        <combo key="seamark:restricted_area:restriction" text="Restriction">
-          <list_entry value="berthing_prohibited"/>
-          <list_entry value="no_entry"/>
-          <list_entry value="no_anchoring"/>
-          <list_entry value="entry_prohibited"/>
-          <list_entry value="passing_or_overtaking_prohibited"/>
-          <list_entry value="restricted_fairway_depth"/>
-          <list_entry value="restricted_speed"/>
-          <list_entry value="berthing_restricted"/>
-          <list_entry value="no_boating"/>
-          <list_entry value="no_fishing"/>
-          <list_entry value="overtaking_prohibited"/>
-          <list_entry value="turning_prohibited"/>
-          <list_entry value="no_diving"/>
-        </combo>
+        <multiselect key="seamark:restricted_area:restriction" text="Restriction">
+          <reference ref="restrictions"/>
+        </multiselect>
       </item>
-
-      <item name="Entry Prohibited Area (N2.2)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/N/N2.2.svg" type="closedway">
-        <label text="N2.2: Entry Prohibited Area"/>
-        <key key="seamark:type" value="restricted_area"/>
-        <key key="seamark:restricted_area:restriction" value="no_entry"/>
-        <text key="seamark:name" text="Name"/>
-      </item>
-
-      <item name="Anchorage (N10-N12)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/N/N12.svg" type="node,closedway">
-        <label text="N10-N12: Anchorage"/>
+      
+      <item name="Anchorage (N10, N12)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/N/N12.svg" type="node,closedway">
+        <label text="N10,N12: Anchorage"/>
         <key key="seamark:type" value="anchorage"/>
         <text key="seamark:name" text="Name"/>
         <combo key="seamark:anchorage:category" text="Category">
@@ -3806,14 +3811,14 @@
           <list_entry value="raft"/>
           <list_entry value="seaplane"/>
         </combo>
-        <text key="maxlength" text="Max. length (m)"/>
-        <text key="seamark:anchorage:ship:maxdraft" text="Max. draft (m)"/>
-        <text key="maxspeed" text="Max. speed (kt)"/>
-        <text key="seamark:anchorage:note" text="Note"/>
+        <multiselect key="seamark:anchorage:restriction" text="Restriction">
+          <reference ref="restrictions"/>
+        </multiselect>
+        <text key="seamark:information" text="Additional Information"/>
       </item>
 
-      <item name="Anchor berth (N10-N12)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/N/N12.svg" type="node">
-        <label text="N10-N12: Anchorage"/>
+      <item name="Anchor berth (N11)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/N/N12.svg" type="node">
+        <label text="N11: Anchor Berthe"/>
         <key key="seamark:type" value="anchor_berth"/>
         <text key="seamark:name" text="Name"/>
         <text key="seamark:anchor_berth:radius" text="Radius"/>
@@ -3834,10 +3839,10 @@
           <list_entry value="raft"/>
           <list_entry value="seaplane"/>
         </combo>
-        <text key="maxlength" text="Max. length (m)"/>
-        <text key="seamark:anchor_berth:ship:maxdraft" text="Max. draft (m)"/>
-        <text key="maxspeed" text="Max. speed (kt)"/>
-        <text key="seamark:anchor_berth:note" text="Note"/>
+        <multiselect key="seamark:anchor_berth:restriction" text="Restriction">
+          <reference ref="restrictions"/>
+        </multiselect>
+        <text key="seamark:information" text="Additional Information"/>
       </item>
 
       <item name="Seaplane operation area (N13)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/N/N13.svg" type="node,closedway">
@@ -3853,8 +3858,8 @@
         <text key="seamark:name" text="Name"/>
       </item>
 
-      <item name="Anchorage prohibited (N20)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/N/N20.svg" type="closedway">
-        <label text="N20: Anchorage prohibited"/>
+      <item name="Anchoring prohibited (N20)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/N/N20.svg" type="closedway">
+        <label text="N20: Anchoring prohibited"/>
         <key key="seamark:type" value="restricted_area"/>
         <key key="seamark:restricted_area:restriction" value="no_anchoring"/>
         <text key="seamark:name" text="Name"/>
@@ -3869,6 +3874,21 @@
 
       <item name="Bird/Seal/Marine Sanctuary, Nature/Marine Reserve, National Park, PSSA (N22)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/N/N22_seal_green.svg" type="closedway">
         <label text="N22: Bird/Seal/Marine Sanctuary, Nature/Marine Reserve, National Park, PSSA"/>
+        <key key="seamark:type" value="restricted_area"/>
+        <text key="seamark:name" text="Name"/>
+        <combo key="seamark:restricted_area:category" text="Category">
+          <list_entry value="nature_reserve"/>
+          <list_entry value="bird_sanctuary"/>
+          <list_entry value="game_reserve"/>
+          <list_entry value="seal_sanctuary"/>
+          <list_entry value="fish_sanctuary"/>
+          <list_entry value="ecological_reserve"/>
+          <list_entry value="environmentally_sensitive"/>
+          <list_entry value="particularly_sensitive"/>
+        </combo>
+        <multiselect key="seamark:restricted_area:restriction" text="Restriction">
+          <reference ref="restrictions"/>
+        </multiselect>
         <key key="boundary" value="protected_area"/>
         <text key="name" text="Name"/>
         <combo key="protect_class" text="Protection type" use_last_as_default="force" required="true">
@@ -3891,29 +3911,41 @@
 
       <item name="Explosives Dumping Ground (N23)" icon="presets/empty.png" type="closedway">
         <label text="N23: Explosives Dumping Ground"/>
-        <key key="seamark:type" value="restricted_area"/>
-        <key key="seamark:restricted_area:restriction" value="explosives_dumping"/>
+        <key key="seamark:type" value="dumping_ground"/>
+        <key key="seamark:dumping_ground:category" value="explosives"/>
+        <multiselect key="seamark:dumping_ground:restriction" text="Restriction">
+          <reference ref="restrictions"/>
+        </multiselect>
         <text key="seamark:name" text="Name"/>
       </item>
 
       <item name="Dumping Ground for Harmful Substances (N24)" icon="presets/empty.png" type="closedway">
         <label text="N24: Dumping Ground for Harmful Substances"/>
-        <key key="seamark:type" value="restricted_area"/>
-        <key key="seamark:restricted_area:restriction" value="harmful_substance_dumping"/>
+        <key key="seamark:type" value="dumping_ground"/>
+        <key key="seamark:dumping_ground:category" value="chemical"/>
+        <multiselect key="seamark:dumping_ground:restriction" text="Restriction">
+          <reference ref="restrictions"/>
+        </multiselect>
         <text key="seamark:name" text="Name"/>
       </item>
 
       <item name="Degaussing Range (N25)" icon="presets/empty.png" type="closedway">
         <label text="N25: Degaussing Range"/>
         <key key="seamark:type" value="restricted_area"/>
-        <key key="seamark:restricted_area:restriction" value="degausing_range"/>
+        <key key="seamark:restricted_area:category" value="degausing_range"/>
+        <multiselect key="seamark:restricted_area:restriction" text="Restriction">
+          <reference ref="restrictions"/>
+        </multiselect>
         <text key="seamark:name" text="Name"/>
       </item>
 
-      <item name="Historic Wreck (N26)" icon="presets/empty.png" type="closedway">
-        <label text="N26: Historic Wreck"/>
+      <item name="Historic Wreck Area (N26)" icon="presets/empty.png" type="closedway">
+        <label text="N26: Historic Wreck Area"/>
         <key key="seamark:type" value="restricted_area"/>
         <key key="seamark:restricted_area:restriction" value="historic_wreck"/>
+        <multiselect key="seamark:restricted_area:restriction" text="Restriction">
+          <reference ref="restrictions"/>
+        </multiselect>
         <text key="seamark:name" text="Name"/>
       </item>
 
@@ -3921,47 +3953,56 @@
         <label text="N27: Maximum Speed"/>
         <key key="seamark:type" value="restricted_area"/>
         <key key="seamark:restricted_area:restriction" value="restricted_speed"/>
+        <text key="seamark:information" text="Speed limit"/>
         <text key="maxspeed" text="Maximum Speed" required="true"/>
         <link href="http://wiki.openstreetmap.org/wiki/Key:maxspeed"/>
       </item>
 
-      <item name="Limit of Firing Danger (N30)" icon="presets/empty.png" type="closedway">
-        <label text="N30: Limit of Firing Danger"/>
-        <key key="seamark:type" value="restricted_area"/>
-        <key key="seamark:restricted_area:category" value="military"/>
-        <key key="seamark:restricted_area:restriction" value="firing_danger"/>
+      <item name="Firing Practice Area (N30)" icon="presets/empty.png" type="closedway">
+        <label text="N30: Firing Practice Area"/>
+        <key key="seamark:type" value="military_area"/>
+        <key key="seamark:military_area:category" value="firing"/>
+        <multiselect key="seamark:military_area:restriction" text="Restriction">
+          <reference ref="restrictions"/>
+        </multiselect>
         <text key="seamark:name" text="Name"/>
       </item>
 
-      <item name="Other Naval Practice Area (N31)" icon="presets/empty.png" type="closedway">
-        <label text="N31: Naval Practice Area"/>
+      <item name="Military Restricted Area (N31)" icon="presets/empty.png" type="closedway">
+        <label text="N31: Military Restricted Area"/>
         <key key="seamark:type" value="restricted_area"/>
         <key key="seamark:restricted_area:category" value="military"/>
-        <key key="seamark:restricted_area:restriction" value="naval_practice_area"/>
+        <key key="seamark:restricted_area:restriction" value="no_entry"/>
         <text key="seamark:name" text="Name"/>
       </item>
 
-      <item name="Limit of Mine Laying or Countermeasures/Clearance Practice (N32)" icon="presets/empty.png" type="closedway">
-        <label text="N32: Limit of Mine Laying or Countermeasures/Clearance Practice"/>
-        <key key="seamark:type" value="restricted_area"/>
-        <key key="seamark:restricted_area:category" value="military"/>
-        <key key="seamark:restricted_area:restriction" value="mine_clearance_practice"/>
+      <item name="Mine Laying Practice Area (N32)" icon="presets/empty.png" type="closedway">
+        <label text="N32: Mine Laying Practice Area"/>
+        <key key="seamark:type" value="military_area"/>
+        <key key="seamark:military_area:category" value="mine_laying"/>
+        <multiselect key="seamark:military_area:restriction" text="Restriction">
+          <reference ref="restrictions"/>
+        </multiselect>
         <text key="seamark:name" text="Name"/>
       </item>
 
       <item name="Submarine Practice Area (N33)" icon="presets/empty.png" type="closedway">
         <label text="N33: Submarine Practice Area"/>
-        <key key="seamark:type" value="restricted_area"/>
-        <key key="seamark:restricted_area:category" value="military"/>
-        <key key="seamark:restricted_area:restriction" value="submarine_practice_area"/>
+        <key key="seamark:type" value="militay_area"/>
+        <key key="seamark:military_area:category" value="submarine"/>
+        <multiselect key="seamark:military_area:restriction" text="Restriction">
+          <reference ref="restrictions"/>
+        </multiselect>
         <text key="seamark:name" text="Name"/>
       </item>
 
-      <item name="Mine field (N34)" icon="presets/empty.png" type="closedway">
-        <label text="N34: Mine Field"/>
+      <item name="Minefield (N34)" icon="presets/empty.png" type="closedway">
+        <label text="N34: Minefield"/>
         <key key="seamark:type" value="restricted_area"/>
-        <key key="seamark:restricted_area:category" value="military"/>
-        <key key="seamark:restricted_area:restriction" value="mine_field"/>
+        <key key="seamark:restricted_area:category" value="minefield"/>
+        <multiselect key="seamark:restricted_area:restriction" text="Restriction">
+          <reference ref="restrictions"/>
+        </multiselect>
         <text key="seamark:name" text="Name"/>
       </item>
 
@@ -4012,33 +4053,35 @@
       <item name="Exclusive Economic Zone (N47)" icon="presets/empty.png" type="way,relation">
         <label text="N47: Exclusive Economic Zone"/>
         <key key="boundary" value="maritime"/>
-        <key key="seamark:type" value="exclusive_economic_zone"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:boundary=maritime"/>
         <key key="border_type" value="eez"/>
       </item>
 
       <!-- N48 Costums Limit -->
+      
       <!-- N49 Defined Harbour Limits -->
+      
       <!-- N60.x Limit of Ice -->
+      
       <!-- N61 Log pond -->
+      
       <item name="Spoil Ground (N62.*)" icon="presets/empty.png" type="closedway">
         <label text="N62: Spoil Ground"/>
-        <key key="seamark:type" value="restricted_area"/>
-        <key key="seamark:restricted_area:category" value="foul_ground"/>
+        <key key="seamark:type" value="dumping_ground"/>
+        <key key="seamark:dumping_ground:category" value="spoil"/>
         <text key="seamark:name" text="Name"/>
       </item>
 
-      <item name="Dredged area (N63)" icon="presets/empty.png" type="closedway">
-        <label text="N63: Dredging Area"/>
-        <key key="waterway" value="dredged_area"/>
-        <key key="seamark:type" value="dredged_area"/>
-        <text key="depth:dredged" text="Dredged Depth"/>
-        <text key="depth:dredged:year" text="Year dredged"/>
-        <check key="maintained" text="Maintained" default="off"/>
+      <item name="Extraction area (N63)" icon="presets/empty.png" type="closedway">
+        <label text="N63: Extraction Area"/>
+        <key key="seamark:type" value="restricted_area"/>
+        <key key="seamark:restricted_area:category" value="dredging"/>
       </item>
 
       <!-- N64 Cargo Transhipment Area -->
+      
       <!-- N65 Incineration Area -->
+      
       <item name="No Diving (Nb UK/Norway)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/N/Nb_no.svg" type="closedway">
         <label text="Nb: No Diving"/>
         <key key="seamark:type" value="restricted_area"/>
