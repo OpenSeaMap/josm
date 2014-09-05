@@ -3127,17 +3127,17 @@
     
     <group name="K: Rocks, Wrecks, Obstructions" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/K/K12.svg">
       
-      <item name="Rock (K2-K15)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/K/K11.svg" type="node">
-        <label text="K2-K15: Rock"/>
+      <item name="Rock (K10-K15)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/K/K11.svg" type="node">
+        <label text="K10-K15: Rock"/>
         <key key="seamark:type" value="rock"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:seamark:type=rock"/>
-        <text key="ele" text="Elevation above high water"/>
-        <text key="depth" text="Depth under low water"/>
         <combo key="seamark:rock:water_level" text="Type Rock (water_level)" use_last_as_default="true">
           <list_entry value="submerged" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/K/K13.svg" icon_size="16"/>
           <list_entry value="covers" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/K/K11.svg" icon_size="16"/>
           <list_entry value="awash" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/K/K12.svg" icon_size="16"/>
         </combo>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:seamark:type=rock"/>
+        <text key="ele" text="Elevation above high water"/>
+        <text key="depth" text="Depth under low water"/>
         <text key="depth:swept" text="Swept to depth"/>
         <text key="depth:clearance" text="Safe Clearance over object"/>
       </item>
@@ -3158,11 +3158,7 @@
 
       <item name="Wreck (K20-K30)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/K/K24.svg" type="node,closedway">
         <label text="K20-K30: Wreck"/>
-        <key key="historic" value="wreck"/>
         <key key="seamark:type" value="wreck"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:historic=wreck"/>
-        <text key="name" text="Name"/>
-        <text key="ref" text="Reference"/>
         <combo key="seamark:wreck:category" text="Wreck Category">
           <list_entry value="non-dangerous"/>
           <list_entry value="hull_showing"/>
@@ -3171,8 +3167,15 @@
           <list_entry value="distributed_remains"/>
         </combo>
         <combo key="seamark:wreck:water_level" text="Water level of wreck">
-          <list_entry value="always_submerged"/>
+          <list_entry value="dry"/>
+          <list_entry value="submerged"/>
+          <list_entry value="covers"/>
+          <list_entry value="awash"/>
         </combo>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:historic=wreck"/>
+        <key key="historic" value="wreck"/>
+        <text key="name" text="Name"/>
+        <text key="ref" text="Reference"/>
         <combo key="depth:verified" text="Depth verification" defalut="">
           <list_entry value="sounding"/>
           <list_entry value="diver"/>
@@ -3196,13 +3199,11 @@
         <label text="K31: Foul Ground"/>
         <key key="seamark:type" value="obstruction"/>
         <key key="seamark:obstruction:category" value="foul_ground"/>
-        <text key="seamark:name" text="Name"/>
       </item>
 
-      <item name="Obstruction (K40-K42)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/K/K40.svg" type="node">
-        <label text="K40-K42: Obstruction"/>
+      <item name="Obstruction (K40-K43)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/K/K40.svg" type="node">
+        <label text="K40-K43: Obstruction"/>
         <key key="seamark:type" value="obstruction"/>
-        <text key="seamark:name" text="Name"/>
         <combo key="seamark:obstruction:category" text="Category" default="">
           <list_entry value="" display_value="default"/>
           <list_entry value="stump"/>
@@ -3230,11 +3231,6 @@
         </combo>
       </item>
 
-      <item name="Stump, Pillar (K43.*)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/K/K43.1.svg" type="node">
-        <label text="K43.*: Stumps of Posts, Pillars"/>
-        <key key="seamark:type" value="pillar"/>
-      </item>
-
       <item name="Fish Stakes, Traps, Net (K44.*, K45)" icon="presets/empty.png" type="node,closedway">
         <label text="K44.*: Fish Stakes, Traps"/>
         <label text="K45: Tunny net"/>
@@ -3253,13 +3249,21 @@
         <key key="seamark:obstruction:category" value="fish_haven"/>
         <text key="seamark:name" text="Name" default="" delete_if_empty="true"/>
       </item>
-
-      <!-- K47 - Shellfish beds with no obstructions -->
+      
+      <item name="Shellfish Beds (K47)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/K/K48.1_no.svg" type="node,closedway">
+        <label text="K47: Shellfish Beds"/>
+        <key key="seamark:type" value="marine_farm"/>
+        <combo key="seamark:marine_farm:category" text="Type">
+          <list_entry value="crustaceans"/>
+          <list_entry value="oysters_mussels"/>
+        </combo>
+        <text key="name" text="Name"/>
+        <key key="landuse" value="aquaculture"/>
+      </item>
+      
       <item name="Marine Farms (K48.*)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/K/K48.1_no.svg" type="node,closedway">
         <label text="K48: Marine farms"/>
-        <key key="landuse" value="aquaculture"/>
         <key key="seamark:type" value="marine_farm"/>
-        <text key="name" text="Name"/>
         <combo key="seamark:marine_farm:category" text="Type">
           <list_entry value="crustaceans"/>
           <list_entry value="oysters_mussels"/>
@@ -3267,8 +3271,10 @@
           <list_entry value="seaweed"/>
           <list_entry value="pearl_culture"/>
         </combo>
+        <text key="name" text="Name"/>
+        <key key="landuse" value="aquaculture"/>
       </item>
-
+      
     </group>
     
     <!---***********************Section L: Offshore Installations***************************-->
@@ -3277,15 +3283,18 @@
       
       <item name="Offshore Oil and Gas Field (L1)" icon="presets/empty.png" type="closedway,node">
         <label text="L1: Offshore Oil and Gas Field"/>
-        <key key="waterway" value="offshore_field"/>
         <key key="seamark:type" value="production_area"/>
-        <key key="seamark:production_area:category" value="oil"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:waterway=offshore_field"/>
-        <text key="name" text="Name"/>
         <combo key="seamark:production_area:category" text="Field Type" required="true">
+          <list_entry value="oil"/>
+          <list_entry value="production"/>
+        </combo>
+        <combo key="seamark:production_area:product" text="Product" required="true">
           <list_entry value="oil"/>
           <list_entry value="gas"/>
         </combo>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:waterway=offshore_field"/>
+        <key key="waterway" value="offshore_field"/>
+        <text key="name" text="Name"/>
         <text key="ref" text="Reference"/>
         <text key="block" text="Block"/>
         <combo key="status" text="Field Status">
@@ -3302,20 +3311,15 @@
 
       <item name="Offshore Platform (L2,L10)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/L/L10.svg" type="node,closedway">
         <label text="L2, L10: Offshore Platform"/>
-        <key key="man_made" value="offshore_platform"/>
         <key key="seamark:type" value="platform"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=offshore_platform"/>
         <text key="seamark:name" text="Name"/>
-        <text key="ref" text="Reference"/>
-        <combo key="operator" text="Operator" readonly="false" use_last_as_default="force">
-        </combo>
         <combo key="seamark:platform:category" text="Type of Platform" use_last_as_default="force">
           <list_entry value="oil"/>
           <list_entry value="gas"/>
           <list_entry value="oil;gas"/>
           <list_entry value="production"/>
           <list_entry value="alp"/>
-          <list_entry value="salm" short_description="Single Anchor Loading Mooring"/>
+          <list_entry value="salm"/>
           <list_entry value="mooring"/>
           <list_entry value="drilling"/>
           <list_entry value="accomodation"/>
@@ -3323,81 +3327,127 @@
           <list_entry value="observation"/>
           <list_entry value="nccb"/>
         </combo>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=offshore_platform"/>
+        <key key="man_made" value="offshore_platform"/>
+        <text key="ref" text="Reference"/>
+        <text key="operator" text="Operator"/>
         <check key="aeroway" text="Helicopter Landing Deck" value_on="helipad" default="on"/>
         <check key="disused" text="Disused" default="off"/>
       </item>
-
+      
       <item name="Safety Zone (L3)" icon="presets/empty.png" type="closedway">
         <label text="L3: Safety Zone established around this feature"/>
         <key key="seamark:type" value="restricted_area"/>
-        <key key="seamark:restricted_area:restriction" value="safety_zone"/>
-        <text key="seamark:restricted_area:safe_distance" text="Safe Distance" default="500"/>
+        <key key="seamark:restricted_area:category" value="safety_zone"/>
+        <key key="seamark:restricted_area:restriction" value="restricted_entry"/>
       </item>
-
-      <!-- L4 Limit of Development Area -->
+      
+      <item name="Development Area (L4)" icon="presets/empty.png" type="closedway">
+        <label text="L4: Development Area"/>
+        <key key="seamark:type" value="production_area"/>
+        <combo key="seamark:production_area:product" text="Product" required="true">
+          <list_entry value="oil"/>
+          <list_entry value="gas"/>
+        </combo>
+        <key key="seamark:production_area:restriction" value="restricted_entry"/>
+      </item>
+      
       <item name="Wind Turbine (L5.1)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/L/L5.1.svg" type="node">
         <label text="L5.2: Offshore Wind Turbine"/>
-        <key key="seamark:production_area:category" value="wind_farm"/>
+        <key key="seamark:type" value="landmark"/>
+        <key key="seamark:landmark:category" value="windmotor"/>
         <key key="generator:source" value="wind"/>
         <text key="name" text="Name"/>
         <combo key="operator" text="Operator" readonly="false">
         </combo>
         <text key="generator:output:electricity" text="Electricity Output" default="yes"/>
       </item>
-
+      
       <item name="Wind Farm (L5.2)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/L/L5.2.svg" type="closedway">
         <label text="L5.2: Offshore Wind Farm"/>
-        <key key="seamark:production_area:category" value="wind_farm"/>
         <key key="seamark:type" value="production_area"/>
+        <key key="seamark:production_area:category" value="wind_farm"/>
         <key key="generator:source" value="wind"/>
         <text key="name" text="Name"/>
         <combo key="operator" text="Operator" readonly="false">
         </combo>
         <text key="generator:output:electricity" text="Electricity Output" default="yes"/>
       </item>
-
+      
+      <item name="Wave Farm (L6)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/L/L6.svg" type="closedway">
+        <label text="L6: Wave Farm"/>
+        <key key="seamark:type" value="production_area"/>
+        <key key="seamark:production_area:category" value="wave_energy"/>
+        <key key="generator:source" value="wave"/>
+        <text key="name" text="Name"/>
+        <combo key="operator" text="Operator" readonly="false">
+        </combo>
+        <text key="generator:output:electricity" text="Electricity Output" default="yes"/>
+      </item>
+      
       <item name="Flare (L11)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/L/L10.svg" type="node">
+        <key key="seamark:type" value="landmark"/>
+        <key key="seamark:landmark:category" value="flare_stack"/>
+        <text key="seamark:name" text="Name"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=flare"/>
         <key key="man_made" value="flare"/>
         <key key="offshore" value="yes"/>
-        <key key="seamark:type" value="platform"/>
-        <key key="seamark:platform:category" value="flare"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=flare"/>
-        <text key="seamark:name" text="Name"/>
         <text key="ref" text="Reference"/>
       </item>
 
       <item name="Single Point Mooring (L12)" icon="presets/empty.png" type="node">
         <label text="L12: Single Point Mooring"/>
-        <key key="mooring" value="spm"/>
-        <key key="seamark:type" value="buoy_installation"/>
-        <key key="seamark:buoy_installation:category" value="sbm"/>
+        <key key="seamark:type" value="platform"/>
+        <combo key="seamark:platform:category" text="Type of Platform" use_last_as_default="force">
+          <list_entry value="alp"/>
+          <list_entry value="salm"/>
+        </combo>
+        <text key="seamark:name" text="Name"/>
         <link href="http://wiki.openstreetmap.org/wiki/Key:mooring"/>
+        <key key="mooring" value="spm"/>
+      </item>
+      
+      <item name="Observation Platform(L13)" icon="presets/empty.png" type="node,closedway">
+        <label text="L13:Observation Platform"/>
+        <key key="seamark:type" value="platform"/>
+        <key key="seamark:platform:category" value="observation"/>
         <text key="seamark:name" text="Name"/>
       </item>
-
+      
+      <item name="Disused Platform(L14)" icon="presets/empty.png" type="node,closedway">
+        <label text="L14:Disused Platform"/>
+        <key key="seamark:type" value="platform"/>
+        <key key="seamark:platform:category" value="production"/>
+        <key key="seamark:platform:status" value="not_in_use"/>
+        <text key="seamark:name" text="Name"/>
+      </item>
+      
       <item name="Artificial Island(L15)" icon="presets/empty.png" type="node,closedway">
         <label text="L15:Artificial Island"/>
         <key key="seamark:type" value="platform"/>
         <key key="seamark:platform:category" value="island"/>
         <text key="seamark:name" text="Name"/>
       </item>
-
+      
       <item name="Exposed Location Single Mooring Buoy, monobuoy (L16)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/L/L16.svg" type="node">
         <label text="L16: Monobuoy, Exposed Location Single Mooring Buoy"/>
-        <key key="mooring" value="monobuoy"/>
         <key key="seamark:type" value="buoy_installation"/>
-        <key key="seamark:buoy_installation" value="calm"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Key:mooring"/>
+        <combo key="seamark:buoy_installation:category" text="Type" required="true">
+          <list_entry value="calm"/>
+          <list_entry value="sbm"/>
+        </combo>
         <text key="seamark:name" text="Name"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Key:mooring"/>
+        <key key="mooring" value="monobuoy"/>
       </item>
 
       <item name="Floating Production and Storage Units (FSU/FPSO) (L17)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/L/L17.svg" type="node">
         <label text="L17: Floating Production and Sorage Units (FSU/FPSO)"/>
-        <key key="man_made" value="floating_storage"/>
         <key key="seamark:type" value="platform"/>
         <key key="seamark:platform:category" value="fpso"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=floating_storage"/>
         <text key="seamark:name" text="Name"/>
+        <key key="man_made" value="floating_storage"/>
         <combo key="operator" text="Operator" readonly="false" use_last_as_default="force">
         </combo>
         <check key="production" text="Production Unit" default="off"/>
@@ -3407,10 +3457,29 @@
         <check key="aeroway" text="Helicopter Landing Deck" value_on="helipad" default="on"/>
         <check key="disused" text="Disused" default="off"/>
       </item>
-
+      
       <!-- L18 Mooring ground tackle -->
-      <item name="Production Well (L20, L21.x, L23)" icon="presets/empty.png" type="node">
-        <label text="L20, L21.x, L23: Production Well"/>
+      
+      <item name="Underwater Installations (L20-23)" icon="presets/empty.png" type="node">
+        <label text="L20-23: Underwater Installations"/>
+        <key key="seamark:type" value="obstruction"/>
+        <combo key="seamark:obstruction:category" text="Category" default="">
+          <list_entry value="" display_value="default"/>
+          <list_entry value="wellhead"/>
+          <list_entry value="foul_ground"/>
+        </combo>
+        <combo key="seamark:obstruction:water_level" text="Water Level" default="">
+          <list_entry value="" display_value="default"/>
+          <list_entry value="part-submerged"/>
+          <list_entry value="dry"/>
+          <list_entry value="submerged"/>
+          <list_entry value="covers"/>
+          <list_entry value="awash"/>
+          <list_entry value="floods"/>
+          <list_entry value="floating"/>
+          <list_entry value="above_mwl"/>
+          <list_entry value="below_mwl"/>
+        </combo>
         <key key="man_made" value="petroleum_well"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=petroleum_well"/>
         <text key="name" text="Name"/>
@@ -3419,8 +3488,7 @@
         <text key="height" text="Well Head height above Seabed"/>
         <text key="ele" text="Well Head height over sea surface"/>
       </item>
-
-      <!-- L22 Cleared platform -->
+      
       <item name="Underwater Turbine (L24)" icon="presets/empty.png" type="node">
         <label text="L24: Underwater Turbine"/>
         <key key="generator:source" value="tidal"/>
@@ -3433,16 +3501,16 @@
 
       <item name="Submarine cable (L31)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/L/L31.svg" type="way">
         <label text="L31.x: Submarine Cable"/>
-        <key key="man_made" value="submarine_cable"/>
         <key key="seamark:type" value="cable_submarine"/>
-        <text key="seamark:name" text="Name"/>
-        <combo key="operator" text="Operator" readonly="false" delete="">
-        </combo>
         <combo key="seamark:cable_submarine:category" text="Type Cable">
           <list_entry value="telephone"/>
           <list_entry value="fiber_optic"/>
           <list_entry value="power"/>
           <list_entry value="transmission"/>
+        </combo>
+        <text key="seamark:name" text="Name"/>
+        <key key="man_made" value="submarine_cable"/>
+        <combo key="operator" text="Operator" readonly="false" delete="">
         </combo>
         <text key="seamark:cable_submarine:depth_buried" text="Buried Depth"/>
       </item>
@@ -3462,13 +3530,10 @@
         </combo>
       </item>
 
-      <item name="Pipelines (L40-L44)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/L/L40.svg" type="way,closedway">
+      <item name="Submarine Pipelines (L40-L44)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/L/L40.svg" type="way,closedway">
         <label text="L40-L44: Pipelines (Underwater)"/>
-        <key key="man_made" value="pipeline" match="none"/>
         <key key="seamark:type" value="pipeline_submarine"/>
         <text key="seamark:name" text="Name"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=pipeline"/>
-        <key key="location" value="underwater" match="none"/>
         <combo key="seamark:pipeline_submarine:category" text="Type">
           <list_entry value="water" />
           <list_entry value="sewer" />
@@ -3479,6 +3544,9 @@
         <combo key="seamark:pipeline_submarine:product" text="Product">
           <reference ref="product"/>
         </combo>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=pipeline"/>
+        <key key="location" value="underwater" match="none"/>
+        <key key="man_made" value="pipeline" match="none"/>
         <combo key="operator" text="Operator" readonly="false">
         </combo>
       </item>
