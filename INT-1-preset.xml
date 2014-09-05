@@ -3065,8 +3065,8 @@
       
       <item name="Dredged area (I20-23)" icon="presets/empty.png" type="closedway">
         <label text="I20-23: Dredged Area"/>
-        <key key="waterway" value="dredged_area"/>
         <key key="seamark:type" value="dredged_area"/>
+        <key key="waterway" value="dredged_area"/>
         <text key="depth:dredged" text="Dredged Depth"/>
         <text key="depth:dredged:year" text="Year dredged"/>
         <check key="maintained" text="Maintained" default="off"/>
@@ -3074,6 +3074,7 @@
       
       <item name="Swept area (I24)" icon="presets/empty.png" type="closedway">
         <label text="I24: Swept Area"/>
+        <key key="seamark:type" value="swept_area"/>
         <key key="waterway" value="swept_area"/>
         <text key="depth:swept:year" text="Year swept"/>
       </item>
