@@ -2548,7 +2548,7 @@
         <text key="harbour:information" text="General Information" />
       </item>
 
-      <group name="Harbour Infrastructure" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/F/F.svg">
+      <group name="Protection Structures (F1-6)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/F/F.svg">
         
         <item name="Dyke (F1)" icon="presets/empty.png" type="way,closedway">
           <label text="F1: Dyke"/>
@@ -2619,6 +2619,72 @@
           <check key="submerged" text="Portion is submerged on low tide" default="off"/>
         </item>
 
+      </group>
+      
+      <group name="Harbour Installations (F10-34)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/F/F.svg">
+        
+        <item name="Fishing Port (F10)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/F/F10.svg" type="node,closedway">
+          <label text="F10: Fishing Port"/>
+          <key key="harbour" value="yes"/>
+          <key key="seamark:type" value="harbour"/>
+          <key key="seamark:harbour:category" value="fishing"/>
+          <link href="http://wiki.openstreetmap.org/wiki/Harbour"/>
+          <text key="harbour:name" text="Name"/>
+          <label text="Special tagging scheme for harbours, if you are unsure of the fields, refer to the corresponding web page."/>
+          <space/>
+          <label text="Names and Identifications"/>
+          <text key="harbour:portindex" text="World Port Index, 5 digit code"/>
+          <text key="harbour:LOCODE" text="US/LOCODE of port, 5 characters"/>
+          <combo key="harbour:size" text="Harbour size" readonly="true">
+            <list_entry value="very_small"/>
+            <list_entry value="small"/>
+            <list_entry value="medium"/>
+            <list_entry value="big"/>
+          </combo>
+          <label text="Operation"/>
+          <combo key="harbour:operator" text="Port Operator">
+          </combo>
+          <check key="harbour:port_of_entry" text="Costums Clearance in port" default="off"/>
+          <label text="Access"/>
+          <text key="maxspeed" text="Maxspeed"/>
+          <text key="maxdraft" text="Max draft"/>
+          <text key="maxlength" text="Max length"/>
+          <label text="Contact"/>
+          <text key="harbour:VHF_channel" text="VHF"/>
+          <text key="harbour:MMSI" text="MMSI"/>
+          <text key="harbour:phone" text="Phone"/>
+        </item>
+        
+        <item name="Steps, landing stairs (F18)" icon="presets/empty.png" type="node,way,closedway">
+          <label text="F18: Steps, landing stairs"/>
+          <key key="highway" value="steps"/>
+        </item>
+        
+        <!-- F24 Gridiron -->
+        <item name="Works on land (F30)" icon="presets/empty.png" type="closedway">
+          <label text="F30: Works on Land"/>
+          <key key="landuse" value="construction"/>
+          <text key="name" text="Name"/>
+          <text key="note" text="Note"/>
+        </item>
+        
+        <item name="Works at sea (F31)" icon="presets/empty.png" type="closedway">
+          <label text="F31: Works at sea"/>
+          <key key="seamark:type" value="shoreline_construction"/>
+          <text key="name" text="Name"/>
+          <combo key="seamark:shoreline_construction:category" text="Category">
+            <list_entry value="breakwater"/>
+            <list_entry value="pier"/>
+            <list_entry value="training_wall"/>
+            <list_entry value="seawall"/>
+            <list_entry value="mole"/>
+            <list_entry value="groyne"/>
+            <list_entry value="wharf"/>
+            <list_entry value="fender"/>
+          </combo>
+          <text key="note" text="Note"/>
+        </item>
+        
         <item name="Drydocks and Floating docks (F25-F26)" icon="presets/empty.png" type="node,closedway">
           <label text="F25-F26: Docks, drydocks and floating"/>
           <key key="waterway" value="dock"/>
@@ -2675,8 +2741,6 @@
           <text key="name" text="Name"/>
         </item>
 
-      </group>
-      <group name="Harbour Vessel Facilities" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/F/F.svg">
         <item name="Quay, Wharf, Pier, Jetty (F13-F15)" icon="presets/empty.png" type="way,closedway">
           <label text="F13-F15: Quay, Wharf, Pier, Jetty"/>
           <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=pier"/>
@@ -2898,68 +2962,6 @@
 
       </group>
       
-      <item name="Fishing Port (F10)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/F/F10.svg" type="node,closedway">
-        <label text="F10: Fishing Port"/>
-        <key key="harbour" value="yes"/>
-        <key key="seamark:type" value="harbour"/>
-        <key key="seamark:harbour:category" value="fishing"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Harbour"/>
-        <text key="harbour:name" text="Name"/>
-        <label text="Special tagging scheme for harbours, if you are unsure of the fields, refer to the corresponding web page."/>
-        <space/>
-        <label text="Names and Identifications"/>
-        <text key="harbour:portindex" text="World Port Index, 5 digit code"/>
-        <text key="harbour:LOCODE" text="US/LOCODE of port, 5 characters"/>
-        <combo key="harbour:size" text="Harbour size" readonly="true">
-          <list_entry value="very_small"/>
-          <list_entry value="small"/>
-          <list_entry value="medium"/>
-          <list_entry value="big"/>
-        </combo>
-        <label text="Operation"/>
-        <combo key="harbour:operator" text="Port Operator">
-        </combo>
-        <check key="harbour:port_of_entry" text="Costums Clearance in port" default="off"/>
-        <label text="Access"/>
-        <text key="maxspeed" text="Maxspeed"/>
-        <text key="maxdraft" text="Max draft"/>
-        <text key="maxlength" text="Max length"/>
-        <label text="Contact"/>
-        <text key="harbour:VHF_channel" text="VHF"/>
-        <text key="harbour:MMSI" text="MMSI"/>
-        <text key="harbour:phone" text="Phone"/>
-      </item>
-
-      <item name="Steps, landing stairs (F18)" icon="presets/empty.png" type="node,way,closedway">
-        <label text="F18: Steps, landing stairs"/>
-        <key key="highway" value="steps"/>
-      </item>
-
-      <!-- F24 Gridiron -->
-      <item name="Works on land (F30)" icon="presets/empty.png" type="closedway">
-        <label text="F30: Works on Land"/>
-        <key key="landuse" value="construction"/>
-        <text key="name" text="Name"/>
-        <text key="note" text="Note"/>
-      </item>
-
-      <item name="Works at sea (F31)" icon="presets/empty.png" type="closedway">
-        <label text="F31: Works at sea"/>
-        <key key="seamark:type" value="shoreline_construction"/>
-        <text key="name" text="Name"/>
-        <combo key="seamark:shoreline_construction:category" text="Category">
-          <list_entry value="breakwater"/>
-          <list_entry value="pier"/>
-          <list_entry value="training_wall"/>
-          <list_entry value="seawall"/>
-          <list_entry value="mole"/>
-          <list_entry value="groyne"/>
-          <list_entry value="wharf"/>
-          <list_entry value="fender"/>
-        </combo>
-        <text key="note" text="Note"/>
-      </item>
-
       <!-- F43 Flood barrage -->
       <item name="Dam (F44)" icon="presets/empty.png" type="node,way,closedway">
         <label text="F44: Dam"/>
