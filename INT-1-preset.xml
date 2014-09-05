@@ -117,6 +117,7 @@
     <!--***********************Section B: Positions, Distances, Directions, Compass***************************-->
     
     <group name="B: Positions, Distances, Directions, Compass" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/B/B21.svg">
+      
       <item name="Survey Point (B20-B23)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/B/B20.svg" type="node">
         <label text="B20-B23: Survey Point" />
         <key key="seamark:type" value="control_point"/>
@@ -236,6 +237,7 @@
     <!--***********************Section C: Natural Features***************************-->
     
     <group name="C: Natural Features" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/C/C31.1.s.svg">
+      
       <item name="Coastline (C1-C2)" icon="presets/empty.png" type="way,closedway">
         <label text="C1-C2: Coastline"/>
         <key key="natural" value="coastline"/>
@@ -718,6 +720,7 @@
     <!--***********************Section D: Cultural Features***************************-->
     
     <group name="D: Cultural Features" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/D/Db_uk.svg">
+      
       <item name="Places (D1, D3, D4)" icon="presets/empty.png" type="node,closedway,relation">
         <label text="D1: Places"/>
         <combo key="place" text="Place" use_last_as_default="force" required="true">
@@ -1492,6 +1495,7 @@
     <!--***********************Section E: Landmarks***************************-->
     
     <group name="E: Landmarks" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E10.svg">
+      
       <item name="Landmarks in General" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E23_colour.svg" type="node,closedway">
         <label text="Landmarks in General, use appropriate categories to specify"/>
         <key key="seamark:type" value="landmark"/>
@@ -2230,7 +2234,6 @@
         <check key="ruins" text="Ruined" default="off"/>
       </item>
 
-
       <item name="Quarry (E35)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E36.svg" type="node,closedway">
         <label text="E35: Quarry (Surface Mine)"/>
         <key key="seamark:type" value="production_area"/>
@@ -2329,7 +2332,6 @@
           <list_entry value="zeolite"/>
         </combo>
       </item>
-
 
       <item name="Mine (E36)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/E/E36.svg" type="node,closedway">
         <label text="E36: Mine (Underground)"/>
@@ -2480,8 +2482,10 @@
     <!---***********************Section F: Ports***************************-->
 
     <group name="F: Ports" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/F/F.svg">
+      
       <item name="Harbour" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/F/F.svg" type="node,closedway">
         <label text="F: Harbour"/>
+        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Harbours" />
         <key key="harbour" value="yes"/>
         <key key="seamark:type" value="harbour"/>
         <text key="seamark:name" text="Name"/>
@@ -2510,39 +2514,48 @@
           <list_entry value="offshore_support" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/F/F.svg" icon_size="16"/>
           <list_entry value="port_support" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/F/F.svg" icon_size="16"/>
         </multiselect>
-        <label text="Port Information"/>
-        <text key="harbour:locode" text="LOCODE"/>
-        <text key="harbour:portindex" text="Port Index"/>
-        <label text="Port Contacts"/>
-        <text key="vhf_channel" text="VHF"/>
-        <text key="vhf_mmsi" text="MMSI"/>
-        <text key="phone" text="Phone"/>
-        <text key="fax" text="fax"/>
-        <text key="email" text="email"/>
-        <text key="web" text="WWW"/>
-        <label text="Restrictions"/>
-        <text key="maxlength" text="Max vessel length"/>
-        <text key="maxdraft" text="Max vessel draft"/>
-        <text key="maxairdraft" text="Max vessel height"/>
-        <text key="maxspeed" text="Speed Limit"/>
-        <label text="Access information"/>
-        <text key="access:tide" text="Tide state"/>
-        <text key="access:tidal_range" text="Tidal Range"/>
-        <text key="access:sill_height" text="Sill Height"/>
-        <text key="access:swell" text="Swell conditions for access"/>
-        <text key="access:ice" text="Ice conditions for access"/>
-        <text key="access:time" text="Access opening times"/>
+        <text key="operator" text="Harbour Operator" />
+        <space/>
+        <check key="port_of_entry" value_on="yes" value_off="no" text="Port of Entry" default="off" />
+        <space/>
+        <label text="Harbour Access Restrictions" />
+        <space />
+        <text key="access:tide" text="Tide state" />
+        <text key="access:tidal_range" text="Tidal range" />
+        <text key="access:sill_height" text="Sill height" />
+        <text key="access:swell" text="Swell conditions" />
+        <text key="access:ice" text="Ice conditions" />
+        <text key="access:time" text="Time limits" />
+        <space/>
+        <label text="Vessel Size Restrictions" />
+        <space/>
+        <text key="maxlength" text="Maximum length" />
+        <text key="maxwidth" text="Maximum beam" />
+        <text key="maxdraft" text="Maximum draft" />
+        <text key="maxairdraft" text="Maximum height" />
+        <text key="maxspeed" text="Speed limit" />
+        <space/>
+        <label text="Contact Information" />
+        <space/>
+        <text key="harbour_master" text="Harbour Master" />
+        <text key="phone" text="Phone" />
+        <text key="fax" text="Fax" />
+        <text key="email" text="Email" />
+        <text key="website" text="Web site" />
+        <text key="vhf_channel" text="VHF channel" />
+        <text key="vhf_mmsi" text="VHF MMSI" />
+        <space/>
+        <text key="harbour:information" text="General Information" />
       </item>
 
-
       <group name="Harbour Infrastructure" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/F/F.svg">
+        
         <item name="Dyke (F1)" icon="presets/empty.png" type="way,closedway">
           <label text="F1: Dyke"/>
           <key key="man_made" value="dyke"/>
           <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=dyke"/>
           <text key="name" text="Name"/>
         </item>
-
 
         <item name="Seawall (F2)" icon="presets/empty.png" type="way,closedway">
           <label text="F2: Seawall"/>
@@ -2551,7 +2564,6 @@
           <key key="wall" value="seawall"/>
           <text key="name" text="Name"/>
         </item>
-
 
         <item name="Causeway (F3)" icon="presets/empty.png" type="way">
           <label text="F3: Causeway"/>
@@ -2885,6 +2897,7 @@
         </item>
 
       </group>
+      
       <item name="Fishing Port (F10)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/F/F10.svg" type="node,closedway">
         <label text="F10: Fishing Port"/>
         <key key="harbour" value="yes"/>
@@ -3027,6 +3040,7 @@
     <!---***********************Section I: Depths***************************-->
 
     <group name="I: Depths" icon="presets/empty.png">
+      
       <item name="Depth Source Quality" icon="presets/empty.png" type="node">
         <label text="I: Depth Source Quality"/>
         <link href="http://wiki.openstreetmap.org/wiki/Key:depth"/>
@@ -3060,6 +3074,7 @@
     <!---***********************Section J: Nature of Seabed***************************-->
 
     <group name="J: Nature of Seabed" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/J/J15.svg">
+      
       <item name="Seabed Surface (J1-J15)+(J30-J39)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/J/J14.svg" type="node,closedway">
         <label text="J1-J15, J30-J39: Seabed Surface"/>
         <key key="seamark:type" value="seabed_area"/>
@@ -3101,6 +3116,7 @@
     <!---***********************Section K: Rocks, Wrecks, Obstructions***************************-->
 
     <group name="K: Rocks, Wrecks, Obstructions" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/K/K12.svg">
+      
       <item name="Rock (K2-K15)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/K/K11.svg" type="node">
         <label text="K2-K15: Rock"/>
         <key key="seamark:type" value="rock"/>
@@ -3248,6 +3264,7 @@
     <!---***********************Section L: Offshore Installations***************************-->
 
     <group name="L: Offshore Installations" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/L/L17.svg">
+      
       <item name="Offshore Oil and Gas Field (L1)" icon="presets/empty.png" type="closedway,node">
         <label text="L1: Offshore Oil and Gas Field"/>
         <key key="waterway" value="offshore_field"/>
@@ -3461,6 +3478,7 @@
     <!---***********************Section M: Tracks, Routes***************************-->
 
     <group name="M: Tracks, Routes" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/M/M10.svg">
+      
       <item name="Leading Line (M1)" icon="presets/empty.png" type="way,relation">
         <label text="M1: Leading Line"/>
         <key key="seamark:type" value="navigation_line"/>
@@ -3633,6 +3651,7 @@
     <!---***********************Section N: Areas, Limits***************************-->
 
     <group name="N: Areas, Limits" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/N/N21.svg">
+      
       <item name="Non-resitricted areas (N1)" icon="presets/empty.png" type="closedway">
         <label text="N1: Non-restricted areas"/>
         <key key="seamark:type" value="non-restricted_area"/>
@@ -3964,6 +3983,7 @@
     <!---***********************Section P: Lights***************************-->
 
     <group name="P: Lights" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/P/P1.major.svg">
+      
       <item name="Light (non-sectored)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/P/P10.2_green.svg" type="node">
         <label text="P: Lights"/>
         <combo key="seamark:type" text="Type" default="light_minor" required="true" match="key">
@@ -4102,6 +4122,7 @@
     <!---***********************Section Q: Buoys, Beacons***************************-->
 
     <group name="Q: Buoys, Beacons" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/pillar/horizontal/yellow_black_yellow.svg">
+      
       <item name="Topmarks (Q9)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q9/cone_point_up/generic.svg" type="node">
         <label text="Q9: Topmarks"/>
         <combo key="seamark:topmark:shape" text="Topmark Shape" required="true" match="key">
@@ -4934,6 +4955,7 @@
       </group>
       
       <group name="Lateral Marks (Q130.1)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/can/green.svg">
+        
         <item name="IALA Lateral Buoy" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/can/green.svg" type="node">
           <label text="Q130.1: Lateral Buoy"/>
           <combo key="seamark:buoy_lateral:system" text="IALA" use_last_as_default="force" required="true" match="keyvalue">
@@ -5668,6 +5690,7 @@
       </group>
       
       <group name="Cardinal Marks (Q130.3)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/pillar/horizontal/yellow_black_yellow.svg">
+        
         <item name="North Buoy" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q9/2_cones_up/black.svg" type="node">
           <label text="Q130.3: North Cardinal Buoy"/>
           <key key="seamark:type" value="buoy_cardinal"/>
@@ -5914,6 +5937,7 @@
       </group>
       
       <group name="Safe Water Marks (Q130.5)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/Q9/sphere/red.svg">
+        
         <item name="Buoy" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/pillar/vertical/red_white.svg" type="node">
           <label text="Q130.5: Safe Water Buoy"/>
           <key key="seamark:type" value="buoy_safe_water"/>
@@ -5961,6 +5985,7 @@
       </group>
       
       <group name="Special Purpose Marks (Q130.6)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/pillar/yellow.svg">
+        
         <item name="Buoy" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/Q/pillar/yellow.svg" type="node">
           <label text="Q130.6: Special Purpose Buoy"/>
           <key key="seamark:type" value="buoy_special_purpose"/>
@@ -6182,6 +6207,7 @@
     <!---***********************Section R: Fog Signals***************************-->
 
     <group name="R: Fog Signals" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/R/R1.svg">
+      
       <item name="Fog Signal (R1-R22)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/R/R1.svg" type="node">
         <label text="R1-R22: Fog Signal"/>
         <key key="seamark:fog_signal" value="yes" match="none"/>
@@ -6216,6 +6242,7 @@
     <!---***********************Section S: Electronic Position-Fixing Systems***************************-->
 
     <group name="S: Electronic Position-Fixing Systems" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/S/S1.svg">
+      
       <item name="Coast Radar Station (S1)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/S/S1.svg" type="node">
         <label text="S1: Cost Radar Station"/>
         <key key="seamark:type" value="radar_station"/>
@@ -6330,6 +6357,7 @@
     <!---***********************Section T: Services***************************-->
 
     <group name="T: Services" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/T/T1.1.svg">
+      
       <item name="Pilot Boarding Position (T1.1-T1.4)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/T/T1.1.svg" type="node,way,closedway,relation">
         <label text="T1.1-T1.4: Pilot Boarding Position"/>
         <key key="pilotage" value="boarding_point"/>
@@ -6480,30 +6508,106 @@
     <!---***********************Section U: Small Craft (Leisure) Facilities***************************-->
 
     <group name="U: Small Craft (Leisure) Facilities" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/U/U1.1.svg">
-      <item name="Marina (U1.1)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/U/U1.1.svg" type="node,way,closedway">
-        <label text="U1.1: Marina"/>
-        <key key="leisure" value="marina"/>
-        <key key="harbour" value="yes"/>
-        <key key="seamark:type" value="harbour"/>
-        <key key="harbour:category" value="marina"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:leisure=marina"/>
-        <combo key="seamark:harbour:category" text="Marina Type" required="true" readonly="true">
-          <list_entry value="marina"/>
-          <list_entry value="marina_no_facilities"/>
-        </combo>
-        <text key="name" text="Name"/>
-      </item>
-
-      <item name="Yacht berth (U1.2)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/U/U1.2.svg" type="node,way,closedway">
-        <label text="U1.2: Yacht Berth"/>
-        <key key="mooring" value="yacht"/>
-        <key key="seamark:type" value="berth"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Key:mooring"/>
-        <label text="This tag should be used of appropriate type of berth."/>
-        <text key="seamark:name" text="Name"/>
-        <check key="seamark:berth:category" text="Overnight Berth" value_on="overnight_accommodation" value_off="" default="off"/>
-      </item>
-
+      
+      <group name="Marina (U1.1/1.2)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/U/U1.1.svg">
+        
+        <item name="General Information" icon="http://dev.openseamap.org/josm/icons/Marina16.png" type="node,way,closedway,relation">
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Harbours" />
+          <link href="http://wiki.openstreetmap.org/wiki/Tag:leisure=marina"/>
+          <key key="leisure" value="marina" />
+          <key key="seamark:type" value="harbour" />
+          <key key="seamark:harbour:category" value="marina" />
+          <text key="name" text="Marina Name" />
+          <space/>
+          <check key="seamark:harbour:category" value_on="marina_no_facilities" value_off="marina" text="Berths only - no facilities" default="off" />
+          <space/>
+          <text key="operator" text="Marina Operator" />
+          <space/>
+          <label text="Marina Access Restrictions" />
+          <space />
+          <text key="access:tide" text="Tide state" />
+          <text key="access:tidal_range" text="Tidal range" />
+          <text key="access:sill_height" text="Sill height" />
+          <text key="access:swell" text="Swell conditions" />
+          <text key="access:ice" text="Ice conditions" />
+          <text key="access:time" text="Time limits" />
+          <space/>
+          <label text="Vessel Size Restrictions" />
+          <space/>
+          <text key="maxlength" text="Maximum length" />
+          <text key="maxwidth" text="Maximum beam" />
+          <text key="maxdraft" text="Maximum draft" />
+          <text key="maxairdraft" text="Maximum height" />
+          <text key="maxspeed" text="Speed limit" />
+          <space/>
+          <label text="Contact Information" />
+          <space/>
+          <text key="harbour_master" text="Harbour Master" />
+          <text key="phone" text="Phone" />
+          <text key="fax" text="Fax" />
+          <text key="email" text="Email" />
+          <text key="website" text="Web site" />
+          <text key="vhf_channel" text="VHF channel" />
+          <text key="vhf_mmsi" text="VHF MMSI" />
+          <space/>
+          <combo key="internet_access" text="Internet Access">
+            <list_entry value="yes"/>
+            <list_entry value="wlan"/>
+            <list_entry value="wired"/>
+            <list_entry value="terminal"/>
+          </combo>
+          <text key="internet_access:operator" text="Internet Operator"/>
+          <combo key="internet_access:fee" text="Internet Fee">
+            <list_entry value="yes"/>
+            <list_entry value="no"/>
+          </combo>
+          <space/>
+          <text key="harbour:information" text="General Information" />
+        </item>
+        
+        <item name="Marina Facilities" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/U/U1.1.svg" type="node,way,closedway,relation">
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Harbours" />
+          <label text="Facilities available at or near this marina" />
+          <key key="leisure" value="marina" />
+          <key key="seamark:type" value="harbour" />
+          <key key="seamark:harbour:category" value="marina" />
+          <space/>
+          <text key="harbour:visitor_berth" text="Visitors berth" />
+          <text key="harbour:visitors_mooring" text="Visitors mooring" />
+          <text key="harbour:scrubbing_berth" text="Scrubbing berth" />
+          <text key="harbour:electricity" text="Electricity" />
+          <text key="harbour:water_tap" text="Drinking Water" />
+          <text key="harbour:showers" text="Showers" />
+          <text key="harbour:toilets" text="Toilets" />
+          <text key="harbour:laundrette" text="Laundrette" />
+          <text key="harbour:public_inn" text="Inn" />
+          <text key="harbour:restaurant" text="Restaurant" />
+          <text key="harbour:nautical_club" text="Sailing club" />
+          <text key="harbour:fuel_station" text="Fuel" />
+          <text key="harbour:chandler" text="Chandler" />
+          <text key="harbour:provisions" text="Provisions" />
+          <text key="harbour:bottle_gas" text="Bottled gas" />
+          <text key="harbour:doctor" text="Doctor" />
+          <text key="harbour:pharmacy" text="Pharmacy" />
+          <text key="harbour:emergency_telephone" text="Emergency telephone" />
+          <text key="harbour:post_box" text="Post box" />
+          <text key="harbour:telephone" text="Telephone" />
+          <text key="harbour:refuse_bin" text="Refuse disposal" />
+          <text key="harbour:pump-out" text="Pump-out" />
+          <text key="harbour:car_park" text="Car park" />
+          <text key="harbour:boat_trailers_park" text="Boat trailer park" />
+          <text key="harbour:caravan_site" text="Caravan site" />
+          <text key="harbour:camping_site" text="Camping site" />
+          <text key="harbour:picnic_area" text="Picnic area" />
+          <text key="harbour:sailmaker" text="Sailmaker" />
+          <text key="harbour:boatyard" text="Boatyard" />
+          <text key="harbour:boat_hoist" text="Boat hoist" />
+          <text key="harbour:slipway" text="Slipway" />
+          <text key="harbour:mechanics_workshop" text="Mechanics workshop" />
+        </item>
+        
+      </group>
+      
       <item name="Visitors berth (U2-U3)" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/U/U2.svg" type="node,way,closedway">
         <label text="U2-U3: Visitors Berth"/>
         <key key="mooring" value="guest"/>
