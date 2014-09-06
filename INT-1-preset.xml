@@ -149,6 +149,88 @@
     <list_entry value="pink"/>
   </chunk>
   
+  <chunk id="lightcolours">
+    <list_entry value="white"/>
+    <list_entry value="red"/>
+    <list_entry value="green"/>
+    <list_entry value="blue"/>
+    <list_entry value="yellow"/>
+    <list_entry value="amber"/>
+    <list_entry value="violet"/>
+    <list_entry value="orange"/>
+    <list_entry value="magenta"/>
+    <list_entry value="pink"/>
+  </chunk>
+  
+  <chunk id="lightchars">
+    <list_entry value="F"/>
+    <list_entry value="Fl"/>
+    <list_entry value="LFl"/>
+    <list_entry value="Q"/>
+    <list_entry value="VQ"/>
+    <list_entry value="UQ"/>
+    <list_entry value="Iso"/>
+    <list_entry value="Oc"/>
+    <list_entry value="IQ"/>
+    <list_entry value="IVQ"/>
+    <list_entry value="IUQ"/>
+    <list_entry value="Mo"/>
+    <list_entry value="FFl"/>
+    <list_entry value="FlLFl"/>
+    <list_entry value="OcFl"/>
+    <list_entry value="FLFl"/>
+    <list_entry value="Al.Oc"/>
+    <list_entry value="Al.LFl"/>
+    <list_entry value="Al.Fl"/>
+    <list_entry value="Al.Gr"/>
+    <list_entry value="Q+LFl"/>
+    <list_entry value="VQ+LFl"/>
+    <list_entry value="UQ+LFl"/>
+    <list_entry value="Al"/>
+    <list_entry value="Al.FFl"/>
+  </chunk>
+  
+  <chunk id="lightcats">
+    <list_entry value="front"/>
+    <list_entry value="rear"/>
+    <list_entry value="lower"/>
+    <list_entry value="upper"/>
+    <list_entry value="horizontal"/>
+    <list_entry value="vertical"/>
+    <list_entry value="directional"/>
+    <list_entry value="leading"/>
+    <list_entry value="aero"/>
+    <list_entry value="air_obstruction"/>
+    <list_entry value="fog_detector"/>
+    <list_entry value="floodlight"/>
+    <list_entry value="strip_light"/>
+    <list_entry value="subsidiary"/>
+    <list_entry value="spotlight"/>
+    <list_entry value="moire"/>
+    <list_entry value="emergency"/>
+    <list_entry value="bearing"/>
+  </chunk>
+  
+  <chunk id="lightexhibs">
+    <list_entry value="24h"/>
+    <list_entry value="day"/>
+    <list_entry value="fog"/>
+    <list_entry value="night"/>
+    <list_entry value="warning"/>
+    <list_entry value="storm"/>
+  </chunk>
+  
+  <chunk id="lightvisis">
+    <list_entry value="high"/>
+    <list_entry value="low"/>
+    <list_entry value="faint"/>
+    <list_entry value="intensified"/>
+    <list_entry value="unintensified"/>
+    <list_entry value="restricted"/>
+    <list_entry value="obscured"/>
+    <list_entry value="part_obscured"/>
+  </chunk>
+  
   
   <group name="INT-1" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/IHO_c.svg">
     
@@ -4092,146 +4174,316 @@
     </group>
     
     <!---***********************Section P: Lights***************************-->
-
-    <group name="P: Lights" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P1.major.svg">
+    
+    <group name="P: Lights" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/P/P1.major.svg">
       
-      <item name="Light (non-sectored)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P10.2_green.svg" type="node">
-        <label text="P: Lights"/>
-        <combo key="seamark:type" text="Type" default="light_minor" required="true" match="key">
-          <list_entry value="light_major"/>
-          <list_entry value="light_minor"/>
-          <list_entry value="landmark"/>
-          <list_entry value="platform"/>
-          <list_entry value="buoy_lateral"/>
-          <list_entry value="beacon_lateral"/>
-          <list_entry value="light_float"/>
-          <list_entry value="light_vessel"/>
-          <list_entry value="buoy_cardinal"/>
-          <list_entry value="beacon_cardinal"/>
-          <list_entry value="buoy_isolated_danger"/>
-          <list_entry value="beacon_isolated_danger"/>
-          <list_entry value="buoy_special_purpose"/>
-          <list_entry value="beacon_special_purpose"/>
-          <list_entry value="mooring"/>
-          <list_entry value="buoy_instalation"/>
-          <list_entry value="buoy_safe_water"/>
-          <list_entry value="beacon_safe_water"/>
-          <list_entry value="notice"/>
+      <item name="Single non-directional Lights (P*)" type="node,closedway" icon="presets/empty.png">
+        <label text="Single non-directional Light"/>
+        <multiselect key="seamark:light:colour" text="Colour">
+          <reference ref="lightcolours"/>
+        </multiselect>
+        <combo key="seamark:light:character" text="Character">
+          <reference ref="lightchars"/>
         </combo>
-        <text key="seamark:name" text="Name"/>
-        <text key="seamark:light:reference" text="List of Lights Reference"/>
-        <combo key="seamark:light:colour" text="Light Colour" required="true" match="key!">
-          <list_entry value="white" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P11_white.svg" icon_size="16"/>
-          <list_entry value="red" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P11_red.svg" icon_size="16"/>
-          <list_entry value="orange" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P11_orange.svg" icon_size="16"/>
-          <list_entry value="amber" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P11_amber.svg" icon_size="16"/>
-          <list_entry value="yellow" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P11_yellow.svg" icon_size="16"/>
-          <list_entry value="green" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P11_green.svg" icon_size="16"/>
-          <list_entry value="blue" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P11_blue.svg" icon_size="16"/>
-          <list_entry value="violet" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P11_violet.svg" icon_size="16"/>
-        </combo>
-        <combo key="seamark:light:character" text="Light Character" required="true" match="key!">
-          <list_entry value="F" short_description="Fixed"/>
-          <list_entry value="Fl" short_description="Flashing"/>
-          <list_entry value="FFl" short_description="Fixed and flashing"/>
-          <list_entry value="Lfl" short_description="Longflash"/>
-          <list_entry value="Q" short_description="Quick"/>
-          <list_entry value="VQ" short_description="Very Quick"/>
-          <list_entry value="UQ" short_description="Ultra Quick"/>
-          <list_entry value="Al" short_description="Alternating"/>
-          <list_entry value="Iso" short_description="Isophase"/>
-          <list_entry value="Oc" short_description="Oculting"/>
-          <list_entry value="Mo" short_description="Morse"/>
-          <list_entry value="IQ" short_description="Interupted Quick"/>
-          <list_entry value="IVQ" short_description="Interupted Very Quick"/>
-          <list_entry value="IUQ" short_description="Interupted Ultra Quick"/>
-        </combo>
-        <text key="seamark:light:group" text="Light Group"/>
-        <label text="If Character is Mo (Morse), groupe is letter of Morse Alphabet"/>
-        <text key="seamark:light:period" text="Light Period"/>
-        <text key="seamark:light:height" text="Light Height"/>
-        <text key="seamark:light:range" text="Light Range"/>
-        <text key="seamark:light:sequence" text="Light Sequence"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Key:light"/>
-        <combo key="seamark:light:category" text="Light Category">
-          <list_entry value="upper"/>
-          <list_entry value="lower"/>
-          <list_entry value="rare"/>
-          <list_entry value="front"/>
-          <list_entry value="directional"/>
-          <list_entry value="horizontal"/>
-          <list_entry value="leading"/>
-          <list_entry value="subsidiary"/>
-          <list_entry value="emergency"/>
-          <list_entry value="bearing"/>
-          <list_entry value="vertical"/>
-          <list_entry value="aero"/>
+        <text key="seamark:light:period" text="Period"/>
+        <text key="seamark:light:group" text="Group"/>
+        <text key="seamark:light:range" text="Range"/>
+        <text key="seamark:light:height" text="Height"/>
+        <multiselect key="seamark:light:category" text="Categories">
+          <reference ref="lightcats"/>
+        </multiselect>
+        <text key="seamark:light:multiple" text="Multplicity"/>
+        <combo key="seamark:light:exhibition" text="Exhibition">
+          <reference ref="lightexhibs"/>
         </combo>
         <combo key="seamark:light:visibility" text="Visibility">
-          <list_entry value="intensified"/>
-          <list_entry value="unintensified"/>
-          <list_entry value="part_obscured"/>
-          <list_entry value="high"/>
-          <list_entry value="low"/>
-          <list_entry value="faint"/>
-          <list_entry value="restricted"/>
-          <list_entry value="obscured"/>
-        </combo>
-        <combo key="seamark:light:exhibition" text="Exhibition">
-          <list_entry value="24h"/>
-          <list_entry value="day"/>
-          <list_entry value="night"/>
-          <list_entry value="fog"/>
-          <list_entry value="warning"/>
-          <list_entry value="storm"/>
-        </combo>
-        <combo key="seamark:light:status" text="Status">
-          <list_entry value="occasional"/>
-          <list_entry value="private"/>
-          <list_entry value="permanent"/>
-          <list_entry value="periodic"/>
-          <list_entry value="historic"/>
-          <list_entry value="abandoned"/>
-          <list_entry value="not_in_use"/>
+          <reference ref="lightvisis"/>
         </combo>
       </item>
-
-      <!-- <label text="Sectored Light, see SeaMap Editor plugin"/> -->
-      <item name="Leading Light" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P10.2.svg" type="way">
-        <key key="seamark:type" value="navigation_line"/>
-        <key key="seamark:navigation_line:category" value="leading"/>
-        <text key="seamark:navigation_line:orientation" text="Orientation"/>
-      </item>
-
-      <item name="Moiré light (P31)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P31.svg" type="node">
-        <label text="P31: Moiré light"/>
-        <!--	<key key="seamark:type" value="light"/> -->
-        <key key="seamark:light:category" value="moire"/>
-      </item>
-
-      <item name="Air obstruction lights (P61)" icon="presets/empty.png" type="node">
-        <label text="P61: Air obstruction lights"/>
-        <key key="seamark:light:category" value="air_obstruction"/>
-        <combo key="seamark:light:visibility" text="Visibility" default="" delete_if_empty="true">
-          <list_entry value="intensified"/>
-          <list_entry value="unintensified"/>
-        </combo>
-      </item>
-
-      <item name="Floodlit (P63)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P63.svg" type="node,way,closedway">
-        <label text="P63: Floodlit"/>
-        <key key="seamark:light:category" value="floodlight"/>
-      </item>
-
-      <item name="Strip light (P64)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P64.svg" type="node,way">
-        <label text="P64: Strip light"/>
-        <key key="seamark:light:category" value="striplight"/>
-      </item>
-
+      
+      <group name="Direction Lights (P30)" icon="presets/empty.png">
+        
+        <item name="Sector 1" type="node,closedway">
+          <label text="Sector 1"/>
+          <multiselect key="seamark:light:1:colour" text="Colour">
+            <reference ref="lightcolours"/>
+          </multiselect>
+          <combo key="seamark:light:1:character" text="Character">
+            <reference ref="lightchars"/>
+          </combo>
+          <text key="seamark:light:1:orientation" text="Orientation"/>
+          <text key="seamark:light:1:period" text="Period"/>
+          <text key="seamark:light:1:group" text="Group"/>
+          <text key="seamark:light:1:range" text="Range"/>
+          <text key="seamark:light:1:height" text="Height"/>
+          <key key="seamark:light:1:category" value="directional"/>
+          <text key="seamark:light:1:multiple" text="Multplicity"/>
+          <combo key="seamark:light:1:exhibition" text="Exhibition">
+            <reference ref="lightexhibs"/>
+          </combo>
+          <combo key="seamark:light:1:visibility" text="Visibility">
+            <reference ref="lightvisis"/>
+          </combo>
+        </item>
+        
+        <item name="Sector 2" type="node,closedway">
+          <label text="Sector 2"/>
+          <multiselect key="seamark:light:2:colour" text="Colour">
+            <reference ref="lightcolours"/>
+          </multiselect>
+          <combo key="seamark:light:2:character" text="Character">
+            <reference ref="lightchars"/>
+          </combo>
+          <text key="seamark:light:2:orientation" text="Orientation"/>
+          <text key="seamark:light:2:period" text="Period"/>
+          <text key="seamark:light:2:group" text="Group"/>
+          <text key="seamark:light:2:range" text="Range"/>
+          <text key="seamark:light:2:height" text="Height"/>
+          <key key="seamark:light:2:category" value="directional"/>
+          <text key="seamark:light:2:multiple" text="Multplicity"/>
+          <combo key="seamark:light:2:exhibition" text="Exhibition">
+            <reference ref="lightexhibs"/>
+          </combo>
+          <combo key="seamark:light:2:visibility" text="Visibility">
+            <reference ref="lightvisis"/>
+          </combo>
+        </item>
+        
+        <item name="Sector 3" type="node,closedway">
+          <label text="Sector 3"/>
+          <multiselect key="seamark:light:3:colour" text="Colour">
+            <reference ref="lightcolours"/>
+          </multiselect>
+          <combo key="seamark:light:3:character" text="Character">
+            <reference ref="lightchars"/>
+          </combo>
+          <text key="seamark:light:3:orientation" text="Orientation"/>
+          <text key="seamark:light:3:period" text="Period"/>
+          <text key="seamark:light:3:group" text="Group"/>
+          <text key="seamark:light:3:range" text="Range"/>
+          <text key="seamark:light:3:height" text="Height"/>
+          <key key="seamark:light:3:category" value="directional"/>
+          <text key="seamark:light:3:multiple" text="Multplicity"/>
+          <combo key="seamark:light:3:exhibition" text="Exhibition">
+            <reference ref="lightexhibs"/>
+          </combo>
+          <combo key="seamark:light:3:visibility" text="Visibility">
+            <reference ref="lightvisis"/>
+          </combo>
+        </item>
+        
+        <item name="Sector 4" type="node,closedway">
+          <label text="Sector 4"/>
+          <multiselect key="seamark:light:4:colour" text="Colour">
+            <reference ref="lightcolours"/>
+          </multiselect>
+          <combo key="seamark:light:4:character" text="Character">
+            <reference ref="lightchars"/>
+          </combo>
+          <text key="seamark:light:4:orientation" text="Orientation"/>
+          <text key="seamark:light:4:period" text="Period"/>
+          <text key="seamark:light:4:group" text="Group"/>
+          <text key="seamark:light:4:range" text="Range"/>
+          <text key="seamark:light:4:height" text="Height"/>
+          <key key="seamark:light:4:category" value="directional"/>
+          <text key="seamark:light:4:multiple" text="Multplicity"/>
+          <combo key="seamark:light:4:exhibition" text="Exhibition">
+            <reference ref="lightexhibs"/>
+          </combo>
+          <combo key="seamark:light:4:visibility" text="Visibility">
+            <reference ref="lightvisis"/>
+          </combo>
+        </item>
+        
+        <item name="Sector 5" type="node,closedway">
+          <label text="Sector 5"/>
+          <multiselect key="seamark:light:5:colour" text="Colour">
+            <reference ref="lightcolours"/>
+          </multiselect>
+          <combo key="seamark:light:5:character" text="Character">
+            <reference ref="lightchars"/>
+          </combo>
+          <text key="seamark:light:5:orientation" text="Orientation"/>
+          <text key="seamark:light:5:period" text="Period"/>
+          <text key="seamark:light:5:group" text="Group"/>
+          <text key="seamark:light:5:range" text="Range"/>
+          <text key="seamark:light:5:height" text="Height"/>
+          <key key="seamark:light:5:category" value="directional"/>
+          <text key="seamark:light:5:multiple" text="Multplicity"/>
+          <combo key="seamark:light:5:exhibition" text="Exhibition">
+            <reference ref="lightexhibs"/>
+          </combo>
+          <combo key="seamark:light:5:visibility" text="Visibility">
+            <reference ref="lightvisis"/>
+          </combo>
+        </item>
+        
+      </group>
+      
+      <group name="Sector Lights (P40-46)" icon="presets/empty.png">
+        
+        <item name="Sector 1" type="node,closedway">
+          <label text="Sector 1"/>
+          <multiselect key="seamark:light:1:colour" text="Colour">
+            <reference ref="lightcolours"/>
+          </multiselect>
+          <combo key="seamark:light:1:character" text="Character">
+            <reference ref="lightchars"/>
+          </combo>
+          <text key="seamark:light:1:sector_start" text="Sector Start"/>
+          <text key="seamark:light:1:sector_end" text="Sector End"/>
+          <text key="seamark:light:1:period" text="Period"/>
+          <text key="seamark:light:1:group" text="Group"/>
+          <text key="seamark:light:1:range" text="Range"/>
+          <text key="seamark:light:1:height" text="Height"/>
+          <multiselect key="seamark:light:1:category" text="Categories">
+            <reference ref="lightcats"/>
+          </multiselect>
+          <text key="seamark:light:1:multiple" text="Multplicity"/>
+          <combo key="seamark:light:1:exhibition" text="Exhibition">
+            <reference ref="lightexhibs"/>
+          </combo>
+          <combo key="seamark:light:1:visibility" text="Visibility">
+            <reference ref="lightvisis"/>
+          </combo>
+        </item>
+        
+        <item name="Sector 2" type="node,closedway">
+          <label text="Sector 2"/>
+          <multiselect key="seamark:light:2:colour" text="Colour">
+            <reference ref="lightcolours"/>
+          </multiselect>
+          <combo key="seamark:light:2:character" text="Character">
+            <reference ref="lightchars"/>
+          </combo>
+          <text key="seamark:light:2:sector_start" text="Sector Start"/>
+          <text key="seamark:light:2:sector_end" text="Sector End"/>
+          <text key="seamark:light:2:period" text="Period"/>
+          <text key="seamark:light:2:group" text="Group"/>
+          <text key="seamark:light:2:range" text="Range"/>
+          <text key="seamark:light:2:height" text="Height"/>
+          <multiselect key="seamark:light:2:category" text="Categories">
+            <reference ref="lightcats"/>
+          </multiselect>
+          <text key="seamark:light:2:multiple" text="Multplicity"/>
+          <combo key="seamark:light:2:exhibition" text="Exhibition">
+            <reference ref="lightexhibs"/>
+          </combo>
+          <combo key="seamark:light:2:visibility" text="Visibility">
+            <reference ref="lightvisis"/>
+          </combo>
+        </item>
+        
+        <item name="Sector 3" type="node,closedway">
+          <label text="Sector 3"/>
+          <multiselect key="seamark:light:3:colour" text="Colour">
+            <reference ref="lightcolours"/>
+          </multiselect>
+          <combo key="seamark:light:3:character" text="Character">
+            <reference ref="lightchars"/>
+          </combo>
+          <text key="seamark:light:3:sector_start" text="Sector Start"/>
+          <text key="seamark:light:3:sector_end" text="Sector End"/>
+          <text key="seamark:light:3:period" text="Period"/>
+          <text key="seamark:light:3:group" text="Group"/>
+          <text key="seamark:light:3:range" text="Range"/>
+          <text key="seamark:light:3:height" text="Height"/>
+          <multiselect key="seamark:light:3:category" text="Categories">
+            <reference ref="lightcats"/>
+          </multiselect>
+          <text key="seamark:light:3:multiple" text="Multplicity"/>
+          <combo key="seamark:light:3:exhibition" text="Exhibition">
+            <reference ref="lightexhibs"/>
+          </combo>
+          <combo key="seamark:light:3:visibility" text="Visibility">
+            <reference ref="lightvisis"/>
+          </combo>
+        </item>
+        
+        <item name="Sector 4" type="node,closedway">
+          <label text="Sector 4"/>
+          <multiselect key="seamark:light:4:colour" text="Colour">
+            <reference ref="lightcolours"/>
+          </multiselect>
+          <combo key="seamark:light:4:character" text="Character">
+            <reference ref="lightchars"/>
+          </combo>
+          <text key="seamark:light:4:sector_start" text="Sector Start"/>
+          <text key="seamark:light:4:sector_end" text="Sector End"/>
+          <text key="seamark:light:4:period" text="Period"/>
+          <text key="seamark:light:4:group" text="Group"/>
+          <text key="seamark:light:4:range" text="Range"/>
+          <text key="seamark:light:4:height" text="Height"/>
+          <multiselect key="seamark:light:4:category" text="Categories">
+            <reference ref="lightcats"/>
+          </multiselect>
+          <text key="seamark:light:4:multiple" text="Multplicity"/>
+          <combo key="seamark:light:4:exhibition" text="Exhibition">
+            <reference ref="lightexhibs"/>
+          </combo>
+          <combo key="seamark:light:4:visibility" text="Visibility">
+            <reference ref="lightvisis"/>
+          </combo>
+        </item>
+        
+        <item name="Sector 5" type="node,closedway">
+          <label text="Sector 5"/>
+          <multiselect key="seamark:light:5:colour" text="Colour">
+            <reference ref="lightcolours"/>
+          </multiselect>
+          <combo key="seamark:light:5:character" text="Character">
+            <reference ref="lightchars"/>
+          </combo>
+          <text key="seamark:light:5:sector_start" text="Sector Start"/>
+          <text key="seamark:light:5:sector_end" text="Sector End"/>
+          <text key="seamark:light:5:period" text="Period"/>
+          <text key="seamark:light:5:group" text="Group"/>
+          <text key="seamark:light:5:range" text="Range"/>
+          <text key="seamark:light:5:height" text="Height"/>
+          <multiselect key="seamark:light:5:category" text="Categories">
+            <reference ref="lightcats"/>
+          </multiselect>
+          <text key="seamark:light:5:multiple" text="Multplicity"/>
+          <combo key="seamark:light:5:exhibition" text="Exhibition">
+            <reference ref="lightexhibs"/>
+          </combo>
+          <combo key="seamark:light:5:visibility" text="Visibility">
+            <reference ref="lightvisis"/>
+          </combo>
+        </item>
+        
+        <item name="Sector 6" type="node,closedway">
+          <label text="Sector 6"/>
+          <multiselect key="seamark:light:6:colour" text="Colour">
+            <reference ref="lightcolours"/>
+          </multiselect>
+          <combo key="seamark:light:6:character" text="Character">
+            <reference ref="lightchars"/>
+          </combo>
+          <text key="seamark:light:6:sector_start" text="Sector Start"/>
+          <text key="seamark:light:6:sector_end" text="Sector End"/>
+          <text key="seamark:light:6:period" text="Period"/>
+          <text key="seamark:light:6:group" text="Group"/>
+          <text key="seamark:light:6:range" text="Range"/>
+          <text key="seamark:light:6:height" text="Height"/>
+          <multiselect key="seamark:light:6:category" text="Categories">
+            <reference ref="lightcats"/>
+          </multiselect>
+          <text key="seamark:light:6:multiple" text="Multplicity"/>
+          <combo key="seamark:light:6:exhibition" text="Exhibition">
+            <reference ref="lightexhibs"/>
+          </combo>
+          <combo key="seamark:light:6:visibility" text="Visibility">
+            <reference ref="lightvisis"/>
+          </combo>
+        </item>
+        
+      </group>
+      
     </group>
     
     <!---***********************Section Q: Buoys, Beacons***************************-->
-
+    
     <group name="Q: Buoys, Beacons" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/pillar/horizontal/yellow_black_yellow.svg">
       
       <item name="Topmarks (Q9)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_up/generic.svg" type="node">
