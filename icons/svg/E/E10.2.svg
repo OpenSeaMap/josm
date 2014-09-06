@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    width="100"
    height="100"
-   id="svg2"
-   inkscape:version="0.48.2 r9819"
-   sodipodi:docname="E10.2.svg">
+   id="svg2">
   <title
      id="title2985">E10.2: Church with Tower</title>
   <metadata
@@ -40,46 +38,7 @@
   </metadata>
   <defs
      id="defs11" />
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="810"
-     inkscape:window-height="635"
-     id="namedview9"
-     showgrid="false"
-     inkscape:zoom="2.84"
-     inkscape:cx="-73.943662"
-     inkscape:cy="50"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg2"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
-  <symbol
-     id="church"
-     width="300"
-     height="400"
-     transform="translate(-100,-150)">
-    <path
-       d="m 129,150 0,2.0625 c 6.1706,0.51092 11,5.6301 11,11.9375 l 0,26 -26,0 c -6.3069,0 -11.4265,-4.8294 -11.9375,-11 l -2.0625,0 0,42 2.0625,0 c 0.51092,-6.1706 5.6301,-11 11.9375,-11 l 26,0 0,26 c 0,6.3069 -4.8294,11.4265 -11,11.9375 l 0,2.0625 42,0 0,-2.0625 C 164.83,247.4275 160,242.31 160,236 l 0,-26 26,0 c 6.3069,0 11.4265,4.8294 11.9375,11 l 2.0625,0 0,-42 -2.0625,0 c -0.51092,6.1706 -5.6301,11 -11.9375,11 l -26,0 0,-26 c 0,-6.3069 4.8294,-11.4265 11,-11.9375 l 0,-2.0625 -42,0 z"
-       id="path5"
-       inkscape:connector-curvature="0" />
-  </symbol>
-  <g
-     id="use7"
-     transform="translate(-100,-150)">
-    <path
-       d="M 29 0 L 29 2.0625 C 35.1706 2.57342 40 7.6926 40 14 L 40 23.75 L 25 23.75 L 23.75 23.75 L 23.75 25 L 23.75 40 L 14 40 C 7.6931 40 2.5735 35.1706 2.0625 29 L 0 29 L 0 71 L 2.0625 71 C 2.57342 64.8294 7.6926 60 14 60 L 23.75 60 L 23.75 75 L 23.75 76.25 L 25 76.25 L 40 76.25 L 40 86 C 40 92.3069 35.1706 97.4265 29 97.9375 L 29 100 L 71 100 L 71 97.9375 C 64.83 97.4275 60 92.31 60 86 L 60 76.25 L 75 76.25 L 76.25 76.25 L 76.25 75 L 76.25 60 L 86 60 C 92.3069 60 97.4265 64.8294 97.9375 71 L 100 71 L 100 29 L 97.9375 29 C 97.42658 35.1706 92.3074 40 86 40 L 76.25 40 L 76.25 25 L 76.25 23.75 L 75 23.75 L 60 23.75 L 60 14 C 60 7.6931 64.8294 2.5735 71 2.0625 L 71 0 L 29 0 z M 26.25 26.25 L 40 26.25 L 40 40 L 26.25 40 L 26.25 26.25 z M 60 26.25 L 73.75 26.25 L 73.75 40 L 60 40 L 60 26.25 z M 26.25 60 L 40 60 L 40 73.75 L 26.25 73.75 L 26.25 60 z M 60 60 L 73.75 60 L 73.75 73.75 L 60 73.75 L 60 60 z "
-       transform="translate(100,150)"
-       id="path3876" />
-  </g>
+  <path
+     d="m 29,0 0,2.0625 C 35.1706,2.57342 40,7.6926 40,14 l 0,9.75 -15,0 -1.25,0 0,1.25 0,15 L 14,40 C 7.6931,40 2.5735,35.1706 2.0625,29 L 0,29 0,71 2.0625,71 C 2.57342,64.8294 7.6926,60 14,60 l 9.75,0 0,15 0,1.25 1.25,0 15,0 0,9.75 c 0,6.3069 -4.8294,11.4265 -11,11.9375 l 0,2.0625 42,0 0,-2.0625 C 64.83,97.4275 60,92.31 60,86 l 0,-9.75 15,0 1.25,0 0,-1.25 0,-15 9.75,0 c 6.3069,0 11.4265,4.8294 11.9375,11 L 100,71 100,29 97.9375,29 C 97.42658,35.1706 92.3074,40 86,40 l -9.75,0 0,-15 0,-1.25 -1.25,0 -15,0 L 60,14 C 60,7.6931 64.8294,2.5735 71,2.0625 L 71,0 29,0 z m -2.75,26.25 13.75,0 0,13.75 -13.75,0 0,-13.75 z m 33.75,0 13.75,0 0,13.75 L 60,40 60,26.25 z M 26.25,60 40,60 l 0,13.75 -13.75,0 0,-13.75 z m 33.75,0 13.75,0 0,13.75 L 60,73.75 60,60 z"
+     id="path7" />
 </svg>

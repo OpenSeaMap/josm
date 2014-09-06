@@ -49,37 +49,31 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="719"
-     inkscape:window-height="480"
+     inkscape:window-width="2560"
+     inkscape:window-height="1332"
      id="namedview9"
-     showgrid="false"
-     inkscape:zoom="0.59"
-     inkscape:cx="-248.30508"
+     showgrid="true"
+     inkscape:zoom="6.675088"
+     inkscape:cx="-42.690678"
      inkscape:cy="50"
      inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="0"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg2"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
-  <symbol
-     id="church"
-     width="300"
-     height="400"
-     transform="translate(-100,-150)">
-    <path
-       d="m 129,150 0,2.0625 c 6.1706,0.51092 11,5.6301 11,11.9375 l 0,26 -26,0 c -6.3069,0 -11.4265,-4.8294 -11.9375,-11 l -2.0625,0 0,42 2.0625,0 c 0.51092,-6.1706 5.6301,-11 11.9375,-11 l 26,0 0,26 c 0,6.3069 -4.8294,11.4265 -11,11.9375 l 0,2.0625 42,0 0,-2.0625 C 164.83,247.4275 160,242.31 160,236 l 0,-26 26,0 c 6.3069,0 11.4265,4.8294 11.9375,11 l 2.0625,0 0,-42 -2.0625,0 c -0.51092,6.1706 -5.6301,11 -11.9375,11 l -26,0 0,-26 c 0,-6.3069 4.8294,-11.4265 11,-11.9375 l 0,-2.0625 -42,0 z"
-       id="path5"
-       inkscape:connector-curvature="0" />
-  </symbol>
-  <g
-     id="use7"
-     transform="translate(-100,-150)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path2986"
-       d="m 129,150 0,2.0625 c 6.1706,0.51092 11,5.6301 11,11.9375 l 0,26 -26,0 c -6.3069,0 -11.4265,-4.8294 -11.9375,-11 l -2.0625,0 0,42 2.0625,0 c 0.51092,-6.1706 5.6301,-11 11.9375,-11 l 26,0 0,26 c 0,6.3069 -4.8294,11.4265 -11,11.9375 l 0,2.0625 42,0 0,-2.0625 C 164.83,247.4275 160,242.31 160,236 l 0,-26 26,0 c 6.3069,0 11.4265,4.8294 11.9375,11 l 2.0625,0 0,-42 -2.0625,0 c -0.51092,6.1706 -5.6301,11 -11.9375,11 l -26,0 0,-26 c 0,-6.3069 4.8294,-11.4265 11,-11.9375 l 0,-2.0625 -42,0 z" />
-  </g>
+     fit-margin-bottom="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2984"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <path
+     d="m 29,0 0,2.0625 C 35.1706,2.57342 40,7.6926 40,14 l 0,26 -26,0 C 7.6931,40 2.5735,35.1706 2.0625,29 L 0,29 0,71 2.0625,71 C 2.57342,64.8294 7.6926,60 14,60 l 26,0 0,26 c 0,6.3069 -4.8294,11.4265 -11,11.9375 l 0,2.0625 42,0 0,-2.0625 C 64.83,97.4275 60,92.31 60,86 l 0,-26 26,0 c 6.3069,0 11.4265,4.8294 11.9375,11 L 100,71 100,29 97.9375,29 C 97.42658,35.1706 92.3074,40 86,40 L 60,40 60,14 C 60,7.6931 64.8294,2.5735 71,2.0625 L 71,0 29,0 z"
+     id="path7"
+     inkscape:connector-curvature="0" />
 </svg>

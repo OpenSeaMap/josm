@@ -120,46 +120,24 @@
     <list_entry value="grain"/>
   </chunk>
   
+  <chunk id="lightcolours">
+    <list_entry value="white" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/white.svg" icon_size="16"/>
+    <list_entry value="red" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/red.svg" icon_size="16"/>
+    <list_entry value="green" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/green.svg" icon_size="16"/>
+    <list_entry value="yellow" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/yellow.svg" icon_size="16"/>
+    <list_entry value="blue" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/blue.svg" icon_size="16"/>
+    <list_entry value="amber" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/amber.svg" icon_size="16"/>
+    <list_entry value="violet" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/violet.svg" icon_size="16"/>
+    <list_entry value="orange" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/orange.svg" icon_size="16"/>
+    <list_entry value="magenta" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/magenta.svg" icon_size="16"/>
+  </chunk>
+  
   <chunk id="colours">
-    <list_entry value="white"/>
-    <list_entry value="red"/>
-    <list_entry value="black"/>
-    <list_entry value="green"/>
-    <list_entry value="blue"/>
-    <list_entry value="yellow"/>
-    <list_entry value="grey"/>
-    <list_entry value="brown"/>
-    <list_entry value="amber"/>
-    <list_entry value="violet"/>
-    <list_entry value="orange"/>
-    <list_entry value="magenta"/>
-    <list_entry value="pink"/>
-  </chunk>
-  
-  <chunk id="lightcolours">
-    <list_entry value="white"/>
-    <list_entry value="red"/>
-    <list_entry value="green"/>
-    <list_entry value="blue"/>
-    <list_entry value="yellow"/>
-    <list_entry value="amber"/>
-    <list_entry value="violet"/>
-    <list_entry value="orange"/>
-    <list_entry value="magenta"/>
-    <list_entry value="pink"/>
-  </chunk>
-  
-  <chunk id="lightcolours">
-    <list_entry value="white"/>
-    <list_entry value="red"/>
-    <list_entry value="green"/>
-    <list_entry value="blue"/>
-    <list_entry value="yellow"/>
-    <list_entry value="amber"/>
-    <list_entry value="violet"/>
-    <list_entry value="orange"/>
-    <list_entry value="magenta"/>
-    <list_entry value="pink"/>
+    <reference ref="lightcolours"/>
+    <list_entry value="black" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/black.svg" icon_size="16"/>
+    <list_entry value="grey" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/grey.svg" icon_size="16"/>
+    <list_entry value="brown" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/brown.svg" icon_size="16"/>
+    <list_entry value="pink" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/pink.svg" icon_size="16"/>
   </chunk>
   
   <chunk id="lightchars">
@@ -231,6 +209,55 @@
     <list_entry value="part_obscured"/>
   </chunk>
   
+  <chunk id="lateraltops">
+    <list_entry value="cone, point up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_up/generic.svg" icon_size="16"/>
+    <list_entry value="cylinder" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cylinder/generic.svg" icon_size="16"/>
+    <list_entry value="sphere" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/sphere/generic.svg" icon_size="16"/>
+    <list_entry value="besom, point up" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="besom, point down" icon="presets/empty.png" icon_size="16"/>
+  </chunk>
+  
+  <chunk id="cardinaltops">
+    <list_entry value="2 cones point together"  icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_cones_point_together/generic.svg" icon_size="16"/>
+    <list_entry value="2 cones base together" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_cones_base_together/generic.svg" icon_size="16"/>
+    <list_entry value="2 cones up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_cones_up/generic.svg" icon_size="16"/>
+    <list_entry value="2 cones down" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_cones_down/generic.svg" icon_size="16"/>
+    <list_entry value="2 spheres" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_spheres/generic.svg" icon_size="16"/>
+  </chunk>
+  
+  <chunk id="specialtops">
+    <list_entry value="x-shape" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/x-shape/generic.svg" icon_size="16"/>
+    <list_entry value="board" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_entry.svg" icon_size="16"/>
+    <list_entry value="cross" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cross/generic.svg" icon_size="16"/>
+    <list_entry value="cone, point down" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="cube, point up" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="rhombus" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="flag" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/flag/generic.svg" icon_size="16"/>
+    <list_entry value="sphere over rhombus" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="square" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/square/generic.svg" icon_size="16"/>
+    <list_entry value="rectangle, horizontal" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="rectangle, vertical" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="trapezium, up" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="trapezium, down" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="triangle, point up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/triangle_point_up/generic.svg" icon_size="16"/>
+    <list_entry value="triangle, point down" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="circle" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="2 upright crosses" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="t-shape" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="triangle, point up over circle" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="upright cross over circle" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="rhombus over circle" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="circle over triangle, point up" icon="presets/empty.png" icon_size="16"/>
+  </chunk>
+  
+  <chunk id="topshapes">
+    <reference ref="lateraltops"/>
+    <reference ref="cardinaltops"/>
+    <reference ref="specialtops"/>
+  </chunk>
+  
+  <!--
+   -->
   
   <group name="INT-1" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/IHO_c.svg">
     
@@ -875,9 +902,9 @@
       <item name="Scattered Buildings (D2, D5, D6)" icon="presets/empty.png" type="node,closedway,relation">
         <label text="D2: Scattered Buildings"/>
         <check key="seamark:type" value_on="building" value_off="" text="Seamap Building" default="on"/>
-        <combo key="seamark:building:function" text="Seamark Building Function" default="" match="key">
+        <multiselect key="seamark:building:function" text="Seamark Building Function" default="" match="key">
           <reference ref="function"/>
-        </combo>
+        </multiselect>
         <combo key="seamark:building:shape" text="Seamark Building Shape" default="">
           <list_entry value="high-rise"/>
           <list_entry value="pyramid"/>
@@ -885,9 +912,9 @@
           <list_entry value="spherical"/>
           <list_entry value="cubic"/>
         </combo>
-        <combo key="seamark:building:construction" text="Nature of Construction">
+        <multiselect key="seamark:building:construction" text="Nature of Construction">
           <reference ref="construction"/>
-        </combo>
+        </multiselect>
         <space/>
         <label text="Streetmap Building"/>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Buildings"/>
@@ -1658,9 +1685,9 @@
         <check key="seamark:landmark:conspicuity" text="Conspicuous" value_on="conspicuous" value_off="not_conspicuous" default="on"/>
         <text key="seamark:landmark:height" text="Height above Sea Level Datum"/>
         <text key="seamark:landmark:elevation" text="Elevation of Landmark Ground"/>
-        <combo key="seamark:landmark:construction" text="Construction">
+        <multiselect key="seamark:landmark:construction" text="Construction">
           <reference ref="construction"/>
-        </combo>
+        </multiselect>
       </item>
       
       <item name="Church or Chapel (E10.1/E11)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E10.svg" type="node,closedway">
@@ -1751,9 +1778,9 @@
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:function" value="church"/>
         <combo key="seamark:landmark:category" text="Landmark" readonly="true">
-          <list_entry value="dome" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E10.4.svg" />
-          <list_entry value="spire" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E10.3.svg" />
-          <list_entry value="tower" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E10.2.svg" />
+          <list_entry value="dome" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E10.4.svg"  icon_size="16"/>
+          <list_entry value="spire" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E10.3.svg"  icon_size="16"/>
+          <list_entry value="tower" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E10.2.svg"  icon_size="16"/>
         </combo>
         <space/>
       </item>
@@ -1877,9 +1904,8 @@
       
       <item name="Buddhist Temple (E16)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E16.svg" type="node,closedway">
         <label text="E16: Buddhist Temple"/>
-        <key key="seamark:type" value="landmark"/>
+        <key key="seamark:type" value="building"/>
         <key key="seamark:building:function" value="buddhist_temple"/>
-        <key key="seamark:landmark:function" value="buddhist_temple"/>
         <space/>
         <label text="Streetmap Buddhist Temple"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=place_of_worship"/>
@@ -1993,7 +2019,7 @@
         </combo>
         <text key="height" text="Height over ground"/>
         <text key="ele" text="Elevation of base over sea level"/>
-        <combo key="seamark:building:function" text="Building Function">
+        <multiselect key="seamark:building:function" text="Building Function">
           <list_entry value="pilot_lookout"/>
           <list_entry value="lookout"/>
           <list_entry value="cooling"/>
@@ -2007,7 +2033,7 @@
           <list_entry value="radio"/>
           <list_entry value="television"/>
           <list_entry value="radar"/>
-        </combo>
+        </multiselect>
         <combo key="tower:type" text="Type">
           <list_entry value="communication"/>
           <list_entry value="observation"/>
@@ -2157,10 +2183,10 @@
         <label text="E28: Radio or Television Mast"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="mast"/>
-        <combo key="seamark:landmark:function" text="Type">
+        <multiselect key="seamark:landmark:function" text="Type">
           <list_entry value="radio"/>
           <list_entry value="television"/>
-        </combo>
+        </multiselect>
         <space/>
         <label text="Streetmap Mast"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=mast"/>
@@ -2178,10 +2204,10 @@
         <label text="E29: Radio or Television Tower"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="tower"/>
-        <combo key="seamark:landmark:function" text="Type">
+        <multiselect key="seamark:landmark:function" text="Type">
           <list_entry value="radio"/>
           <list_entry value="television"/>
-        </combo>
+        </multiselect>
         <space/>
         <label text="Streetmap Tower"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=tower"/>
@@ -4489,38 +4515,10 @@
       <item name="Topmarks (Q9)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_up/generic.svg" type="node">
         <label text="Q9: Topmarks"/>
         <combo key="seamark:topmark:shape" text="Topmark Shape" required="true" match="key">
-          <list_entry value="cylinder" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cylinder/generic.svg" icon_size="16"/>
-          <list_entry value="cone, point up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_up/generic.svg" icon_size="16"/>
-          <list_entry value="sphere" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/sphere/generic.svg" icon_size="16"/>
-          <list_entry value="x-shape" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/x-shape/generic.svg" icon_size="16"/>
-          <list_entry value="flag" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/flag/generic.svg" icon_size="16"/>
-          <list_entry value="2 cones up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_cones_up/generic.svg" icon_size="16"/>
-          <list_entry value="2 cones down" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_cones_down/generic.svg" icon_size="16"/>
-          <list_entry value="2 cones point together"  icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_cones_point_together/generic.svg" icon_size="16"/>
-          <list_entry value="2 cones base together" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_cones_base_together/generic.svg" icon_size="16"/>
-          <list_entry value="2 spheres" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_spheres/generic.svg" icon_size="16"/>
-          <list_entry value="upright-cross" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cross/generic.svg" icon_size="16"/>
-          <list_entry value="board" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_entry.svg" icon_size="16"/>
-          <list_entry value="rhombus"/>
-          <list_entry value="triangle, point up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/triangle_point_up/generic.svg" icon_size="16"/>
-          <list_entry value="triangle, point down"/>
-          <list_entry value="square" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/square/generic.svg" icon_size="16"/>
-          <list_entry value="circle"/>
+          <reference ref="topshapes"/>
         </combo>
         <combo key="seamark:topmark:colour" text="Topmark Colour" required="true" match="key">
-          <list_entry value="white" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/white.svg" icon_size="16"/>
-          <list_entry value="red" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/red.svg" icon_size="16"/>
-          <list_entry value="orange" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/orange.svg" icon_size="16"/>
-          <list_entry value="amber" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/amber.svg" icon_size="16"/>
-          <list_entry value="yellow" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/yellow.svg" icon_size="16"/>
-          <list_entry value="green" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/green.svg" icon_size="16"/>
-          <list_entry value="blue" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/blue.svg" icon_size="16"/>
-          <list_entry value="violet" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/violet.svg" icon_size="16"/>
-          <list_entry value="black" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/black.svg" icon_size="16"/>
-          <list_entry value="grey" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/grey.svg" icon_size="16"/>
-          <list_entry value="brown" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/brown.svg" icon_size="16"/>
-          <list_entry value="magenta" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/magenta.svg" icon_size="16"/>
-          <list_entry value="pink" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/pink.svg" icon_size="16"/>
+          <reference ref="colours"/>
         </combo>
         <combo key="seamark:topmark:colour_pattern" text="Colour Pattern">
           <list_entry value="horizontal"/>
@@ -4530,7 +4528,13 @@
           <list_entry value="border"/>
         </combo>
       </item>
-
+      
+      <item name="Radar Reflector (Q9-10)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/S/S4.svg" type="node">
+        <label text="S4: Radar Reflector"/>
+        <key key="seamark:radar_reflector" value="yes"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Key:radar_reflector"/>
+      </item>
+      
       <item name="Buoy (Q20-Q26)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/barrel/yellow.svg" type="node">
         <label text="Q20-Q26: Buoy (non-IALA)"/>
         <label text="For IALA buoys, see Q130.1 - Q130.6"/>
@@ -6650,7 +6654,6 @@
 
       <item name="Radar Reflector (S4)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/S/S4.svg" type="node">
         <label text="S4: Radar Reflector"/>
-        <key key="radar_reflector" value="yes"/>
         <key key="seamark:radar_reflector" value="yes"/>
         <link href="http://wiki.openstreetmap.org/wiki/Key:radar_reflector"/>
       </item>
