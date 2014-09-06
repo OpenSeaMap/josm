@@ -213,8 +213,8 @@
     <list_entry value="cone, point up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_up/generic.svg" icon_size="16"/>
     <list_entry value="cylinder" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cylinder/generic.svg" icon_size="16"/>
     <list_entry value="sphere" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/sphere/generic.svg" icon_size="16"/>
-    <list_entry value="besom, point up" icon="presets/empty.png" icon_size="16"/>
-    <list_entry value="besom, point down" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="besom, point up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/besom_point_up/generic.svg" icon_size="16"/>
+    <list_entry value="besom, point down" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/besom_point_down/generic.svg" icon_size="16"/>
   </chunk>
   
   <chunk id="cardinaltops">
@@ -229,9 +229,9 @@
     <list_entry value="x-shape" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/x-shape/generic.svg" icon_size="16"/>
     <list_entry value="board" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_entry.svg" icon_size="16"/>
     <list_entry value="cross" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cross/generic.svg" icon_size="16"/>
-    <list_entry value="cone, point down" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="cone, point down" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_down/generic.svg" icon_size="16"/>
     <list_entry value="cube, point up" icon="presets/empty.png" icon_size="16"/>
-    <list_entry value="rhombus" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="rhombus" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/rhombus/generic.svg" icon_size="16"/>
     <list_entry value="flag" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/flag/generic.svg" icon_size="16"/>
     <list_entry value="sphere over rhombus" icon="presets/empty.png" icon_size="16"/>
     <list_entry value="square" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/square/generic.svg" icon_size="16"/>
@@ -240,7 +240,7 @@
     <list_entry value="trapezium, up" icon="presets/empty.png" icon_size="16"/>
     <list_entry value="trapezium, down" icon="presets/empty.png" icon_size="16"/>
     <list_entry value="triangle, point up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/triangle_point_up/generic.svg" icon_size="16"/>
-    <list_entry value="triangle, point down" icon="presets/empty.png" icon_size="16"/>
+    <list_entry value="triangle, point down" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/triangle_point_down/generic.svg" icon_size="16"/>
     <list_entry value="circle" icon="presets/empty.png" icon_size="16"/>
     <list_entry value="2 upright crosses" icon="presets/empty.png" icon_size="16"/>
     <list_entry value="t-shape" icon="presets/empty.png" icon_size="16"/>
@@ -254,6 +254,17 @@
     <reference ref="lateraltops"/>
     <reference ref="cardinaltops"/>
     <reference ref="specialtops"/>
+  </chunk>
+  
+  <chunk id="buoyshapes">
+    <list_entry value="conical" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/conical/generic.svg" icon_size="16"/>
+    <list_entry value="can" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/can/generic.svg" icon_size="16"/>
+    <list_entry value="spherical" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/spherical/generic.svg" icon_size="16"/>
+    <list_entry value="super-buoy" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/super-buoy/generic.svg" icon_size="16"/>
+    <list_entry value="pillar" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/pillar/generic.svg" icon_size="16"/>
+    <list_entry value="spar" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/spar/generic.svg" icon_size="16"/>
+    <list_entry value="barrel" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/barrel/generic.svg" icon_size="16"/>
+    <list_entry value="ice-buoy" icon="presets/empty.png" icon_size="16"/>
   </chunk>
   
   <!--
@@ -4534,6 +4545,44 @@
         <key key="seamark:radar_reflector" value="yes"/>
         <link href="http://wiki.openstreetmap.org/wiki/Key:radar_reflector"/>
       </item>
+      
+      <group name="Buoys and Floats (Q20-Q71)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/pillar/generic.svg">
+        
+        <item name="Lateral Buoys" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/pillar/red.svg" type="node">
+          <label text="Lateral Buoys"/>
+          <key key="seamark:type" value="buoy_lateral"/>
+          <combo key="seamark:buoy_lateral:category" text="Category">
+          </combo>
+          <combo key="seamark:buoy_lateral:shape" text="Shape">
+            <reference ref="buoyshapes"/>
+          </combo>
+          <multiselect key="seamark:buoy_lateral:colour" text="Colour(s)">
+            <reference ref="colours"/>
+          </multiselect>
+          <combo key="seamark:buoy_lateral:colour_pattern" text="Colour Pattern">
+          </combo>
+          <text key="seamark:name" text="Name"/>
+        </item>
+        
+        <item name="Safe Water Buoys" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/pillar/vertical/red_white.svg" type="node">
+        </item>
+        
+        <item name="Cardinal Buoys" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/pillar/horizontal/black_yellow.svg" type="node">
+        </item>
+        
+        <item name="Isolated Danger Buoys" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/pillar/horizontal/black_red_black.svg" type="node">
+        </item>
+        
+        <item name="Special Purpose Buoys" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/pillar/yellow.svg" type="node">
+        </item>
+        
+        <item name="Mooring Buoys" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q40/generic.svg" type="node">
+        </item>
+        
+        <item name="Minor Light Floats" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q31/generic.svg" type="node">
+        </item>
+        
+      </group>
       
       <item name="Buoy (Q20-Q26)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/barrel/yellow.svg" type="node">
         <label text="Q20-Q26: Buoy (non-IALA)"/>
