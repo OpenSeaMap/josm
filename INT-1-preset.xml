@@ -4175,9 +4175,9 @@
     
     <!---***********************Section P: Lights***************************-->
     
-    <group name="P: Lights" icon="https://raw.githubusercontent.com/Skippern/INT-1/master/SVG/P/P1.major.svg">
+    <group name="P: Lights" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P1.major.svg">
       
-      <item name="Single non-directional Lights (P*)" type="node,closedway" icon="presets/empty.png">
+      <item name="Single non-directional Lights (P*)" type="node,closedway" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P1.minor.svg">
         <label text="Single non-directional Light"/>
         <multiselect key="seamark:light:colour" text="Colour">
           <reference ref="lightcolours"/>
@@ -4201,7 +4201,7 @@
         </combo>
       </item>
       
-      <group name="Direction Lights (P30)" icon="presets/empty.png">
+      <group name="Direction Lights (P30)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P1.minor.svg">
         
         <item name="Sector 1" type="node,closedway">
           <label text="Sector 1"/>
@@ -4320,7 +4320,7 @@
         
       </group>
       
-      <group name="Sector Lights (P40-46)" icon="presets/empty.png">
+      <group name="Sector Lights (P40-46)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P1.minor.svg"">
         
         <item name="Sector 1" type="node,closedway">
           <label text="Sector 1"/>
