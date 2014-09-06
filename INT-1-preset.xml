@@ -4320,7 +4320,7 @@
         
       </group>
       
-      <group name="Sector Lights (P40-46)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P1.minor.svg"">
+      <group name="Sector Lights (P40-46)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P1.minor.svg">
         
         <item name="Sector 1" type="node,closedway">
           <label text="Sector 1"/>
