@@ -2901,7 +2901,7 @@
           <text key="ref" text="Reference"/>
         </item>
         
-        <item name="Gridiron (F24)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F24.svg" type="node">
+        <item name="Gridiron (F24)" icon="presets/empty.png" type="node">
           <label text="F24: Gridiron"/>
           <key key="seamark:type" value="gridiron"/>
           <key key="seamark:gridiron:water_level" value="covers"/>
@@ -5251,11 +5251,11 @@
             <list_entry value="cross_river_to_port" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/right/change_bank.svg" icon_size="16"/>
             <list_entry value="cross_river_to_starboard" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/left/change_bank.svg" icon_size="16"/>
             <list_entry value="keep_to_port_margin" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/left/keep_to_port_margin.svg" icon_size="16"/>
-            <list_entry value="keep_to_mid-river" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/L_navigate_mid_river.svg" icon_size="16"/>
+            <list_entry value="keep_to_mid-river" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/left/navigate_mid_river.svg" icon_size="16"/>
             <list_entry value="opening_to_left" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/BNIWR/right/bridge.svg" icon_size="16"/>
             <list_entry value="opening_to_right" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/BNIWR/left/bridge.svg" icon_size="16"/>
-            <list_entry value="main_waterway_left_secondary_ahead_right" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/L_bifucation.svg" icon_size="16"/>
-            <list_entry value="main_waterway_right_secondary_ahead_left" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/R_bifucation.svg" icon_size="16"/>
+            <list_entry value="main_waterway_left_secondary_ahead_right" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/left/bifucation.svg" icon_size="16"/>
+            <list_entry value="main_waterway_right_secondary_ahead_left" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/right/bifucation.svg" icon_size="16"/>
             <list_entry value="isolated_danger" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/isolated_danger.svg" icon_size="16"/>
           </combo>
           <combo key="seamark:notice:impact" text="Impact">
@@ -5275,11 +5275,11 @@
             <list_entry value="cross_river_to_port" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/right/change_bank.svg" icon_size="16"/>
             <list_entry value="cross_river_to_starboard" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/left/change_bank.svg" icon_size="16"/>
             <list_entry value="keep_to_port_margin" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/left/navigate_along_bank.svg" icon_size="16"/>
-            <list_entry value="keep_to_mid-river" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/L_navigate_mid_river.svg" icon_size="16"/>
+            <list_entry value="keep_to_mid-river" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/left/navigate_mid_river.svg" icon_size="16"/>
             <list_entry value="opening_to_left" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/BNIWR/right/bridge.svg" icon_size="16"/>
             <list_entry value="opening_to_right" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/BNIWR/left/bridge.svg" icon_size="16"/>
-            <list_entry value="main_waterway_left_secondary_ahead_right" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/L_bifucation.svg" icon_size="16"/>
-            <list_entry value="main_waterway_right_secondary_ahead_left" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/R_bifucation.svg" icon_size="16"/>
+            <list_entry value="main_waterway_left_secondary_ahead_right" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/left/bifucation.svg" icon_size="16"/>
+            <list_entry value="main_waterway_right_secondary_ahead_left" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/right/bifucation.svg" icon_size="16"/>
             <list_entry value="isolated_danger" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/isolated_danger.svg" icon_size="16"/>
           </combo>
           <combo key="seamark:notice:1:impact" text="Impact (1)">
@@ -5299,11 +5299,11 @@
             <list_entry value="cross_river_to_port" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/right/change_bank.svg" icon_size="16"/>
             <list_entry value="cross_river_to_starboard" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/left/change_bank.svg" icon_size="16"/>
             <list_entry value="keep_to_port_margin" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/left/navigate_along_bank.svg" icon_size="16"/>
-            <list_entry value="keep_to_mid-river" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/L_navigate_mid_river.svg" icon_size="16"/>
+            <list_entry value="keep_to_mid-river" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/left/navigate_mid_river.svg" icon_size="16"/>
             <list_entry value="opening_to_left" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/BNIWR/right/bridge.svg" icon_size="16"/>
             <list_entry value="opening_to_right" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/BNIWR/left/bridge.svg" icon_size="16"/>
-            <list_entry value="main_waterway_left_secondary_ahead_right" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/L_bifucation.svg" icon_size="16"/>
-            <list_entry value="main_waterway_right_secondary_ahead_left" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/R_bifucation.svg" icon_size="16"/>
+            <list_entry value="main_waterway_left_secondary_ahead_right" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/left/bifucation.svg" icon_size="16"/>
+            <list_entry value="main_waterway_right_secondary_ahead_left" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/right/bifucation.svg" icon_size="16"/>
             <list_entry value="isolated_danger" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/isolated_danger.svg" icon_size="16"/>
           </combo>
           <combo key="seamark:notice:2:impact" text="Impact (2)">
