@@ -209,67 +209,6 @@
     <list_entry value="part_obscured"/>
   </chunk>
   
-  <chunk id="lateraltops">
-    <list_entry value="cone, point up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_up/generic.svg" icon_size="16"/>
-    <list_entry value="cylinder" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cylinder/generic.svg" icon_size="16"/>
-    <list_entry value="sphere" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/sphere/generic.svg" icon_size="16"/>
-    <list_entry value="besom, point up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/besom_point_up/generic.svg" icon_size="16"/>
-    <list_entry value="besom, point down" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/besom_point_down/generic.svg" icon_size="16"/>
-  </chunk>
-  
-  <chunk id="cardinaltops">
-    <list_entry value="2 cones point together"  icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_cones_point_together/generic.svg" icon_size="16"/>
-    <list_entry value="2 cones base together" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_cones_base_together/generic.svg" icon_size="16"/>
-    <list_entry value="2 cones up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_cones_up/generic.svg" icon_size="16"/>
-    <list_entry value="2 cones down" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_cones_down/generic.svg" icon_size="16"/>
-    <list_entry value="2 spheres" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_spheres/generic.svg" icon_size="16"/>
-  </chunk>
-  
-  <chunk id="specialtops">
-    <list_entry value="x-shape" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/x-shape/generic.svg" icon_size="16"/>
-    <list_entry value="board" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_entry.svg" icon_size="16"/>
-    <list_entry value="cross" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cross/generic.svg" icon_size="16"/>
-    <list_entry value="cone, point down" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_down/generic.svg" icon_size="16"/>
-    <list_entry value="cube, point up" icon="presets/empty.png" icon_size="16"/>
-    <list_entry value="rhombus" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/rhombus/generic.svg" icon_size="16"/>
-    <list_entry value="flag" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/flag/generic.svg" icon_size="16"/>
-    <list_entry value="sphere over rhombus" icon="presets/empty.png" icon_size="16"/>
-    <list_entry value="square" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/square/generic.svg" icon_size="16"/>
-    <list_entry value="rectangle, horizontal" icon="presets/empty.png" icon_size="16"/>
-    <list_entry value="rectangle, vertical" icon="presets/empty.png" icon_size="16"/>
-    <list_entry value="trapezium, up" icon="presets/empty.png" icon_size="16"/>
-    <list_entry value="trapezium, down" icon="presets/empty.png" icon_size="16"/>
-    <list_entry value="triangle, point up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/triangle_point_up/generic.svg" icon_size="16"/>
-    <list_entry value="triangle, point down" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/triangle_point_down/generic.svg" icon_size="16"/>
-    <list_entry value="circle" icon="presets/empty.png" icon_size="16"/>
-    <list_entry value="2 upright crosses" icon="presets/empty.png" icon_size="16"/>
-    <list_entry value="t-shape" icon="presets/empty.png" icon_size="16"/>
-    <list_entry value="triangle, point up over circle" icon="presets/empty.png" icon_size="16"/>
-    <list_entry value="upright cross over circle" icon="presets/empty.png" icon_size="16"/>
-    <list_entry value="rhombus over circle" icon="presets/empty.png" icon_size="16"/>
-    <list_entry value="circle over triangle, point up" icon="presets/empty.png" icon_size="16"/>
-  </chunk>
-  
-  <chunk id="topshapes">
-    <reference ref="lateraltops"/>
-    <reference ref="cardinaltops"/>
-    <reference ref="specialtops"/>
-  </chunk>
-  
-  <chunk id="buoyshapes">
-    <list_entry value="conical" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/conical/generic.svg" icon_size="16"/>
-    <list_entry value="can" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/can/generic.svg" icon_size="16"/>
-    <list_entry value="spherical" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/spherical/generic.svg" icon_size="16"/>
-    <list_entry value="super-buoy" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/super-buoy/generic.svg" icon_size="16"/>
-    <list_entry value="pillar" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/pillar/generic.svg" icon_size="16"/>
-    <list_entry value="spar" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/spar/generic.svg" icon_size="16"/>
-    <list_entry value="barrel" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/barrel/generic.svg" icon_size="16"/>
-    <list_entry value="ice-buoy" icon="presets/empty.png" icon_size="16"/>
-  </chunk>
-  
-  <!--
-   -->
-  
   <group name="INT-1" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/IHO_c.svg">
     
     <!--***********************Section B: Positions, Distances, Directions, Compass***************************-->
@@ -4551,14 +4490,72 @@
     
     <group name="Q: Buoys, Beacons" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/pillar/horizontal/yellow_black_yellow.svg">
       
-      <item name="Topmarks (Q9)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_up/generic.svg" type="node">
+      <chunk id="lateraltops">
+        <list_entry value="cone, point up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_up/generic.svg" icon_size="16"/>
+        <list_entry value="cylinder" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cylinder/generic.svg" icon_size="16"/>
+        <list_entry value="sphere" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/sphere/generic.svg" icon_size="16"/>
+        <list_entry value="besom, point up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/besom_point_up/generic.svg" icon_size="16"/>
+        <list_entry value="besom, point down" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/besom_point_down/generic.svg" icon_size="16"/>
+      </chunk>
+      
+      <chunk id="cardinaltops">
+        <list_entry value="2 cones point together"  icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_cones_point_together/generic.svg" icon_size="16"/>
+        <list_entry value="2 cones base together" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_cones_base_together/generic.svg" icon_size="16"/>
+        <list_entry value="2 cones up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_cones_up/generic.svg" icon_size="16"/>
+        <list_entry value="2 cones down" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_cones_down/generic.svg" icon_size="16"/>
+        <list_entry value="2 spheres" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_spheres/generic.svg" icon_size="16"/>
+      </chunk>
+      
+      <chunk id="specialtops">
+        <list_entry value="x-shape" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/x-shape/generic.svg" icon_size="16"/>
+        <list_entry value="board" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_entry.svg" icon_size="16"/>
+        <list_entry value="cross" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cross/generic.svg" icon_size="16"/>
+        <list_entry value="cone, point down" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_down/generic.svg" icon_size="16"/>
+        <list_entry value="cube, point up" icon="presets/empty.png" icon_size="16"/>
+        <list_entry value="rhombus" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/rhombus/generic.svg" icon_size="16"/>
+        <list_entry value="flag" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/flag/generic.svg" icon_size="16"/>
+        <list_entry value="sphere over rhombus" icon="presets/empty.png" icon_size="16"/>
+        <list_entry value="square" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/square/generic.svg" icon_size="16"/>
+        <list_entry value="rectangle, horizontal" icon="presets/empty.png" icon_size="16"/>
+        <list_entry value="rectangle, vertical" icon="presets/empty.png" icon_size="16"/>
+        <list_entry value="trapezium, up" icon="presets/empty.png" icon_size="16"/>
+        <list_entry value="trapezium, down" icon="presets/empty.png" icon_size="16"/>
+        <list_entry value="triangle, point up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/triangle_point_up/generic.svg" icon_size="16"/>
+        <list_entry value="triangle, point down" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/triangle_point_down/generic.svg" icon_size="16"/>
+        <list_entry value="circle" icon="presets/empty.png" icon_size="16"/>
+        <list_entry value="2 upright crosses" icon="presets/empty.png" icon_size="16"/>
+        <list_entry value="t-shape" icon="presets/empty.png" icon_size="16"/>
+        <list_entry value="triangle, point up over circle" icon="presets/empty.png" icon_size="16"/>
+        <list_entry value="upright cross over circle" icon="presets/empty.png" icon_size="16"/>
+        <list_entry value="rhombus over circle" icon="presets/empty.png" icon_size="16"/>
+        <list_entry value="circle over triangle, point up" icon="presets/empty.png" icon_size="16"/>
+      </chunk>
+      
+      <chunk id="topshapes">
+        <reference ref="lateraltops"/>
+        <reference ref="cardinaltops"/>
+        <reference ref="specialtops"/>
+      </chunk>
+      
+      <chunk id="buoyshapes">
+        <list_entry value="conical" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/conical/generic.svg" icon_size="16"/>
+        <list_entry value="can" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/can/generic.svg" icon_size="16"/>
+        <list_entry value="spherical" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/spherical/generic.svg" icon_size="16"/>
+        <list_entry value="super-buoy" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/super-buoy/generic.svg" icon_size="16"/>
+        <list_entry value="pillar" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/pillar/generic.svg" icon_size="16"/>
+        <list_entry value="spar" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/spar/generic.svg" icon_size="16"/>
+        <list_entry value="barrel" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/barrel/generic.svg" icon_size="16"/>
+        <list_entry value="ice-buoy" icon="presets/empty.png" icon_size="16"/>
+      </chunk>
+      
+      <chunk id="topmarks">
         <label text="Q9: Topmarks"/>
         <combo key="seamark:topmark:shape" text="Topmark Shape" required="true" match="key">
           <reference ref="topshapes"/>
         </combo>
-        <combo key="seamark:topmark:colour" text="Topmark Colour" required="true" match="key">
+        <multiselect key="seamark:topmark:colour" text="Topmark Colour(s)" required="true" match="key">
           <reference ref="colours"/>
-        </combo>
+        </multiselect>
         <combo key="seamark:topmark:colour_pattern" text="Colour Pattern">
           <list_entry value="horizontal"/>
           <list_entry value="vertical"/>
@@ -4566,6 +4563,10 @@
           <list_entry value="squared"/>
           <list_entry value="border"/>
         </combo>
+      </chunk>
+      
+      <item name="Topmarks (Q9)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_up/generic.svg" type="node">
+        <reference ref="topmarks"/>
       </item>
       
       <item name="Radar Reflector (Q9-10)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/S/S4.svg" type="node">
@@ -4622,6 +4623,8 @@
             <list_entry value="diagonal"/>
             <list_entry value="squared"/>
           </combo>
+          <space/>
+          <reference ref="topmarks"/>
           <space/>
           <label text="Light attributes"/>
           <multiselect key="seamark:light:colour" text="Colour">
