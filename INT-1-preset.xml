@@ -4564,17 +4564,18 @@
           <list_entry value="border"/>
         </combo>
       </chunk>
-      
+
       <item name="Topmarks (Q9)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_up/generic.svg" type="node">
         <reference ref="topmarks"/>
       </item>
-      
+ 
       <item name="Radar Reflector (Q9-10)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/S/S4.svg" type="node">
         <label text="S4: Radar Reflector"/>
         <key key="seamark:radar_reflector" value="yes"/>
         <link href="http://wiki.openstreetmap.org/wiki/Key:radar_reflector"/>
       </item>
-      
+ 
+ <!--
       <group name="Buoys and Floats (Q20-Q71)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/pillar/generic.svg">
         
         <item name="Lateral Buoys" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/pillar/red.svg" type="node">
@@ -4639,7 +4640,7 @@
         </item>
         
       </group>
-      
+-->
       <item name="Buoy (Q20-Q26)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/barrel/yellow.svg" type="node">
         <label text="Q20-Q26: Buoy (non-IALA)"/>
         <label text="For IALA buoys, see Q130.1 - Q130.6"/>
