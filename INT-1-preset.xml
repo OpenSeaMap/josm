@@ -4517,6 +4517,45 @@
         
       </group>
       
+      <item name="Major Floating Light (P6)" type="node,closedway" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P6.svg">
+        <label text="Major Floating Light"/>
+        <label text="***For Minor Floating Lights: see Q:Buoys***"/>
+        <space/>
+        <key key="seamark:type" value="light_vessel"/>
+        <label text="Vessel attributes"/>
+        <multiselect key="seamark:light_vessel:colour" text="Colour(s)">
+          <reference ref="colours"/>
+        </multiselect>
+        <combo key="seamark:light_vessel:colour_pattern" text="Pattern">
+          <list_entry value="vertical"/>
+          <list_entry value="horizontal"/>
+          <list_entry value="diagonal"/>
+          <list_entry value="squared"/>
+        </combo>
+        <space/>
+        <label text="Light attributes"/>
+        <multiselect key="seamark:light:colour" text="Colour">
+          <reference ref="lightcolours"/>
+        </multiselect>
+        <combo key="seamark:light:character" text="Character">
+          <reference ref="lightchars"/>
+        </combo>
+        <text key="seamark:light:period" text="Period"/>
+        <text key="seamark:light:group" text="Group"/>
+        <text key="seamark:light:range" text="Range"/>
+        <text key="seamark:light:height" text="Height"/>
+        <multiselect key="seamark:light:category" text="Categories">
+          <reference ref="lightcats"/>
+        </multiselect>
+        <text key="seamark:light:multiple" text="Multplicity"/>
+        <combo key="seamark:light:exhibition" text="Exhibition">
+          <reference ref="lightexhibs"/>
+        </combo>
+        <combo key="seamark:light:visibility" text="Visibility">
+          <reference ref="lightvisis"/>
+        </combo>
+      </item>
+      
     </group>
     
     <!---***********************Section Q: Buoys, Beacons***************************-->
