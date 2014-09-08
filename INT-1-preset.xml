@@ -6683,9 +6683,7 @@
       
       <item name="Fog Signal (R1-R22)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/R/R1.svg" type="node">
         <label text="R1-R22: Fog Signal"/>
-        <key key="seamark:fog_signal" value="yes" match="none"/>
         <link href="http://wiki.openstreetmap.org/wiki/Key:fog_signal"/>
-        <text key="seamark:name" text="Name"/>
         <combo key="seamark:fog_signal:category" text="Fog Signal" match="key" required="true">
           <list_entry value="explosive"/>
           <list_entry value="diaphone"/>
@@ -6699,15 +6697,15 @@
           <list_entry value="reed"/>
           <list_entry value="tyfon"/>
         </combo>
-        <combo key="seamark:fog_signal:character" text="Character">
-          <list_entry value="Mo" short_description="Morse"/>
-          <list_entry value="" short_description="Other"/>
-        </combo>
         <text key="seamark:fog_signal:group" text="Group"/>
         <text key="seamark:fog_signal:period" text="Period"/>
-        <text key="seamark:fog_signal:sequence" text="Sequence"/>
-        <text key="seamark:fog_signal:range" text="Range"/>
-        <check key="seamark:fog_signal:generation" text="Wave Activated" value_on="wave" value_off="" default="off"/>
+        <text key="seamark:fog_signal:range" text="Nominal Range"/>
+        <combo key="seamark:fog_signal:generation" text="Generation">
+          <list_entry value="automatic"/>
+          <list_entry value="wave"/>
+          <list_entry value="wind"/>
+          <list_entry value="hand"/>
+        </combo>
       </item>
 
     </group>
@@ -6727,35 +6725,33 @@
         <label text="S2: Ramark"/>
         <label text="A radar beacon transmitting continously"/>
         <key key="seamark:radar_transponder:category" value="ramark"/>
-        <text key="seamark:name" text="Name" delete_if_empty="tre"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Key:radar_transponder"/>
         <text key="seamark:radar_transponder:group" text="Group"/>
         <text key="seamark:radar_transponder:period" text="Period"/>
         <text key="seamark:radar_transponder:sequence" text="Sequence"/>
         <text key="seamark:radar_transponder:range" text="Range"/>
         <text key="seamark:radar_transponder:sector_start" text="Start of Visible Sector"/>
         <text key="seamark:radar_transponder:sector_end" text="End of Visible Sector"/>
-        <combo key="seamark:radar_transponder:wavelength" text="Band">
-          <list_entry value="3cm" display_value="3cm (X)"/>
-          <list_entry value="10cm" display_value="10cm (S)"/>
-        </combo>
+        <multiselect key="seamark:radar_transponder:wavelength" text="Band">
+          <list_entry value="0.03-X" display_value="3cm (X)"/>
+          <list_entry value="0.10-S" display_value="10cm (S)"/>
+        </multiselect>
+        <link href="http://wiki.openstreetmap.org/wiki/Key:radar_transponder"/>
       </item>
 
-      <item name="Racon (S3.1-S3.4, S3.6)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/S/S1.svg" type="node">
-        <label text="S3.1-S3.4, S3.6: Racon"/>
+      <item name="Racon (S3.1-S3.6)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/S/S1.svg" type="node">
+        <label text="S3.1-S3.6: Racon"/>
         <label text="A radar beacon transmitting only when activated"/>
-        <key key="seamark:radar_transponder:category" value="racon"/>
+        <check key="seamark:radar_transponder:category" value_on="racon;leading" value_off="racon" default="off" text="Leading Transponder"/>
         <link href="http://wiki.openstreetmap.org/wiki/Key:radar_transponder"/>
         <text key="seamark:radar_transponder:group" text="Group"/>
         <text key="seamark:radar_transponder:period" text="Period"/>
-        <text key="seamark:radar_transponder:sequence" text="Sequence"/>
         <text key="seamark:radar_transponder:range" text="Range"/>
         <text key="seamark:radar_transponder:sector_start" text="Start of Visible Sector"/>
         <text key="seamark:radar_transponder:sector_end" text="End of Visible Sector"/>
-        <combo key="seamark:radar_transponder:wavelength" text="Band">
-          <list_entry value="3cm" display_value="3cm (X)"/>
-          <list_entry value="10cm" display_value="10cm (S)"/>
-        </combo>
+        <multiselect key="seamark:radar_transponder:wavelength" text="Band">
+          <list_entry value="0.03-X" display_value="3cm (X)"/>
+          <list_entry value="0.10-S" display_value="10cm (S)"/>
+        </multiselect>
       </item>
 
       <item name="Radar Reflector (S4)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/S/S4.svg" type="node">
@@ -6775,14 +6771,14 @@
         <key key="seamark:type" value="radio_station"/>
         <link href="http://wiki.openstreetmap.org/wiki/Key:radio_transponder"/>
         <combo key="seamark:radio_station:category" text="Transponder-type" readonly="true" required="true">
-          <list_entry value="beacon_circular"/>
-          <list_entry value="beacon_directional"/>
-          <list_entry value="beacon_rotating"/>
-          <list_entry value="beacon_consol"/>
-          <list_entry value="direction_finding"/>
-          <list_entry value="qtg_service"/>
+          <list_entry value="omnidirectional"/>
+          <list_entry value="directional"/>
+          <list_entry value="rotating_pattern"/>
+          <list_entry value="consol"/>
+          <list_entry value="rdf"/>
+          <list_entry value="qtg"/>
           <list_entry value="public_communication"/>
-          <list_entry value="beacon_aero"/>
+          <list_entry value="aeronautical"/>
           <list_entry value="decca"/>
           <list_entry value="loran"/>
           <list_entry value="dgps"/>
@@ -6794,34 +6790,51 @@
           <list_entry value="facsimile"/>
           <list_entry value="time_signal"/>
         </combo>
-        <text key="seamark:radio_station:signal_group" text="Group"/>
-        <text key="seamark:radio_station:signal_frequency" text="Frequency"/>
+        <text key="seamark:radio_station:group" text="Group"/>
+        <text key="seamark:radio_station:orientation" text="Orientation"/>
+        <text key="seamark:radio_station:range" text="Estimated Range"/>
+        <text key="seamark:radio_station:callsign" text="Callsign/ID"/>
+        <text key="seamark:radio_station:frequency" text="Frequency (Hz)"/>
         <text key="seamark:radio_station:channel" text="VHF Channel"/>
       </item>
-
       <item name="AIS transmitter (S17.1-S17.2)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/S/S1.svg" type="node">
         <label text="S17: AIS, Automatic Identification System"/>
-        <key key="radio_transponder:AIS" value="yes"/>
-        <key key="seamark:ais" value="AtoN"/>
-        <key key="seamark:radio_transponder" value="ais"/>
+        <check key="seamark:radio_station:category" value_on="s-ais" value_off="ais" text="Synthetic AIS"/>
+        <text key="seamark:radio_station:mmsi" text="MMSI"/>
         <link href="http://wiki.openstreetmap.org/wiki/Key:radio_transponder"/>
-        <text key="seamark:ais:name" text="Name (AIS)"/>
-        <text key="seamark:ais:mmsi" text="MMSI"/>
       </item>
-
+      
+      <item name="Virtual AIS transmitter (S18.1-S18.2)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/S/S1.svg" type="node">
+        <label text="S18: Virtual AIS, Automatic Identification System"/>
+        <key key="seamark:type" value="radio_station"/>
+        <combo key="seamark:radio_station:category" text="Category" default="v-ais">
+          <list_entry value="v-ais" display_value="Unknown"/>
+          <list_entry value="v-ais_north_cardinal" display_value="North Cardinal"/>
+          <list_entry value="v-ais_south_cardinal" display_value="South Cardinal"/>
+          <list_entry value="v-ais_east_cardinal" display_value="East Cardinal"/>
+          <list_entry value="v-ais_west_cardinal" display_value="West Cardinal"/>
+          <list_entry value="v-ais_port_lateral" display_value="Port Lateral"/>
+          <list_entry value="v-ais_starboard_lateral" display_value="Starboard Lateral"/>
+          <list_entry value="v-ais_isolated_danger" display_value="Isolated Danger"/>
+          <list_entry value="v-ais_safe_water" display_value="Safe Water"/>
+          <list_entry value="v-ais_special_purpose" display_value="Special Purpose"/>
+          <list_entry value="v-ais_wreck" display_value="Wreck"/>
+        </combo>
+        <text key="seamark:radio_station:mmsi" text="MMSI"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Key:radio_transponder"/>
+      </item>
+      
       <item name="dGPS Correction Transmitter (S51)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/S/S1.svg" type="node">
         <label text="S51: dGPS Correction Transmitter"/>
-        <key key="man_made" value="monitoring_station"/>
         <key key="seamark:type" value="radio_station"/>
         <key key="seamark:radio_station:category" value="dgps"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=monitoring_station"/>
+        <text key="seamark:radio_station:frequency" text="Frequency (Hz)"/>
         <text key="seamark:name" text="Name"/>
+        <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=monitoring_station"/>
+        <key key="man_made" value="monitoring_station"/>
         <check key="monitoring:gps" text="GPS" default="on"/>
         <check key="monitoring:glonass" text="GLONASS" default="off"/>
         <check key="monitoring:galileo" text="Galileo" default="off"/>
-        <text key="seamark:radio_station:dgps_id" text="Station ID"/>
-        <text key="seamark:radio_station:dgps_name" text="Station Name"/>
-        <text key="seamark:radio_station:signal_frequency" text="Frequency"/>
       </item>
 
     </group>
@@ -6832,11 +6845,9 @@
       
       <item name="Pilot Boarding Position (T1.1-T1.4)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/T/T1.1.svg" type="node,way,closedway,relation">
         <label text="T1.1-T1.4: Pilot Boarding Position"/>
-        <key key="pilotage" value="boarding_point"/>
         <key key="seamark:type" value="pilot_boarding"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Key:pilotage"/>
         <text key="seamark:name" text="Name (seamark)"/>
-        <text key="note:pilotage" text="Note"/>
+        <text key="seamark:information" text="Pilotage Sevice Information"/>
         <label text="Special attributes"/>
         <text key="seamark:pilot_boarding:channel" text="VHF Channel"/>
         <combo key="seamark:pilot_boarding:category" text="Boarding from">
@@ -6844,13 +6855,21 @@
           <list_entry value="helicopter"/>
           <list_entry value="from_shore"/>
         </combo>
+        <link href="http://wiki.openstreetmap.org/wiki/Key:pilotage"/>
+        <key key="pilotage" value="boarding_point"/>
         <check key="deep_water" text="Deep Water" default="off"/>
         <check key="helicopter" text="Helicopter Boarding" default="off"/>
-        <check key="launche" text="Pilot Launche Boarding" default="on"/>
+        <check key="launch" text="Pilot Launch Boarding" default="on"/>
       </item>
-
+      
       <item name="Pilot Station, Lookout, Office (T2-T3)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/T/T1.1.svg" type="closedway">
         <label text="T2-T3: Pilot Station, Lookout, Office"/>
+        <key key="seamark:type" value="building"/>
+        <multiselect key="seamark:building:function" text="Station Type">
+          <list_entry value="pilot_office"/>
+          <list_entry value="pilot_lookout"/>
+        </multiselect>
+        <text key="seamark:information" text="Pilotage Sevice Information"/>
         <key key="building" value="office"/>
         <key key="office" value="administrative"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:office=administrative"/>
@@ -6862,9 +6881,10 @@
         <text key="contact:fax" text="Fax"/>
         <text key="contact:vhf" text="VHF"/>
       </item>
-
+      
       <item name="Coastguard (T10-T11)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/T/T12.svg" type="node,closedway">
         <label text="T10-T11: Coastguard"/>
+        <key key="seamark:type" value="coastguard_station"/>
         <key key="amenity" value="coast_guard"/>
         <key key="emergency" value="coast_guard"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=coast_guard"/>
@@ -6877,8 +6897,22 @@
         <check key="emergency_services" value_on="water" value_off="" text="Rescue Station" default="off"/>
       </item>
 
-      <item name="Rescue Station (T11-T13)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/T/T12.svg" type="node,closedway">
+      <item name="Rescue Station (T11-T14)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/T/T12.svg" type="node,closedway">
         <label text="T11-T13: Rescue Station"/>
+        <key key="seamark:type" value="rescue_station"/>
+        <multiselect key="seamark:rescue_station:category" text="Rescue Aids">
+          <list_entry value="lifeboat"/>
+          <list_entry value="rocket"/>
+          <list_entry value="lifeboat_rocket"/>
+          <list_entry value="refuge_shipwrecked"/>
+          <list_entry value="refuge_intertidal"/>
+          <list_entry value="lifeboat_on_mooring"/>
+          <list_entry value="radio"/>
+          <list_entry value="first_aid"/>
+          <list_entry value="seaplane"/>
+          <list_entry value="aircraft"/>
+          <list_entry value="tug"/>
+        </multiselect>
         <key key="emergency" value="water_rescue_station"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:emergency_services=water"/>
         <text key="name" text="Name"/>
@@ -6894,35 +6928,26 @@
         <text key="contact:fax" text="Fax"/>
       </item>
 
-      <item name="Marine Refuge (T14)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/T/T14.svg" type="node,closedway">
-        <label text="T14: Marine Refuge"/>
-        <key key="emergency" value="marine_refuge"/>
-        <text key="Name" text="Name"/>
-        <combo key="tourism" text="Type">
-          <list_entry value="hotel"/>
-          <list_entry value="guest_house"/>
-          <list_entry value="hostel"/>
-          <list_entry value="motel"/>
-        </combo>
-      </item>
-
       <item name="Signal Station - Traffic (T20-T36)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/T/T20.svg" type="node">
         <label text="T20-T36: Signal Station"/>
         <link href="http://wiki.openstreetmap.org/wiki/Key:signal_station"/>
         <key key="seamark:type" value="signal_station_traffic"/>
         <text key="seamark:name" text="Name"/>
-        <combo key="seamark:signal_station_trafic:category" text="Type" readonly="true" default="yes" required="true">
-          <list_entry value="ipt" short_description="International Port Traffic"/>
-          <list_entry value="traffic" short_description="Traffic Control"/>
-          <list_entry value="port_control" short_description="Port Control"/>
-          <list_entry value="port_entry" short_description="Port Entry/Departure"/>
-          <list_entry value="berthing" short_description="Berthing"/>
-          <list_entry value="dock" short_description="Dock"/>
-          <list_entry value="lock" short_description="Lock"/>
-          <list_entry value="barrage" short_description="Flood Barrage"/>
-          <list_entry value="bridge" short_description="Bridge Passage"/>
-          <list_entry value="dredging" short_description="Dredging"/>
-        </combo>
+        <multiselect key="seamark:signal_station_trafic:category" text="Type" readonly="true" default="yes" required="true">
+          <list_entry value="port_control"/>
+          <list_entry value="port_entry_departure"/>
+          <list_entry value="ipt"/>
+          <list_entry value="berthing"/>
+          <list_entry value="dock"/>
+          <list_entry value="lock"/>
+          <list_entry value="flood_barrage"/>
+          <list_entry value="bridge_passage"/>
+          <list_entry value="dredging"/>
+          <list_entry value="traffic_control"/>
+          <list_entry value="pilotage"/>
+          <list_entry value="special"/>
+          <list_entry value="oncoming_traffic"/>
+        </multiselect>
         <text key="seamark:signal_station_traffic:channel" text="VHF Channel"/>
         <check key="light" text="Signal by light" default="off"/>
         <check key="flag" text="Signal by flag" default="off"/>
@@ -6942,25 +6967,27 @@
         <link href="http://wiki.openstreetmap.org/wiki/Key:signal_station"/>
         <key key="seamark:type" value="signal_station_warning"/>
         <text key="seamark:name" text="Name"/>
-        <combo key="seamark:signal_station_warning:category" text="Type" readonly="true" default="yes" required="true">
+        <multiselect key="seamark:signal_station_warning:category" text="Type" readonly="true" default="yes" required="true">
+          <list_entry value="danger"/>
+          <list_entry value="maritime_obstruction"/>
+          <list_entry value="cable"/>
+          <list_entry value="military"/>
           <list_entry value="distress"/>
-          <list_entry value="telegraph"/>
-          <list_entry value="storm" short_description="Storm"/>
-          <list_entry value="weather" short_description="Weather"/>
-          <list_entry value="obstruction" short_description="Obstruction"/>
-          <list_entry value="cable" short_description="Cable"/>
-          <list_entry value="distress" short_description="Distress"/>
-          <list_entry value="ice" short_description="Ice"/>
-          <list_entry value="time" short_description="Time"/>
-          <list_entry value="scale" short_description="Tide Scale"/>
-          <list_entry value="gauge" short_description="Tide Gauge"/>
-          <list_entry value="tide" short_description="Tide"/>
-          <list_entry value="stream" short_description="Tide Stream"/>
-          <list_entry value="danger" short_description="Danger"/>
-          <list_entry value="diving" short_description="Diving"/>
-          <list_entry value="level" short_description="Water Level Gauge"/>
-          <list_entry value="military" short_description="Military Practice"/>
-        </combo>
+          <list_entry value="weather"/>
+          <list_entry value="storm"/>
+          <list_entry value="ice"/>
+          <list_entry value="time"/>
+          <list_entry value="tide"/>
+          <list_entry value="tidal_stream"/>
+          <list_entry value="tide_gauge"/>
+          <list_entry value="tide_scale"/>
+          <list_entry value="diving"/>
+          <list_entry value="water_level_gauge"/>
+          <list_entry value="vertical_clearance"/>
+          <list_entry value="high_water"/>
+          <list_entry value="depth"/>
+          <list_entry value="current"/>
+        </multiselect>
         <text key="seamark:signal_station_warning:channel" text="VHF Channel"/>
         <check key="light" text="Signal by light" default="off"/>
         <check key="flag" text="Signal by flag" default="off"/>
