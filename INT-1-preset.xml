@@ -239,57 +239,7 @@
           <list_entry value="boundary"/>
         </combo>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Categories_of_Objects#Control_Points_.28CATCTR.29" text="Control Point Categories"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=survey_point"/>
-         <key key="man_made" value="survey_point"/>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         <text key="ele" text="Elevation"/>
-         <combo key="type" text="Type">
-         <list_entry value="triangulation" display_value="Triangulation" short_description="Triangulation Point" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/B/B20.svg" icon_size="16"/>
-         <list_entry value="observation_spot" display_value="Observation Spot" short_description="An observation spot" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/B/B21.svg" icon_size="16"/>
-         <list_entry value="fixed_point" display_value="Fixed Point" short_description="A fixed point of known possition" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/B/B22.svg" icon_size="16"/>
-         <list_entry value="benchmark" display_value="Benchmark" short_description="A point of known height" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/B/B23.svg" icon_size="16"/>
-         </combo>
-         <check key="aerial" text="Aerial visible" default="off"/>-->
       </item>
-      
-      <!--<item name="Boundary Mark (B24)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/B/B24_ca.svg" type="node">
-       <label text="B24: Boundary Mark"/>
-       <key key="seamark:type" value="control_point"/>
-       <key key="seamark:control_point:category" value="boundary"/>
-       <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Categories_of_Objects#Control_Points_.28CATCTR.29" text="Control Point Categories"/>
-       <space/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:historic=boundary_stone"/>
-       <check key="historic" value_on="boundary_stone" value_off="" text="Historic Boundary Stone" default="off"/>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       <label text="Fill in the following if known"/>
-       <combo key="format" text="Shape description">
-       <list_entry value="squared_stone"/>
-       <list_entry value="triangle"/>
-       <list_entry value="conus"/>
-       <list_entry value="obelisk"/>
-       <list_entry value="bell"/>
-       <list_entry value="cylindrical"/>
-       <list_entry value="irregular"/>
-       </combo>
-       <combo key="format:top" text="Top Shape description">
-       <list_entry value="flat"/>
-       <list_entry value="rounded"/>
-       <list_entry value="segment-like"/>
-       <list_entry value="gable-like"/>
-       <list_entry value="pyramidal"/>
-       <list_entry value="pointed"/>
-       <list_entry value="spherical"/>
-       </combo>
-       <text key="height" text="Height"/>
-       <text key="inscription" text="Inscription"/>
-       <text key="year" text="Year erected"/>
-       <check key="moved" text="Have been moved" value_on="yes" value_off="" delete_if_empty="true" default="off"/>
-       <check key="collection" text="Part of collection" value_on="yes" value_off="" delete_if_empty="true" default="off"/>
-       <check key="heritage" text="Heritage" value_on="yes" value_off="" delete_if_empty="true" default="off"/>
-       </item>-->
       
       <item name="Distance Mark (B25)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/B/B25.1.svg" type="node">
         <label text="B25: Distance Mark"/>
@@ -310,555 +260,15 @@
           <list_entry value="feet"/>
         </combo>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Distance_Marks" text="Distance Marks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:waterway=milestone"/>
-         <check key="waterway" value_on="milestone" value_off="" text="Milestone" default="off"/>
-         <check key="sign" text="Signed" use_last_as_default="true"/>
-         <text key="ref" text="Reference"/>
-         <label text="If the distance mark have other uses as well:"/>
-         <text key="distance" text="Distance (with units)" required="true"/>
-         <check key="railway" value_on="milestone" value_off="" delete_if_empty="true" text="Also used on railways" default="off"/>
-         <check key="highway" value_on="milestone" value_off="" delete_if_empty="true" text="Also used on highways" delfault="off"/>
-         <check key="historic" value_on="milestone" value_off="" delete_if_empty="true" text="Historic Milestone" default="off"/>
-         <combo key="format" text="Shape description">
-         <list_entry value="squared_stone"/>
-         <list_entry value="triangle"/>
-         <list_entry value="conus"/>
-         <list_entry value="obelisk"/>
-         <list_entry value="bell"/>
-         <list_entry value="cylindrical"/>
-         <list_entry value="irregular"/>
-         </combo>
-         <label text="A distance marker with the Shape value set above should be considered as sign=on (signed)."/>
-         <text key="inscription" text="Inscription (for historic marks)"/>
-         <text key="year" text="Year erected (for historic marks)"/>
-         <check key="moved" value_on="yes" value_off="" delete_if_empty="true" text="Milestone have been moved" default="off"/>
-         <label text="The following values should be transferred to 'distance' if present, they are of disputed and unclear nature"/>
-         <text key="pk" text="PK (Point kilométrique)"/>
-         <text key="kp" text="KP (Kilometer Point)"/>
-         <label text="Another disputed tag: river:waterway_distance"/>
-         <text key="river:waterway_distance" text="river:waterway_distance"/>-->
       </item>
       
     </group>
     
     <!--***********************Section C: Natural Features***************************-->
     
-    <!--<group name="C: Natural Features" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.1.s.svg">
-     
-     <item name="Coastline (C1-C2)" icon="presets/empty.png" type="way,closedway">
-     <label text="C1-C2: Coastline"/>
-     <key key="natural" value="coastline"/>
-     <text key="name" text="Name"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Key:coastline"/>
-     <combo key="coastline:survey_quality" text="Survey Quality">
-     <list_entry value="complete" display_value="Survey Completed" short_description="Reliable and high resolution source" />
-     <list_entry value="inadequate" display_value="Inadequate or Inaccurate" short_description="Inadequate or Inaccurate data or unreliable source" />
-     </combo>
-     </item>
-     
-     <item name="Cliffy Coast (C3)" icon="presets/empty.png" type="way">
-     <label text="C3: Cliffy Coast"/>
-     <key key="natural" value="cliff"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:natural=cliff"/>
-     <text key="name" text="Name"/>
-     <label text="Left side of way is top of Cliff, right side bottom."/>
-     </item>
-     
-     <item name="Beachy coastline (C6-C7)" icon="presets/empty.png" type="way,closedway">
-     <label text="C6-C7: Beachy Coast"/>
-     <key key="natural" value="beach"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:natural=beach"/>
-     <text key="name" text="Name"/>
-     <combo key="surface" text="Surface" required="true">
-     <list_entry value="sand"/>
-     <list_entry value="gravel"/>
-     <list_entry value="pebbles"/>
-     </combo>
-     <optional>
-     <check key="supervised" text="Supervised" value_on="yes" value_off="" delete_if_empty="true" default="off"/>
-     <text key="fee" text="Beach Fee"/>
-     <combo key="sport" text="Sport (typical)">
-     <list_entry value="swimming"/>
-     <list_entry value="surfing"/>
-     <list_entry value="beachvolleyball"/>
-     </combo>
-     <combo key="nudism" text="Nudism">
-     <list_entry value="yes"/>
-     <list_entry value="no"/>
-     <list_entry value="customary"/>
-     <list_entry value="permissive"/>
-     <list_entry value="obligatory"/>
-     </combo>
-     </optional>
-     <check key="tidal" text="Tidal" default="off"/>
-     </item>
-     
-     <item name="Sand Dunes (C8)" icon="presets/empty.png" type="closedway,relation">
-     <label text="C8: Sand Dunes"/>
-     <key key="natural" value="dune"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:natural=dune"/>
-     <text key="name" text="Name"/>
-     <combo key="surface" text="Surface">
-     <list_entry value="sand"/>
-     <list_entry value="grass"/>
-     </combo>
-     <combo key="dune" text="Type of dune" default="coastal">
-     <list_entry value="desert"/>
-     <list_entry value="coastal"/>
-     <list_entry value="white"/>
-     <list_entry value="gray"/>
-     </combo>
-     </item>
-     
-     <item name="Spot Heights, Peaks (C10-C11)" icon="presets/empty.png" type="node">
-     <label text="C10: Heights (Peaks, Spot Heights)"/>
-     <key key="natural" value="peak"/>
-     <text key="ele" text="Elevation (height over sea level)"/>
-     <text key="name" text="Name"/>
-     </item>
-     
-     <item name="Rivers (C20-C21)" icon="presets/empty.png" type="way">
-     <label text="C20-C21: Rivers"/>
-     <key key="waterway" value="river"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:waterway=river"/>
-     <text key="name" text="Name"/>
-     <text key="width" text="Width"/>
-     <check key="boat" text="Accessible with boats"/>
-     <optional>
-     <check key="intermittent" text="Intermittent" default="off"/>
-     <check key="seasonal" text="Seasonal" default="off"/>
-     </optional>
-     </item>
-     
-     <item name="Streams (C20-C21)" icon="presets/empty.png" type="way">
-     <label text="C20-C21: Streams"/>
-     <key key="waterway" value="stream"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:waterway=streams"/>
-     <text key="name" text="Name"/>
-     <text key="width" text="Width"/>
-     <optional>
-     <check key="intermittent" text="Intermittent" default="off"/>
-     <check key="seasonal" text="Seasonal" default="off"/>
-     </optional>
-     </item>
-     
-     <item name="Large Rivers (C20)" icon="presets/empty.png" type="closedway,relation">
-     <label text="C20: Large River"/>
-     <key key="waterway" value="riverbank"/>
-     <key key="water" value="river"/>
-     <label text="All navigatable rivers should be tagged this way. Smaller rivers or streams that might be accessable with cannoes and smaller leasure crafts can still be tagged as natural=river or natural=steam"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:waterway=riverbank"/>
-     <text key="name" text="Name"/>
-     </item>
-     
-     <item name="Waterfalls (C22)" icon="presets/empty.png" type="node">
-     <label text="C22: Waterfall"/>
-     <key key="waterway" value="waterfall"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:waterway=waterfall"/>
-     <text key="name" text="Name"/>
-     <text key="height" text="Height of Fall"/>
-     <text key="width" text="Width"/>
-     </item>
-     
-     <item name="Rapid (C22)" icon="presets/empty.png" type="node,way">
-     <label text="C22: Rapids"/>
-     <link href="http://wiki.openstreetmap.org/wiki/WikiProject_Whitewater_Maps"/>
-     <text key="whitewater:rapid_name" text="Rapid Name"/>
-     <text key="name" text="River Name"/>
-     <text key="whitewater:name" text="Whitewater Name"/>
-     <text key="whitewater:rapid_grade" text="Rapid Grade (whitewater)" default="unknown" required="true"/>
-     <text key="whitewater:section_grade" text="Section Grade (whitewater)" default=""/>
-     <text key="whitewater:grade" text="River Grade (whitewater)"/>
-     <text key="whitewater:description" text="Description (whitewater)"/>
-     </item>
-     
-     <item name="Weir (C22)" icon="presets/empty.png" type="node">
-     <label text="C22: Weir"/>
-     <key key="waterway" value="weir"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:waterway=weir"/>
-     <text key="name" text="Name"/>
-     </item>
-     
-     <item name="Lakes (C23)" icon="presets/empty.png" type="closedway,relation">
-     <label text="C23: Lakes"/>
-     <key key="natural" value="water"/>
-     <key key="water" value="lake"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:natural=water"/>
-     <text key="name" text="Name"/>
-     <check key="intermittent" text="Intermittent" value_on="yes" value_off="" delete_if_empty="true" default="off"/>
-     <check key="salt" text="Salt Lake" value_on="yes" value_off="" delete_if_empty="true" default="off"/>
-     </item>
-     
-     <item name="Salt Pan (C24)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C24.svg" type="closedway,relation">
-     <label text="C24: Salt Pans"/>
-     <key key="natural" value="wetland"/>
-     <key key="wetland" value="saltmarch"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:natural=wetland"/>
-     <text key="name" text="Name"/>
-     <check key="tidal" text="Tidal" default="off"/>
-     <check key="seasonal" text="Seasonal" default="off"/>
-     <check key="managed" text="Managed" default="off"/>
-     </item>
-     
-     <item name="Salt Pan (C24)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C24.svg" type="closedway,relation">
-     <label text="C24: Saltern"/>
-     <key key="natural" value="wetland"/>
-     <key key="wetland" value="saltern"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:natural=wetland"/>
-     <text key="name" text="Name"/>
-     <check key="tidal" text="Tidal" default="off"/>
-     <check key="managed" text="Managed" default="off"/>
-     </item>
-     
-     <item name="Salt Ponds (C24)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C24.svg" type="closedway">
-     <label text="C24: Salt Ponds"/>
-     <key key="landuse" value="salt_pond"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:landuse=salt_pond"/>
-     <text key="name" text="Name"/>
-     <combo key="operator" text="Operator" readonly="false">
-     </combo>
-     </item>
-     
-     <item name="Glacier (C25)" icon="presets/empty.png" type="way,closedway,relation">
-     <label text="C25: Glacier"/>
-     <key key="natural" value="glacier"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:natural=glacier"/>
-     <text key="name" text="Name"/>
-     <optional>
-     <combo key="surface" text="Surface">
-     <list_entry value="snow"/>
-     <list_entry value="ice"/>
-     <list_entry value="scree"/>
-     </combo>
-     <text key="direction" text="Direction of movement"/>
-     <combo key="glacier:type" text="Glacial Type" default="">
-     <list_entry value="icecap"/>
-     <list_entry value="icefield"/>
-     <list_entry value="valley"/>
-     <list_entry value="outlet"/>
-     <list_entry value="tidewater"/>
-     <list_entry value="mountain"/>
-     <list_entry value="icefall"/>
-     <list_entry value="rock"/>
-     <list_entry value="shelf"/>
-     <list_entry value="remnant"/>
-     <list_entry value="ice_tongue"/>
-     </combo>
-     <combo key="glacier:edge" text="Glacial Edge Status" default="">
-     <list_entry value="calving_line"/>
-     <list_entry value="grounding_line"/>
-     </combo>
-     <text key="glacier:status" text="Status (NSIDC)"/>
-     </optional>
-     </item>
-     
-     <item name="Lava flow (C26)" icon="presets/empty.png" type="way,closedway">
-     <label text="C26: Lava flow"/>
-     <key key="natural" value="lava"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:natural=lava"/>
-     <text key="name" text="Name"/>
-     </item>
-     
-     <item name="Tree (C31)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.2.s.svg" type="node">
-     <label text="C31: Tree"/>
-     <key key="natural" value="tree"/>
-     <key key="denotation" value="landmark"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:natural=tree"/>
-     <text key="name" text="Name"/>
-     <combo key="type" text="Type">
-     <list_entry value="broad_leaf"/>
-     <list_entry value="conifer"/>
-     <list_entry value="palm"/>
-     </combo>
-     <combo key="genus" text="Genus" readonly="false">
-     </combo>
-     <combo key="species" text="Species" readonly="false">
-     </combo>
-     <combo key="taxon" text="Taxon" readonly="false">
-     </combo>
-     <text key="height" text="Height of tree"/>
-     <text key="circumference" text="Circumference of trunk"/>
-     </item>
-     
-     <item name="Forest - managed (C30-31)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.3.s.svg" type="closedway,relation">
-     <label text="C30-C31: Managed Forest"/>
-     <key key="landuse" value="forest"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:landuse=forest"/>
-     <combo key="wood" text="Type of forest">
-     <list_entry value="evergreen" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.2.s.svg" icon_size="16"/>
-     <list_entry value="eucalypt" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.8.s.svg" icon_size="16"/>
-     <list_entry value="casuarina" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.6.s.svg" icon_size="16"/>
-     <list_entry value="coniferous" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.3.s.svg" icon_size="16"/>
-     <list_entry value="deciduous" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.1.s.svg" icon_size="16"/>
-     <list_entry value="mixed" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.2.s.svg" icon_size="16"/>
-     <list_entry value="nipa_palm" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.5.s.svg" icon_size="16"/>
-     <list_entry value="palm" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.4.s.svg" icon_size="16"/>
-     <list_entry value="filao" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.7.s.svg" icon_size="16"/>
-     </combo>
-     <text key="name" text="Name"/>
-     <optional>
-     <combo key="crop" text="Crop" readonly="false">
-     </combo>
-     <combo key="produce" text="Produce" readonly="false">
-     </combo>
-     </optional>
-     </item>
-     
-     <item name="Wood - natural (C30-31)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.8.s.svg" type="closedway,relation">
-     <label text="C30-C31: Natural Woods"/>
-     <key key="natural" value="wood"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:natural=wood"/>
-     <combo key="wood" text="Type of forest">
-     <list_entry value="evergreen" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.2.s.svg" icon_size="16"/>
-     <list_entry value="eucalypt" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.8.s.svg" icon_size="16"/>
-     <list_entry value="casuarina" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.6.s.svg" icon_size="16"/>
-     <list_entry value="coniferous" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.3.s.svg" icon_size="16"/>
-     <list_entry value="deciduous" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.1.s.svg" icon_size="16"/>
-     <list_entry value="mixed" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.2.s.svg" icon_size="16"/>
-     <list_entry value="nipa_palm" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.5.s.svg" icon_size="16"/>
-     <list_entry value="palm" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C31.4.s.svg" icon_size="16"/>
-     <list_entry value="filao" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/C37.2.s.svg" icon_size="16"/>
-     </combo>
-     <text key="name" text="Name"/>
-     </item>
-     
-     <item name="Mangroves (C32)" icon="presets/empty.png" type="closedway,relation">
-     <label text="C32: Mangroves"/>
-     <key key="natural" value="wetland"/>
-     <key key="wetland" value="mangrove"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:natural=wetland"/>
-     <text key="name" text="Name"/>
-     <check key="tidal" text="Tidal" default="off"/>
-     <check key="managed" text="Managed" default="off"/>
-     </item>
-     
-     <item name="Marsh, Swamp, Salt marsh (C33)" icon="presets/empty.png" type="closedway,relation">
-     <label text="C33: Marsh, Swamp, Salt Marsh"/>
-     <key key="natural" value="wetland"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:natural=wetland"/>
-     <combo key="wetland" text="Type" readonly="true" required="true">
-     <list_entry value="marsh"/>
-     <list_entry value="swamp"/>
-     <list_entry value="saltmarsh"/>
-     <list_entry value="tidalflat"/>
-     </combo>
-     <text key="name" text="Name"/>
-     <check key="tidal" text="Tidal" default="off"/>
-     <check key="seasonal" text="Seasonal" default="off"/>
-     <check key="managed" text="Managed" default="off"/>
-     </item>
-     
-     <item name="Park, Garden (Ca Norway, Ck France)" icon="presets/empty.png" type="node,closedway,relation">
-     <key key="leisure" value="garden"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:leisure=garden"/>
-     <text key="name" text="Name"/>
-     <combo key="access" text="Access" readonly="false">
-     <list_entry value="yes"/>
-     </combo>
-     </item>
-     
-     <item name="Spring (Cb Brazil)" icon="presets/empty.png" type="node,closedway,relation">
-     <label text="Cb: Spring"/>
-     <key key="natural" value="spring"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:natural=spring"/>
-     <text key="name" text="Text"/>
-     <check key="drinkable" text="Drinkable" default="off"/>
-     </item>
-     
-     <item name="Grassland (Cc Brazil, Cd France)" icon="presets/empty.png" type="closedway,relation">
-     <label text="Cc: Grassland"/>
-     <key key="natural" value="grassland"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:natural=grassland"/>
-     <text key="name" text="Name"/>
-     <combo key="grassland" text="Grassland type" default="">
-     <list_entry value="pampas"/>
-     <list_entry value="prairie"/>
-     <list_entry value="puszta"/>
-     <list_entry value="savanna"/>
-     <list_entry value="steppe"/>
-     <list_entry value="veld"/>
-     </combo>
-     </item>
-     
-     <item name="Paddy field (Cd Brazil)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/Cd_br.svg" type="closedway,relation">
-     <label text="Cb: Paddy Field"/>
-     <key key="landuse" value="farm"/>
-     <key key="crop" value="rice"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:landuse=farm"/>
-     <text key="name" text="Name"/>
-     </item>
-     
-     <item name="Bushes (Cf Brazil)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/C/Cf_br.svg" type="closedway,relation">
-     <label text="Cf: Bushes"/>
-     <key key="natural" value="scrub"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:natural=scrub"/>
-     <text key="name" text="Name"/>
-     </item>
-     
-     <item name="Cultivated fields (Cj France) Farmland" icon="presets/empty.png" type="closedway,relation">
-     <label text="Cj: Cultivated fields (Farmland)"/>
-     <key key="landuse" value="farm"/>
-     <link href="http://wiki.openstreetmap.org/wiki/Tag:landuse=farm"/>
-     <text key="name" text="Name"/>
-     <combo key="crop" text="Crop">
-     <list_entry value="asparagus"/>
-     <list_entry value="barley"/>
-     <list_entry value="corn"/>
-     <list_entry value="flowers"/>
-     <list_entry value="grape"/>
-     <list_entry value="grass"/>
-     <list_entry value="hay"/>
-     <list_entry value="hop"/>
-     <list_entry value="maize"/>
-     <list_entry value="orchid"/>
-     <list_entry value="potatoes"/>
-     <list_entry value="rape"/>
-     <list_entry value="rice"/>
-     <list_entry value="rye"/>
-     <list_entry value="strawberry"/>
-     <list_entry value="sugar"/>
-     <list_entry value="wheat"/>
-     </combo>
-     <combo key="barrier" text="Barrier around field">
-     <list_entry value="ditch"/>
-     <list_entry value="fence"/>
-     <list_entry value="hedge"/>
-     <list_entry value="retaining_wall"/>
-     <list_entry value="wall"/>
-     </combo>
-     </item>
-     
-     <item name="Cultivated fields (Cj France) Orchard" icon="presets/empty.png" type="closedway,relation">
-     <label text="Cj: Cultivated fields (Orchard)"/>
-     <key key="landuse" value="orchard"/>
-     <text key="name" text="Name"/>
-     <combo key="trees" text="Trees">
-     <list_entry value="banana_plants" short_description="Crop: bananas"/>
-     <list_entry value="cacao_plants" short_description="Crop: cacao"/>
-     <list_entry value="coconut_palms" short_description="Crop: coconut"/>
-     <list_entry value="coffea_plants" short_description="Crop: coffee"/>
-     <list_entry value="mango_trees" short_description="Crop: mango"/>
-     <list_entry value="avocado" short_description="Crop: avocado"/>
-     <list_entry value="date_palms" short_description="Crop: dates"/>
-     <list_entry value="lemon_trees" short_description="Crop: lemon - Produce: citrus"/>
-     <list_entry value="olive_trees" short_description="Crop: olive - Produce: olive_oil"/>
-     <list_entry value="orange_trees" short_description="Crop: orange - Produce: citrus"/>
-     <list_entry value="tea_plants" short_description="Crop: tea - Produce: tea"/>
-     <list_entry value="almond_trees" short_description="Crop: almond"/>
-     <list_entry value="apple_trees" short_description="Crop: apple"/>
-     <list_entry value="apricot_trees" short_description="Crop: apricot"/>
-     <list_entry value="cherry_trees" short_description="Crop: cherry"/>
-     <list_entry value="chestnut_trees" short_description="Crop: chestnut"/>
-     <list_entry value="hazels" short_description="Crop: hazel"/>
-     <list_entry value="peach_grees" short_description="Crop: peach"/>
-     <list_entry value="pear_trees" short_description="Crop: pear"/>
-     <list_entry value="plum_trees" short_description="Crop: plum"/>
-     <list_entry value="walnut_trees" short_description="Crop: walnut"/>
-     <list_entry value="oak" short_description="Produce: cork, truffels"/>
-     <list_entry value="rubber_trees" short_description="Produce: latex"/>
-     </combo>
-     <combo key="crop" text="Crop">
-     <list_entry value="bananas"/>
-     <list_entry value="coffee"/>
-     <list_entry value="grape"/>
-     <list_entry value="olive"/>
-     <list_entry value="pear"/>
-     <list_entry value="tea"/>
-     <list_entry value="cacao"/>
-     <list_entry value="coconut"/>
-     <list_entry value="mango"/>
-     <list_entry value="avocado"/>
-     <list_entry value="dates"/>
-     <list_entry value="lemon"/>
-     <list_entry value="orange"/>
-     <list_entry value="almond"/>
-     <list_entry value="apple"/>
-     <list_entry value="apricot"/>
-     <list_entry value="cherry"/>
-     <list_entry value="chestnut"/>
-     <list_entry value="hazel"/>
-     <list_entry value="peach"/>
-     <list_entry value="plum"/>
-     <list_entry value="walnut"/>
-     </combo>
-     <combo key="produce" text="Produce">
-     <list_entry value="cork"/>
-     <list_entry value="latex"/>
-     <list_entry value="truffels"/>
-     <list_entry value="palm_oil"/>
-     <list_entry value="plum"/>
-     <list_entry value="tea"/>
-     <list_entry value="citrus"/>
-     <list_entry value="cherry"/>
-     <list_entry value="dates"/>
-     <list_entry value="almond"/>
-     <list_entry value="apples"/>
-     <list_entry value="olives"/>
-     <list_entry value="olive_oil"/>
-     <list_entry value="peach"/>
-     <list_entry value="avocado"/>
-     <list_entry value="hazel"/>
-     <list_entry value="walnuts"/>
-     <list_entry value="orange_joice"/>
-     <list_entry value="cider"/>
-     </combo>
-     <combo key="barrier" text="Barrier around field">
-     <list_entry value="ditch"/>
-     <list_entry value="fence"/>
-     <list_entry value="hedge"/>
-     <list_entry value="retaining_wall"/>
-     <list_entry value="wall"/>
-     </combo>
-     </item>
-     
-     <item name="Cultivated fields (Cj France) Meadow" icon="presets/empty.png" type="closedway,relation">
-     <label text="Cj: Cultivated fields (Meadow)"/>
-     <key key="landuse" value="meadow"/>
-     <text key="name" text="Name"/>
-     <combo key="meadow" text="Meadow Type">
-     <list_entry value="perpetual"/>
-     <list_entry value="agricultural"/>
-     <list_entry value="transitional"/>
-     </combo>
-     </item>
-     
-     </group>-->
-    
     <!--***********************Section D: Cultural Features***************************-->
     
     <group name="D: Cultural Features" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/D/Db_uk.svg">
-      
-      <!--<item name="Places (D1, D3, D4)" icon="presets/empty.png" type="node,closedway,relation">
-       <label text="D1: Places"/>
-       <combo key="place" text="Place" use_last_as_default="force" required="true">
-       <list_entry value="city"/>
-       <list_entry value="town"/>
-       <list_entry value="village"/>
-       <list_entry value="hamlet"/>
-       <list_entry value="suburb"/>
-       <list_entry value="neighbourhood"/>
-       <list_entry value="district"/>
-       <list_entry value="municipality"/>
-       <list_entry value="county"/>
-       <list_entry value="region"/>
-       <list_entry value="province"/>
-       <list_entry value="borough"/>
-       <list_entry value="quarter"/>
-       <list_entry value="isolated_dwelling"/>
-       <list_entry value="farm"/>
-       <list_entry value="allotments"/>
-       </combo>
-       <text key="name" text="Name" required="true"/>
-       <text key="population" text="Population"/>
-       <text key="source:population" text="Source for population data"/>
-       <text key="addr:postcode" text="Post Code"/>
-       <text key="addr:city" text="City"/>
-       <text key="addr:state" text="State"/>
-       <combo key="addr:country" text="Country" use_last_as_default="true">
-       <list_entry value="BR" display_value="Brazil"/>
-       </combo>
-       </item>-->
       
       <item name="Single Buildings (D2, D5, D6)" icon="presets/empty.png" type="node,closedway">
         <label text="D2: Single Buildings"/>
@@ -877,478 +287,7 @@
           <reference ref="construction"/>
         </multiselect>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Buildings" text="Buildings"/>
-        <!--<space/>
-         <combo key="building" text="Building" default="yes" required="true">
-         <list_entry value="yes" short_description="Generic building value"/>
-         <list_entry value="apartments"/>
-         <list_entry value="dormitory"/>
-         <list_entry value="hotel"/>
-         <list_entry value="house"/>
-         <list_entry value="detached"/>
-         <list_entry value="residential"/>
-         <list_entry value="terrace"/>
-         <list_entry value="houseboat" short_description="Permanently moored"/>
-         <list_entry value="static_caravan"/>
-         <list_entry value="commercial" short_description="Mainly offices"/>
-         <list_entry value="industrial"/>
-         <list_entry value="retail" short_description="Mainly shops"/>
-         <list_entry value="warehouse"/>
-         <list_entry value="cathedral"/>
-         <list_entry value="chapel"/>
-         <list_entry value="church"/>
-         <list_entry value="civic"/>
-         <list_entry value="hospital"/>
-         <list_entry value="school"/>
-         <list_entry value="train_station"/>
-         <list_entry value="transportation"/>
-         <list_entry value="university"/>
-         <list_entry value="public"/>
-         <list_entry value="barn"/>
-         <list_entry value="bridge"/>
-         <list_entry value="bunker" short_description="military=bunker"/>
-         <list_entry value="cabin"/>
-         <list_entry value="construction" short_description="Under Construction"/>
-         <list_entry value="cowshed"/>
-         <list_entry value="farm_auxiliary"/>
-         <list_entry value="garage"/>
-         <list_entry value="garages"/>
-         <list_entry value="greenhouse"/>
-         <list_entry value="hangar" short_description="aeroway=hangar"/>
-         <list_entry value="hut"/>
-         <list_entry value="roof"/>
-         <list_entry value="shed"/>
-         <list_entry value="stable"/>
-         <list_entry value="sty"/>
-         <list_entry value="transformer_tower"/>
-         </combo>
-         <text key="name" text="Name"/>
-         <text key="height" text="Height"/>
-         <text key="building:levels" text="Number of floors"/>
-         <check key="denotation" value_on="landmark" text="Denoted Landmark" default="off"/>
-         <combo key="landmark" text="Type of Landmark" readonly="false">
-         <list_entry value="" short_description="Not a landmark"/>
-         <list_entry value="yes" short_description="Default landmark value"/>
-         </combo>
-         <label text="Addressing information"/>
-         <optional>
-         <text key="addr:housenumber" text="House Number"/>
-         <text key="addr:housename" text="House Name"/>
-         <text key="addr:street" text="Street Name"/>
-         <text key="addr:postcode" text="Post Code"/>
-         <text key="addr:city" text="City"/>
-         <text key="addr:state" text="State"/>
-         <combo key="addr:country" text="Country" use_last_as_default="true">
-         <list_entry value="BR" display_value="Brazil"/>
-         </combo>
-         </optional>-->
       </item>
-      
-      <!--<item name="Named streets and roads (D7)" icon="presets/empty.png" type="way">
-       <label text="D7: Named Streets and Roads"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Key:highway"/>
-       <combo key="highway" text="Road type" required="true">
-       <list_entry value="road"/>
-       <list_entry value="residential" icon="presets/residential.png"/>
-       <list_entry value="unclassified" icon="presets/way_unclassified.png"/>
-       <list_entry value="tertiary" icon="presets/way_tertiary.png"/>
-       <list_entry value="secondary" icon="presets/way_secondary.png"/>
-       <list_entry value="primary" icon="presets/way_primary.png"/>
-       <list_entry value="trunk" icon="presets/trunk.png"/>
-       <list_entry value="motorway" icon="presets/motorway.png"/>
-       </combo>
-       <text key="name" text="Name" required="true"/>
-       <text key="ref" text="Reference"/>
-       <text key="lanes" text="Lanes"/>
-       <text key="maxspeed" text="Speed Limit"/>
-       <check key="oneway" text="Oneway" default="off"/>
-       <check key="bridge" text="Bridge" default="off"/>
-       <check key="tunnel" text="Tunnel" default="off"/>
-       <check key="lit" text="Lit" default="off"/>
-       <combo key="overtaking" text="Overtaking" default="">
-       <list_entry value="yes"/>
-       <list_entry value="no"/>
-       <list_entry value="forward"/>
-       <list_entry value="backward"/>
-       </combo>
-       <combo key="surface" text="Surface" readonly="false" default="">
-       <list_entry value="paved"/>
-       <list_entry value="unpaved"/>
-       <list_entry value="asphalt"/>
-       <list_entry value="concrete"/>
-       <list_entry value="cobblestone"/>
-       </combo>
-       </item>
-       
-       <item name="Ruined Landmarks (D8)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/D/D8.svg" type="node,closedway,relation">
-       <label text="D8: Ruined Landmarks"/>
-       <key key="ruins" value="yes"/>
-       <check key="historic" text="Historic Ruins" value_on="ruins" default="off"/>
-       <text key="name" text="Name"/>
-       <combo key="ruin_type" text="Ruin type">
-       </combo>
-       <text key="ruin_state" text="Ruin State"/>
-       <text key="constructed" text="Year/Century constructed"/>
-       <text key="ruined" text="Year/Century ruined"/>
-       </item>
-       
-       <item name="Motorway (D10)" icon="presets/motorway.png" type="way,relation">
-       <label text="D10: Motorway"/>
-       <key key="highway" value="motorway"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:highway=motorway"/>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       <text key="maxspeed" text="Speed Limit"/>
-       <text key="lanes" text="Lanes"/>
-       <check key="oneway" text="Oneway" default="on"/>
-       <check key="bridge" text="Bridge" default="off"/>
-       <check key="tunnel" text="Tunnel" default="off"/>
-       <check key="lit" text="Lit" default="off"/>
-       <combo key="overtaking" text="Overtaking" default="">
-       <list_entry value="yes"/>
-       <list_entry value="no"/>
-       <list_entry value="forward"/>
-       <list_entry value="backward"/>
-       </combo>
-       <combo key="surface" text="Surface" readonly="false" default="">
-       <list_entry value="paved"/>
-       <list_entry value="unpaved"/>
-       <list_entry value="asphalt"/>
-       <list_entry value="concrete"/>
-       <list_entry value="cobblestone"/>
-       </combo>
-       </item>
-       
-       <item name="Trunk (D10)" icon="presets/trunk.png" type="way,relation">
-       <label text="D10: Trunkway"/>
-       <key key="highway" value="trunk"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:highway=trunk"/>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       <text key="maxspeed" text="Speed Limit"/>
-       <text key="lanes" text="Lanes"/>
-       <check key="oneway" text="Oneway" default="on"/>
-       <check key="bridge" text="Bridge" default="off"/>
-       <check key="tunnel" text="Tunnel" default="off"/>
-       <check key="lit" text="Lit" default="off"/>
-       <combo key="overtaking" text="Overtaking" default="">
-       <list_entry value="yes"/>
-       <list_entry value="no"/>
-       <list_entry value="forward"/>
-       <list_entry value="backward"/>
-       </combo>
-       <combo key="surface" text="Surface" readonly="false" default="">
-       <list_entry value="paved"/>
-       <list_entry value="unpaved"/>
-       <list_entry value="asphalt"/>
-       <list_entry value="concrete"/>
-       <list_entry value="cobblestone"/>
-       </combo>
-       </item>
-       
-       <item name="Primary Highway (D11)" icon="presets/way_primary.png" type="way,relation">
-       <label text="D11: Primary Highway"/>
-       <key key="highway" value="primary"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:highway=primary"/>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       <text key="maxspeed" text="Speed Limit"/>
-       <text key="Lanes" text="Lanes"/>
-       <check key="oneway" text="Oneway" default="off"/>
-       <check key="bridge" text="Bridge" default="off"/>
-       <check key="tunnel" text="Tunnel" default="off"/>
-       <check key="lit" text="Lit" default="off"/>
-       <combo key="overtaking" text="Overtaking" default="">
-       <list_entry value="yes"/>
-       <list_entry value="no"/>
-       <list_entry value="forward"/>
-       <list_entry value="backward"/>
-       </combo>
-       <combo key="surface" text="Surface" readonly="false" default="">
-       <list_entry value="paved"/>
-       <list_entry value="unpaved"/>
-       <list_entry value="asphalt"/>
-       <list_entry value="concrete"/>
-       <list_entry value="cobblestone"/>
-       </combo>
-       </item>
-       
-       <item name="Secondary Highway (D11)" icon="presets/way_secondary.png" type="way,relation">
-       <label text="D11: Secondary Highway"/>
-       <key key="highway" value="secondary"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:highway=secondary"/>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       <text key="maxspeed" text="Speed Limit"/>
-       <text key="lanes" text="Lanes"/>
-       <check key="oneway" text="Oneway" default="off"/>
-       <check key="bridge" text="Bridge" default="off"/>
-       <check key="tunnel" text="Tunnel" default="off"/>
-       <check key="lit" text="Lit" default="off"/>
-       <combo key="overtaking" text="Overtaking" default="">
-       <list_entry value="yes"/>
-       <list_entry value="no"/>
-       <list_entry value="forward"/>
-       <list_entry value="backward"/>
-       </combo>
-       <combo key="surface" text="Surface" readonly="false" default="">
-       <list_entry value="paved"/>
-       <list_entry value="unpaved"/>
-       <list_entry value="asphalt"/>
-       <list_entry value="concrete"/>
-       <list_entry value="cobblestone"/>
-       </combo>
-       </item>
-       
-       <item name="Tertiary Highway (D11)" icon="presets/way_tertiary.png" type="way,relation">
-       <label text="D11: Tertiary Highway"/>
-       <key key="highway" value="tertiary"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:highway=tertiary"/>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       <text key="maxspeed" text="Speed Limit"/>
-       <text key="lanes" text="Lanes"/>
-       <check key="oneway" text="Oneway" default="off"/>
-       <check key="bridge" text="Bridge" default="off"/>
-       <check key="tunnel" text="Tunnel" default="off"/>
-       <check key="lit" text="Lit" default="off"/>
-       <combo key="overtaking" text="Overtaking" default="">
-       <list_entry value="yes"/>
-       <list_entry value="no"/>
-       <list_entry value="forward"/>
-       <list_entry value="backward"/>
-       </combo>
-       <combo key="surface" text="Surface" readonly="false" default="">
-       <list_entry value="paved"/>
-       <list_entry value="unpaved"/>
-       <list_entry value="asphalt"/>
-       <list_entry value="concrete"/>
-       <list_entry value="cobblestone"/>
-       </combo>
-       </item>
-       
-       <item name="Unclassified road (D11)" icon="presets/way_unclassified.png" type="way,relation">
-       <label text="D11: Unclassified Road"/>
-       <key key="highway" value="unclassified"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:highway=tertiary"/>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       <text key="maxspeed" text="Speed Limit"/>
-       <text key="lanes" text="Lanes"/>
-       <check key="oneway" text="Oneway" default="off"/>
-       <check key="bridge" text="Bridge" default="off"/>
-       <check key="tunnel" text="Tunnel" default="off"/>
-       <check key="lit" text="Lit" default="off"/>
-       <combo key="overtaking" text="Overtaking" default="">
-       <list_entry value="yes"/>
-       <list_entry value="no"/>
-       <list_entry value="forward"/>
-       <list_entry value="backward"/>
-       </combo>
-       <combo key="surface" text="Surface" readonly="false" default="">
-       <list_entry value="paved"/>
-       <list_entry value="unpaved"/>
-       <list_entry value="asphalt"/>
-       <list_entry value="concrete"/>
-       <list_entry value="cobblestone"/>
-       </combo>
-       </item>
-       
-       <item name="Residential Road (D11)" icon="presets/residential.png" type="way,relation">
-       <label text="D11: Residential Road"/>
-       <key key="highway" value="residential"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:highway=tertiary"/>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       <text key="maxspeed" text="Speed Limit"/>
-       <text key="lanes" text="Lanes"/>
-       <check key="oneway" text="Oneway" default="off"/>
-       <check key="bridge" text="Bridge" default="off"/>
-       <check key="tunnel" text="Tunnel" default="off"/>
-       <check key="lit" text="Lit" default="off"/>
-       <combo key="overtaking" text="Overtaking" default="">
-       <list_entry value="yes"/>
-       <list_entry value="no"/>
-       <list_entry value="forward"/>
-       <list_entry value="backward"/>
-       </combo>
-       <combo key="surface" text="Surface" readonly="false" default="">
-       <list_entry value="paved"/>
-       <list_entry value="unpaved"/>
-       <list_entry value="asphalt"/>
-       <list_entry value="concrete"/>
-       <list_entry value="cobblestone"/>
-       </combo>
-       </item>
-       
-       <item name="Tracks (D12)" icon="presets/track1.png" type="way">
-       <label text="D12: Track"/>
-       <key key="highway" value="track"/>
-       <text key="name" text="Name"/>
-       <combo key="tracktype" text="Tracktype">
-       <list_entry value="grade1"/>
-       <list_entry value="grade2"/>
-       <list_entry value="grade3"/>
-       <list_entry value="grade4"/>
-       <list_entry value="grade5"/>
-       </combo>
-       <combo key="surface" text="Surface" readonly="false" default="">
-       <list_entry value="paved"/>
-       <list_entry value="unpaved"/>
-       <list_entry value="asphalt"/>
-       <list_entry value="concrete"/>
-       <list_entry value="cobblestone"/>
-       </combo>
-       </item>
-       
-       <item name="Path (D12)" icon="presets/path.png" type="way">
-       <label text="D12: path"/>
-       <key key="highway" value="path"/>
-       <text key="name" text="Name"/>
-       <combo key="sac_scale" text="SAC Scale">
-       <list_entry value="hiking" display_value="T1 - hiking trail" short_description="Trail well cleared. Area flat or slightly sloped, no fall hazard" />
-       <list_entry value="mountain_hiking" display_value="T2 - mountain hiking trail" short_description="Trail with continuous line and balanced ascent. Terrain partially steep, fall hazard possible" />
-       <list_entry value="demanding_mountain_hiking" display_value="T3 - difficult, exposed hiking trail" short_description="exposed sites may be secured with ropes or chains, possible need to use hands for balance. Partly exposed sites with fall hazard, scree, pathless jagged rocks" />
-       <list_entry value="alpine_hiking" display_value="T4 - difficult, exposed, steep alpine trail" short_description="sometimes need for hand use to get ahead. Terrain quite exposed, precarious grassy acclivities, jagged rocks, facile snow-free glaciers" />
-       <list_entry value="demanding_alpine_hiking" display_value="T5 - difficult alpine trail with climbing" short_description="single plainly climbing up to second grade. Exposed, demanding terrain, jagged rocks, few dangerous glacier and snow" />
-       <list_entry value="difficult_alpine_hiking" display_value="T6 - hazardous alpine trail with climbing" short_description="climbing up to second grade. Often very exposed, precarious jagged rocks, glacier with danger to slip and fall" />
-       </combo>
-       <combo key="surface" text="Surface" readonly="false" default="">
-       <list_entry value="paved"/>
-       <list_entry value="unpaved"/>
-       <list_entry value="asphalt"/>
-       <list_entry value="concrete"/>
-       <list_entry value="cobblestone"/>
-       </combo>
-       </item>
-       
-       <item name="Railways (D13)" icon="presets/railway.png" type="way,relation">
-       <label text="D13: Railways"/>
-       <combo key="railway" value="rail" default="rail" required="true">
-       <list_entry value="rail"/>
-       <list_entry value="light_rail"/>
-       <list_entry value="narrow_gauge"/>
-       <list_entry value="preserved"/>
-       <list_entry value="tram"/>
-       <list_entry value="monorail"/>
-       <list_entry value="funicular"/>
-       <list_entry value="construction"/>
-       <list_entry value="disused"/>
-       <list_entry value="abandoned"/>
-       </combo>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:railway=rail"/>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       <combo key="electrified" text="Electrified" default="">
-       <list_entry value="yes"/>
-       <list_entry value="no"/>
-       <list_entry value="contact_line"/>
-       <list_entry value="rail"/>
-       </combo>
-       <text key="frequency" text="Frequency"/>
-       <text key="voltage" text="Voltage"/>
-       <text key="gauge" text="Gauge"/>
-       <text key="tracks" text="Tracks"/>
-       <check key="tunnel" text="Tunnel" value_on="yes" value_off="" delete_if_empty="true" default="off"/>
-       <check key="bridge" text="Bridge" value_on="yes" value_off="" delete_if_empty="true" default="off"/>
-       <check key="cutting" text="Cutting" value_on="yes" value_off="" delete_if_empty="true" default="off"/>
-       <check key="embankment" text="Embankment" value_on="yes" value_off="" delete_if_empty="true" default="off"/>
-       <combo key="usage" text="Usage">
-       <list_entry value="main"/>
-       <list_entry value="branch"/>
-       <list_entry value="freight"/>
-       <list_entry value="industrial"/>
-       <list_entry value="military"/>
-       <list_entry value="tourism"/>
-       <list_entry value="service"/>
-       </combo>
-       <combo key="service" text="Service">
-       <list_entry value="siding"/>
-       <list_entry value="spur"/>
-       <list_entry value="yard"/>
-       </combo>
-       </item>
-       
-       <item name="Railway Station (D13)" icon="presets/empty.png" type="node">
-       <label text="D13: Railway Station"/>
-       <key key="seamark:type" value="building"/>
-       <key key="seamark:building:function" value="railway_station"/>
-       <space/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:public_transport=station"/>
-       <key key="building" value="transportation"/>
-       <key key="public_transport" value="station"/>
-       <combo key="railway" text="Station" default="station" required="true">
-       <list_entry value="station"/>
-       <list_entry value="halt"/>
-       <list_entry value="tram_stop"/>
-       </combo>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       <combo key="operator" text="Operator" readonly="false">
-       </combo>
-       <combo key="network" text="Network" readonly="false">
-       </combo>
-       </item>
-       
-       <item name="Cutting (D14)" icon="presets/empty.png" type="way,relation">
-       <label text="D14: Cutting"/>
-       <combo key="cutting" text="Cutting" default="yes">
-       <list_entry value="yes"/>
-       <list_entry value="left"/>
-       <list_entry value="right"/>
-       </combo>
-       <link href="http://wiki.openstreetmap.org/wiki/Key:cutting"/>
-       </item>
-       
-       <item name="Embankment (D15)" icon="presets/empty.png" type="way,relation">
-       <label text="D15: Embankment"/>
-       <key key="embankment" value="yes"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Key:embankment"/>
-       </item>
-       
-       <item name="Tunnel (D16)" icon="presets/empty.png" type="way,relation">
-       <label text="D16: Tunnel"/>
-       <key key="tunnel" value="yes"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Key:tunnel"/>
-       <text key="name" text="Name"/>
-       <text key="tunnel:name" text="Tunnel Name"/>
-       <text key="ref" text="Reference"/>
-       <combo key="layer" text="Layer">
-       <list_entry value="5"/>
-       <list_entry value="4"/>
-       <list_entry value="3"/>
-       <list_entry value="2"/>
-       <list_entry value="1"/>
-       <list_entry value="0"/>
-       <list_entry value="-1"/>
-       <list_entry value="-2"/>
-       <list_entry value="-3"/>
-       <list_entry value="-4"/>
-       <list_entry value="-5"/>
-       </combo>
-       <check key="lit" text="Lit"/>
-       <text key="maxheight" text="Max Height"/>
-       <optional>
-       <text key="maxheight:physical" text="Physical Height"/>
-       <text key="maxheight:legal" text="Legal Max Height"/>
-       </optional>
-       <text key="maxwidth" text="Max Width"/>
-       <combo key="access" text="Access" readonly="false">
-       </combo>
-       </item>
-       
-       <item name="Airfields (D17)" icon="presets/empty.png" type="node,closedway">
-       <label text="D17: Airfields"/>
-       <key key="aeroway" value="aerodrome"/>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       <combo key="operator" text="Operator" readonly="false">
-       </combo>
-       <text key="iata" text="IATA"/>
-       <text key="icao" text="ICAO"/>
-       <check key="IFR" text="Instrument Flight Rules" default="off"/>
-       <check key="landuse" text="On Military ground" value_on="military" value_off="" delete_if_empty="true"/>
-       <check key="type" text="Military use only" value_on="military" value_off="" delete_if_empty="true"/>
-       </item>-->
       
       <item name="Bridge (D20-D24)" icon="presets/empty.png" type="node,way,closedway">
         <label text="D20-D24: Bridge"/>
@@ -1372,37 +311,6 @@
         <text key="seamark:bridge:clearance_height_closed" text="Vertical Clearance Closed" match="key"/>
         <text key="seamark:bridge:clearance_width" text="Horizontal Clearance" match="key"/>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Bridges" text="Bridges"/>
-        <!--<space/>
-         <combo key="bridge" text="Bridge" required="true" match="key">
-         <list_entry value="yes"/>
-         <list_entry value="arch"/>
-         <list_entry value="suspension"/>
-         <list_entry value="opening"/>
-         <list_entry value="swing"/>
-         <list_entry value="lift"/>
-         <list_entry value="bascule"/>
-         <list_entry value="pontoon"/>
-         <list_entry value="drawbridge"/>
-         <list_entry value="transporter"/>
-         </combo>
-         <label text="D22, D23.x, D24: Bridge, to be tagged on the bridge itself"/>
-         <link href="http://wiki.openstreetmap.org/wiki/Key:bridge"/>
-         <text key="bridge_name" text="Name (of bridge)"/>
-         <text key="name" text="Name (of road, etc. passing bridge)"/>
-         <text key="ref" text="Reference"/>
-         <combo key="layer" text="Layer">
-         <list_entry value="5"/>
-         <list_entry value="4"/>
-         <list_entry value="3"/>
-         <list_entry value="2"/>
-         <list_entry value="1"/>
-         <list_entry value="0"/>
-         <list_entry value="-1"/>
-         <list_entry value="-2"/>
-         <list_entry value="-3"/>
-         <list_entry value="-4"/>
-         <list_entry value="-5"/>
-         </combo>-->
       </item>
       
       <item name="Overhead transporter or Telepheric (D25)" icon="presets/empty.png" type="way">
@@ -1413,26 +321,6 @@
         <combo key="seamark:conveyor:product" text="Cargo">
           <reference ref="product"/>
         </combo>
-        <!--<space/>
-         <combo key="aerialway" text="Type" required="true" match="key">
-         <list_entry value="gondola"/>
-         <list_entry value="cable_car"/>
-         <list_entry value="chair_lift"/>
-         <list_entry value="goods"/>
-         <list_entry value="drag_lift"/>
-         <list_entry value="magic_carpet"/>
-         <list_entry value="platter"/>
-         <list_entry value="t-bar"/>
-         <list_entry value="rope-tow"/>
-         <list_entry value="mixed_lift"/>
-         </combo>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         <optional>
-         <text key="aerialway:occupancy" text="Occupants per unit"/>
-         <text key="aerialway:capacity" text="Passengers per hour"/>
-         <text key="aerialway:duration" text="Duration of ride"/>
-         </optional>-->
       </item>
       
       <item name="Power Transmission Line (D26)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/D/D26.svg" type="way">
@@ -1445,19 +333,6 @@
         <text key="seamark:cable_overhead:clearance_height" text="Vertical Clearance" match="key"/>
         <text key="seamark:cable_overhead:clearance_height_safe" text="Safe Vertical Clearance" match="key"/>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Categories_of_Objects#Cables_.28CATCBL.29" text="Cable Categories"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:power=line"/>
-         <key key="power" value="line"/>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <text key="voltage" text="Voltage"/>
-         <text key="cables" text="Cables"/>
-         <text key="wires" text="Wires"/>
-         <text key="maxheight:marine" text="Clearance under Cable"/>
-         <text key="seamark:cable_overhead:vertical:clearance_height" text="Vertical Clearance of Cable"/>
-         <text key="seamark:cable_overhead:vertical:clearance_height_safe" text="Safe Clearance of Cable"/>-->
       </item>
       
       <item name="Power Pylon (D26)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/D/D26.svg" type="node">
@@ -1473,21 +348,6 @@
           <list_entry value="dry"/>
         </combo>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Categories_of_Objects#Pylons_.28CATPYL.29" text="Pylon Categories"/>
-        <!--<space/>
-         <key key="power" value="tower"/>
-         <text key="ref" text="Pylon reference" />
-         <combo key="structure" text="Structure" readonly="false">
-         <list_entry value="lattice"/>
-         <list_entry value="tubular"/>
-         <list_entry value="solid"/>
-         </combo>
-         <combo key="material" text="Material" readonly="false">
-         <list_entry value="steel"/>
-         <list_entry value="wood"/>
-         <list_entry value="concrete"/>
-         </combo>
-         <text key="height" text="Height"/>
-         <text key="colour" text="Colour"/>-->
       </item>
       
       <item name="Telephone Line (D27)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/D/D26.svg" type="way">
@@ -1501,10 +361,6 @@
         <text key="seamark:cable_overhead:vertical:clearance_height" text="Vertical Clearance of Cable"/>
         <text key="seamark:cable_overhead:vertical:clearance_height_safe" text="Safe Clearance of Cable"/>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Categories_of_Objects#Cables_.28CATCBL.29" text="Cable Categories"/>
-        <!--<space/>
-         <text key="ref" text="Reference"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>-->
       </item>
       
       <item name="Pipeline (Overhead) (D28)" icon="presets/empty.png" type="way">
@@ -1523,24 +379,6 @@
         <text key="seamark:pipeline_overhead:vertical:clearance_height" text="Vertical Clearance"/>
         <label text="For underwater pipelines, see L40-L44"/>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Categories_of_Objects#Pipelines_.28CATPIP.29" text="Pipeline Categories"/>
-        <!--<space/>
-         <key key="man_made" value="pipeline"/>
-         <key key="location" value="overhead"/>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         <combo key="type" text="Type">
-         <list_entry value="gas"/>
-         <list_entry value="oil"/>
-         <list_entry value="water"/>
-         <list_entry value="sewer"/>
-         <list_entry value="drain"/>
-         <list_entry value="telecom"/>
-         <list_entry value="slurry"/>
-         <list_entry value="hot_water"/>
-         <list_entry value="heat"/>
-         </combo>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>-->
       </item>
       
       <item name="Pipeline (On Land) (D29)" icon="presets/empty.png" type="way">
@@ -1558,43 +396,7 @@
         </combo>
         <label text="For underwater pipelines, see L40-L44"/>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Categories_of_Objects#Pipelines_.28CATPIP.29" text="Pipeline Categories"/>
-        <!--<space/>
-         <key key="man_made" value="pipeline"/>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         <combo key="type" text="Type">
-         <list_entry value="gas"/>
-         <list_entry value="oil"/>
-         <list_entry value="water"/>
-         <list_entry value="sewer"/>
-         <list_entry value="drain"/>
-         <list_entry value="telecom"/>
-         <list_entry value="slurry"/>
-         <list_entry value="hot_water"/>
-         <list_entry value="heat"/>
-         </combo>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <combo key="location" text="Location" readonly="true">
-         <list_entry value="overground"/>
-         <list_entry value="underground"/>
-         </combo>-->
       </item>
-      
-      <!--<item name="Helicopter Landing Site, Heliport (Db UK)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/D/Db_uk.svg" type="node,closedway">
-       <label text="Db: Helicopter Landing Site, Heliport"/>
-       <key key="aeroway" value="helipad"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:aeroway=healipad"/>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       <text key="iata" text="IATA (3 letter) code"/>
-       <text key="icao" text="ICAO (4 letter) code"/>
-       </item>
-       
-       <item name="Telegraph Office (Dc Norway)" icon="presets/empty.png" type="node,closedway">
-       <label text="Dc: Telegraph Office"/>
-       <key key="signal_station" value="telegraph"/>
-       </item>-->
       
     </group>
     
@@ -1658,78 +460,6 @@
           <list_entry value="chapel"/>
         </combo>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Buildings" text="Buildings"/>
-        <!--<space/>
-         <key key="amenity" value="place_of_worship"/>
-         <key key="religion" value="christian"/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=place_of_worship"/>
-         <text key="name" text="Name"/>
-         <combo key="denomination" text="Denomination" readonly="false">
-         <list_entry value="adventist"/>
-         <list_entry value="alliance"/>
-         <list_entry value="anglican"/>
-         <list_entry value="assemblies_of_god"/>
-         <list_entry value="apostolic"/>
-         <list_entry value="armenian_apostolic"/>
-         <list_entry value="assyrian"/>
-         <list_entry value="baptist"/>
-         <list_entry value="catholic"/>
-         <list_entry value="roman_catholic"/>
-         <list_entry value="greek_catholic"/>
-         <list_entry value="christ_scientist"/>
-         <list_entry value="christian_community"/>
-         <list_entry value="church_of_scotland"/>
-         <list_entry value="coptic_orthodox"/>
-         <list_entry value="czechoslovak_hussite"/>
-         <list_entry value="dutch_reformed"/>
-         <list_entry value="evangelical"/>
-         <list_entry value="exclusive_brethren"/>
-         <list_entry value="foursquare"/>
-         <list_entry value="greek_orthodox"/>
-         <list_entry value="jehovahs_witness"/>
-         <list_entry value="kimbanguist"/>
-         <list_entry value="living_waters_church"/>
-         <list_entry value="lutherian"/>
-         <list_entry value="mariavite"/>
-         <list_entry value="maronite"/>
-         <list_entry value="mennonite"/>
-         <list_entry value="messianic_jewish"/>
-         <list_entry value="methodist"/>
-         <list_entry value="moravian"/>
-         <list_entry value="mormon"/>
-         <list_entry value="nazarene"/>
-         <list_entry value="new_apostolic"/>
-         <list_entry value="nondenominentional"/>
-         <list_entry value="orthodox"/>
-         <list_entry value="old_believers"/>
-         <list_entry value="old_catholic"/>
-         <list_entry value="pentecostal"/>
-         <list_entry value="polish_catholic"/>
-         <list_entry value="presbyterian"/>
-         <list_entry value="protestant"/>
-         <list_entry value="quaker"/>
-         <list_entry value="reformed"/>
-         <list_entry value="russian_orthodox"/>
-         <list_entry value="salvation_army"/>
-         <list_entry value="santo_daime"/>
-         <list_entry value="serbian_orthodox"/>
-         <list_entry value="seventh_day_adventist"/>
-         <list_entry value="spiritism"/>
-         <list_entry value="united"/>
-         <list_entry value="united_church_of_christ"/>
-         <list_entry value="united_free_church_of_scotland"/>
-         <list_entry value="united_methodist"/>
-         <list_entry value="united_reformed"/>
-         <list_entry value="uniting"/>
-         <list_entry value="church_of_sweden"/>
-         <list_entry value="mission_covenant_church_of_sweden"/>
-         </combo>
-         <combo key="building" text="Building" readonly="true">
-         <list_entry value="yes" short_description="Generic Building"/>
-         <list_entry value="cathedral"/>
-         <list_entry value="church"/>
-         <list_entry value="chapel"/>
-         </combo>
-         <label text="If the church is mapped as an area, it might be desirable to mark the landmark separately in a node"/>-->
       </item>
       
       <item name="Landmark Churches (E10.2-E10.4)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E10.svg" type="node,closedway">
@@ -1750,143 +480,30 @@
         <label text="E12: Cross or Calvary"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="cross"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Landmarks" text="Landmarks"/>
-        <!--<space/>
-         <check key="historic" value_on="wayside_cross" value_off="" default="off" text="Historic Cross"/>
-         <text key="name" text="Name"/>
-         <text key="height" text="Height"/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:historic=wayside_cross"/>-->
       </item>
       
       <item name="Temple (E13)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E13.svg" type="node,closedway">
         <label text="E13: Temple"/>
         <key key="seamark:type" value="building"/>
         <key key="seamakr:building:function" value="temple"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Buildings" text="Buildings"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=place_of_worship"/>
-         <key key="amenity" value="place_of_worship"/>
-         <text key="name" text="Name"/>
-         <key key="religion" value="jewish"/>
-         <combo key="denomination" text="Denomination" readonly="false">
-         <list_entry value="alternative"/>
-         <list_entry value="ashkenazi"/>
-         <list_entry value="buchari"/>
-         <list_entry value="conservative"/>
-         <list_entry value="egalitarian"/>
-         <list_entry value="hasidic"/>
-         <list_entry value="humanistic"/>
-         <list_entry value="kabbalistic"/>
-         <list_entry value="karaite"/>
-         <list_entry value="liberal"/>
-         <list_entry value="lubavitch"/>
-         <list_entry value="lubavitch_messianic"/>
-         <list_entry value="mizrachi_baghdadi"/>
-         <list_entry value="mizrachi_chida"/>
-         <list_entry value="mizrachi_jerusalemite"/>
-         <list_entry value="mizrachi_livorno"/>
-         <list_entry value="mizrachi_moroccan"/>
-         <list_entry value="modern_orthodox"/>
-         <list_entry value="neo_orthodox"/>
-         <list_entry value="nondenominational"/>
-         <list_entry value="orthodox"/>
-         <list_entry value="orthodox_askenaz"/>
-         <list_entry value="orthodox_sefard"/>
-         <list_entry value="progressive"/>
-         <list_entry value="reconstructionist"/>
-         <list_entry value="reform"/>
-         <list_entry value="renewal"/>
-         <list_entry value="samaritan"/>
-         <list_entry value="sefardi"/>
-         <list_entry value="sefardi_amsterdam"/>
-         <list_entry value="sefardi_london"/>
-         <list_entry value="traditional"/>
-         <list_entry value="ultra_orthodox"/>
-         <list_entry value="unaffiliated"/>
-         <list_entry value="yemenite"/>
-         <list_entry value="yemenite_baldi"/>
-         <list_entry value="yemenite_shami"/>
-         </combo>
-         <combo key="building" text="Building" readonly="true">
-         <list_entry value="yes" short_description="Generic Building"/>
-         <list_entry value="temple"/>
-         <list_entry value="synagoge"/>
-         </combo>-->
       </item>
       
       <item name="Pagoda (E14)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E14.svg" type="node,closedway">
         <label text="E14: Pagoda"/>
         <key key="seamark:type" value="building"/>
         <key key="seamark:building:function" value="pagoda"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Buildings" text="Buildings"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=place_of_worship"/>
-         <key key="amenity" value="place_of_worship"/>
-         <text key="name" text="Name"/>
-         <combo key="religion" text="Religion" readonly="true">
-         <list_entry value="hindu"/>
-         <list_entry value="buddhist"/>
-         </combo>
-         <combo key="denomination" text="Denomination" readonly="false">
-         <list_entry value="nichiren"/>
-         <list_entry value="jodo_shinshu"/>
-         <list_entry value="jodo_shu"/>
-         <list_entry value="vajrayana"/>
-         <list_entry value="shigon_shu"/>
-         <list_entry value="zen"/>
-         <list_entry value="thai_mahanikaya"/>
-         <list_entry value="thai_thammayut"/>
-         </combo>
-         <combo key="building" text="Building" readonly="true">
-         <list_entry value="yes" short_description="Generic Building"/>
-         <list_entry value="pavalion"/>
-         <list_entry value="temple"/>
-         </combo>-->
       </item>
       
       <item name="Shinto Shrine, Josshouse (E15)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E15.svg" type="node,closedway">
         <label text="E15: Shinto Shrine, Josshouse"/>
         <key key="seamark:type" value="building"/>
         <key key="seamark:building:function" value="shinto_shrine"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=place_of_worship"/>
-         <key key="amenity" value="place_of_worship"/>
-         <key key="religion" value="shinto"/>
-         <text key="name" text="Name"/>
-         <combo key="building" text="Building" readonly="true">
-         <list_entry value="yes" short_description="Generic Building"/>
-         <list_entry value="pavalion"/>
-         <list_entry value="temple"/>
-         <list_entry value="joss_house"/>
-         <list_entry value="shrine"/>
-         </combo>-->
       </item>
       
       <item name="Buddhist Temple (E16)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E16.svg" type="node,closedway">
         <label text="E16: Buddhist Temple"/>
         <key key="seamark:type" value="building"/>
         <key key="seamark:building:function" value="buddhist_temple"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Buildings" text="Buildings"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=place_of_worship"/>
-         <key key="amenity" value="place_of_worship"/>
-         <key key="religion" value="buddhist"/>
-         <text key="name" text="Name"/>
-         <combo key="denomination" text="Denomination">
-         <list_entry value="nichiren"/>
-         <list_entry value="jodo_shinshu"/>
-         <list_entry value="jodo_shu"/>
-         <list_entry value="vajrayana"/>
-         <list_entry value="shigon_shu"/>
-         <list_entry value="zen"/>
-         <list_entry value="thai_mahanikaya"/>
-         <list_entry value="thai_thammayut"/>
-         </combo>
-         <combo key="building" text="Building" readonly="true">
-         <list_entry value="yes" short_description="Generic Building"/>
-         <list_entry value="pavalion"/>
-         <list_entry value="temple"/>
-         </combo>-->
       </item>
       
       <item name="Minaret (E17)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E17.svg" type="node,closedway">
@@ -1901,26 +518,6 @@
         <key key="seamark:type" value="building"/>
         <key key="seamark:building:function" value="mosque"/>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Buildings" text="Buildings"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=place_of_worship"/>
-         <key key="amenity" value="place_of_worship"/>
-         <key key="religion" value="muslim"/>
-         <text key="name" text="Name"/>
-         <combo key="denomination" text="Denomination">
-         <list_entry value="ahmadiya"/>
-         <list_entry value="alaouite"/>
-         <list_entry value="druze"/>
-         <list_entry value="ismaili"/>
-         <list_entry value="nondenominational"/>
-         <list_entry value="shia"/>
-         <list_entry value="sunni"/>
-         <list_entry value="ibadi"/>
-         </combo>
-         <combo key="building" text="Building" readonly="true">
-         <list_entry value="yes" short_description="Generic Building"/>
-         <list_entry value="mosque"/>
-         <list_entry value="minaret"/>
-         </combo>-->
       </item>
       
       <item name="Marabout (E18)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E18.svg" type="node,closedway">
@@ -1928,34 +525,12 @@
         <key key="seamark:type" value="building"/>
         <key key="seamark:building:function" value="marabout"/>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Buildings" text="Buildings"/>
-        <!--<space/>
-         <key key="historic" value="tomb"/>
-         <key key="religion" value="muslim"/>
-         <text key="name" text="Name"/>
-         <combo key="building" text="Building" readonly="true">
-         <list_entry value="yes" short_description="Generic Building"/>
-         <list_entry value="marabout"/>
-         <list_entry value="tomb"/>
-         <list_entry value="crypt"/>
-         </combo>-->
       </item>
       
       <item name="Cemetery (E19)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E19.svg" type="closedway">
         <label text="E19: Cemetery"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="cemetery"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Landmarks" text="Landmarks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:landuse=cemetery"/>
-         <key key="landuse" value="cemetery"/>
-         <text key="name" text="Name"/>
-         <combo key="religion" text="Religion" readonly="false">
-         <list_entry value="christian"/>
-         <list_entry value="muslim"/>
-         <list_entry value="jewish"/>
-         </combo>
-         <combo key="denomination" text="Denomination" readonly="false">
-         </combo>-->
       </item>
       
       <item name="Tower (E20)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E20.svg" type="node,closedway">
@@ -1969,41 +544,6 @@
           <list_entry value="television"/>
         </combo>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Landmarks" text="Landmarks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=tower"/>
-         <key key="man_made" value="tower"/>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <text key="height" text="Height over ground"/>
-         <text key="ele" text="Elevation of base over sea level"/>
-         <multiselect key="seamark:building:function" text="Building Function">
-         <list_entry value="pilot_lookout"/>
-         <list_entry value="lookout"/>
-         <list_entry value="cooling"/>
-         <list_entry value="observation"/>
-         <list_entry value="control"/>
-         <list_entry value="clock"/>
-         <list_entry value="light_support"/>
-         <list_entry value="airship_mooring"/>
-         <list_entry value="microwave"/>
-         <list_entry value="communication"/>
-         <list_entry value="radio"/>
-         <list_entry value="television"/>
-         <list_entry value="radar"/>
-         </multiselect>
-         <combo key="tower:type" text="Type">
-         <list_entry value="communication"/>
-         <list_entry value="observation"/>
-         </combo>
-         <combo key="tower:construction" text="Construction">
-         <list_entry value="concealed"/>
-         <list_entry value="dish"/>
-         <list_entry value="dome"/>
-         <list_entry value="freestanding"/>
-         <list_entry value="lattice"/>
-         </combo>-->
       </item>
       
       <item name="Water Tower (E21)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E21.svg" type="node,closedway">
@@ -2011,45 +551,18 @@
         <key key="seamark:type" value="tank"/>
         <key key="seamark:tank:category" value="water_tower"/>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Categories_of_Objects#Silos_and_tanks_.28CATSIL.29" text="Silos and Tanks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=water_tower"/>
-         <key key="man_made" value="water_tower"/>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <text key="capacity" text="Capacity"/>
-         <text key="height" text="Height over ground"/>-->
       </item>
       
       <item name="Chimney (E22)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E22.svg" type="node">
         <label text="E22: Chimney"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="chimney"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Landmarks" text="Landmarks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=chimney"/>
-         <key key="man_made" value="chimney"/>
-         <text key="name" text="Name (if known)"/>
-         <text key="ref" text="Reference"/>
-         <text key="height" text="Height over ground"/>
-         <text key="ele" text="Elevation of base over sea level"/>
-         <combo key="material" text="Material" readonly="false">
-         </combo>-->
       </item>
       
       <item name="Flare Stack (E23)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E23.svg" type="node">
         <label text="E23: Flare Stack"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="flare_stack"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Landmarks" text="Landmarks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=flare"/>
-         <key key="man_made" value="flare"/>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         <text key="height" text="Height over ground"/>
-         <text key="ele" text="Elevation of base over sea level"/>-->
       </item>
       
       <item name="Monument (E24)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E24.svg" type="node,closedway">
@@ -2063,79 +576,30 @@
           <list_entry value="statue"/>
         </combo>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Landmarks" text="Landmarks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:historic=monument"/>
-         <key key="historic" value="monument"/>
-         <text key="name" text="Name"/>
-         <text key="historic:civilization" text="Who raised the monument"/>-->
       </item>
       
       <item name="Windmill (E25.1-E25.2)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E25.svg" type="node,closedway">
         <label text="E25.1-25.2: Windmill"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="windmill"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Landmarks" text="Landmarks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=windmill"/>
-         <key key="man_made" value="windmill"/>
-         <text key="name" text="Name"/>
-         <check key="ruins" text="Ruined" value_on="yes" default="off"/>
-         <check key="disused" text="Disused" default="off"/>
-         <check key="tourism" text="Tourist Attraction" value_on="attraction" value_off="" default="off"/>
-         <check key="windmill:vanes" text="Have wind wanes" default="off"/>-->
       </item>
       
       <item name="Wind Turbine (E26.1)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E26.1.svg" type="node,closedway">
         <label text="E26.1-26.2: Wind Turbine"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="windmotor"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Landmarks" text="Landmarks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:power=generator"/>
-         <key key="power" value="generator"/>
-         <key key="generator:source" value="wind"/>
-         <text key="name" text="Name"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <text key="generator:output:electricity" text="Energy Output"/>
-         <combo key="generator:type" text="Generator Orientation">
-         <list_entry value="horizontal_axis"/>
-         <list_entry value="vertical_axis"/>
-         </combo>-->
       </item>
       
       <item name="Wind Farm (E26.2)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E26.1.svg" type="node,closedway">
         <label text="E26.1-26.2: Wind Farm"/>
         <key key="seamark:type" value="production_area"/>
         <key key="seamark:production_area:category" value="wind_farm"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Categories_of_Objects#Production_areas_.28CATPRA.29" text="Offshore Production Areas"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:power=generator"/>
-         <key key="power" value="generator"/>
-         <key key="generator:source" value="wind"/>
-         <text key="name" text="Name"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <text key="generator:output:electricity" text="Energy Output"/>-->
       </item>
       
       <item name="Flagpole (E27)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E27.svg" type="node">
         <label text="E27: Flagpole"/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="flagstaff"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Landmarks" text="Landmarks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=flagpole"/>
-         <key key="man_made" value="flagpole"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <combo key="type" text="Type">
-         <list_entry value="signal"/>
-         <list_entry value="national"/>
-         <list_entry value="governmental"/>
-         </combo>
-         <text key="height" text="Height over ground"/>
-         <check key="lit" text="Lit" default="off"/>-->
       </item>
       
       <item name="Radio or Television Mast (E28)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E28_.svg" type="node">
@@ -2147,16 +611,6 @@
           <list_entry value="television"/>
         </multiselect>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Landmarks" text="Landmarks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=mast"/>
-         <key key="man_made" value="mast"/>
-         <key key="tower:type" value="communication"/>
-         <key key="tower:construction" value="freestanding"/>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <text key="height" text="Height over ground"/>-->
       </item>
       
       <item name="Radio or Television Tower (E29)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E29.svg" type="node">
@@ -2168,16 +622,6 @@
           <list_entry value="television"/>
         </multiselect>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Landmarks" text="Landmarks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=tower"/>
-         <key key="man_made" value="tower"/>
-         <key key="tower:type" value="communication"/>
-         <key key="tower:construction" value="freestanding"/>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <text key="height" text="Height over ground"/>-->
       </item>
       
       <item name="Radar mast (E30.1)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E29.svg" type="node">
@@ -2185,18 +629,6 @@
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="mast"/>
         <key key="seamark:landmark:function" value="radar"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Landmarks" text="Landmarks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=mast"/>
-         <key key="man_made" value="mast"/>
-         <key key="tower:type" value="surveillance"/>
-         <key key="tower:construction" value="freestanding"/>
-         <text key="name" text="Name"/>
-         <text key="reference" text="Reference"/>
-         <text key="height" text="Height over ground"/>
-         <text key="surveillance:range" text="Radar Range"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>-->
       </item>
       
       <item name="Radar Tower (E30.2)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E29.svg" type="node">
@@ -2204,18 +636,6 @@
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="tower"/>
         <key key="seamark:landmark:function" value="radar"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Landmarks" text="Landmarks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=tower"/>
-         <key key="man_made" value="tower"/>
-         <key key="tower:type" value="surveillance"/>
-         <key key="tower:construction" value="freestanding"/>
-         <text key="name" text="Name"/>
-         <text key="reference" text="Reference"/>
-         <text key="height" text="Height over ground"/>
-         <text key="surveillance:range" text="Radar Range"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>-->
       </item>
       
       <item name="Radar Scanner (E30.3)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E29.svg" type="node">
@@ -2223,18 +643,6 @@
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="radar_scanner"/>
         <key key="seamark:landmark:function" value="radar"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Landmarks" text="Landmarks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=mast"/>
-         <key key="man_made" value="mast"/>
-         <key key="tower:type" value="surveillance"/>
-         <key key="tower:construction" value="freestanding"/>
-         <text key="name" text="Name"/>
-         <text key="reference" text="Reference"/>
-         <text key="height" text="Height over ground"/>
-         <text key="surveillance:range" text="Radar Range"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>-->
       </item>
       
       <item name="Radar Dome (E30.4)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E29.svg" type="node">
@@ -2242,71 +650,24 @@
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="dome"/>
         <key key="seamark:landmark:function" value="radar"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Landmarks" text="Landmarks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=dome"/>
-         <key key="man_made" value="dome"/>
-         <key key="tower:type" value="surveillance"/>
-         <key key="tower:construction" value="dome"/>
-         <text key="name" text="Name"/>
-         <text key="reference" text="Reference"/>
-         <text key="height" text="Height over ground"/>
-         <text key="surveillance:range" text="Radar Range"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>-->
       </item>
       
       <item name="Dish Aerial (E31)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E31.svg" type="node">
         <label text="E31: Dish Aerial"/>
         <key key="seamark:landmark:category" value="dish_aerial"/>
         <key key="seamark:type" value="landmark"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Landmarks" text="Landmarks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=tower"/>
-         <key key="man_made" value="tower"/>
-         <key key="tower:type" value="communication"/>
-         <key key="tower:construction" value="dish"/>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <text key="height" text="Height over ground"/>-->
       </item>
       
       <item name="Tanks (E32)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E32.svg" type="node,closedway">
         <label text="E32: Tanks"/>
         <key key="seamark:type" value="tank"/>
         <key key="seamark:tank:category" value="tank"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Categories_of_Objects#Silos_and_tanks_.28CATSIL.29" text="Silos and Tanks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=storage_tank"/>
-         <key key="man_made" value="storage_tank"/>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <text key="height" text="Height over ground"/>
-         <text key="capacity" text="Capacity"/>
-         <combo key="contents" text="Contents">
-         </combo>-->
       </item>
       
       <item name="Silos (E33)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E33.svg" type="node,closedway">
         <label text="E33: Silos"/>
         <key key="seamark:type" value="tank"/>
         <key key="seamark:tank:category" value="silo"/>
-        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Categories_of_Objects#Silos_and_tanks_.28CATSIL.29" text="Silos and Tanks"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=silo"/>
-         <key key="man_made" value="silo"/>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <text key="height" text="Height over ground"/>
-         <text key="capacity" text="Capacity"/>
-         <combo key="contents" text="Contents">
-         </combo>-->
       </item>
       
       <item name="Fortification (E34)" icon="presets/empty.png" type="node,closedway">
@@ -2322,264 +683,20 @@
           <list_entry value="redoubt"/>
         </combo>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Categories_of_Objects#Forts_.28CATFOR.29" text="Forts"/>
-        <!--<space/>
-         <check key="historic" value_on="castle" value_off="" default="off" text="Historic castle"/>
-         <combo key="castle_type" text="Type">
-         <list_entry value="defensive"/>
-         <list_entry value="stately"/>
-         <list_entry value="fortress"/>
-         <list_entry value="castrum"/>
-         <list_entry value="burg" icon="http://wiki.openstreetmap.org/w/images/2/21/Burg.svg" icon_size="16"/>
-         <list_entry value="schloss" icon="http://wiki.openstreetmap.org/w/images/8/89/Schloss.svg" icon_size="16"/>
-         <list_entry value="burg;schloss" icon="http://wiki.openstreetmap.org/w/images/4/4e/Schloss_burg.svg" icon_size="16"/>
-         <list_entry value="festung" icon="http://wiki.openstreetmap.org/w/images/0/0c/Festung.svg" icon_size="16"/>
-         <list_entry value="kremlin"/>
-         <list_entry value="shiro"/>
-         </combo>
-         <check key="ruins" text="Ruined" default="off"/>-->
       </item>
       
       <item name="Quarry (E35)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E36.svg" type="node,closedway">
         <label text="E35: Quarry (Surface Mine)"/>
         <key key="seamark:type" value="production_area"/>
         <key key="seamark:production_area:category" value="quarry"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:landuse=quarry"/>
-         <key key="landuse" value="quarry"/>
-         <text key="name" text="Name"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <combo key="resource" text="Resource">
-         <list_entry value="aggregate"/>
-         <list_entry value="bauxite"/>
-         <list_entry value="coal"/>
-         <list_entry value="copper"/>
-         <list_entry value="dimension_stone"/>
-         <list_entry value="gold"/>
-         <list_entry value="ilmenite"/>
-         <list_entry value="iron_ore"/>
-         <list_entry value="lead"/>
-         <list_entry value="limestone"/>
-         <list_entry value="nickel"/>
-         <list_entry value="rutile"/>
-         <list_entry value="salt"/>
-         <list_entry value="silver"/>
-         <list_entry value="tin"/>
-         <list_entry value="zinc"/>
-         <list_entry value="zircon"/>
-         <list_entry value="antimony"/>
-         <list_entry value="arsenic"/>
-         <list_entry value="asbestos"/>
-         <list_entry value="barite"/>
-         <list_entry value="bastnäsite"/>
-         <list_entry value="bentonite"/>
-         <list_entry value="beryl"/>
-         <list_entry value="bismuth"/>
-         <list_entry value="bitumen"/>
-         <list_entry value="borax"/>
-         <list_entry value="boron"/>
-         <list_entry value="bromide"/>
-         <list_entry value="caesium"/>
-         <list_entry value="chromite"/>
-         <list_entry value="cobalt"/>
-         <list_entry value="diamond"/>
-         <list_entry value="diatomite"/>
-         <list_entry value="dolomite"/>
-         <list_entry value="feldspar"/>
-         <list_entry value="fluorite"/>
-         <list_entry value="garnet"/>
-         <list_entry value="graphite"/>
-         <list_entry value="gypsum"/>
-         <list_entry value="iodine"/>
-         <list_entry value="jade"/>
-         <list_entry value="kaolinite"/>
-         <list_entry value="lanthanum"/>
-         <list_entry value="lithium"/>
-         <list_entry value="magnesite"/>
-         <list_entry value="magneisium"/>
-         <list_entry value="manganese"/>
-         <list_entry value="marble"/>
-         <list_entry value="mercury"/>
-         <list_entry value="mica"/>
-         <list_entry value="molybdenite"/>
-         <list_entry value="monazite"/>
-         <list_entry value="niobium"/>
-         <list_entry value="oil_sand"/>
-         <list_entry value="oil_shale"/>
-         <list_entry value="opal"/>
-         <list_entry value="palladium"/>
-         <list_entry value="peat"/>
-         <list_entry value="perlite"/>
-         <list_entry value="phospate"/>
-         <list_entry value="potash"/>
-         <list_entry value="platinum"/>
-         <list_entry value="radium"/>
-         <list_entry value="ruby"/>
-         <list_entry value="rubidium"/>
-         <list_entry value="sapphire"/>
-         <list_entry value="scandium"/>
-         <list_entry value="silica"/>
-         <list_entry value="sodium_carbonate"/>
-         <list_entry value="spongolite"/>
-         <list_entry value="strontium"/>
-         <list_entry value="sulphur"/>
-         <list_entry value="talc"/>
-         <list_entry value="terbium"/>
-         <list_entry value="tantalum"/>
-         <list_entry value="topaz"/>
-         <list_entry value="tungsten"/>
-         <list_entry value="uranium"/>
-         <list_entry value="vanadium"/>
-         <list_entry value="vermiculite"/>
-         <list_entry value="wollastonite"/>
-         <list_entry value="yttrium"/>
-         <list_entry value="zeolite"/>
-         </combo>-->
       </item>
       
       <item name="Mine (E36)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E36.svg" type="node,closedway">
         <label text="E36: Mine (Underground)"/>
         <key key="seamark:type" value="production_area"/>
         <key key="seamark:production_area" value="mine"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=mineshaft"/>
-         <key key="man_made" value="mineshaft"/>
-         <text key="name" text="Name"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <combo key="resource" text="Resource">
-         <list_entry value="aggregate"/>
-         <list_entry value="bauxite"/>
-         <list_entry value="coal"/>
-         <list_entry value="copper"/>
-         <list_entry value="dimension_stone"/>
-         <list_entry value="gold"/>
-         <list_entry value="ilmenite"/>
-         <list_entry value="iron_ore"/>
-         <list_entry value="lead"/>
-         <list_entry value="limestone"/>
-         <list_entry value="nickel"/>
-         <list_entry value="rutile"/>
-         <list_entry value="salt"/>
-         <list_entry value="silver"/>
-         <list_entry value="tin"/>
-         <list_entry value="zinc"/>
-         <list_entry value="zircon"/>
-         <list_entry value="antimony"/>
-         <list_entry value="arsenic"/>
-         <list_entry value="asbestos"/>
-         <list_entry value="barite"/>
-         <list_entry value="bastnäsite"/>
-         <list_entry value="bentonite"/>
-         <list_entry value="beryl"/>
-         <list_entry value="bismuth"/>
-         <list_entry value="bitumen"/>
-         <list_entry value="borax"/>
-         <list_entry value="boron"/>
-         <list_entry value="bromide"/>
-         <list_entry value="caesium"/>
-         <list_entry value="chromite"/>
-         <list_entry value="cobalt"/>
-         <list_entry value="diamond"/>
-         <list_entry value="diatomite"/>
-         <list_entry value="dolomite"/>
-         <list_entry value="feldspar"/>
-         <list_entry value="fluorite"/>
-         <list_entry value="garnet"/>
-         <list_entry value="graphite"/>
-         <list_entry value="gypsum"/>
-         <list_entry value="iodine"/>
-         <list_entry value="jade"/>
-         <list_entry value="kaolinite"/>
-         <list_entry value="lanthanum"/>
-         <list_entry value="lithium"/>
-         <list_entry value="magnesite"/>
-         <list_entry value="magneisium"/>
-         <list_entry value="manganese"/>
-         <list_entry value="marble"/>
-         <list_entry value="mercury"/>
-         <list_entry value="mica"/>
-         <list_entry value="molybdenite"/>
-         <list_entry value="monazite"/>
-         <list_entry value="niobium"/>
-         <list_entry value="oil_sand"/>
-         <list_entry value="oil_shale"/>
-         <list_entry value="opal"/>
-         <list_entry value="palladium"/>
-         <list_entry value="peat"/>
-         <list_entry value="perlite"/>
-         <list_entry value="phospate"/>
-         <list_entry value="potash"/>
-         <list_entry value="platinum"/>
-         <list_entry value="radium"/>
-         <list_entry value="ruby"/>
-         <list_entry value="rubidium"/>
-         <list_entry value="sapphire"/>
-         <list_entry value="scandium"/>
-         <list_entry value="silica"/>
-         <list_entry value="sodium_carbonate"/>
-         <list_entry value="spongolite"/>
-         <list_entry value="strontium"/>
-         <list_entry value="sulphur"/>
-         <list_entry value="talc"/>
-         <list_entry value="terbium"/>
-         <list_entry value="tantalum"/>
-         <list_entry value="topaz"/>
-         <list_entry value="tungsten"/>
-         <list_entry value="uranium"/>
-         <list_entry value="vanadium"/>
-         <list_entry value="vermiculite"/>
-         <list_entry value="wollastonite"/>
-         <list_entry value="yttrium"/>
-         <list_entry value="zeolite"/>
-         </combo>
-         <combo key="mineshaft_type" text="Shaft type">
-         <list_entry value="air"/>
-         <list_entry value="winding"/>
-         </combo>
-         <text key="mine" text="Name of Mine"/>
-         <text key="depth" text="Depth of shaft"/>
-         <check key="headframe" text="Headframe" default="off"/>
-         <check key="disused" text="Disused" default="off"/>-->
       </item>
       
-      <!--<item name="Stadium (Eb BR)" icon="presets/empty.png" type="node,closedway">
-       <label text="Eb: Stadium"/>
-       <key key="leisure" value="stadium"/>
-       <key key="seamark:type" value="building"/>
-       <key key="seamark:building:function" value="stadium"/>
-       <text key="name" text="Name"/>
-       <text key="owner" text="Owner"/>
-       <combo key="operator" text="Operator" readonly="false">
-       </combo>
-       <combo key="sport" text="Sport">
-       <list_entry value="american_football"/>
-       <list_entry value="archery"/>
-       <list_entry value="athletics"/>
-       <list_entry value="australian_football"/>
-       <list_entry value="badminton"/>
-       <list_entry value="baseball"/>
-       <list_entry value="basketball"/>
-       <list_entry value="canadian_football"/>
-       <list_entry value="cricket"/>
-       <list_entry value="dog_racing"/>
-       <list_entry value="equestrian"/>
-       <list_entry value="gymnastics"/>
-       <list_entry value="hockey"/>
-       <list_entry value="horse_racing"/>
-       <list_entry value="multi"/>
-       <list_entry value="rugby_league"/>
-       <list_entry value="rugby_union"/>
-       <list_entry value="running"/>
-       <list_entry value="skating"/>
-       <list_entry value="soccer"/>
-       <list_entry value="swimming"/>
-       <list_entry value="team_handball"/>
-       <list_entry value="tennis"/>
-       <list_entry value="volleyball"/>
-       </combo>
-       </item>-->
-      <!-- Ed Monastary - amenity=monastary -->
     </group>
     
     <!---***********************Section F: Ports***************************-->
@@ -2653,71 +770,9 @@
           <text key="harbour:information" text="General Information" />
         </item>
         
-        <!--<item name="Cruise Terminal" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" type="node,closedway">
-         <label text="F: Cruise Terminal"/>
-         <key key="amenity" value="cruise_terminal"/>
-         <key key="seamark:type" value="harbour"/>
-         <key key="seamark:harbour:category" value="passenger"/>
-         <text key="name" text="Name"/>
-         </item>
-         
-         <item name="Harbour Landuse" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" type="closedway,relation">
-         <label text="Harbour Land"/>
-         <key key="landuse" value="harbour"/>
-         <text key="name" text="Name"/>
-         </item>-->
-        
       </group>
       
       <group name="Protection Structures (F1-6)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg">
-        
-        <!--<item name="Dyke (F1)" icon="presets/empty.png" type="way,closedway">
-         <label text="F1: Dyke"/>
-         <key key="man_made" value="dyke"/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=dyke"/>
-         <text key="name" text="Name"/>
-         </item>
-         
-         <item name="Seawall (F2)" icon="presets/empty.png" type="way,closedway">
-         <label text="F2: Seawall"/>
-         <key key="barrier" value="wall"/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:barrier=wall"/>
-         <key key="wall" value="seawall"/>
-         <text key="name" text="Name"/>
-         </item>
-         
-         <item name="Causeway (F3)" icon="presets/empty.png" type="way">
-         <label text="F3: Causeway"/>
-         <key key="causeway" value="yes"/>
-         <key key="embankment" value="yes"/>
-         <link href="http://wiki.openstreetmap.org/wiki/Key:embankment"/>
-         <combo key="highway" text="Highway type">
-         <list_entry value="motorway" icon="presets/motorway.png"/>
-         <list_entry value="trunk" icon="presets/trunk.png"/>
-         <list_entry value="primary" icon="presets/primary.png"/>
-         <list_entry value="secondary" icon="presets/secondary.png"/>
-         <list_entry value="tertiary" icon="presets/tertiary.png"/>
-         <list_entry value="unclassified" icon="presets/unclassified.png"/>
-         <list_entry value="track" icon="presets/track1.png"/>
-         </combo>
-         <combo key="railway" text="Railway type">
-         <list_entry value="rail"/>
-         <list_entry value="light_rail"/>
-         <list_entry value="monorail"/>
-         <list_entry value="preserved"/>
-         <list_entry value="tram"/>
-         </combo>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         </item>
-         
-         <item name="Breakwater (F4)" icon="presets/empty.png" type="way,closedway">
-         <label text="F4: Breakwater"/>
-         <key key="man_made" value="breakwater"/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=breakwater"/>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         </item>-->
         
         <item name="Training Wall (F5)" icon="presets/empty.png" type="way,closedway">
           <label text="F5: Training Wall"/>
@@ -2728,25 +783,7 @@
             <list_entry value="submerged"/>
             <list_entry value="covers"/>
           </combo>
-          <!--<space/>
-           <key key="barrier" value="wall"/>
-           <key key="wall" value="training_wall"/>
-           <link href="http://wiki.openstreetmap.org/wiki/Tag:barrier=wall"/>
-           <text key="name" text="Name"/>
-           <text key="height" text="Height over ground"/>
-           <check key="tidal" text="Portion of wall is submerged only on high tide" default="off"/>
-           <check key="submerged" text="Portion of wall is submerged on low tide" default="off"/>-->
         </item>
-        
-        <!--<item name="Groyne (F6)" icon="presets/empty.png" type="way,closedway">
-         <label text="F6: Groyne"/>
-         <key key="man_made" value="groyne"/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=groyne"/>
-         <text key="name" text="Name"/>
-         <text key="height" text="Height over ground"/>
-         <check key="tidal" text="Portion is submerged only on high tide" default="off"/>
-         <check key="submerged" text="Portion is submerged on low tide" default="off"/>
-         </item>-->
         
       </group>
       
@@ -2794,31 +831,6 @@
           <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Harbours" text="Harbours"/>
         </item>
         
-        <!--<item name="Quay, Wharf, Pier, Jetty (F13-F15)" icon="presets/empty.png" type="way,closedway">
-         <label text="F13-F15: Quay, Wharf, Pier, Jetty"/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=pier"/>
-         <key key="man_made" value="pier"/>
-         <check key="floating" text="Floating Pier" default="off"/>
-         </item>
-         
-         <item name="Pontoon (F16)" icon="presets/empty.png" type="node,way,closedway">
-         <label text="F16: Pontoon"/>
-         <key key="man_made" value="pontoon"/>
-         <key key="waterway" value="pontoon"/>
-         <text key="name" text="Name"/>
-         </item>
-         
-         <item name="Landing for boats (F17)" icon="presets/empty.png" type="node">
-         <label text="F17: Landing for boats"/>
-         <key key="amenity" value="boat_ramp"/>
-         <key key="pier" value="landing_stage"/>
-         </item>
-         
-         <item name="Steps, landing stairs (F18)" icon="presets/empty.png" type="node,way,closedway">
-         <label text="F18: Steps, landing stairs"/>
-         <key key="highway" value="steps"/>
-         </item>-->
-        
         <item name="Designation of Berth (F19.1)" icon="presets/empty.png" type="node,way,closedway">
           <label text="Number, Name or Letter of Berth"/>
           <key key="seamark:type" value="berth"/>
@@ -2840,18 +852,6 @@
             <list_entry value="three_blue" short_description="Certain Explosives"  icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/E5_7.svg" icon_size="16"/>
             <list_entry value="one_red" short_description="Russian Inland Waterway Regulation" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/RIWR/keep_lookout.svg" icon_size="16"/>
           </combo>
-          <!--<space/>
-           <combo key="mooring" text="Moorings for">
-           <list_entry value="private"/>
-           <list_entry value="ferry"/>
-           <list_entry value="commercial"/>
-           <list_entry value="guest"/>
-           <list_entry value="cruise"/>
-           <list_entry value="public"/>
-           <list_entry value="yacht"/>
-           <list_entry value="declaration"/>
-           <list_entry value="pleasure_craft"/>
-           </combo>-->
         </item>
         
         <item name="Visitors Berth (F19.2)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U2.svg" type="node,way,closedway">
@@ -2886,10 +886,6 @@
             <list_entry value="slipway"/>
             <list_entry value="ramp"/>
           </combo>
-          <!--<space/>
-           <key key="leisure" value="slipway"/>
-           <text key="name" text="Name"/>
-           <text key="ref" text="Reference"/>-->
         </item>
         
         <item name="Gridiron (F24)" icon="presets/empty.png" type="node">
@@ -2905,15 +901,6 @@
             <list_entry value="dry_dock"/>
             <list_entry value="floating_dock"/>
           </combo>
-          <!--<space/>
-           <key key="waterway" value="dock"/>
-           <link href="http://wiki.openstreetmap.org/wiki/Tag:waterway=dock"/>
-           <combo key="dock" text="Type Dock" readonly="true" use_last_as_default="force" required="true">
-           <list_entry value="drydock"/>
-           <list_entry value="floating"/>
-           </combo>
-           <text key="name" text="Name"/>
-           <text key="ref" text="Reference"/>-->
         </item>
         
         <item name="Harbour Basin (F27-F28)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" type="closedway">
@@ -2931,23 +918,7 @@
             <list_entry value="floating"/>
             <list_entry value="retention"/>
           </combo>
-          <!--<space/>
-           <key key="emergency" value="oilbarrier"/>
-           <text key="ref" text="Reference"/>-->
         </item>
-        
-        <!--<item name="Works on land (F30)" icon="presets/empty.png" type="closedway">
-         <label text="F30: Works on Land"/>
-         <key key="landuse" value="construction"/>
-         <text key="name" text="Name"/>
-         <text key="note" text="Note"/>
-         </item>
-         
-         <item name="Works at sea (F31)" icon="presets/empty.png" type="closedway">
-         <label text="F31: Works at sea"/>
-         <text key="name" text="Name"/>
-         <text key="note" text="Note"/>
-         </item>-->
         
         <item name="Hulk (F34)" icon="presets/empty.png" type="closedway">
           <label text="F34: Hulk"/>
@@ -2967,65 +938,9 @@
           <label text="Fa: Bollard"/>
           <key key="seamark:type" value="mooring"/>
           <key key="seamark:mooring:category" value="bollard"/>
-          <!--<space/>
-           <text key="mooring:name" text="Name"/>-->
         </item>
         
-        <!--<item name="Culvert (Fa France)" icon="presets/empty.png" type="way">
-         <label text="Fa: Culvert"/>
-         <key key="tunnel" value="culvert"/>
-         <combo key="waterway" text="Waterway">
-         <list_entry value="river"/>
-         <list_entry value="stream"/>
-         <list_entry value="canal"/>
-         <list_entry value="ditch"/>
-         <list_entry value="drain"/>
-         </combo>
-         </item>
-         
-         <item name="Ditch (Fa Brazil)" icon="presets/empty.png" type="way">
-         <label text="Fa: Ditch"/>
-         <key key="waterway" value="ditch"/>
-         <text key="name" text="Name"/>
-         </item>
-         
-         <item name="Mooring Ring (Fb Norway)" icon="presets/empty.png" type="node">
-         <label text="Fb: Mooring Ring"/>
-         <key key="seamark:type" value="mooring"/>
-         <key key="seamark:mooring:category" value="ring"/>
-         <key key="mooring" value="wall"/>
-         <text key="mooring:name" text="Name"/>
-         </item>-->
-        
       </group>
-      
-      <!--<group name="Rivers, Canals, Barrages (F40-44)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg">
-       
-       <item name="Canal (F40)" icon="presets/empty.png" type="way,closedway">
-       <label text="F40: Canal"/>
-       <key key="waterway" value="canal"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:waterway=canal"/>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       <check key="cutting" text="Cutting" default="off"/>
-       <text key="width" text="Width"/>
-       </item>
-       
-       <item name="Lock Gate, Caisson (F41-F42)" icon="presets/empty.png" type="node,way,closedway">
-       <label text="F41-F42: Lock Gate, Caisson"/>
-       <key key="waterway" value="lock_gate"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:waterway=lock_gate"/>
-       <text key="name" text="Name"/>
-       </item>
-       
-       <item name="Dam (F44)" icon="presets/empty.png" type="node,way,closedway">
-       <label text="F44: Dam"/>
-       <key key="waterway" value="dam"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:waterway=dam"/>
-       <text key="name" text="Text"/>
-       </item>
-       
-       </group>-->
       
       <group name="Transhipment Facilities (F50-53)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg">
         
@@ -3033,26 +948,13 @@
           <label text="F50: Ro-Ro Terminal"/>
           <key key="seamark:type" value="harbour"/>
           <key key="seamark:harbour:category" value="roro"/>
-          <!--<space/>
-           <key key="amenity" value="roro_terminal"/>-->
         </item>
         
         <item name="Transit sheds, warehouses (F51)" icon="presets/empty.png" type="closedway">
           <label text="F51: Transit sheds, warehouses"/>
           <key key="seamark:type" value="buidling"/>
           <key key="seamark:building:function" value="transit_shed"/>
-          <!--<space/>
-           <link href="http://wiki.openstreetmap.org/wiki/Key:building"/>
-           <key key="building" value="warehouse"/>
-           <text key="name" text="Name"/>
-           <text key="ref" text="Reference"/>-->
         </item>
-        
-        <!--<item name="Timber Yard (F52)" icon="presets/empty.png" type="closedway">
-         <label text="F52: Timber Yard"/>
-         <key key="storage_area" value="timber"/>
-         <key key="landuse" value="utility"/>
-         </item>-->
         
         <item name="Crane (F53)" icon="presets/empty.png" type="node,closedway">
           <label text="F53: Crane"/>
@@ -3063,24 +965,6 @@
             <list_entry value="travelling"/>
             <list_entry value="a-frame"/>
           </combo>
-          <!--<space/>
-           <key key="man_made" value="crane"/>
-           <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=crane"/>
-           <text key="name" text="Name"/>
-           <combo key="operator" text="Operator" readonly="false">
-           </combo>
-           <label text="Crane Features:"/>
-           <combo key="crane:mobile" text="Crane Mobility">
-           <list_entry value="no"/>
-           <list_entry value="rail"/>
-           <list_entry value="street"/>
-           <list_entry value="work_site"/>
-           </combo>
-           <label text="Admissable load:"/>
-           <text key="crane:maxload" text="Payload SWL (to)"/>
-           <text key="crane:maxradius" text="Max length of boom (m)"/>
-           <text key="crane:maxlength" text="Max length of cargo (m)"/>
-           <text key="crane:maxwidth" text="Max width of cargo (m)"/>-->
         </item>
         
       </group>
@@ -3091,75 +975,30 @@
           <label text="F60: Harbour Master's Office"/>
           <key key="seamark:type" value="building"/>
           <key key="seamark:building:function" value="harbour_master"/>
-          <!--<space/>
-           <link href="http://wiki.openstreetmap.org/wiki/Tag:officer=government"/>
-           <key key="office" value="government"/>
-           <key key="amenity" value="harbourmaster"/>
-           <key key="harbour" value="harbour_master"/>
-           <combo key="building" text="Building">
-           <list_entry value="yes" display_value="Generic building"/>
-           <list_entry value="civic"/>
-           <list_entry value="public"/>
-           </combo>
-           <text key="name" text="Name"/>-->
         </item>
         
         <item name="Customs Office (F61)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F61.svg" type="node,closedway">
           <label text="F61: Customs Office"/>
           <key key="seamark:type" value="building"/>
           <key key="seamark:building:function" value="customs"/>
-          <!--<space/>
-           <link href="http://wiki.openstreetmap.org/wiki/Tag:office=government"/>
-           <key key="office" value="government"/>
-           <key key="amenity" value="customs"/>
-           <key key="harbour" value="customs"/>
-           <combo key="building" text="Building">
-           <list_entry value="yes" display_value="Generic building"/>
-           <list_entry value="civic"/>
-           <list_entry value="public"/>
-           </combo>
-           <text key="name" text="Name"/>-->
         </item>
         
         <item name="Quarantine Office, Health Officers Office (F62.1)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F62.1.svg" type="node,closedway">
           <label text="F62.1: Quarantine Office, Health Officers Office"/>
           <key key="seamark:type" value="building"/>
           <key key="seamark:building:function" value="health"/>
-          <!--<space/>
-           <key key="office" value="government"/>
-           <link href="http://wiki.openstreetmap.org/wiki/Tag:office=government"/>
-           <key key="type" value="quarantine"/>
-           <combo key="building" text="Building">
-           <list_entry value="yes" display_value="Generic building"/>
-           <list_entry value="civic"/>
-           <list_entry value="public"/>
-           <list_entry value="hospital"/>
-           </combo>
-           <text key="name" text="Name"/>-->
         </item>
         
         <item name="Hospital (F62.2)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F62.1.svg" type="node,closedway">
           <label text="F62.2: Hospital"/>
           <key key="seamark:type" value="building"/>
           <key key="seamark:building:function" value="hospital"/>
-          <!--<space/>
-           <key key="amenity" value="hospital"/>
-           <key key="building" value="hospital"/>
-           <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=hospital"/>
-           <text key="name" text="Name"/>-->
         </item>
         
         <item name="Post Office (F63)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F63.svg" type="node,closedway">
           <label text="F63: Post Office"/>
           <key key="seamark:type" value="building"/>
           <key key="seamark:building:function" value="post_office"/>
-          <!--<space/>
-           <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=post_office"/>
-           <key key="amenity" value="post_office"/>
-           <text key="name" text="Name"/>
-           <text key="ref" text="Reference"/>
-           <combo key="operator" text="Operator" readonly="false" use_last_as_default="force">
-           </combo>-->
         </item>
         
       </group>
@@ -3170,35 +1009,14 @@
     
     <group name="I: Depths" icon="presets/empty.png">
       
-      <!--<item name="Depth Source Quality" icon="presets/empty.png" type="node">
-       <label text="I: Depth Source Quality"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Key:depth"/>
-       <text key="depth" text="Depth" required="true"/>
-       <combo key="depth:source_quality" text="Source Quality" readonly="true" required="true">
-       <list_entry value="existence_doubtfull"/>
-       <list_entry value="sounding_doubtfull"/>
-       <list_entry value="reported"/>
-       <list_entry value="reported_not_confirmed"/>
-       </combo>
-       <text key="depth:source_quality:reportyear" text="Reported Year"/>
-       </item>-->
-      
       <item name="Dredged area (I20-23)" icon="presets/empty.png" type="closedway">
         <label text="I20-23: Dredged Area"/>
         <key key="seamark:type" value="dredged_area"/>
-        <!--<space/>
-         <key key="waterway" value="dredged_area"/>
-         <text key="depth:dredged" text="Dredged Depth"/>
-         <text key="depth:dredged:year" text="Year dredged"/>
-         <check key="maintained" text="Maintained" default="off"/>-->
       </item>
       
       <item name="Swept area (I24)" icon="presets/empty.png" type="closedway">
         <label text="I24: Swept Area"/>
         <key key="seamark:type" value="swept_area"/>
-        <!--<space/>
-         <key key="waterway" value="swept_area"/>
-         <text key="depth:swept:year" text="Year swept"/>-->
       </item>
       
     </group>
@@ -3257,27 +1075,7 @@
           <list_entry value="covers" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K11.svg" icon_size="16"/>
           <list_entry value="awash" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K12.svg" icon_size="16"/>
         </combo>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:seamark:type=rock"/>
-         <text key="ele" text="Elevation above high water"/>
-         <text key="depth" text="Depth under low water"/>
-         <text key="depth:swept" text="Swept to depth"/>
-         <text key="depth:clearance" text="Safe Clearance over object"/>-->
       </item>
-      
-      <!--<item name="Submerged coral reefs and pinnacles (K16)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K16.svg" type="closedway,relation">
-       <label text="K16: Coral Reefs"/>
-       <key key="natural" value="reef"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:natural=reef"/>
-       <key key="sub_sea" value="reef"/>
-       <text key="name" text="Name"/>
-       <text key="depth" text="Depth"/>
-       </item>
-       
-       <item name="Breakers (K17)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K17.svg" type="node">
-       <label text="K17: Breakers"/>
-       <key key="note" value="Breaker"/>
-       </item>-->
       
       <item name="Wreck (K20-K30)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K24.svg" type="node,closedway">
         <label text="K20-K30: Wreck"/>
@@ -3295,28 +1093,6 @@
           <list_entry value="covers"/>
           <list_entry value="awash"/>
         </combo>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:historic=wreck"/>
-         <key key="historic" value="wreck"/>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         <combo key="depth:verified" text="Depth verification" defalut="">
-         <list_entry value="sounding"/>
-         <list_entry value="diver"/>
-         <list_entry value="survey"/>
-         <list_entry value="yes"/>
-         <list_entry value="no"/>
-         </combo>
-         <text key="height" text="Height of wreck (from ground/seabed)"/>
-         <text key="ele" text="Elevation over chart datum"/>
-         <text key="depth" text="Depth where wreck lay"/>
-         <text key="depth:clearance" text="Clearance over Wreck"/>
-         <check key="depth:swept" text="Wreck is wire swept" default="off"/>
-         <check key="depth:dangerous" text="Wreck is dangerous for shipping" default="off"/>
-         <text key="wreck:length" text="Length of Wreck"/>
-         <text key="wreck:width" text="Width of Wreck"/>
-         <label text="If wreck is marked by light, see appropriate tag under letter P"/>
-         <label text="If wreck is marked by buoy, place separate node with appropriate tag under letter Q"/>-->
       </item>
       
       <item name="Foul Ground (K31)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K31.svg" type="node,closedway">
@@ -3381,9 +1157,6 @@
           <list_entry value="crustaceans"/>
           <list_entry value="oysters_mussels"/>
         </combo>
-        <!--<space/>
-         <text key="name" text="Name"/>
-         <key key="landuse" value="aquaculture"/>-->
       </item>
       
       <item name="Marine Farms (K48.*)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K48.1_no.svg" type="node,closedway">
@@ -3396,9 +1169,6 @@
           <list_entry value="seaweed"/>
           <list_entry value="pearl_culture"/>
         </combo>
-        <!--<space/>
-         <text key="name" text="Name"/>
-         <key key="landuse" value="aquaculture"/>-->
       </item>
       
     </group>
@@ -3418,22 +1188,6 @@
           <list_entry value="oil"/>
           <list_entry value="gas"/>
         </combo>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:waterway=offshore_field"/>
-         <key key="waterway" value="offshore_field"/>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         <text key="block" text="Block"/>
-         <combo key="status" text="Field Status">
-         <list_entry value="proposed"/>
-         <list_entry value="searching"/>
-         <list_entry value="drilling"/>
-         <list_entry value="producing"/>
-         <list_entry value="disused"/>
-         <list_entry value="abandoned"/>
-         </combo>
-         <combo key="operator" text="Operator" readonly="false" use_last_as_default="force">
-         </combo>-->
       </item>
       
       <item name="Offshore Platform (L2,L10)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/L/L10.svg" type="node,closedway">
@@ -3454,13 +1208,6 @@
           <list_entry value="observation"/>
           <list_entry value="nccb"/>
         </combo>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=offshore_platform"/>
-         <key key="man_made" value="offshore_platform"/>
-         <text key="ref" text="Reference"/>
-         <text key="operator" text="Operator"/>
-         <check key="aeroway" text="Helicopter Landing Deck" value_on="helipad" default="on"/>
-         <check key="disused" text="Disused" default="off"/>-->
       </item>
       
       <item name="Safety Zone (L3)" icon="presets/empty.png" type="closedway">
@@ -3486,10 +1233,6 @@
         <key key="seamark:landmark:category" value="windmotor"/>
         <key key="generator:source" value="wind"/>
         <text key="name" text="Name"/>
-        <!--<space/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <text key="generator:output:electricity" text="Electricity Output" default="yes"/>-->
       </item>
       
       <item name="Wind Farm (L5.2)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/L/L5.2.svg" type="closedway">
@@ -3497,34 +1240,17 @@
         <key key="seamark:type" value="production_area"/>
         <key key="seamark:production_area:category" value="wind_farm"/>
         <key key="generator:source" value="wind"/>
-        <!--<space/>
-         <text key="name" text="Name"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <text key="generator:output:electricity" text="Electricity Output" default="yes"/>-->
       </item>
       
       <item name="Wave Farm (L6)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/L/L6.svg" type="closedway">
         <label text="L6: Wave Farm"/>
         <key key="seamark:type" value="production_area"/>
         <key key="seamark:production_area:category" value="wave_energy"/>
-        <!--<space/>
-         <key key="generator:source" value="wave"/>
-         <text key="name" text="Name"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <text key="generator:output:electricity" text="Electricity Output" default="yes"/>-->
       </item>
       
       <item name="Flare (L11)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/L/L10.svg" type="node">
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="flare_stack"/>
-        <!--<space/>
-         <text key="seamark:name" text="Name"/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=flare"/>
-         <key key="man_made" value="flare"/>
-         <key key="offshore" value="yes"/>
-         <text key="ref" text="Reference"/>-->
       </item>
       
       <item name="Single Point Mooring (L12)" icon="presets/empty.png" type="node">
@@ -3535,9 +1261,6 @@
           <list_entry value="salm"/>
         </combo>
         <text key="seamark:name" text="Name"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Key:mooring"/>
-         <key key="mooring" value="spm"/>-->
       </item>
       
       <item name="Observation Platform(L13)" icon="presets/empty.png" type="node,closedway">
@@ -3570,9 +1293,6 @@
           <list_entry value="sbm"/>
         </combo>
         <text key="seamark:name" text="Name"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Key:mooring"/>
-         <key key="mooring" value="monobuoy"/>-->
       </item>
       
       <item name="Floating Production and Storage Units (FSU/FPSO) (L17)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/L/L17.svg" type="node">
@@ -3581,16 +1301,6 @@
         <key key="seamark:platform:category" value="fpso"/>
         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=floating_storage"/>
         <text key="seamark:name" text="Name"/>
-        <!--<space/>
-         <key key="man_made" value="floating_storage"/>
-         <combo key="operator" text="Operator" readonly="false" use_last_as_default="force">
-         </combo>
-         <check key="production" text="Production Unit" default="off"/>
-         <check key="storage" text="Storage Unit" default="on"/>
-         <check key="refrigeration" text="Refrigeration Unit (LNG)" default="off"/>
-         <check key="offloading" text="Offloading" default="on"/>
-         <check key="aeroway" text="Helicopter Landing Deck" value_on="helipad" default="on"/>
-         <check key="disused" text="Disused" default="off"/>-->
       </item>
       
       <!-- L18 Mooring ground tackle -->
@@ -3615,27 +1325,12 @@
           <list_entry value="above_mwl"/>
           <list_entry value="below_mwl"/>
         </combo>
-        <!--<space/>
-         <key key="man_made" value="petroleum_well"/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=petroleum_well"/>
-         <text key="name" text="Name"/>
-         <text key="ref" text="Reference"/>
-         <text key="depth" text="Depth of Well Head"/>
-         <text key="height" text="Well Head height above Seabed"/>
-         <text key="ele" text="Well Head height over sea surface"/>-->
       </item>
       
       <item name="Underwater Turbine (L24)" icon="presets/empty.png" type="node">
         <label text="L24: Underwater Turbine"/>
         <key key="seamark:type" value="obstruction"/>
         <key key="seamark:obstruction:category" value="foul_ground"/>
-        <!--<space/>
-         <key key="generator:source" value="tidal"/>
-         <key key="generator:method" value="run-of-the-river"/>
-         <text key="name" text="Name"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <text key="generator:output:electricity" text="Electricity Output" default="yes"/>-->
       </item>
       
       <item name="Submarine cable (L31)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/L/L31.svg" type="way">
@@ -3647,11 +1342,6 @@
           <list_entry value="power"/>
           <list_entry value="transmission"/>
         </combo>
-        <!--<space/>
-         <key key="man_made" value="submarine_cable"/>
-         <combo key="operator" text="Operator" readonly="false" delete="">
-         </combo>
-         <text key="seamark:cable_submarine:depth_buried" text="Buried Depth"/>-->
       </item>
       
       <item name="Submarine cable Area (L32)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/L/L31.svg" type="closedway">
@@ -3683,12 +1373,6 @@
         <combo key="seamark:pipeline_submarine:product" text="Product">
           <reference ref="product"/>
         </combo>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=pipeline"/>
-         <key key="location" value="underwater" match="none"/>
-         <key key="man_made" value="pipeline" match="none"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>-->
       </item>
       
     </group>
@@ -3705,6 +1389,7 @@
           <list_entry value="leading"/>
           <list_entry value="clearing"/>
         </combo>
+        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Leading_Lines" text="Leading Lines"/>
       </item>
       
       <item name="Recommended Track (M3-M6)" icon="presets/empty.png" type="way">
@@ -3722,11 +1407,7 @@
           <list_entry value="two-way"/>
         </combo>
         <text key="seamark:information" text="Maximum Draft"/>
-        <!--<space/>
-         <text key="maxdraught" text="Max Draught" match="key"/>
-         <text key="draft" text="Draft" match="key"/>
-         <text key="maxdraft" text="Maxdraft" match="key"/>
-         <link href="http://wiki.openstreetmap.org/wiki/Key:maxdraught"/>-->
+        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Leading_Lines" text="Leading Lines"/>
       </item>
       
       <item name="Established direction in TSS (M10)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/M/M10.svg" type="way,closedway">
@@ -3828,30 +1509,6 @@
           <list_entry value="ice"/>
           <list_entry value="swinging_wire"/>
         </combo>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:route=ferry"/>
-         <text key="name" text="Name"/>
-         <key key="type" value="route"/>
-         <key key="route" value="ferry"/>
-         <text key="ref" text="Reference"/>
-         <text key="symbol" text="Symbol Description"/>
-         <text key="description" text="Description"/>
-         <optional>
-         <text key="network" text="Network"/>
-         <combo key="operator" text="Operator" readonly="false">
-         </combo>
-         <text key="color" text="Color (hex)"/>
-         <text key="duration" text="Duration"/>
-         <check key="cable_ferry" text="Cable Ferry" value_on="yes" value_off="no" default="off"/>
-         </optional>
-         <roles>
-         <role key="" text="Route Segment" requisite="optional" type="way"/>
-         <role key="forward" text="Forward Segment" requisite="optional" type="way"/>
-         <role key="backward" text="Backward Segment" requisite="optional" type="way"/>
-         <role key="stop" text="Ferry Landing" requisite="optional" type="node"/>
-         <role key="forward_stop" text="Forward Ferry Landing" requisite="optional" type="node"/>
-         <role key="backward_stop" text="Backward Ferry Landing" requisite="optional" type="node"/>
-         </roles>-->
       </item>
       
     </group>
@@ -3917,10 +1574,11 @@
           <reference ref="restrictions"/>
         </multiselect>
         <text key="seamark:information" text="Additional Information"/>
+        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Anchorages" text="Anchorages"/>
       </item>
       
       <item name="Anchor berth (N11)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/N/N12.svg" type="node">
-        <label text="N11: Anchor Berthe"/>
+        <label text="N11: Anchor Berth"/>
         <key key="seamark:type" value="anchor_berth"/>
         <text key="seamark:name" text="Name"/>
         <text key="seamark:anchor_berth:radius" text="Radius"/>
@@ -3945,6 +1603,7 @@
           <reference ref="restrictions"/>
         </multiselect>
         <text key="seamark:information" text="Additional Information"/>
+        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Anchorages" text="Anchorages"/>
       </item>
       
       <item name="Seaplane operation area (N13)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/N/N13.svg" type="node,closedway">
@@ -3958,6 +1617,7 @@
         <key key="seamark:type" value="anchorage"/>
         <key key="seamark:anchorage:type" value="seaplane"/>
         <text key="seamark:name" text="Name"/>
+        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Anchorages" text="Anchorages"/>
       </item>
       
       <item name="Anchoring prohibited (N20)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/N/N20.svg" type="closedway">
@@ -3991,25 +1651,6 @@
         <multiselect key="seamark:restricted_area:restriction" text="Restriction">
           <reference ref="restrictions"/>
         </multiselect>
-        <!--<space/>
-         <key key="boundary" value="protected_area"/>
-         <text key="name" text="Name"/>
-         <combo key="protect_class" text="Protection type" use_last_as_default="force" required="true">
-         <list_entry value="1" display_value="Strict Nature Reserve"/>
-         <list_entry value="2" display_value="National Park"/>
-         <list_entry value="3" display_value="Natural Monument"/>
-         <list_entry value="4" display_value="Habitat/Species Management Area"/>
-         <list_entry value="5" display_value="Protected Landscape"/>
-         <list_entry value="6" display_value="Protected Area with sustainable use of Natural Resources"/>
-         <list_entry value="7" display_value="Nature-Feature Area"/>
-         <list_entry value="14" display_value="Species Protection Area"/>
-         </combo>
-         <text key="protection_title" text="Protection Title (not name of area)"/>
-         <combo key="protection_object" text="Protected Object" use_last_as_default="force" required="true">
-         <list_entry value="nature"/>
-         <list_entry value="habitat"/>
-         </combo>
-         <text key="related_law" text="Law Protecting site"/>-->
       </item>
       
       <item name="Explosives Dumping Ground (N23)" icon="presets/empty.png" type="closedway">
@@ -4107,55 +1748,6 @@
         <text key="seamark:name" text="Name"/>
       </item>
       
-      <!--<item name="International Border on Land (N40)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/N/N40.svg" type="way,relation">
-       <label text="N40: International Border on Land"/>
-       <key key="boundary" value="administrative"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:boundary=administrative"/>
-       <key key="admin_level" value="2"/>
-       <key key="maritime" value=""/>
-       <text key="name" text="Name"/>
-       <label text="This border should be part of the border relation surrounding the country"/>
-       </item>
-       
-       <item name="International Maritime Border (N41)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/N/N41.svg" type="way,relation">
-       <label text="N41: International Maritime Border"/>
-       <key key="boundary" value="administrative"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:boundary=maritime"/>
-       <key key="admin_level" value="2"/>
-       <key key="maritime" value="yes"/>
-       <key key="border_type" value="territorial"/>
-       <text key="name" text="Name"/>
-       <label text="This border should be part of the border relation surrounding the country"/>
-       </item>
-       
-       <item name="Baseline (N42)" icon="presets/empty.png" type="way,relation">
-       <label text="N42: Baseline"/>
-       <key key="boundary" value="maritime"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:boundary=maritime"/>
-       <key key="border_type" value="baseline"/>
-       </item>
-       
-       <item name="Contiguous Zone (N44)" icon="presets/empty.png" type="way,relation">
-       <label text="N44: Contiguous Zone"/>
-       <key key="boundary" value="maritime"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:boundary=maritime"/>
-       <key key="border_type" value="contiguous"/>
-       </item>
-       
-       <item name="Fishery Zone (N45)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/N/N45.svg" type="way,relation">
-       <label text="N45: Fishery Zone"/>
-       <key key="boundary" value="maritime"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:boundary=maritime"/>
-       <key key="border_type" value="fishing"/>
-       </item>
-       
-       <item name="Exclusive Economic Zone (N47)" icon="presets/empty.png" type="way,relation">
-       <label text="N47: Exclusive Economic Zone"/>
-       <key key="boundary" value="maritime"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:boundary=maritime"/>
-       <key key="border_type" value="eez"/>
-       </item>-->
-      
       <item name="Spoil Ground (N62.*)" icon="presets/empty.png" type="closedway">
         <label text="N62: Spoil Ground"/>
         <key key="seamark:type" value="dumping_ground"/>
@@ -4169,20 +1761,13 @@
         <key key="seamark:restricted_area:category" value="dredging"/>
       </item>
       
-      <item name="No Diving (Nb UK/Norway)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/N/Nb_no.svg" type="closedway">
-        <label text="Nb: No Diving"/>
-        <key key="seamark:type" value="restricted_area"/>
-        <key key="seamark:restricted_area:restriction" value="no_diving"/>
-        <text key="seamark:name" text="Name"/>
-      </item>
-      
     </group>
     
     <!---***********************Section P: Lights***************************-->
     
     <group name="P: Lights" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P1.major.svg">
       
-      <item name="Single non-directional Lights (P*)" type="node,closedway" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P1.minor.svg">
+      <item name="Single non-directional Lights (P1-P16)" type="node,closedway" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P1.minor.svg">
         <label text="Single non-directional Light"/>
         <multiselect key="seamark:light:colour" text="Colour">
           <reference ref="lightcolours"/>
@@ -4204,9 +1789,10 @@
         <combo key="seamark:light:visibility" text="Visibility">
           <reference ref="lightvisis"/>
         </combo>
+        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Lights" text="Lights"/>
       </item>
       
-      <group name="Direction Lights (P30)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P1.minor.svg">
+      <group name="Directional Lights (P30)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P1.minor.svg">
         
         <item name="Sector 1" type="node,closedway">
           <label text="Sector 1"/>
@@ -4229,6 +1815,7 @@
           <combo key="seamark:light:1:visibility" text="Visibility">
             <reference ref="lightvisis"/>
           </combo>
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Lights" text="Lights"/>
         </item>
         
         <item name="Sector 2" type="node,closedway">
@@ -4252,6 +1839,7 @@
           <combo key="seamark:light:2:visibility" text="Visibility">
             <reference ref="lightvisis"/>
           </combo>
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Lights" text="Lights"/>
         </item>
         
         <item name="Sector 3" type="node,closedway">
@@ -4275,6 +1863,7 @@
           <combo key="seamark:light:3:visibility" text="Visibility">
             <reference ref="lightvisis"/>
           </combo>
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Lights" text="Lights"/>
         </item>
         
         <item name="Sector 4" type="node,closedway">
@@ -4298,6 +1887,7 @@
           <combo key="seamark:light:4:visibility" text="Visibility">
             <reference ref="lightvisis"/>
           </combo>
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Lights" text="Lights"/>
         </item>
         
         <item name="Sector 5" type="node,closedway">
@@ -4321,11 +1911,12 @@
           <combo key="seamark:light:5:visibility" text="Visibility">
             <reference ref="lightvisis"/>
           </combo>
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Lights" text="Lights"/>
         </item>
         
       </group>
       
-      <group name="Sector Lights (P40-46)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P1.minor.svg">
+      <group name="Sectored Lights (P40-46)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P1.minor.svg">
         
         <item name="Sector 1" type="node,closedway">
           <label text="Sector 1"/>
@@ -4351,6 +1942,7 @@
           <combo key="seamark:light:1:visibility" text="Visibility">
             <reference ref="lightvisis"/>
           </combo>
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Lights" text="Lights"/>
         </item>
         
         <item name="Sector 2" type="node,closedway">
@@ -4377,6 +1969,7 @@
           <combo key="seamark:light:2:visibility" text="Visibility">
             <reference ref="lightvisis"/>
           </combo>
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Lights" text="Lights"/>
         </item>
         
         <item name="Sector 3" type="node,closedway">
@@ -4403,6 +1996,7 @@
           <combo key="seamark:light:3:visibility" text="Visibility">
             <reference ref="lightvisis"/>
           </combo>
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Lights" text="Lights"/>
         </item>
         
         <item name="Sector 4" type="node,closedway">
@@ -4429,6 +2023,7 @@
           <combo key="seamark:light:4:visibility" text="Visibility">
             <reference ref="lightvisis"/>
           </combo>
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Lights" text="Lights"/>
         </item>
         
         <item name="Sector 5" type="node,closedway">
@@ -4455,6 +2050,7 @@
           <combo key="seamark:light:5:visibility" text="Visibility">
             <reference ref="lightvisis"/>
           </combo>
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Lights" text="Lights"/>
         </item>
         
         <item name="Sector 6" type="node,closedway">
@@ -4481,13 +2077,15 @@
           <combo key="seamark:light:6:visibility" text="Visibility">
             <reference ref="lightvisis"/>
           </combo>
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Lights" text="Lights"/>
         </item>
         
       </group>
       
       <item name="Major Floating Light (P6)" type="node,closedway" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P6.svg">
         <label text="Major Floating Light"/>
-        <label text="***For Minor Floating Lights: see Q:Buoys***"/>
+        <space/>
+        <label text="*** For Minor Floating Lights: see Q:Buoys ***"/>
         <space/>
         <key key="seamark:type" value="light_vessel"/>
         <label text="Vessel attributes"/>
@@ -4511,6 +2109,7 @@
         <text key="seamark:light:period" text="Period"/>
         <text key="seamark:light:group" text="Group"/>
         <text key="seamark:light:range" text="Range"/>
+        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Lights" text="Lights"/>
       </item>
       
     </group>
@@ -4605,6 +2204,7 @@
           <list_entry value="squared"/>
           <list_entry value="border"/>
         </combo>
+        <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Topmarks_and_Daymarks" text="Topmarks and Daymarks"/>
       </chunk>
       
       <chunk id="ialas">
@@ -4827,10 +2427,9 @@
         
       </group>
       
-      <item name="Radar Reflector (Q9-10)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/S/S4.svg" type="node">
+      <item name="Radar Reflector (Q10-11)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/S/S4.svg" type="node">
         <label text="S4: Radar Reflector"/>
         <key key="seamark:radar_reflector" value="yes"/>
-        <link href="http://wiki.openstreetmap.org/wiki/Key:radar_reflector"/>
       </item>
       
       <!-- -->
@@ -5148,6 +2747,19 @@
           <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Buoys"/>
         </item>
         
+        <item name="IALA Emergency Wreck Buoys" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/pillar/vertical/yellow_blue.svg" type="node">
+          <label text="Emergency Wreck Buoy"/>
+          <key key="seamark:type" value="buoy_special_purpose"/>
+          <key key="seamark:buoy_special_purpose:category" value="warning"/>
+          <combo key="seamark:buoy_special_purpose:shape" text="Shape">
+            <reference ref="buoyshapes"/>
+          </combo>
+          <key key="seamark:buoy_special_purpose:colour" value="yellow;blue"/>
+          <key key="seamark:buoy_special_purpose:colour_pattern" value="vertical"/>
+          <text key="seamark:name" text="Name"/>
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Buoys"/>
+        </item>
+        
         <item name="Installation Buoy" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/super-buoy/generic.svg" type="node">
           <key key="seamark:type" value="buoy_installation"/>
           <combo key="seamark:buoy_installation:category" text="Category">
@@ -5190,7 +2802,9 @@
         </item>
         
         <item name="Minor Light Float" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q31/generic.svg" type="node">
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Lights"/>
           <label text="Minor Floating Light"/>
+          <space/>
           <label text="*** For Major Floating Lights: see P6 ***"/>
           <space/>
           <key key="seamark:type" value="light_float"/>
@@ -5690,12 +3304,6 @@
         <key key="seamark:radio_station:category" value="dgps"/>
         <text key="seamark:radio_station:frequency" text="Frequency (Hz)"/>
         <text key="seamark:name" text="Name"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=monitoring_station"/>
-         <key key="man_made" value="monitoring_station"/>
-         <check key="monitoring:gps" text="GPS" default="on"/>
-         <check key="monitoring:glonass" text="GLONASS" default="off"/>
-         <check key="monitoring:galileo" text="Galileo" default="off"/>-->
       </item>
       
     </group>
@@ -5716,12 +3324,6 @@
           <list_entry value="helicopter"/>
           <list_entry value="from_shore"/>
         </combo>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Key:pilotage"/>
-         <key key="pilotage" value="boarding_point"/>
-         <check key="deep_water" text="Deep Water" default="off"/>
-         <check key="helicopter" text="Helicopter Boarding" default="off"/>
-         <check key="launch" text="Pilot Launch Boarding" default="on"/>-->
       </item>
       
       <item name="Pilot Station, Lookout, Office (T2-T3)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/T/T1.1.svg" type="closedway">
@@ -5732,33 +3334,11 @@
           <list_entry value="pilot_lookout"/>
         </multiselect>
         <text key="seamark:information" text="Pilotage Sevice Information"/>
-        <!--<space/>
-         <key key="building" value="office"/>
-         <key key="office" value="administrative"/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:office=administrative"/>
-         <key key="pilotage" value="office"/>
-         <text key="name" text="Name"/>
-         <check key="lookout" text="Lookout" default="off"/>
-         <label text="Contact information"/>
-         <text key="contact:phone" text="Phone"/>
-         <text key="contact:fax" text="Fax"/>
-         <text key="contact:vhf" text="VHF"/>-->
       </item>
       
       <item name="Coastguard (T10-T11)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/T/T12.svg" type="node,closedway">
         <label text="T10-T11: Coastguard"/>
         <key key="seamark:type" value="coastguard_station"/>
-        <!--<space/>
-         <key key="amenity" value="coast_guard"/>
-         <key key="emergency" value="coast_guard"/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=coast_guard"/>
-         <text key="name" text="Name"/>
-         <label text="Contact information"/>
-         <text key="contact:phone" text="Phone"/>
-         <text key="contact:fax" text="Fax"/>
-         <text key="contact:vhf" text="VHF"/>
-         <label text="Emergency Services"/>
-         <check key="emergency_services" value_on="water" value_off="" text="Rescue Station" default="off"/>-->
       </item>
       
       <item name="Rescue Station (T11-T14)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/T/T12.svg" type="node,closedway">
@@ -5777,20 +3357,6 @@
           <list_entry value="aircraft"/>
           <list_entry value="tug"/>
         </multiselect>
-        <!--<space/>
-         <key key="emergency" value="water_rescue_station"/>
-         <link href="http://wiki.openstreetmap.org/wiki/Tag:emergency_services=water"/>
-         <text key="name" text="Name"/>
-         <label text="If Rescue Station is combined with Coastguard Station, consider using tagging scheme for Coastguard (T11)"/>
-         <combo key="amenity" text="Additional Services">
-         <list_entry value="coast_guard"/>
-         <list_entry value="lifeboat_station"/>
-         </combo>
-         <label text="Contact Details"/>
-         <text key="contact:vhf" text="VHF"/>
-         <label text="If contact details are left blank, one can assume that the lifeboat or rescue station is not manned 24h, and a local coast radio station must be contacted"/>
-         <text key="contact:phone" text="Telephone"/>
-         <text key="contact:fax" text="Fax"/>-->
       </item>
       
       <item name="Signal Station - Traffic (T20-T36)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/T/T20.svg" type="node">
@@ -5814,19 +3380,6 @@
           <list_entry value="oncoming_traffic"/>
         </multiselect>
         <text key="seamark:signal_station_traffic:channel" text="VHF Channel"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Key:signal_station"/>
-         <check key="light" text="Signal by light" default="off"/>
-         <check key="flag" text="Signal by flag" default="off"/>
-         <check key="man_made" text="Monitoring Station" value_on="monitoring_station" default="off"/>
-         <optional>
-         <label text="If Signal Station also is a Monitoring Station:"/>
-         <check key="monitoring:tide_gauge" text="Tide Gauge" default="off"/>
-         <check key="monitoring:tide_scale" text="Tide Scale" default="off"/>
-         <check key="monitoring:tide" text="Tide" default="off"/>
-         <check key="monitoring:stream" text="Stream" default="off"/>
-         <check key="monitoring:weather" text="Weather" default="off"/>
-         </optional>-->
       </item>
       
       <item name="Signal Station - Warning (T20-T36)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/T/T20.svg" type="node">
@@ -5856,19 +3409,6 @@
           <list_entry value="current"/>
         </multiselect>
         <text key="seamark:signal_station_warning:channel" text="VHF Channel"/>
-        <!--<space/>
-         <link href="http://wiki.openstreetmap.org/wiki/Key:signal_station"/>
-         <check key="light" text="Signal by light" default="off"/>
-         <check key="flag" text="Signal by flag" default="off"/>
-         <check key="man_made" text="Monitoring Station" value_on="monitoring_station" default="off"/>
-         <optional>
-         <label text="If Signal Station also is a Monitoring Station:"/>
-         <check key="monitoring:tide_gauge" text="Tide Gauge" default="off"/>
-         <check key="monitoring:tide_scale" text="Tide Scale" default="off"/>
-         <check key="monitoring:tide" text="Tide" default="off"/>
-         <check key="monitoring:stream" text="Stream" default="off"/>
-         <check key="monitoring:weather" text="Weather" default="off"/>
-         </optional>-->
       </item>
       
     </group>
@@ -6014,440 +3554,9 @@
         <text key="harbour:mechanics_workshop" text="Mechanics workshop" />
       </item>
       
-      <!--<item name="Visitors berth (U2-U3)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U2.svg" type="node,way,closedway">
-       <label text="U2-U3: Visitors Berth"/>
-       <key key="mooring" value="guest"/>
-       <key key="seamark:type" value="berth"/>
-       <key key="seamark:small_craft_facility:category" value="visitor_berth"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Key:mooring"/>
-       <label text="This tag should be used of appropriate type of berth."/>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       <check key="seamark:berth:category" text="Overnight Berth" value_on="overnight_accommodation" value_off="" default="off"/>
-       <check key="man_made" text="Pier" value_on="pier" default="off"/>
-       </item>
-       
-       <item name="Yacht Club, Sailing Club (U4)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U4.svg" type="node,closedway">
-       <label text="U4: Yacht Club, Sailing Club"/>
-       <key key="leisure" value="sailing_club"/>
-       <text key="name" text="Name"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility" value="nautical_club"/>
-       <label text="If the Nautical Club offers several services open for public or non-member visitors, see U32"/>
-       <text key="seamark:name" text="Facility Name"/>
-       <text key="contact:phone" text="Phone"/>
-       <text key="contact:fax" text="Fax"/>
-       <text key="contact:email" text="E-Mail"/>
-       <text key="contact:vhf" text="VHF Channel"/>
-       </item>
-       
-       <item name="Slipway (U5)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U5.svg" type="node,way,closedway">
-       <label text="U5: Slipway"/>
-       <key key="leisure" value="slipway"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="slipway"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:leisure=slipway"/>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       <combo key="harbour:slipway:type" text="Type">
-       <list_entry value="manual"/>
-       <list_entry value="car"/>
-       <list_entry value="cable_winch"/>
-       <list_entry value="crane"/>
-       <list_entry value="travellift"/>
-       </combo>
-       <text key="harbour:slipway:maxload" text="Max Work Load (SWL)"/>
-       </item>
-       
-       <item name="Boat Hoist (U6)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U6.svg" type="node,way,closedway">
-       <label text="U6: Boat Hoist"/>
-       <key key="waterway" value="boat_hoist"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="boat_hoist"/>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       </item>
-       
-       <item name="Public Landing, Steps, Ladder (U7)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U7.svg" type="node,way">
-       <label text="U7: Public Landing, Steps, Ladder"/>
-       <key key="highway" value="steps"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:highway=steps"/>
-       <text key="name" text="Name"/>
-       </item>
-       
-       <item name="Sailmaker (U8)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U8.svg" type="node,closedway">
-       <label text="U8: Sailmaker"/>
-       <key key="craft" value="sailmaker"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:craft=sailmaker"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="sailmaker"/>
-       <text key="name" text="Name"/>
-       </item>
-       
-       <item name="Boatyard (U9)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U9.svg" type="node,closedway">
-       <label text="U9: Boatyard"/>
-       <key key="waterway" value="boatyard"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="boatyard"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:waterway=boatyard"/>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       <combo key="operator" text="Operator" readonly="false">
-       </combo>
-       <combo key="boatyard:type" text="Yard Type">
-       <list_entry value="general"/>
-       <list_entry value="sailboat"/>
-       <list_entry value="motorboat"/>
-       <list_entry value="cargo_ship"/>
-       <list_entry value="passenger_ship"/>
-       </combo>
-       </item>
-       
-       <item name="Inn (U10)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U10.svg" type="node,closedway">
-       <label text="U10: Inn (B&amp;B, etc.)"/>
-       <key key="tourism" value="guest_house"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="public_inn"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:tourism=guest_house"/>
-       <text key="name" text="Name"/>
-       </item>
-       
-       <item name="Public House (U10)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U10.svg" type="node,closedway">
-       <label text="U10:Public House (Pub, etc)"/>
-       <key key="amenity" value="pub"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="public_inn"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=pub"/>
-       <text key="name" text="Name"/>
-       </item>
-       
-       <item name="Restaurant (U11)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U11.svg" type="node,closedway">
-       <label text="U11: Restaurant"/>
-       <key key="amenity" value="restaurant"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="restaurant"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=restaurant"/>
-       <text key="name" text="Name"/>
-       <combo key="operator" text="Operator" readonly="false">
-       </combo>
-       <combo key="cuisine" text="Cuisine">
-       </combo>
-       <check key="smoking" text="smoking" default="off"/>
-       <combo key="internet_access" text="Internet Access Point" readonly="true">
-       <list_entry value="terminal"/>
-       <list_entry value="wlan"/>
-       <list_entry value="wired"/>
-       <list_entry value="public"/>
-       <list_entry value="service"/>
-       </combo>
-       </item>
-       
-       <item name="Chandler (U12)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U12.svg" type="node,closedway">
-       <label text="U12: Chandler, Ship Chandler"/>
-       <key key="shop" value="ship_chandler"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="chandler"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:shop=chandler"/>
-       <text key="name" text="Name"/>
-       </item>
-       
-       <item name="Provisions (U13)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U13.svg" type="node,closedway">
-       <label text="U13: Provisions (Supermarket)"/>
-       <key key="shop" value="supermarket"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="provisions"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:shop=supermarket"/>
-       <text key="name" text="Name"/>
-       <label text="Note: This can also be tagged as shop=convinience, shop=general or shop=greengrocer."/>
-       <label text="All these tags will be treated equally in a rendererer, but shop=supermarket chosen as most common."/>
-       </item>
-       
-       <item name="Bank (U14)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U14b.svg" type="node,closedway">
-       <label text="U14: Bank"/>
-       <key key="amenity" value="bank"/>
-       <key key="seamark:type" value="building"/>
-       <key key="seamark:building:function" value="bank"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=bank"/>
-       <text key="name" text="Name"/>
-       <combo key="operator" text="Operator" readonly="false">
-       </combo>
-       <combo key="building" text="Building">
-       <list_entry value="yes"/>
-       <list_entry value="commercial"/>
-       <list_entry value="retail"/>
-       </combo>
-       </item>
-       
-       <item name="Exchange Office (U14)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U14e.svg" type="node,closedway">
-       <label text="U14: Exchange Office"/>
-       <key key="amenity" value="bureau_de_change"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=bureau_de_change"/>
-       <text key="name" text="Name"/>
-       <combo key="operator" text="Operator" readonly="false">
-       </combo>
-       </item>
-       
-       <item name="Physician, Doctor (U15)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U15.svg" type="node,closedway">
-       <label text="U15: Physician, Doctor"/>
-       <key key="amenity" value="doctors"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="doctor"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=doctors"/>
-       <text key="name" text="Name"/>
-       </item>
-       
-       <item name="Chemist (U16)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U16.svg" type="node,closedway">
-       <label text="U16: Chemist"/>
-       <key key="shop" value="chemist"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="pharmacy"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:shop=chemist"/>
-       <text key="name" text="Name"/>
-       </item>
-       
-       <item name="Pharmacy (U16)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U16.svg" type="node,closedway">
-       <label text="U16: Pharmacy"/>
-       <key key="amenity" value="pharmacy"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="pharmacy"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=pharmacy"/>
-       <text key="name" text="Name"/>
-       </item>
-       
-       <item name="Water Tap (U17)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U17.svg" type="node">
-       <label text="U17: Water Tap"/>
-       <key key="amenity" value="drinking_water"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="water_tap"/>
-       <key key="seamark:bunker_station:category" value="water"/>
-       <key key="harbour" value="drinking_water"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=drinking_water"/>
-       <text key="name" text="Name"/>
-       </item>
-       
-       <item name="Fuel Station (U18)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U18.svg" type="node,closedway">
-       <label text="U18: Fuel Station"/>
-       <key key="amenity" value="fuel"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="fuel_station"/>
-       <key key="seamark:bunker_station:category" value="diesel"/>
-       <key key="harbour" value="fuel"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=fuel"/>
-       <text key="name" text="Name"/>
-       <combo key="operator" text="Operator">
-       </combo>
-       <combo key="brand" text="Brand">
-       </combo>
-       <label text="Forms of Payment"/>
-       <check key="payment:cash" text="Cash" default="on"/>
-       <check key="payment:mastercard" text="Mastercard" default="off"/>
-       <check key="payment:visa" text="Visa" default="off"/>
-       <check key="payment:american_express" text="American Express" default="off"/>
-       <label text="Types of Fuel"/>
-       <check key="fuel:diesel" text="Diesel, MDO, MGO" default="on"/>
-       <check key="fuel:octane_95" text="95 Octane, Bensine, Gasoline" default="off"/>
-       <check key="fuel:lpg" text="LPG" default="off"/>
-       <check key="fuel:lng" text="LNG" default="off"/>
-       </item>
-       
-       <item name="Electricity (U19)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U19.svg" type="node">
-       <label text="U19: Electricity"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="electricity"/>
-       <key key="harbour:electricity" value="yes"/>
-       <text key="seamark:name" text="Name"/>
-       </item>
-       
-       <item name="Bottled Gas (U20)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U20.svg" type="node,closedway">
-       <label text="U20: Bottled Gas"/>
-       <key key="shop" value="gas"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="bottle_gas"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:shop=gas"/>
-       <text key="name" text="Name"/>
-       </item>
-       
-       <item name="Showers (U21)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U21.svg" type="node,closedway">
-       <label text="U21: Showers"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="showers"/>
-       <key key="amenity" value="shower"/>
-       <text key="name" text="Name"/>
-       <check key="building" text="Building" default="off"/>
-       </item>
-       
-       <item name="Laundrette, Dry cleaner (U22)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U22.svg" type="node,closedway">
-       <label text="U22: Landrette, Dry cleaner"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="launderette"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:shop=dry_cleaning"/>
-       <key key="shop" value="dry_cleaning"/>
-       <text key="name" text="Name"/>
-       <check key="self_service" text="Self Service" default="off"/>
-       <check key="laundry_service" text="Staff Service" default="off"/>
-       </item>
-       
-       <item name="Laundrette, Laundry (U22)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U22.svg" type="node,closedway">
-       <label text="U22: Landrette, Laundry, Dry cleaner"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="launderette"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:shop=laundry"/>
-       <key key="shop" value="laundry"/>
-       <text key="name" text="Name"/>
-       <check key="self_service" text="Self Service" default="off"/>
-       <check key="laundry_service" text="Staff Service" default="off"/>
-       </item>
-       
-       <item name="Public Toilet (U23)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U23.svg" type="node,closedway">
-       <label text="U23: Public Toilet"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="toilets"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=toilets"/>
-       <key key="amenity" value="toilets"/>
-       <text key="name" text="Name"/>
-       <check key="fee" text="Access Fee" default="off"/>
-       <label text="Accessable by:"/>
-       <check key="male" text="Male" default="on"/>
-       <check key="female" text="Female" default="on"/>
-       <check key="unisex" text="Unisex (same stall used by male and female)" default="off"/>
-       <check key="diaper" text="Changing baby diapers" default="off"/>
-       </item>
-       
-       <item name="Post Box (U24)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U24.svg" type="node">
-       <label text="U24: Post Box"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="post_box"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=post_box"/>
-       <key key="amenity" value="post_box"/>
-       <text key="ref" text="Reference"/>
-       </item>
-       
-       <item name="Public Telephone (U25)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U25.svg" type="node">
-       <label text="U25: Public Telephone"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="telephone"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=telephone"/>
-       <key key="amenity" value="telephone"/>
-       <text key="ref" text="Reference"/>
-       <label text="Forms of payment:"/>
-       <check key="payment:coins" text="Coins" default="off"/>
-       <check key="payment:credit_card" text="Credit Card" default="off"/>
-       <check key="payment:debit_card" text="Debit Card" default="off"/>
-       <check key="payment:telephone_card" text="Telephone Card" default="on"/>
-       </item>
-       
-       <item name="Refuse Bin (U26)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U26.svg" type="node">
-       <label text="U26: Refuse Bin"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="refuse_bin"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=waste_basket"/>
-       <key key="amenity" value="waste_basket"/>
-       </item>
-       
-       <item name="Public Car Park (U27)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U27.svg" type="node,closedway">
-       <label text="U27: Public Car Park"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="car_park"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=parking"/>
-       <key key="amenity" value="parking"/>
-       <combo key="parking" text="Parking">
-       <list_entry value="surface"/>
-       <list_entry value="multi-storey"/>
-       <list_entry value="underground"/>
-       <list_entry value="sheds"/>
-       <list_entry value="carports"/>
-       <list_entry value="garage_boxes"/>
-       </combo>
-       <text key="name" text="Name"/>
-       <text key="ref" text="Reference"/>
-       <label text="Only Public parkings are rendered on sea maps"/>
-       <combo key="access" text="Access">
-       <list_entry value="public"/>
-       <list_entry value="customers"/>
-       <list_entry value="private"/>
-       </combo>
-       <label text="U28: Parking for Boats and Trailers"/>
-       <check key="caravan" text="Trailers" default="off"/>
-       <check key="boat" text="Boat" default="off"/>
-       </item>
-       
-       <item name="Caravan Site (U29)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U29.svg" type="node,closedway">
-       <label text="U29: Caravane Site"/>
-       <key key="tourism" value="caravan_site"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="caravan_site"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:tourism=caravan_site"/>
-       <text key="name" text="Name"/>
-       <text key="capacity" text="Capacity"/>
-       <check key="fee" text="Fee" default="on"/>
-       <check key="power_supply" text="Power Supply" default="off"/>
-       <check key="tents" text="Tents" default="off"/>
-       </item>
-       
-       <item name="Camping Site (U30)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U30_br.svg" type="node,closedway">
-       <label text="U30: Camping Site"/>
-       <key key="tourism" value="camp_site"/>
-       <key key="seamark:type" value="small_craft_facility"/>
-       <key key="seamark:small_craft_facility:category" value="camping_site"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:tourism=camp_site"/>
-       <text key="name" text="Name"/>
-       <text key="maxtents" text="Capacity"/>
-       <check key="tents" text="Tents" default="on"/>
-       <check key="caravans" text="Caravans" default="off"/>
-       <check key="openfire" text="Open Fire" default="off"/>
-       </item>
-       
-       <item name="Water Police (U31)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U31.svg" type="node,closedway">
-       <label text="U31: Water Police"/>
-       <key key="seamark:type" value="building"/>
-       <key key="seamark:building:function" value="water-police_station"/>
-       <space/>
-       <key key="amenity" value="police"/>
-       <key key="police" value="water_police"/>
-       <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=police"/>
-       <text key="name" text="Name"/>
-       </item>
-       
-       <item name="Bathing Place (Ua Norway)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/Ua_no.svg" type="node,closedway">
-       <label text="Ua: Bathing Place"/>
-       <key key="leisure" value="bathing_place"/>
-       <text key="name" text="Name"/>
-       </item>
-       
-       <item name="Picnic Site (Ua Canada)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/Ua_ca.svg" type="node,closedway">
-       <label text="Ua: Picnic Site"/>
-       <key key="tourism" value="picnic_site"/>
-       <key key="seamark:small_craft_facility:category" value="picnic_site"/>
-       <text key="name" text="Name"/>
-       </item>
-       
-       <item name="Hotel (Uc Norway)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/Uc_no.svg" type="node,closedway">
-       <label text="Uc: Hotel"/>
-       <key key="tourism" value="hotel"/>
-       <key key="seamark:type" value="building"/>
-       <key key="seamark:building:function" value="hotel"/>
-       <key key="building" value="hotel"/>
-       <text key="name" text="Name"/>
-       <combo key="operator" text="Operator" readonly="false">
-       </combo>
-       <combo key="stars" text="Stars">
-       <list_entry value="1" display_value="*"/>
-       <list_entry value="1S" display_value="*S"/>
-       <list_entry value="2" display_value="**"/>
-       <list_entry value="2S" display_value="**S"/>
-       <list_entry value="3" display_value="***"/>
-       <list_entry value="3S" display_value="***S"/>
-       <list_entry value="4" display_value="****"/>
-       <list_entry value="4S" display_value="****S"/>
-       <list_entry value="5" display_value="*****"/>
-       <list_entry value="5S" display_value="*****S"/>
-       </combo>
-       <text key="rooms" text="Rooms"/>
-       </item>-->
-      
     </group>
     
-    <item name="FIXME" icon="presets/empty.png" type="node,way,closedway,relation">
+    <item name="FIXMEs" icon="presets/empty.png" type="node,way,closedway,relation">
       <label text="Seamark Fixme's"/>
       <combo key="seamark:fixme" required="true" text="FIXME" use_last_as_default="true" match="key">
         <list_entry value="beacon_guess"/>
