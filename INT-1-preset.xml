@@ -2329,7 +2329,7 @@
           <reference ref="topmarks"/>
         </item>
         
-        <group name="IALA Topmarks">
+        <group name="IALA Topmarks" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_up/green.svg">
           
           <group name="IALA-A Lateral Topmarks" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_up/green.svg">
             
@@ -2441,6 +2441,136 @@
           
         </group>
         
+        <group name="CEVNI Topmarks" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_down/red.svg">
+          
+          <group name="Channel and Waterway Limit Topmarks" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_down/red.svg">
+            
+            <item name="Right Bank Topmark" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_down/red.svg" type="node">
+              <key key="seamark:topmark:shape" value="cone, point down"/>
+              <key key="seamark:topmark:colour" value="red"/>
+              <key key="seamark:topmark:colour_pattern" value=""/>
+            </item>
+            
+            <item name="Left Bank Topmark" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_up/green.svg" type="node">
+              <key key="seamark:topmark:shape" value="cone, point up"/>
+              <key key="seamark:topmark:colour" value="green"/>
+              <key key="seamark:topmark:colour_pattern" value=""/>
+            </item>
+            
+          </group>
+          
+          <item name="Bifurcation Topmark" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/2_cones_point_together/red_green.svg" type="node">
+            <key key="seamark:topamrk:shape" value="2 cones point together"/>
+            <key key="seamark:topmark:colour" value="red;green"/>
+            <key key="seamark:topmark:colour_pattern" value=""/>
+          </item>
+          
+          <group name="Channel Indicator Topmarks" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/buoyant/horizontal/red_green_red_green.svg">
+            
+            <group name="Channel by Right Bank Topmarks" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/square/horizontal/white_red_white.svg">
+              
+              <item name="(1)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/square/horizontal/white_red_white.svg" type="node">
+                <key key="seamark:topmark:shape" value="square"/>
+                <key key="seamark:topmark:colour" value="white;red;white"/>
+                <key key="seamark:topmark:colour_pattern" value="horizontal"/>
+              </item>
+              
+              <item name="(2)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/square/border/red_white.svg" type="node">
+                <key key="seamark:topmark:shape" value="square"/>
+                <key key="seamark:topmark:colour" value="red;white"/>
+                <key key="seamark:topmark:colour_pattern" value="border"/>
+              </item>
+              
+            </group>
+            
+            <group name="Channel by Left Bank Topmarks" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/rhombus/horizontal/green_white.svg">
+              
+              <item name="(1)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/rhombus/horizontal/green_white.svg" type="node">
+                <key key="seamark:topmark:shape" value="rhombus"/>
+                <key key="seamark:topmark:colour" value="white;green;white"/>
+                <key key="seamark:topmark:colour_pattern" value="horizontal"/>
+              </item>
+              
+              <item name="(2)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/rhombus/border/green_white.svg" type="node">
+                <key key="seamark:topmark:shape" value="rhombus"/>
+                <key key="seamark:topmark:colour" value="green;white"/>
+                <key key="seamark:topmark:colour_pattern" value="border"/>
+              </item>
+              
+            </group>
+            
+            <group name="Channel Crosses to Right Bank Topmarks" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/x-shape/yellow.svg">
+              
+              <item name="(1)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/rhombus/vertical/yellow_black_yellow.svg" type="node">
+                <key key="seamark:topmark:shape" value="rhombus"/>
+                <key key="seamark:topmark:colour" value="yellow;black;yellow"/>
+                <key key="seamark:topmark:colour_pattern" value="vertical"/>
+              </item>
+              
+              <item name="(2)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/x-shape/yellow.svg" type="node">
+                <key key="seamark:topmark:shape" value="x-shape"/>
+                <key key="seamark:topmark:colour" value="yellow"/>
+                <key key="seamark:topmark:colour_pattern" value=""/>
+              </item>
+              
+            </group>
+            
+            <group name="Channel Crosses to Left Bank Topmarks" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cross/yellow.svg">
+              
+              <item name="(1)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/square/vertical/yellow_black_yellow.svg" type="node">
+                <key key="seamark:topmark:shape" value="square"/>
+                <key key="seamark:topmark:colour" value="yellow;black;yellow"/>
+                <key key="seamark:topmark:colour_pattern" value="vertical"/>
+              </item>
+              
+              <item name="(2)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cross/yellow.svg" type="node">
+                <key key="seamark:topmark:shape" value="cross"/>
+                <key key="seamark:topmark:colour" value="yellow"/>
+                <key key="seamark:topmark:colour_pattern" value=""/>
+              </item>
+              
+            </group>
+            
+          </group>
+          
+          <group name="Warning Topmarks" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_down/red.svg">
+            
+            <group name="Right Bank Warning Topmarks" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_down/red.svg">
+              
+              <item name="(1)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_down/red.svg" type="node">
+                <key key="seamark:topmark:shape" value="cone, point down"/>
+                <key key="seamark:topmark:colour" value="red"/>
+                <key key="seamark:topmark:colour_pattern" value=""/>
+              </item>
+              
+              <item name="(2)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/triangle_point_down/border/red_white.svg" type="node">
+                <key key="seamark:topmark:shape" value="triangle, point down"/>
+                <key key="seamark:topmark:colour" value="red;white"/>
+                <key key="seamark:topmark:colour_pattern" value="border"/>
+              </item>
+              
+            </group>
+            
+            <group name="Left Bank Warning Topmarks" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_up/green.svg">
+              
+              <item name="(1)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/cone_point_up/green.svg" type="node">
+                <key key="seamark:topmark:shape" value="cone, point up"/>
+                <key key="seamark:topmark:colour" value="green"/>
+                <key key="seamark:topmark:colour_pattern" value=""/>
+              </item>
+              
+              <item name="(2)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/triangle_point_up/border/green_white.svg" type="node">
+                <key key="seamark:topmark:shape" value="triangle, point up"/>
+                <key key="seamark:topmark:colour" value="green;white"/>
+                <key key="seamark:topmark:colour_pattern" value="border"/>
+              </item>
+              
+            </group>
+            
+          </group>
+          
+        </group>
+        
       </group>
       
       <item name="Radar Reflector (Q10-11)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/S/S4.svg" type="node">
@@ -2448,7 +2578,6 @@
         <key key="seamark:radar_reflector" value="yes"/>
       </item>
       
-      <!-- -->
       <group name="Buoys and Floats (Q20-Q71)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/pillar/generic.svg">
         
         <group name="Buoys in General" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/pillar/generic.svg">
