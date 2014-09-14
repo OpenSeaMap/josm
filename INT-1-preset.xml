@@ -4726,7 +4726,7 @@
     
     <group name="U: Small Craft (Leisure) Facilities" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U1.1.svg">
       
-      <item name="General Information (U1.1/1.2)" icon="http://dev.openseamap.org/josm/icons/Marina16.png" type="node,way,closedway,relation">
+      <item name="Marinas (U1.1/1.2)" icon="http://dev.openseamap.org/josm/icons/Marina16.png" type="node,way,closedway,relation">
         <label text="General Information (U1.1/1.2)" icon="http://dev.openseamap.org/josm/icons/Marina16.png"/>
         <space/>
         <key key="leisure" value="marina" />
