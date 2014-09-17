@@ -1230,8 +1230,8 @@
         <key key="seamark:obstruction:category" value="fish_haven"/>
       </item>
       
-      <item name="Shellfish Beds (K47)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K48.1_no.svg" type="node,closedway">
-        <label text="K47: Shellfish Beds" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K48.1_no.svg"/>
+      <item name="Shellfish Beds (K47)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K48.1.svg" type="node,closedway">
+        <label text="K47: Shellfish Beds" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K48.1.svg"/>
         <space/>
         <key key="seamark:type" value="marine_farm"/>
         <combo key="seamark:marine_farm:category" text="Type">
@@ -1240,8 +1240,8 @@
         </combo>
       </item>
       
-      <item name="Marine Farms (K48.*)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K48.1_no.svg" type="node,closedway">
-        <label text="K48: Marine farms" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K48.1_no.svg"/>
+      <item name="Marine Farms (K48.*)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K48.1.svg" type="node,closedway">
+        <label text="K48: Marine farms" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K48.1.svg"/>
         <space/>
         <key key="seamark:type" value="marine_farm"/>
         <combo key="seamark:marine_farm:category" text="Type">
