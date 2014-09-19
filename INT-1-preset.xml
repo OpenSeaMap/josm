@@ -470,9 +470,9 @@
       </item>
       
       <item name="Landmark Churches (E10.2-E10.4)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E10.svg" type="node,closedway">
-        <key key="seamark:building:function" value="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E10.svg"/>
-        <label text="E10-E11: Landmark Churches"/>
+        <label text="E10-E11: Landmark Churches" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E10.svg"/>
         <space/>
+        <key key="seamark:building:function" value=""/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:function" value="church"/>
         <combo key="seamark:landmark:category" text="Landmark" readonly="true">
