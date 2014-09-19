@@ -132,6 +132,13 @@
     <list_entry value="magenta" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/magenta.svg" icon_size="16"/>
   </chunk>
   
+  <chunk id="othercolours">
+    <list_entry value="black" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/black.svg" icon_size="16"/>
+    <list_entry value="grey" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/grey.svg" icon_size="16"/>
+    <list_entry value="brown" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/brown.svg" icon_size="16"/>
+    <list_entry value="pink" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/pink.svg" icon_size="16"/>
+  </chunk>
+  
   <chunk id="lightchars">
     <list_entry value="F"/>
     <list_entry value="Fl"/>
@@ -199,14 +206,6 @@
     <list_entry value="restricted"/>
     <list_entry value="obscured"/>
     <list_entry value="part_obscured"/>
-  </chunk>
-  
-  <chunk id="colours">
-    <reference ref="lightcolours"/>
-    <list_entry value="black" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/black.svg" icon_size="16"/>
-    <list_entry value="grey" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/grey.svg" icon_size="16"/>
-    <list_entry value="brown" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/brown.svg" icon_size="16"/>
-    <list_entry value="pink" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/pink.svg" icon_size="16"/>
   </chunk>
   
   <chunk id="patterns">
@@ -439,8 +438,9 @@
         <multiselect key="seamark:landmark:function" text="Function" match="key">
           <reference ref="function"/>
         </multiselect>
-        <multiselect key="seamark:landmark:colour" text="Colours">
-          <reference ref="colours"/>
+        <multiselect key="seamark:landmark:colour" text="Colour(s)">
+          <reference ref="lightcolours"/>
+          <reference ref="othercolours"/>
         </multiselect>
         <combo key="seamark:landmark:colour_pattern" text="Colour Pattern">
           <list_entry value="vertical"/>
@@ -2241,7 +2241,8 @@
         <key key="seamark:type" value="light_vessel"/>
         <label text="Vessel attributes"/>
         <multiselect key="seamark:light_vessel:colour" text="Colour(s)">
-          <reference ref="colours"/>
+          <reference ref="lightcolours"/>
+          <reference ref="othercolours"/>
         </multiselect>
         <combo key="seamark:light_vessel:colour_pattern" text="Pattern">
           <list_entry value="vertical"/>
@@ -2346,7 +2347,8 @@
           <reference ref="topshapes"/>
         </combo>
         <multiselect key="seamark:topmark:colour" text="Topmark Colour(s)" required="true" match="key">
-          <reference ref="colours"/>
+          <reference ref="lightcolours"/>
+          <reference ref="othercolours"/>
         </multiselect>
         <combo key="seamark:topmark:colour_pattern" text="Colour Pattern">
           <list_entry value="horizontal"/>
@@ -2791,7 +2793,8 @@
               <reference ref="buoyshapes"/>
             </combo>
             <multiselect key="seamark:buoy_lateral:colour" text="Colour(s)">
-              <reference ref="colours"/>
+              <reference ref="lightcolours"/>
+              <reference ref="othercolours"/>
             </multiselect>
             <combo key="seamark:buoy_lateral:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
@@ -2811,7 +2814,8 @@
               <reference ref="buoyshapes"/>
             </combo>
             <multiselect key="seamark:buoy_cardinal:colour" text="Colour(s)">
-              <reference ref="colours"/>
+              <reference ref="lightcolours"/>
+              <reference ref="othercolours"/>
             </multiselect>
             <combo key="seamark:buoy_cardinal:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
@@ -2828,7 +2832,8 @@
               <reference ref="buoyshapes"/>
             </combo>
             <multiselect key="seamark:buoy_safe_water:colour" text="Colour(s)">
-              <reference ref="colours"/>
+              <reference ref="lightcolours"/>
+              <reference ref="othercolours"/>
             </multiselect>
             <combo key="seamark:buoy_safe_water:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
@@ -2845,7 +2850,8 @@
               <reference ref="buoyshapes"/>
             </combo>
             <multiselect key="seamark:buoy_isolated_danger:colour" text="Colour(s)">
-              <reference ref="colours"/>
+              <reference ref="lightcolours"/>
+              <reference ref="othercolours"/>
             </multiselect>
             <combo key="seamark:buoy_isolated_danger:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
@@ -2865,7 +2871,8 @@
               <reference ref="buoyshapes"/>
             </combo>
             <multiselect key="seamark:buoy_special_purpose:colour" text="Colour(s)">
-              <reference ref="colours"/>
+              <reference ref="lightcolours"/>
+              <reference ref="othercolours"/>
             </multiselect>
             <combo key="seamark:buoy_special_purpose:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
@@ -3257,7 +3264,8 @@
             <reference ref="buoyshapes"/>
           </combo>
           <multiselect key="seamark:buoy_installation:colour" text="Colour(s)">
-            <reference ref="colours"/>
+            <reference ref="lightcolours"/>
+            <reference ref="othercolours"/>
           </multiselect>
           <combo key="seamark:buoy_installation:colour_pattern" text="Pattern">
             <list_entry value="vertical"/>
@@ -3278,7 +3286,8 @@
             <reference ref="buoyshapes"/>
           </combo>
           <multiselect key="seamark:mooring:colour" text="Colour(s)">
-            <reference ref="colours"/>
+            <reference ref="lightcolours"/>
+            <reference ref="othercolours"/>
           </multiselect>
           <combo key="seamark:mooring:colour_pattern" text="Pattern">
             <list_entry value="vertical"/>
@@ -3298,7 +3307,8 @@
           <key key="seamark:type" value="light_float"/>
           <label text="Float attributes"/>
           <multiselect key="seamark:light_float:colour" text="Colour(s)">
-            <reference ref="colours"/>
+            <reference ref="lightcolours"/>
+            <reference ref="othercolours"/>
           </multiselect>
           <combo key="seamark:light_float:colour_pattern" text="Pattern">
             <list_entry value="vertical"/>
@@ -3339,7 +3349,8 @@
               <reference ref="beaconshapes"/>
             </combo>
             <multiselect key="seamark:beacon_lateral:colour" text="Colour(s)">
-              <reference ref="colours"/>
+              <reference ref="lightcolours"/>
+              <reference ref="othercolours"/>
             </multiselect>
             <combo key="seamark:beacon_lateral:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
@@ -3359,7 +3370,8 @@
               <reference ref="beaconshapes"/>
             </combo>
             <multiselect key="seamark:beacon_cardinal:colour" text="Colour(s)">
-              <reference ref="colours"/>
+              <reference ref="lightcolours"/>
+              <reference ref="othercolours"/>
             </multiselect>
             <combo key="seamark:beacon_cardinal:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
@@ -3376,7 +3388,8 @@
               <reference ref="beaconshapes"/>
             </combo>
             <multiselect key="seamark:beacon_safe_water:colour" text="Colour(s)">
-              <reference ref="colours"/>
+              <reference ref="lightcolours"/>
+              <reference ref="othercolours"/>
             </multiselect>
             <combo key="seamark:beacon_safe_water:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
@@ -3393,7 +3406,8 @@
               <reference ref="beaconshapes"/>
             </combo>
             <multiselect key="seamark:beacon_isolated_danger:colour" text="Colour(s)">
-              <reference ref="colours"/>
+              <reference ref="lightcolours"/>
+              <reference ref="othercolours"/>
             </multiselect>
             <combo key="seamark:beacon_isolated_danger:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
@@ -3413,7 +3427,8 @@
               <reference ref="beaconshapes"/>
             </combo>
             <multiselect key="seamark:beacon_special_purpose:colour" text="Colour(s)">
-              <reference ref="colours"/>
+              <reference ref="lightcolours"/>
+              <reference ref="othercolours"/>
             </multiselect>
             <combo key="seamark:beacon_special_purpose:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
@@ -4927,6 +4942,8 @@
     <item name="README">
       <label text="Documentation of the tagging provided by this preset can be found here:"/>
       <space/>
+      <link href="http://www.iho.int/iho_pubs/standard/S-4/INT1_FR_Ed5_2012.pdf" text="IHO INT-1 (English/French)"/>
+      <link href="http://www.nauticalcharts.noaa.gov/mcd/chart1/ChartNo1.pdf" text="US NOAA INT-1"/>
       <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Tag_Values" text="Seamark Tag Values"/>
       <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Objects" text="Seamark Objects"/>
       <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Attributes" text="Seamark Attributes"/>
