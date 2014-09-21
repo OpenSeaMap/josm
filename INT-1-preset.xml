@@ -274,7 +274,7 @@
       <item name="Single Buildings (D2, D5, D6)" icon="presets/empty.png" type="node,closedway">
         <label text="D2: Single Buildings"/>
         <key key="seamark:type" value="building"/>
-        <multiselect key="seamark:building:function" text="Seamark Building Function" default="" match="key">
+        <multiselect key="seamark:building:function" text="Seamark Building Function" default="" >
           <reference ref="function"/>
         </multiselect>
         <combo key="seamark:building:shape" text="Seamark Building Shape" default="">
@@ -293,7 +293,7 @@
       <item name="Bridge (D20-D24)" icon="presets/empty.png" type="node,way,closedway">
         <label text="D20-D24: Bridge"/>
         <key key="seamark:type" value="bridge"/>
-        <combo key="seamark:bridge:category" text="Bridge Type" match="key">
+        <combo key="seamark:bridge:category" text="Bridge Type" >
           <list_entry value="fixed"/>
           <list_entry value="opening"/>
           <list_entry value="swing"/>
@@ -307,10 +307,10 @@
           <list_entry value="aqueduct"/>
           <list_entry value="suspension"/>
         </combo>
-        <text key="seamark:bridge:clearance_height" text="Vertical Clearance" match="key"/>
-        <text key="seamark:bridge:clearance_height_open" text="Vertical Clearance Open" match="key"/>
-        <text key="seamark:bridge:clearance_height_closed" text="Vertical Clearance Closed" match="key"/>
-        <text key="seamark:bridge:clearance_width" text="Horizontal Clearance" match="key"/>
+        <text key="seamark:bridge:clearance_height" text="Vertical Clearance"/>
+        <text key="seamark:bridge:clearance_height_open" text="Vertical Clearance Open"/>
+        <text key="seamark:bridge:clearance_height_closed" text="Vertical Clearance Closed"/>
+        <text key="seamark:bridge:clearance_width" text="Horizontal Clearance"/>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Bridges" text="Bridges"/>
       </item>
       
@@ -318,7 +318,7 @@
         <label text="D25: Overhead transporter or Telepheric"/>
         <key key="seamark:type" value="conveyor"/>
         <key key="seamark:conveyor:category" value="aerial"/>
-        <text key="seamark:conveyor:clearance_height" text="Vertical Clearance" match="key"/>
+        <text key="seamark:conveyor:clearance_height" text="Vertical Clearance"/>
         <combo key="seamark:conveyor:product" text="Cargo">
           <reference ref="product"/>
         </combo>
@@ -332,8 +332,8 @@
           <list_entry value="power"/>
           <list_entry value="transmission"/>
         </combo>
-        <text key="seamark:cable_overhead:clearance_height" text="Vertical Clearance" match="key"/>
-        <text key="seamark:cable_overhead:clearance_height_safe" text="Safe Vertical Clearance" match="key"/>
+        <text key="seamark:cable_overhead:clearance_height" text="Vertical Clearance"/>
+        <text key="seamark:cable_overhead:clearance_height_safe" text="Safe Vertical Clearance"/>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Categories_of_Objects#Cables_.28CATCBL.29" text="Cable Categories"/>
       </item>
       
@@ -412,7 +412,7 @@
         <label text="Landmarks in General, use appropriate categories to specify" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E23_colour.svg"/>
         <space/>
         <key key="seamark:type" value="landmark"/>
-        <multiselect key="seamark:landmark:category" text="Category" match="key">
+        <multiselect key="seamark:landmark:category" text="Category" >
           <list_entry value="cairn"/>
           <list_entry value="cemetery"/>
           <list_entry value="chimney"/>
@@ -435,7 +435,7 @@
           <list_entry value="spire"/>
           <list_entry value="boulder"/>
         </multiselect>
-        <multiselect key="seamark:landmark:function" text="Function" match="key">
+        <multiselect key="seamark:landmark:function" text="Function" >
           <reference ref="function"/>
         </multiselect>
         <multiselect key="seamark:landmark:colour" text="Colour(s)">
@@ -475,7 +475,7 @@
         <key key="seamark:building:function" value=""/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:function" value="church"/>
-        <combo key="seamark:landmark:category" text="Landmark" readonly="true">
+        <combo key="seamark:landmark:category" text="Landmark" >
           <list_entry value="dome" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E10.4.svg"  icon_size="16"/>
           <list_entry value="spire" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E10.3.svg"  icon_size="16"/>
           <list_entry value="tower" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E10.2.svg"  icon_size="16"/>
@@ -484,7 +484,7 @@
       </item>
       
       <item name="Cross or Calvary (E12)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E12.svg" type="node">
-        <label text="E12: Cross or Calvary" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E12.svg" />
+        <label text="E12: Cross or Calvary" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E12.svg"/>
         <space/>
         <key key="seamark:type" value="landmark"/>
         <key key="seamark:landmark:category" value="cross"/>
@@ -598,7 +598,7 @@
         <label text="E24: Monument" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E24.svg"/>
         <space/>
         <key key="seamark:type" value="landmark"/>
-        <combo key="seamark:landmark:category" text="Monument Category" required="true">
+        <combo key="seamark:landmark:category" text="Monument Category" >
           <list_entry value="monument"/>
           <list_entry value="column"/>
           <list_entry value="memorial"/>
@@ -768,7 +768,7 @@
           <text key="seamark:name" text="Name"/>
           <combo key="harbour:operator" text="Operator" readonly="false">
           </combo>
-          <multiselect key="seamark:harbour:category" text="Category" delimiter=";" required="true" match="key">
+          <multiselect key="seamark:harbour:category" text="Category" delimiter=";"  >
             <list_entry value="roro" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
             <list_entry value="ferry" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
             <list_entry value="fishing" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F10.svg" icon_size="16"/>
@@ -791,38 +791,38 @@
             <list_entry value="offshore_support" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
             <list_entry value="port_support" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
           </multiselect>
-          <text key="operator" text="Harbour Operator" />
+          <text key="operator" text="Harbour Operator"/>
           <space/>
-          <check key="port_of_entry" value_on="yes" value_off="no" text="Port of Entry" default="off" />
+          <check key="port_of_entry" value_on="yes" value_off="no" text="Port of Entry" default="off"/>
           <space/>
-          <label text="Harbour Access Restrictions" />
-          <space />
-          <text key="access:tide" text="Tide state" />
-          <text key="access:tidal_range" text="Tidal range" />
-          <text key="access:sill_height" text="Sill height" />
-          <text key="access:swell" text="Swell conditions" />
-          <text key="access:ice" text="Ice conditions" />
-          <text key="access:time" text="Time limits" />
+          <label text="Harbour Access Restrictions"/>
           <space/>
-          <label text="Vessel Size Restrictions" />
+          <text key="access:tide" text="Tide state"/>
+          <text key="access:tidal_range" text="Tidal range"/>
+          <text key="access:sill_height" text="Sill height"/>
+          <text key="access:swell" text="Swell conditions"/>
+          <text key="access:ice" text="Ice conditions"/>
+          <text key="access:time" text="Time limits"/>
           <space/>
-          <text key="maxlength" text="Maximum length" />
-          <text key="maxwidth" text="Maximum beam" />
-          <text key="maxdraft" text="Maximum draft" />
-          <text key="maxairdraft" text="Maximum height" />
-          <text key="maxspeed" text="Speed limit" />
+          <label text="Vessel Size Restrictions"/>
           <space/>
-          <label text="Contact Information" />
+          <text key="maxlength" text="Maximum length"/>
+          <text key="maxwidth" text="Maximum beam"/>
+          <text key="maxdraft" text="Maximum draft"/>
+          <text key="maxairdraft" text="Maximum height"/>
+          <text key="maxspeed" text="Speed limit"/>
           <space/>
-          <text key="harbour_master" text="Harbour Master" />
-          <text key="phone" text="Phone" />
-          <text key="fax" text="Fax" />
-          <text key="email" text="Email" />
-          <text key="website" text="Web site" />
-          <text key="vhf_channel" text="VHF channel" />
-          <text key="vhf_mmsi" text="VHF MMSI" />
+          <label text="Contact Information"/>
           <space/>
-          <text key="harbour:information" text="General Information" />
+          <text key="harbour_master" text="Harbour Master"/>
+          <text key="phone" text="Phone"/>
+          <text key="fax" text="Fax"/>
+          <text key="email" text="Email"/>
+          <text key="website" text="Web site"/>
+          <text key="vhf_channel" text="VHF channel"/>
+          <text key="vhf_mmsi" text="VHF MMSI"/>
+          <space/>
+          <text key="harbour:information" text="General Information"/>
         </item>
         
       </group>
@@ -853,38 +853,38 @@
           <key key="seamark:harbour:category" value="fishing"/>
           <text key="name" text="Name"/>
           <space/>
-          <text key="operator" text="Harbour Operator" />
+          <text key="operator" text="Harbour Operator"/>
           <space/>
-          <check key="port_of_entry" value_on="yes" value_off="no" text="Port of Entry" default="off" />
+          <check key="port_of_entry" value_on="yes" value_off="no" text="Port of Entry" default="off"/>
           <space/>
-          <label text="Harbour Access Restrictions" />
-          <space />
-          <text key="access:tide" text="Tide state" />
-          <text key="access:tidal_range" text="Tidal range" />
-          <text key="access:sill_height" text="Sill height" />
-          <text key="access:swell" text="Swell conditions" />
-          <text key="access:ice" text="Ice conditions" />
-          <text key="access:time" text="Time limits" />
+          <label text="Harbour Access Restrictions"/>
           <space/>
-          <label text="Vessel Size Restrictions" />
+          <text key="access:tide" text="Tide state"/>
+          <text key="access:tidal_range" text="Tidal range"/>
+          <text key="access:sill_height" text="Sill height"/>
+          <text key="access:swell" text="Swell conditions"/>
+          <text key="access:ice" text="Ice conditions"/>
+          <text key="access:time" text="Time limits"/>
           <space/>
-          <text key="maxlength" text="Maximum length" />
-          <text key="maxwidth" text="Maximum beam" />
-          <text key="maxdraft" text="Maximum draft" />
-          <text key="maxairdraft" text="Maximum height" />
-          <text key="maxspeed" text="Speed limit" />
+          <label text="Vessel Size Restrictions"/>
           <space/>
-          <label text="Contact Information" />
+          <text key="maxlength" text="Maximum length"/>
+          <text key="maxwidth" text="Maximum beam"/>
+          <text key="maxdraft" text="Maximum draft"/>
+          <text key="maxairdraft" text="Maximum height"/>
+          <text key="maxspeed" text="Speed limit"/>
           <space/>
-          <text key="harbour_master" text="Harbour Master" />
-          <text key="phone" text="Phone" />
-          <text key="fax" text="Fax" />
-          <text key="email" text="Email" />
-          <text key="website" text="Web site" />
-          <text key="vhf_channel" text="VHF channel" />
-          <text key="vhf_mmsi" text="VHF MMSI" />
+          <label text="Contact Information"/>
           <space/>
-          <text key="harbour:information" text="General Information" />
+          <text key="harbour_master" text="Harbour Master"/>
+          <text key="phone" text="Phone"/>
+          <text key="fax" text="Fax"/>
+          <text key="email" text="Email"/>
+          <text key="website" text="Web site"/>
+          <text key="vhf_channel" text="VHF channel"/>
+          <text key="vhf_mmsi" text="VHF MMSI"/>
+          <space/>
+          <text key="harbour:information" text="General Information"/>
           <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Harbours" text="Harbours"/>
         </item>
         
@@ -961,7 +961,7 @@
         <item name="Drydocks and Floating docks (F25-F26)" icon="presets/empty.png" type="node,closedway">
           <label text="F25-F26: Docks, drydocks and floating"/>
           <space/>
-          <combo key="seamark:type" text="Dock Type (seamark)" readonly="true" use_last_as_default="force" required="true">
+          <combo key="seamark:type" text="Dock Type (seamark)"  use_last_as_default="force" >
             <list_entry value="dock"/>
             <list_entry value="dry_dock"/>
             <list_entry value="floating_dock"/>
@@ -1104,7 +1104,7 @@
         <space/>
         <key key="seamark:type" value="seabed_area"/>
         <link href="http://wiki.openstreetmap.org/wiki/Key:seabed_surface"/>
-        <combo key="seamark:seabed_area:surface" text="Surface Material" readonly="true" use_last_as_default="force" required="true">
+        <combo key="seamark:seabed_area:surface" text="Surface Material"  use_last_as_default="force" >
           <list_entry value="sand"/>
           <list_entry value="mud"/>
           <list_entry value="clay"/>
@@ -1122,7 +1122,7 @@
           <list_entry value="mobile_bottom"/>
           <list_entry value="spring_in_seabed"/>
         </combo>
-        <combo key="seamark:seabed_area:quality" text="Surface Quality" readonly="true">
+        <combo key="seamark:seabed_area:quality" text="Surface Quality" >
           <list_entry value="fine"/>
           <list_entry value="medium"/>
           <list_entry value="coarse"/>
@@ -1215,7 +1215,7 @@
         <label text="K45: Tunny net"/>
         <space/>
         <key key="seamark:type" value="fishing_facility"/>
-        <combo key="seamark:fishing_facility:category" text="Type" required="true" use_last_as_default="true">
+        <combo key="seamark:fishing_facility:category" text="Type"  use_last_as_default="true">
           <list_entry value="stake"/>
           <list_entry value="trap"/>
           <list_entry value="weir"/>
@@ -1263,11 +1263,11 @@
         <label text="L1: Offshore Oil and Gas Field"/>
         <space/>
         <key key="seamark:type" value="production_area"/>
-        <combo key="seamark:production_area:category" text="Field Type" required="true">
+        <combo key="seamark:production_area:category" text="Field Type" >
           <list_entry value="oil"/>
           <list_entry value="production"/>
         </combo>
-        <combo key="seamark:production_area:product" text="Product" required="true">
+        <combo key="seamark:production_area:product" text="Product" >
           <list_entry value="oil"/>
           <list_entry value="gas"/>
         </combo>
@@ -1306,7 +1306,7 @@
         <label text="L4: Development Area"/>
         <space/>
         <key key="seamark:type" value="production_area"/>
-        <combo key="seamark:production_area:product" text="Product" required="true">
+        <combo key="seamark:production_area:product" text="Product" >
           <list_entry value="oil"/>
           <list_entry value="gas"/>
         </combo>
@@ -1384,7 +1384,7 @@
         <label text="L16: Monobuoy, Exposed Location Single Mooring Buoy" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/L/L16.svg"/>
         <space/>
         <key key="seamark:type" value="buoy_installation"/>
-        <combo key="seamark:buoy_installation:category" text="Type" required="true">
+        <combo key="seamark:buoy_installation:category" text="Type" >
           <list_entry value="calm"/>
           <list_entry value="sbm"/>
         </combo>
@@ -1466,10 +1466,10 @@
         <key key="seamark:type" value="pipeline_submarine"/>
         <text key="seamark:name" text="Name"/>
         <combo key="seamark:pipeline_submarine:category" text="Type">
-          <list_entry value="water" />
-          <list_entry value="sewer" />
-          <list_entry value="oil" />
-          <list_entry value="gas" />
+          <list_entry value="water"/>
+          <list_entry value="sewer"/>
+          <list_entry value="oil"/>
+          <list_entry value="gas"/>
           <list_entry value="supply"/>
         </combo>
         <combo key="seamark:pipeline_submarine:product" text="Product">
@@ -1592,13 +1592,13 @@
       </item>
       
       <item name="Radar Range (M31)" icon="presets/empty.png" type="way">
-        <label text="M31: Radar Range" />
+        <label text="M31: Radar Range"/>
         <space/>
         <key key="seamark:type" value="radar_range"/>
       </item>
       
       <item name="Radar Line (M32)" icon="presets/empty.png" type="way">
-        <label text="M31: Radar Line" />
+        <label text="M31: Radar Line"/>
         <space/>
         <key key="seamark:type" value="radar_line"/>
         <text key="seamark:radar_line:orientation" text="Orientation"/>
@@ -2343,10 +2343,10 @@
       
       <chunk id="topmarks">
         <label text="Q9: Topmarks"/>
-        <combo key="seamark:topmark:shape" text="Topmark Shape" required="true" match="key">
+        <combo key="seamark:topmark:shape" text="Topmark Shape"  >
           <reference ref="topshapes"/>
         </combo>
-        <multiselect key="seamark:topmark:colour" text="Topmark Colour(s)" required="true" match="key">
+        <multiselect key="seamark:topmark:colour" text="Topmark Colour(s)"  >
           <reference ref="lightcolours"/>
           <reference ref="othercolours"/>
         </multiselect>
@@ -4310,7 +4310,7 @@
           <key key="seamark:notice:system" value="ppwbc"/>
           <key key="seamark:notice:1:system" value="ppwbc"/>
           <key key="seamark:notice:2:system" value="ppwbc"/>
-          <combo key="seamark:notice:bank" text="Notice Bank" required="true">
+          <combo key="seamark:notice:bank" text="Notice Bank" >
             <list_entry value="left" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/left/change_bank.svg" icon_size="16"/>
             <list_entry value="right" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/right/change_bank.svg" icon_size="16"/>
           </combo>
@@ -4334,7 +4334,7 @@
             <list_entry value="downstream"/>
             <list_entry value="upstream"/>
           </combo>
-          <combo key="seamark:notice:1:bank" text="Notice Bank (1)" required="true">
+          <combo key="seamark:notice:1:bank" text="Notice Bank (1)" >
             <list_entry value="left" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/left/change_bank.svg" icon_size="16"/>
             <list_entry value="right" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/right/change_bank.svg" icon_size="16"/>
           </combo>
@@ -4358,7 +4358,7 @@
             <list_entry value="downstream"/>
             <list_entry value="upstream"/>
           </combo>
-          <combo key="seamark:notice:2:bank" text="Notice Bank (2)" required="true">
+          <combo key="seamark:notice:2:bank" text="Notice Bank (2)" >
             <list_entry value="left" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/left/change_bank.svg" icon_size="16"/>
             <list_entry value="right" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/right/change_bank.svg" icon_size="16"/>
           </combo>
@@ -4455,7 +4455,7 @@
         <label text="R1-R22: Fog Signal" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/R/R1.svg"/>
         <space/>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Fog_Signals" text="Fog Signals"/>
-        <combo key="seamark:fog_signal:category" text="Fog Signal" match="key" required="true">
+        <combo key="seamark:fog_signal:category" text="Fog Signal"  >
           <list_entry value="explosive"/>
           <list_entry value="diaphone"/>
           <list_entry value="siren"/>
@@ -4542,7 +4542,7 @@
         <label text="S10-S16: Radio Trandponder" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/S/S1.svg"/>
         <space/>
         <key key="seamark:type" value="radio_station"/>
-        <combo key="seamark:radio_station:category" text="Transponder-type" readonly="true" required="true">
+        <combo key="seamark:radio_station:category" text="Transponder-type"  >
           <list_entry value="omnidirectional"/>
           <list_entry value="directional"/>
           <list_entry value="rotating_pattern"/>
@@ -4687,7 +4687,7 @@
         <label text="T20-T36: Signal Station" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/T/T20.svg"/>
         <space/>
         <key key="seamark:type" value="signal_station_traffic"/>
-        <multiselect key="seamark:signal_station_trafic:category" text="Type" readonly="true" default="yes" required="true">
+        <multiselect key="seamark:signal_station_trafic:category" text="Type"  default="yes" >
           <list_entry value="port_control"/>
           <list_entry value="port_entry_departure"/>
           <list_entry value="ipt"/>
@@ -4710,7 +4710,7 @@
         <label text="T20-T36: Signal Station" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/T/T20.svg"/>
         <space/>
         <key key="seamark:type" value="signal_station_warning"/>
-        <multiselect key="seamark:signal_station_warning:category" text="Type" readonly="true" default="yes" required="true">
+        <multiselect key="seamark:signal_station_warning:category" text="Type" default="yes" >
           <list_entry value="danger"/>
           <list_entry value="maritime_obstruction"/>
           <list_entry value="cable"/>
@@ -4744,41 +4744,41 @@
       <item name="Marinas (U1.1/1.2)" icon="http://dev.openseamap.org/josm/icons/Marina16.png" type="node,way,closedway,relation">
         <label text="General Information (U1.1/1.2)" icon="http://dev.openseamap.org/josm/icons/Marina16.png"/>
         <space/>
-        <key key="leisure" value="marina" />
-        <key key="seamark:type" value="harbour" />
-        <key key="seamark:harbour:category" value="marina" />
-        <text key="name" text="Marina Name" />
+        <key key="leisure" value="marina"/>
+        <key key="seamark:type" value="harbour"/>
+        <key key="seamark:harbour:category" value="marina"/>
+        <text key="name" text="Marina Name"/>
         <space/>
-        <check key="seamark:harbour:category" value_on="marina_no_facilities" value_off="marina" text="Berths only - no facilities" default="off" />
+        <check key="seamark:harbour:category" value_on="marina_no_facilities" value_off="marina" text="Berths only - no facilities" default="off"/>
         <space/>
-        <text key="operator" text="Marina Operator" />
+        <text key="operator" text="Marina Operator"/>
         <space/>
-        <label text="Marina Access Restrictions" />
-        <space />
-        <text key="access:tide" text="Tide state" />
-        <text key="access:tidal_range" text="Tidal range" />
-        <text key="access:sill_height" text="Sill height" />
-        <text key="access:swell" text="Swell conditions" />
-        <text key="access:ice" text="Ice conditions" />
-        <text key="access:time" text="Time limits" />
+        <label text="Marina Access Restrictions"/>
         <space/>
-        <label text="Vessel Size Restrictions" />
+        <text key="access:tide" text="Tide state"/>
+        <text key="access:tidal_range" text="Tidal range"/>
+        <text key="access:sill_height" text="Sill height"/>
+        <text key="access:swell" text="Swell conditions"/>
+        <text key="access:ice" text="Ice conditions"/>
+        <text key="access:time" text="Time limits"/>
         <space/>
-        <text key="maxlength" text="Maximum length" />
-        <text key="maxwidth" text="Maximum beam" />
-        <text key="maxdraft" text="Maximum draft" />
-        <text key="maxairdraft" text="Maximum height" />
-        <text key="maxspeed" text="Speed limit" />
+        <label text="Vessel Size Restrictions"/>
         <space/>
-        <label text="Contact Information" />
+        <text key="maxlength" text="Maximum length"/>
+        <text key="maxwidth" text="Maximum beam"/>
+        <text key="maxdraft" text="Maximum draft"/>
+        <text key="maxairdraft" text="Maximum height"/>
+        <text key="maxspeed" text="Speed limit"/>
         <space/>
-        <text key="harbour_master" text="Harbour Master" />
-        <text key="phone" text="Phone" />
-        <text key="fax" text="Fax" />
-        <text key="email" text="Email" />
-        <text key="website" text="Web site" />
-        <text key="vhf_channel" text="VHF channel" />
-        <text key="vhf_mmsi" text="VHF MMSI" />
+        <label text="Contact Information"/>
+        <space/>
+        <text key="harbour_master" text="Harbour Master"/>
+        <text key="phone" text="Phone"/>
+        <text key="fax" text="Fax"/>
+        <text key="email" text="Email"/>
+        <text key="website" text="Web site"/>
+        <text key="vhf_channel" text="VHF channel"/>
+        <text key="vhf_mmsi" text="VHF MMSI"/>
         <space/>
         <combo key="internet_access" text="Internet Access">
           <list_entry value="yes"/>
@@ -4792,14 +4792,14 @@
           <list_entry value="no"/>
         </combo>
         <space/>
-        <text key="harbour:information" text="General Information" />
+        <text key="harbour:information" text="General Information"/>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Harbours" text="Harbours"/>
       </item>
       
       <item name="Small Craft Facilities (U2-U30)" icon="http://dev.openseamap.org/josm/icons/Marina16.png" type="node,way,closedway,relation">
         <label text="Small Craft Facilities (U2-U30)" icon="http://dev.openseamap.org/josm/icons/Marina16.png"/>
-        <key key="seamark:type" value="small_craft_facility" />
-        <label text="Location of particular marina facilities" />
+        <key key="seamark:type" value="small_craft_facility"/>
+        <label text="Location of particular marina facilities"/>
         <space/>
         <multiselect key="seamark:small_craft_facility:category" text="Facility type(s)">
           <list_entry value="visitor_berth" display_value="Visitors berth" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U2.svg" icon_size="16"/>
@@ -4836,49 +4836,49 @@
           <list_entry value="picnic_area" display_value="Picnic area" icon="presets/empty.png" icon_size="16"/>
         </multiselect>
         <space/>
-        <text key="seamark:information" text="Supplimentary Information" />
+        <text key="seamark:information" text="Supplimentary Information"/>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Small_Craft_Facilities" text="Small Craft Facilities"/>
       </item>
       
       <item name="Marina Facilities (U32)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U1.1.svg" type="node,way,closedway,relation">
         <label text="Facilities available at or near this marina" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U1.1.svg"/>
         <space/>
-        <key key="leisure" value="marina" />
-        <key key="seamark:type" value="harbour" />
-        <key key="seamark:harbour:category" value="marina" />
+        <key key="leisure" value="marina"/>
+        <key key="seamark:type" value="harbour"/>
+        <key key="seamark:harbour:category" value="marina"/>
         <space/>
-        <text key="harbour:visitor_berth" text="Visitors berth" />
-        <text key="harbour:visitors_mooring" text="Visitors mooring" />
-        <text key="harbour:scrubbing_berth" text="Scrubbing berth" />
-        <text key="harbour:electricity" text="Electricity" />
-        <text key="harbour:water_tap" text="Drinking Water" />
-        <text key="harbour:showers" text="Showers" />
-        <text key="harbour:toilets" text="Toilets" />
-        <text key="harbour:laundrette" text="Laundrette" />
-        <text key="harbour:public_inn" text="Inn" />
-        <text key="harbour:restaurant" text="Restaurant" />
-        <text key="harbour:nautical_club" text="Sailing club" />
-        <text key="harbour:fuel_station" text="Fuel" />
-        <text key="harbour:chandler" text="Chandler" />
-        <text key="harbour:provisions" text="Provisions" />
-        <text key="harbour:bottle_gas" text="Bottled gas" />
-        <text key="harbour:doctor" text="Doctor" />
-        <text key="harbour:pharmacy" text="Pharmacy" />
-        <text key="harbour:emergency_telephone" text="Emergency telephone" />
-        <text key="harbour:post_box" text="Post box" />
-        <text key="harbour:telephone" text="Telephone" />
-        <text key="harbour:refuse_bin" text="Refuse disposal" />
-        <text key="harbour:pump-out" text="Pump-out" />
-        <text key="harbour:car_park" text="Car park" />
-        <text key="harbour:boat_trailers_park" text="Boat trailer park" />
-        <text key="harbour:caravan_site" text="Caravan site" />
-        <text key="harbour:camping_site" text="Camping site" />
-        <text key="harbour:picnic_area" text="Picnic area" />
-        <text key="harbour:sailmaker" text="Sailmaker" />
-        <text key="harbour:boatyard" text="Boatyard" />
-        <text key="harbour:boat_hoist" text="Boat hoist" />
-        <text key="harbour:slipway" text="Slipway" />
-        <text key="harbour:mechanics_workshop" text="Mechanics workshop" />
+        <text key="harbour:visitor_berth" text="Visitors berth"/>
+        <text key="harbour:visitors_mooring" text="Visitors mooring"/>
+        <text key="harbour:scrubbing_berth" text="Scrubbing berth"/>
+        <text key="harbour:electricity" text="Electricity"/>
+        <text key="harbour:water_tap" text="Drinking Water"/>
+        <text key="harbour:showers" text="Showers"/>
+        <text key="harbour:toilets" text="Toilets"/>
+        <text key="harbour:laundrette" text="Laundrette"/>
+        <text key="harbour:public_inn" text="Inn"/>
+        <text key="harbour:restaurant" text="Restaurant"/>
+        <text key="harbour:nautical_club" text="Sailing club"/>
+        <text key="harbour:fuel_station" text="Fuel"/>
+        <text key="harbour:chandler" text="Chandler"/>
+        <text key="harbour:provisions" text="Provisions"/>
+        <text key="harbour:bottle_gas" text="Bottled gas"/>
+        <text key="harbour:doctor" text="Doctor"/>
+        <text key="harbour:pharmacy" text="Pharmacy"/>
+        <text key="harbour:emergency_telephone" text="Emergency telephone"/>
+        <text key="harbour:post_box" text="Post box"/>
+        <text key="harbour:telephone" text="Telephone"/>
+        <text key="harbour:refuse_bin" text="Refuse disposal"/>
+        <text key="harbour:pump-out" text="Pump-out"/>
+        <text key="harbour:car_park" text="Car park"/>
+        <text key="harbour:boat_trailers_park" text="Boat trailer park"/>
+        <text key="harbour:caravan_site" text="Caravan site"/>
+        <text key="harbour:camping_site" text="Camping site"/>
+        <text key="harbour:picnic_area" text="Picnic area"/>
+        <text key="harbour:sailmaker" text="Sailmaker"/>
+        <text key="harbour:boatyard" text="Boatyard"/>
+        <text key="harbour:boat_hoist" text="Boat hoist"/>
+        <text key="harbour:slipway" text="Slipway"/>
+        <text key="harbour:mechanics_workshop" text="Mechanics workshop"/>
         <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Harbours" text="Harbours"/>
       </item>
       
@@ -4888,7 +4888,7 @@
       <label text="Supplimentary Information"/>
       <space/>
       <text key="seamark:name" text="Name"/>
-      <text key="seamark:information" text="Information" required="true" match="key"/>
+      <text key="seamark:information" text="Information"/>
       <combo key="seamark:status" text="Status">
         <list_entry value="permanent"/>
         <list_entry value="occasional"/>
@@ -4922,7 +4922,7 @@
     <item name="FIXMEs" icon="presets/empty.png" type="node,way,closedway,relation">
       <label text="Seamark Fixme's"/>
       <space/>
-      <combo key="seamark:fixme" required="true" text="FIXME" use_last_as_default="true" match="key">
+      <combo key="seamark:fixme"  text="FIXME" use_last_as_default="true" >
         <list_entry value="beacon_guess"/>
         <list_entry value="e_lateral"/>
         <list_entry value="height"/>
