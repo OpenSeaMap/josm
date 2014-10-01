@@ -4928,15 +4928,15 @@
         <list_entry value="height"/>
         <list_entry value="intdup"/>
         <list_entry value="intset"/>
-        <list_entry value="lateral_unknown"/>
-        <list_entry value="name_incomplete"/>
-        <list_entry value="noindex"/>
-        <list_entry value="please_fix_position"/>
+        <list_entry value="lateral_unknown" display_value="lateral unknown" de.display_value="abstand unbekannt"/>
+        <list_entry value="name_incomplete" display_value="Name incomplete" de.display_value="Name unvollständig"/>
+        <list_entry value="noindex" display_value="no index"/>
+        <list_entry value="please_fix_position" display_value="please fix Position" de.display_value="bitte Position korrigieren"/>
         <list_entry value="racon_char"/>
         <list_entry value="rem_imcomplete"/>
         <list_entry value="usldup"/>
       </combo>
-      <text key="note" text="Additional note to mappers" delete_if_empty="true"/>
+      <text key="note" text="Additional note to mappers" de.text="Optionale Notiz fuer Mappers" delete_if_empty="true"/>
     </item>
     
     <item name="README">
