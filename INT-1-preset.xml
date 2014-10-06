@@ -904,11 +904,11 @@
             <list_entry value="second_class"/>
           </combo>
           <combo key="seamark:berth:danger_class" text="Danger Class">
-            <list_entry value="no_blue" display_value="Unspecified" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/E5_4.svg" icon_size="16"/>
-            <list_entry value="one_blue" display_value="Certain Flammable Substances"  icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/E5_5.svg" icon_size="16"/>
-            <list_entry value="two_blue" display_value="Certain Health Hazards"  icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/E5_6.svg" icon_size="16"/>
-            <list_entry value="three_blue" display_value="Certain Explosives"  icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/E5_7.svg" icon_size="16"/>
-            <list_entry value="one_red" display_value="Russian Inland Waterway Regulation" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/RIWR/keep_lookout.svg" icon_size="16"/>
+            <list_entry value="no_blue" short_description="Unspecified" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/E5_4.svg" icon_size="16"/>
+            <list_entry value="one_blue" short_description="Certain Flammable Substances"  icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/E5_5.svg" icon_size="16"/>
+            <list_entry value="two_blue" short_description="Certain Health Hazards"  icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/E5_6.svg" icon_size="16"/>
+            <list_entry value="three_blue" short_description="Certain Explosives"  icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/E5_7.svg" icon_size="16"/>
+            <list_entry value="one_red" short_description="Russian Inland Waterway Regulation" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/RIWR/keep_lookout.svg" icon_size="16"/>
           </combo>
         </item>
         
@@ -3909,55 +3909,56 @@
         
       </group>
       
-      <group name="Notice Boards (Q126)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_entry.svg">
+      <group name="Notice Boards (Q126)" de.name="Verbots- und Beschränkungszeichen (Q126)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_entry.svg">
         
         <group name="CEVNI" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_entry.svg">
           
           <item name="Prohibition Notices" de.name="Verbotszeichen" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_berthing_lateral_limit.svg" type="node">
-            <label text="CEVNI Prohibition Notice" de.name="CEVNI Verbotszeichen" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_berthing_lateral_limit.svg"/>
+            <label text="CEVNI Prohibition Notice" de.name="CEVNI Verbotszeichen" short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_berthing_lateral_limit.svg"/>
+            <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/CEVNI_Notice_Marks#Prohibitory_Signs" de.href="http://wiki.openstreetmap.org/wiki/DE:OpenSeaMap/CEVNI_Notice_Marks#Verbote"/>
             <space/>
             <key key="seamark:type" value="notice"/>
             <key key="seamark:notice:function" value="prohibition"/>
             <key key="seamark:notice:system" value="cevni"/>
             <combo key="seamark:notice:category" text="Notice Category" de.text="Verbotszeichen">
-              <list_entry value="no_entry" display_value="No entry" de.display_value="Durchfahrt verboten" de.short_description="sperrung der Schifffahrt" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_entry.svg" icon_size="16"/>
-              <list_entry value="closed_area" display_value="Closed area" de.display_value="Gesperrte Wasserfläche" de.short_description="sperrung der Wasserfläche" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/closed_area.svg" icon_size="16"/>
-              <list_entry value="no_overtaking" display_value="No overtaking" de.display_value="Überholverbot" de.short_description="überholen verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_overtaking.svg" icon_size="16"/>
-              <list_entry value="no_convoy_overtaking" display_value="No convoy overtaking" de.display_value="Überholverbot von Bootsgruppen" de.short_description="überholen von mehreren Booten verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_convoy_overtaking.svg" icon_size="16"/>
-              <list_entry value="no_passing" display_value="No passing/overtaking" de.display_value="Begegnungsverbot" de.short_description="begegenen verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_passing.svg" icon_size="16"/>
-              <list_entry value="no_convoy_passing" display_value="No convoy passing/.." de.display_value="Begegnungsverbot von Bootsgruppen" de.short_description="begegnen von Bootsgruppen verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_convoy_passing.svg" icon_size="16"/>
-              <list_entry value="no_berthing" display_value="No berthing" de.display_value="Liegeverbot" de.short_description="liegen/anlegen verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_berthing.svg" icon_size="16"/>
-              <list_entry value="no_berthing_lateral_limit" display_value="No berthing within indicated breadth" de.display_value="Liegeverbot auf einer bestimmten länge" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_berthing_lateral_limit.svg" icon_size="16"/>
-              <list_entry value="no_anchoring" display_value="No anchoring or dragging" de.display_value="Ankerverbot" de.short_description="ankern verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_anchoring.svg" icon_size="16"/>
-              <list_entry value="no_mooring" display_value="No making fast to bank" de.display_value="Festmachen verboten" de.short_description="anlegen/fest machen verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_mooring.svg" icon_size="16"/>
-              <list_entry value="no_turning" display_value="No turning" de.display_value="Wendeverbot" de.short_description="wenden verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_turning.svg" icon_size="16"/>
-              <list_entry value="no_wash" display_value="Do not create wash" de.display_value="Sog- und Wellenschlag vermeidern" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_wash.svg" icon_size="16"/>
-              <list_entry value="no_passage_left" display_value="No passage to left" de.display_value="nicht links passieren" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_passage_left.svg" icon_size="16"/>
-              <list_entry value="no_passage_right" display_value="No passage to right" de.display_value="nicht links passieren" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_passage_right.svg" icon_size="16"/>
-              <list_entry value="no_motor_craft" display_value="No motor craft" de.display_value="Maschineantrib verboten" de.short_description="Maschinenantrieb jeglicher art verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_motor_craft.svg" icon_size="16"/>
-              <list_entry value="no_sport_craft" display_value="No sports craft" de.display_value="Sportfahrzeuge verboten" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_sport_craft.svg" icon_size="16"/>
-              <list_entry value="no_waterskiing" display_value="No waterskiing" de.display_value="Wasserski fahren verboten" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_waterskiing.svg" icon_size="16"/>
-              <list_entry value="no_sailing_craft" display_value="No sailing craft" de.display_value="Segelfahrzeuge verboten" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_sailing_craft.svg" icon_size="16"/>
-              <list_entry value="no_unpowered_craft" display_value="No unpowered craft" de.display_value="Unmotorisierte Fahrzeuge verboten" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_unpowered_craft.svg" icon_size="16"/>
-              <list_entry value="no_sailboards" display_value="No sailboards" de.display_value="Segelsurfbretter verboten" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_sailboards.svg" icon_size="16"/>
-              <list_entry value="no_high_speeds" display_value="No high speeds" de.display_value="Hohe Geschwindigkeiten verboten" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_high_speeds.svg" icon_size="16"/>
-              <list_entry value="no_launching_beaching" display_value="No launching/beaching" de.display_value="Slippen verboten" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_launching_beaching.svg" icon_size="16"/>
-              <list_entry value="no_waterbikes" display_value="No waterbikes" de.display_value="Wassermotorräder verboten" de.short_description="z.B. Jetski" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_waterbikes.svg" icon_size="16"/>
+              <list_entry value="no_entry" display_value="no entry" de.display_value="Durchfahrt verboten" de.short_description="sperrung der Schifffahrt" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_entry.svg" icon_size="16"/>
+              <list_entry value="closed_area" display_value="closed area" de.display_value="Gesperrte Wasserfläche" de.short_description="sperrung der Wasserfläche" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/closed_area.svg" icon_size="16"/>
+              <list_entry value="no_overtaking" display_value="no overtaking" de.display_value="Überholverbot" de.short_description="überholen verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_overtaking.svg" icon_size="16"/>
+              <list_entry value="no_convoy_overtaking" display_value="no convoy overtaking" de.display_value="Überholverbot von Bootsgruppen" de.short_description="überholen von mehreren Booten verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_convoy_overtaking.svg" icon_size="16"/>
+              <list_entry value="no_passing" display_value="no passing" de.display_value="Begegnungsverbot" de.short_description="begegenen verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_passing.svg" icon_size="16"/>
+              <list_entry value="no_convoy_passing" display_value="no convoy passing" de.display_value="Begegnungsverbot von Bootsgruppen" de.short_description="begegnen von Bootsgruppen verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_convoy_passing.svg" icon_size="16"/>
+              <list_entry value="no_berthing" display_value="no berthing" de.display_value="Liegeverbot" de.short_description="liegen/anlegen verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_berthing.svg" icon_size="16"/>
+              <list_entry value="no_berthing_lateral_limit" display_value="no berthing lateral limit" de.display_value="Liegeverbot auf einer bestimmten länge" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_berthing_lateral_limit.svg" icon_size="16"/>
+              <list_entry value="no_anchoring" display_value="no anchoring" de.display_value="Ankerverbot" de.short_description="ankern verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_anchoring.svg" icon_size="16"/>
+              <list_entry value="no_mooring" display_value="no mooring" de.display_value="Festmachen verboten" de.short_description="anlegen/fest machen verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_mooring.svg" icon_size="16"/>
+              <list_entry value="no_turning" display_value="no turning" de.display_value="Wendeverbot" de.short_description="wenden verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_turning.svg" icon_size="16"/>
+              <list_entry value="no_wash" display_value="no wasch" de.display_value="Sog- und Wellenschlag vermeidern" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_wash.svg" icon_size="16"/>
+              <list_entry value="no_passage_left" display_value="no passing left" de.display_value="nicht links passieren" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_passage_left.svg" icon_size="16"/>
+              <list_entry value="no_passage_right" display_value="no passing right" de.display_value="nicht links passieren" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_passage_right.svg" icon_size="16"/>
+              <list_entry value="no_motor_craft" display_value="no motor craft" de.display_value="Maschineantrib verboten" de.short_description="Maschinenantrieb jeglicher art verboten" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_motor_craft.svg" icon_size="16"/>
+              <list_entry value="no_sport_craft" display_value="no sports craft" de.display_value="Sportfahrzeuge verboten" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_sport_craft.svg" icon_size="16"/>
+              <list_entry value="no_waterskiing" display_value="no waterskiing" de.display_value="Wasserski fahren verboten" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_waterskiing.svg" icon_size="16"/>
+              <list_entry value="no_sailing_craft" display_value="no sailing craft" de.display_value="Segelfahrzeuge verboten" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_sailing_craft.svg" icon_size="16"/>
+              <list_entry value="no_unpowered_craft" display_value="no unpowered craft" de.display_value="Unmotorisierte Fahrzeuge verboten" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_unpowered_craft.svg" icon_size="16"/>
+              <list_entry value="no_sailboards" display_value="no sailboards" de.display_value="Segelsurfbretter verboten" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_sailboards.svg" icon_size="16"/>
+              <list_entry value="no_high_speeds" display_value="no highspeeds" de.display_value="Hohe Geschwindigkeiten verboten" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_high_speeds.svg" icon_size="16"/>
+              <list_entry value="no_launching_beaching" display_value="no aunching beaching" de.display_value="Slippen verboten" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_launching_beaching.svg" icon_size="16"/>
+              <list_entry value="no_waterbikes" display_value="no waterbikes" de.display_value="Wassermotorräder verboten" de.short_description="z.B. Jetski" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/no_waterbikes.svg" icon_size="16"/>
             </combo>
             <combo key="seamark:notice:impact" text="Impact" de.text="Einfluss">
-              <list_entry value="downstream" display_value="Downstream" de.display_value="Strom abwärts"/>
-              <list_entry value="upstream" display_value="Upstream" de.display_value="Strom aufwärts"/>
-              <list_entry value="left_bank" display_value="Left bank" de.display_value="linkes Ufer"/>
-              <list_entry value="right_bank" display_value="Right bank" de.display_value="rechtes Ufer"/>
-              <list_entry value="bank_to_bank" display_value="Bank to bank" de.display_value="Ufer zu Ufer"/>
-              <list_entry value="to_harbour" display_value="To harbour" de.display_value="zum Hafen"/>
+              <list_entry value="downstream" display_value="downstream" short_description="" de.display_value="Strom abwärts" de.short_description=""/>
+              <list_entry value="upstream" display_value="upstream" short_description="" de.display_value="Strom aufwärts" de.short_description=""/>
+              <list_entry value="left_bank" display_value="left bank" short_description="" de.display_value="linkes Ufer" de.short_description=""/>
+              <list_entry value="right_bank" display_value="right bank" short_description="" de.display_value="rechtes Ufer" de.short_description=""/>
+              <list_entry value="bank_to_bank" display_value="bank to bank" short_description="" de.display_value="Ufer zu Ufer" de.short_description=""/>
+              <list_entry value="to_harbour" display_value="to harbour" short_description="" de.display_value="zum Hafen" de.short_description=""/>
             </combo>
             <multiselect key="seamark:notice:addition" text="Addition">
-              <list_entry value="top_board" display_value="Board above sign" de.display_value="Schild oben" de.short_description="Schild mit zusatzinformation oben"/>
-              <list_entry value="bottom_board" display_value="Board below sign" de.display_value="Schild unten" de.short_description="Schild mit zusatzinformation unten"/>
-              <list_entry value="left_triangle" display_value="Triangle on left of sign" de.display_value="Dreieck links" de.short_description="Weisses Dreieck (Pfeil) nach links zeigend"/>
-              <list_entry value="right_triangle" display_value="Triangle on right of sign" de.display_value="Dreieck rechts" de.short_description="Weisses Dreieck (Pfeil) nach rechts zeigend"/>
-              <list_entry value="bottom_triangle" display_value="Triangle below sign" de.display_value="Dreieck unten" de.short_description="Weisses Dreieck (Pfeil) nach unten zeigend"/>
+              <list_entry value="top_board" display_value="top board" short_description="top description board" de.display_value="Schild oben" de.short_description="Schild mit zusatzinformation oben"/>
+              <list_entry value="bottom_board" display_value="buttom board" short_description="button description board" de.display_value="Schild unten" de.short_description="Schild mit zusatzinformation unten"/>
+              <list_entry value="left_triangle" display_value="left triangle" short_description="whit triangle (arrow) left" de.display_value="Dreieck links" de.short_description="Weisses Dreieck (Pfeil) nach links zeigend"/>
+              <list_entry value="right_triangle" display_value="right triangle" short_description="white triangle (arrow) right" de.display_value="Dreieck rechts" de.short_description="Weisses Dreieck (Pfeil) nach rechts zeigend"/>
+              <list_entry value="bottom_triangle" display_value="buttom triangle" short_description="white triangle (arrow) down" de.display_value="Dreieck unten" de.short_description="Weisses Dreieck (Pfeil) nach unten zeigend"/>
             </multiselect> 
             <text key="seamark:notice:information" text="Notice Text" de.text="Zusatz Information"/>
             <text key="seamark:notice:orientation" text="Orientation" de.text="Ausrichtung"/>
@@ -3969,87 +3970,51 @@
             <check key="seamark:notice:status" text="Illuminated" de.text="Beleuchtet" value_on="illuminated" value_off=""/>
           </item>
           
-          <item name="Regulation Notices" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/speed_limit.svg" type="node">
+          <item name="Regulation Notices" de.name="Vorschreibungs Schilder" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/speed_limit.svg" type="node">
             <label text="CEVNI Regulation Notice" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/speed_limit.svg"/>
+            <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/CEVNI_Notice_Marks#Mandatory_Signs" de.href="http://wiki.openstreetmap.org/wiki/DE:OpenSeaMap/CEVNI_Notice_Marks#Vorgeschrieben"/>
             <space/>
             <key key="seamark:type" value="notice"/>
             <key key="seamark:notice:function" value="regulation"/>
             <key key="seamark:notice:system" value="cevni"/>
             <combo key="seamark:notice:category" text="Notice Category">
-              <list_entry value="move_to_left" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/move_to_left.svg" icon_size="16"/>
-              <list_entry value="move_to_right" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/move_to_right.svg" icon_size="16"/>
-              <list_entry value="move_to_port" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/move_to_port.svg" icon_size="16"/>
-              <list_entry value="move_to_starboard" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/move_to_starboard.svg" icon_size="16"/>
-              <list_entry value="keep_to_port" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/keep_to_port.svg" icon_size="16"/>
-              <list_entry value="keep_to_starboard" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/keep_to_starboard.svg" icon_size="16"/>
-              <list_entry value="stop" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/stop.svg" icon_size="16"/>
-              <list_entry value="speed_limit" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/speed_limit.svg" icon_size="16"/>
-              <list_entry value="sound_horn" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/sound_horn.svg" icon_size="16"/>
-              <list_entry value="keep_lookout" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/keep_lookout.svg" icon_size="16"/>
-              <list_entry value="give_way_junction" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/give_way_junction.svg" icon_size="16"/>
-              <list_entry value="give_way_crossing" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/give_way_crossing.svg" icon_size="16"/>
-              <list_entry value="make_radio_contact" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/make_radio_contact.svg" icon_size="16"/>
+              <list_entry value="move_to_left" display_value="move to left" short_description="driving way left" de.display_value="Fahrtrichtung links" de.short_description="Vorgeschriebene Fahrtrichtung links" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/move_to_left.svg" icon_size="16"/>
+              <list_entry value="move_to_right" display_value="move to right" short_description="driving way right" de.display_value="Fahrtrichtung rechts" de.short_description="Vorgeschriebene Fahrtrichtung rechts" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/move_to_right.svg" icon_size="16"/>
+              <list_entry value="move_to_port" display_value="move to port" short_description="" de.display_value="Backbordseite fahren" de.short_description="Backbordseite wechseln und fahren" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/move_to_port.svg" icon_size="16"/>
+              <list_entry value="move_to_starboard" display_value="move to starboard" short_description="" de.display_value="Steuerbordseite fahren" de.short_description="Steuerbordseite wechseln und fahren"  icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/move_to_starboard.svg" icon_size="16"/>
+              <list_entry value="keep_to_port"  display_value="keep to port" short_description="" de.display_value="Backbordseite bleiben" de.short_description="Backbordseite fahren und bleiben" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/keep_to_port.svg" icon_size="16"/>
+              <list_entry value="keep_to_starboard"  display_value="keep to starboard" short_description="" de.display_value="Steuerbordseite bleiben" de.short_description="Steuerbordseite fahren und bleiben" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/keep_to_starboard.svg" icon_size="16"/>
+              <list_entry value="stop" display_value="stop" short_description="hold ago watergate and bridge" de.display_value="Stop" de.short_description="Halt vor beweglichen Brücken und Schleusen" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/stop.svg" icon_size="16"/>
+              <list_entry value="speed_limit" display_value="speed limit" short_description="" de.display_value="Geschwindigkeitsbegrenzung" de.short_description="Geschwindigkeitesbeschränkung" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/speed_limit.svg" icon_size="16"/>
+              <list_entry value="sound_horn" display_value="sound horn" short_description="" de.display_value="Signal geben" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/sound_horn.svg" icon_size="16"/>
+              <list_entry value="keep_lookout" display_value="keep lookout" short_description="" de.display_value="Vorsicht" de.short_description="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/keep_lookout.svg" icon_size="16"/>
+              <list_entry value="give_way_junction" display_value="give way junction" short_description="" de.display_value="Vorfahrt beachten T-Kreuzung" de.short_description="Querende Fahrzeuge haben vorfahrt an der T-Kreuzung" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/give_way_junction.svg" icon_size="16"/>
+              <list_entry value="give_way_crossing" display_value="give way crossing" short_description="" de.display_value="Vorfahrt beachten Kreuzung" de.short_description="Querende Fahrzeuge haben vorfahrt an der Kreuzung" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/give_way_crossing.svg" icon_size="16"/>
+              <list_entry value="make_radio_contact" display_value="make radio contact" short_description="select channel to radio contact" de.display_value="Funkkanal einstellen" de.short_description="den angezeigten Fiunkkanal einstellen" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/make_radio_contact.svg" icon_size="16"/>
             </combo>
-            <combo key="seamark:notice:impact" text="Impact">
-              <list_entry value="downstream"/>
-              <list_entry value="upstream"/>
-              <list_entry value="left_bank"/>
-              <list_entry value="right_bank"/>
-              <list_entry value="to_harbour"/>
-            </combo>
-            <multiselect key="seamark:notice:addition" text="Addition">
-              <list_entry value="top_board"/>
-              <list_entry value="bottom_board"/>
-              <list_entry value="left_triangle"/>
-              <list_entry value="right_triangle"/>
-              <list_entry value="bottom_triangle"/>
-            </multiselect>
-            <text key="seamark:notice:information" text="Notice Text"/>
-            <text key="seamark:notice:orientation" text="Orientation"/>
-            <text key="seamark:notice:distance_up" text="Distance Up"/>
-            <text key="seamark:notice:distance_down" text="Distance Down"/>
-            <text key="seamark:notice:distance_start" text="Distance Start"/>
-            <text key="seamark:notice:distance_end" text="Distance End"/>
-            <text key="seamark:notice:channel" text="Channel"/>
-            <check key="seamark:notice:status" text="Illuminated" value_on="illuminated" value_off=""/>
-          </item>
-          
-          <item name="Restriction Notices" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/navigation_restrictions.svg" type="node">
-            <label text="CEVNI Restriction Notice" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/navigation_restrictions.svg"/>
-            <space/>
-            <key key="seamark:type" value="notice"/>
-            <key key="seamark:notice:function" value="Restriction"/>
-            <key key="seamark:notice:system" value="cevni"/>
-            <combo key="seamark:notice:category" text="Notice Category">
-              <list_entry value="limited_depth" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/limited_depth.svg" icon_size="16"/>
-              <list_entry value="limited_headroom" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/limited_headroom.svg" icon_size="16"/>
-              <list_entry value="limited_width" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/limited_width.svg" icon_size="16"/>
-              <list_entry value="navigation_restrictions" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/navigation_restrictions.svg" icon_size="16"/>
-              <list_entry value="channel_distance_left" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/channel_distance_left.svg" icon_size="16"/>
-              <list_entry value="channel_distance_right" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/channel_distance_right.svg" icon_size="16"/>
-            </combo>
-            <combo key="seamark:notice:impact" text="Impact">
-              <list_entry value="downstream"/>
-              <list_entry value="upstream"/>
-              <list_entry value="left_bank"/>
-              <list_entry value="right_bank"/>
-              <list_entry value="to_harbour"/>
+            <combo key="seamark:notice:impact" text="Impact" de.text="Einfluss">
+              <list_entry value="downstream" display_value="downstream" short_description="" de.display_value="Strom abwärts" de.short_description=""/>
+              <list_entry value="upstream" display_value="upstream" short_description="" de.display_value="Strom aufwärts" de.short_description=""/>
+              <list_entry value="left_bank" display_value="left bank" short_description="" de.display_value="linkes Ufer" de.short_description=""/>
+              <list_entry value="right_bank" display_value="right bank" short_description="" de.display_value="rechtes Ufer" de.short_description=""/>
+              <list_entry value="bank_to_bank" display_value="bank to bank" short_description="" de.display_value="Ufer zu Ufer" de.short_description=""/>
+              <list_entry value="to_harbour" display_value="to harbour" short_description="" de.display_value="zum Hafen" de.short_description=""/>
             </combo>
             <multiselect key="seamark:notice:addition" text="Addition">
-              <list_entry value="top_board"/>
-              <list_entry value="bottom_board"/>
-              <list_entry value="left_triangle"/>
-              <list_entry value="right_triangle"/>
-              <list_entry value="bottom_triangle"/>
-            </multiselect>
-            <text key="seamark:notice:information" text="Notice Text"/>
-            <text key="seamark:notice:orientation" text="Orientation"/>
-            <text key="seamark:notice:distance_up" text="Distance Up"/>
-            <text key="seamark:notice:distance_down" text="Distance Down"/>
-            <text key="seamark:notice:distance_start" text="Distance Start"/>
-            <text key="seamark:notice:distance_end" text="Distance End"/>
+              <list_entry value="top_board" display_value="top board" short_description="top description board" de.display_value="Schild oben" de.short_description="Schild mit zusatzinformation oben"/>
+              <list_entry value="bottom_board" display_value="buttom board" short_description="button description board" de.display_value="Schild unten" de.short_description="Schild mit zusatzinformation unten"/>
+              <list_entry value="left_triangle" display_value="left triangle" short_description="whit triangle (arrow) left" de.display_value="Dreieck links" de.short_description="Weisses Dreieck (Pfeil) nach links zeigend"/>
+              <list_entry value="right_triangle" display_value="right triangle" short_description="white triangle (arrow) right" de.display_value="Dreieck rechts" de.short_description="Weisses Dreieck (Pfeil) nach rechts zeigend"/>
+              <list_entry value="bottom_triangle" display_value="buttom triangle" short_description="white triangle (arrow) down" de.display_value="Dreieck unten" de.short_description="Weisses Dreieck (Pfeil) nach unten zeigend"/>
+            </multiselect> 
+            <text key="seamark:notice:information" text="Notice Text" de.text="Zusatz Information"/>
+            <text key="seamark:notice:orientation" text="Orientation" de.text="Ausrichtung"/>
+            <text key="seamark:notice:distance_up" text="Distance upstream" de.text="Abstand Strom aufwärts"/>
+            <text key="seamark:notice:distance_down" text="Distance downstream" de.text="Abstand Strom abwärts"/>
+            <text key="seamark:notice:distance_start" text="Distance Start" de.text="Abstand Start"/>
+            <text key="seamark:notice:distance_end" text="Distance End" de.text="Abstand Ende"/>
             <text key="seamark:notice:channel" text="Channel"/>
-            <check key="seamark:notice:status" text="Illuminated" value_on="illuminated" value_off=""/>
+            <check key="seamark:notice:status" text="Illuminated" de.text="Beleuchtet" value_on="illuminated" value_off=""/>
           </item>
           
           <item name="Recommendation Notices" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/channel_two_way.svg" type="node">
@@ -4937,11 +4902,11 @@
         <list_entry value="rem_imcomplete"/>
         <list_entry value="usldup"/>
       </combo>
-      <text key="note" text="Additional note to mappers" de.text="Optionale Notiz fuer Mappers" delete_if_empty="true"/>
+      <text key="note" text="Additional note to mappers" de.text="Optionale Notiz für Mappers" delete_if_empty="true"/>
     </item>
     
     <item name="README">
-      <label text="Documentation of the tagging provided by this preset can be found here:"/>
+      <label text="Documentation of the tagging provided by this preset can be found here:" de.text="Dokumente auf das dieses Preset basiert"/>
       <space/>
       <link href="http://www.iho.int/iho_pubs/standard/S-4/INT1_FR_Ed5_2012.pdf" text="IHO INT-1 (English/French)"/>
       <link href="http://www.nauticalcharts.noaa.gov/mcd/chart1/ChartNo1.pdf" text="US NOAA INT-1"/>
