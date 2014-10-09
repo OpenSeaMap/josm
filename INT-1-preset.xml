@@ -221,19 +221,19 @@
   
   <chunk id="notice_impact">
 		<list_entry value="downstream" display_value="Downstream" de.display_value="Strom abwärts" de.short_description=""/>
-		<list_entry value="upstream" display_value="Upstream"de.display_value="Strom aufwärts" de.short_description=""/>
-		<list_entry value="left_bank" display_value="Left bank"de.display_value="linkes Ufer" de.short_description=""/>
-		<list_entry value="right_bank" display_value="Right bank"de.display_value="rechtes Ufer" de.short_description=""/>
+		<list_entry value="upstream" display_value="Upstream" de.display_value="Strom aufwärts" de.short_description=""/>
+		<list_entry value="left_bank" display_value="Left bank" de.display_value="linkes Ufer" de.short_description=""/>
+		<list_entry value="right_bank" display_value="Right bank" de.display_value="rechtes Ufer" de.short_description=""/>
 		<list_entry value="bank_to_bank" display_value="Bank to bank" de.display_value="Ufer zu Ufer" de.short_description=""/>
 		<list_entry value="to_harbour" display_value="To harbour" de.display_value="zum Hafen" de.short_description=""/>
 	</chunk>
   
 	<chunk id="notice_addition">
-		<list_entry value="top_board" display_value="Top board"de.display_value="Schild oben" de.short_description="Schild mit zusatzinformation oben"/>
-		<list_entry value="bottom_board" display_value="Bottom board"de.display_value="Schild unten" de.short_description="Schild mit zusatzinformation unten"/>
-		<list_entry value="left_triangle" display_value="Left triangle"de.display_value="Dreieck links" de.short_description="Weisses Dreieck (Pfeil) nach links zeigend"/>
-		<list_entry value="right_triangle" display_value="Right triangle"de.display_value="Dreieck rechts" de.short_description="Weisses Dreieck (Pfeil) nach rechts zeigend"/>
-		<list_entry value="bottom_triangle" display_value="Bottom triangle"de.display_value="Dreieck unten" de.short_description="Weisses Dreieck (Pfeil) nach unten zeigend"/>
+		<list_entry value="top_board" display_value="Top board" de.display_value="Schild oben" de.short_description="Schild mit zusatzinformation oben"/>
+		<list_entry value="bottom_board" display_value="Bottom board" de.display_value="Schild unten" de.short_description="Schild mit zusatzinformation unten"/>
+		<list_entry value="left_triangle" display_value="Left triangle" de.display_value="Dreieck links" de.short_description="Weisses Dreieck (Pfeil) nach links zeigend"/>
+		<list_entry value="right_triangle" display_value="Right triangle" de.display_value="Dreieck rechts" de.short_description="Weisses Dreieck (Pfeil) nach rechts zeigend"/>
+		<list_entry value="bottom_triangle" display_value="Bottom triangle" de.display_value="Dreieck unten" de.short_description="Weisses Dreieck (Pfeil) nach unten zeigend"/>
 	</chunk>
 
 	<chunk id="notice_impact_distances">
@@ -4021,7 +4021,7 @@
             <key key="seamark:notice:function" value="Restriction"/>
             <key key="seamark:notice:system" value="cevni"/>
             <combo key="seamark:notice:category" text="Notice Category"  de.text="Schild Kategorie">
-              <list_entry value="limited_depth" display_value="Limited depth"de.display_value="Begrenzte Tiefe" de.short_description="Wassertiefe stark begrenzt" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/limited_depth.svg" icon_size="16"/>
+              <list_entry value="limited_depth" display_value="Limited depth" de.display_value="Begrenzte Tiefe" de.short_description="Wassertiefe stark begrenzt" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/limited_depth.svg" icon_size="16"/>
               <list_entry value="limited_headroom" display_value="Limited headroom" de.display_value="Begrenzte Höhe" de.short_description="Begrenzte Höhe (z.B. Brücke)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/limited_headroom.svg" icon_size="16"/>
               <list_entry value="limited_width" display_value="Limited width" de.display_value="Begrenzte Breite" de.short_description="Begrennzte Flussbreite" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/limited_width.svg" icon_size="16"/>
               <list_entry value="navigation_restrictions" display_value="Navigation restriction" de.display_value="" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/navigation_restrictions.svg" icon_size="16"/>
