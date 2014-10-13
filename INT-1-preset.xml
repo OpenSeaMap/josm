@@ -2,141 +2,141 @@
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="Aun 'Skippern' Johnsen, Malcolm Herring, Translator.DE: S. 'XPcRUSHER' Heilmann" version="1.0" description="Seamark Tagging according to INT-1 symbols" shortdescription="Seamarks">
   
   <chunk id="function">
-    <list_entry value="harbour_master"/>
-    <list_entry value="customs"/>
-    <list_entry value="health"/>
-    <list_entry value="hospital"/>
-    <list_entry value="post_office"/>
-    <list_entry value="hotel"/>
-    <list_entry value="railway_station"/>
-    <list_entry value="police_station"/>
-    <list_entry value="water-police_station"/>
-    <list_entry value="pilot_office"/>
-    <list_entry value="pilot_lookout"/>
-    <list_entry value="bank"/>
-    <list_entry value="district_control"/>
-    <list_entry value="transit_shed"/>
-    <list_entry value="factory"/>
-    <list_entry value="power_station"/>
-    <list_entry value="administrative"/>
-    <list_entry value="educational"/>
-    <list_entry value="church"/>
-    <list_entry value="chapel"/>
-    <list_entry value="temple"/>
-    <list_entry value="pagoda"/>
-    <list_entry value="shinto_shrine"/>
-    <list_entry value="buddhist_temple"/>
-    <list_entry value="mosque"/>
-    <list_entry value="marebout"/>
-    <list_entry value="lookout"/>
-    <list_entry value="communication"/>
-    <list_entry value="television"/>
-    <list_entry value="radio"/>
-    <list_entry value="radar"/>
-    <list_entry value="light_support"/>
-    <list_entry value="microwave"/>
-    <list_entry value="cooling"/>
-    <list_entry value="observation"/>
-    <list_entry value="time_ball"/>
-    <list_entry value="clock"/>
-    <list_entry value="control"/>
-    <list_entry value="airship_mooring"/>
-    <list_entry value="stadium"/>
-    <list_entry value="bus_station"/>
+    <list_entry value="harbour_master" display_value="Harbour Master" de.display_value="Haupt Hafen"/>
+    <list_entry value="customs" diplay_value="Customs" de.display_value="Benutzerdefinierte Information"/>
+    <list_entry value="health" display_value="Health"/>
+    <list_entry value="hospital" display_value="Hospital" de.display_value="Krankenhaus"/>
+    <list_entry value="post_office" display_value="Post Office" de.display_value="Postamt"/>
+    <list_entry value="hotel" display_value="Hotel" de.display_value="Hotel"/>
+    <list_entry value="railway_station" display_value="Railway Station" de.display_value="Bahnstation"/>
+    <list_entry value="police_station" display_value="Police Station" de.display_value="Polizeirevier"/>
+    <list_entry value="water-police_station" display_value="Water-Police Station" de.display_value="Wasserpolizeistation"/>
+    <list_entry value="pilot_office" display_value="Pilot Office" de.display_value="Pilot Office"/><!--was ist das?-->
+    <list_entry value="pilot_lookout" display_value="Pilot Lookout" de.display_value="Pilot Lookout"/><!--was ist das?-->
+    <list_entry value="bank" display_value="Bank" de.display_value="Geldinstitut"/>
+    <list_entry value="district_control" display_value="District Control" de.display_value="Distgrict Control"/>
+    <list_entry value="transit_shed" display_value="Transit Shed"/>
+    <list_entry value="factory" display_value="Factory" de.display_value="Fabrik"/>
+    <list_entry value="power_station" display_value="Power Station" de.display_value="Kraftwerk"/>
+    <list_entry value="administrative" display_value="Administrative"/>
+    <list_entry value="educational" display_vlue="Educational"/>
+    <list_entry value="church" display_value="Church" de.display_value="Kirche"/>
+    <list_entry value="chapel" display_value="Chapel" de.display_value="Kapelle"/>
+    <list_entry value="temple" display_value="Temple" de.display_value="Gotteshaus"/>
+    <list_entry value="pagoda" display_value="Pagoda"/>
+    <list_entry value="shinto_shrine" display_value="Shinto Shrine"/>
+    <list_entry value="buddhist_temple" display_value="Buddhist Temple" de.display_value="Buddisticher Tempel"/>
+    <list_entry value="mosque" display_value="Mosque" de.display_value="Mosche"/>
+    <list_entry value="marebout" display_value="Marebout"/>
+    <list_entry value="lookout" display_value="Lookout" de.display_value="Aussichtspunkt"/>
+    <list_entry value="communication" display_value="Communication"/>
+    <list_entry value="television" display_value="television" de.display_value="Fernsehturm"/>
+    <list_entry value="radio" display_value="Radio"/>
+    <list_entry value="radar" display_value="Radar"/>
+    <list_entry value="light_support" display_value="Light support"/>
+    <list_entry value="microwave" display_value="Microwave"/>
+    <list_entry value="cooling" display_value="Cooling"/>
+    <list_entry value="observation" display_value="Oberservation" de.display_value="Observarorium"/>
+    <list_entry value="time_ball" display_value="Time Ball"/>
+    <list_entry value="clock" display_value="Clock" de.display_value="Uhr"/>
+    <list_entry value="control" display_value="Control"/>
+    <list_entry value="airship_mooring" display_value="Airship Mooring" de.display_value="Luftschiffbefestigung"/>
+    <list_entry value="stadium" display_value="Stadium" de.display_value="Stadion"/>
+    <list_entry value="bus_station" display_value="Bus Station" de.display_value="Busstation"/>
   </chunk>
   
   <chunk id="restrictions">
-    <list_entry value="no_anchoring"/>
-    <list_entry value="restricted_anchoring"/>
-    <list_entry value="no_fishing"/>
-    <list_entry value="restricted_fishing"/>
+    <list_entry value="no_anchoring" display_value="No Anchoring" de.display_value="Ankern verboten"/>
+    <list_entry value="restricted_anchoring" display_value="Restricted Anchoring"/>
+    <list_entry value="no_fishing" display_value="No Fishing" de.display_value="Angeln verboten"/>
+    <list_entry value="restricted_fishing" display_value="Restricted Fishing"/>
     <list_entry value="restricted_trawlingno_trawling"/>
-    <list_entry value="no_entry"/>
-    <list_entry value="restricted_entry"/>
-    <list_entry value="no_dredging"/>
-    <list_entry value="restricted_dredging"/>
-    <list_entry value="no_diving"/>
-    <list_entry value="restricted_diving"/>
-    <list_entry value="no_wake"/>
-    <list_entry value="to_be_avoided"/>
-    <list_entry value="no_construction"/>
-    <list_entry value="no_discharging"/>
-    <list_entry value="restricted_discharging"/>
-    <list_entry value="no_exploration_development"/>
-    <list_entry value="restricted_exploration_development"/>
-    <list_entry value="no_drilling"/>
-    <list_entry value="restricted_drilling"/>
-    <list_entry value="no_historical_artifacts_removal"/>
-    <list_entry value="no_lightering"/>
-    <list_entry value="no_dragging"/>
-    <list_entry value="no_stopping"/>
-    <list_entry value="no_landing"/>
-    <list_entry value="restricted_speed"/>
-    <list_entry value="no_overtaking"/>
-    <list_entry value="no_convoy_overtaking"/>
-    <list_entry value="no_passing_overtaking"/>
-    <list_entry value="no_berthing"/>
-    <list_entry value="restricted_berthing"/>
-    <list_entry value="no_making_fast"/>
-    <list_entry value="restricted_making_fast"/>
-    <list_entry value="no_turning"/>
-    <list_entry value="restricted_fairway_depth"/>
+    <list_entry value="no_entry" display_value="No Entry" de.display_value="kein Zutritt"/>
+    <list_entry value="restricted_entry" display_value="Restricted Entry"/>
+    <list_entry value="no_dredging" display_value="No Dredging"/>
+    <list_entry value="restricted_dredging" display_value="Restricted Dredging"/>
+    <list_entry value="no_diving" display_value="No Diving"/>
+    <list_entry value="restricted_diving" display_value="Restrictred Diving"/>
+    <list_entry value="no_wake" display_value="No wake"/>
+    <list_entry value="to_be_avoided" display_value="To be Avoided"/>
+    <list_entry value="no_construction" display_value="No construction"/>
+    <list_entry value="no_discharging" display_value="No discharging"/>
+    <list_entry value="restricted_discharging" display_value="Restricted discharing"/>
+    <list_entry value="no_exploration_development" display_value="No exploration development"/>
+    <list_entry value="restricted_exploration_development" display_value="Restricted exploration development"/>
+    <list_entry value="no_drilling" display_value="No drilling"/>
+    <list_entry value="restricted_drilling" display_value="Restricted drilling"/>
+    <list_entry value="no_historical_artifacts_removal" display_value="No historical artifacts removal"/>
+    <list_entry value="no_lightering" display_value="No lightering"/>
+    <list_entry value="no_dragging" display_value="No dragging"/>
+    <list_entry value="no_stopping" display_value="No stopping"/>
+    <list_entry value="no_landing" display_value="No landing"/>
+    <list_entry value="restricted_speed" display_value="Restricted speed"/>
+    <list_entry value="no_overtaking" display_value="No overtaking" de.display_value="Überholverbot"/>
+    <list_entry value="no_convoy_overtaking" display_value="No convoy overtaking" de.display_value="Überholverbot von mehreren Fahrzeugen"/>
+    <list_entry value="no_passing_overtaking" display_value="No passing overtaking"/>
+    <list_entry value="no_berthing" display_value="No berthing"/>
+    <list_entry value="restricted_berthing" display_value="Restricted berthing"/>
+    <list_entry value="no_making_fast" display_value="No making fast"/>
+    <list_entry value="restricted_making_fast" display_value="Restricted making fast"/>
+    <list_entry value="no_turning" display_value="No turning"/>
+    <list_entry value="restricted_fairway_depth" display_value="Restricted fairway depth"/>
   </chunk>
   
   <chunk id="construction">
-    <list_entry value="masonry"/>
-    <list_entry value="concreted"/>
-    <list_entry value="loose_boulders"/>
-    <list_entry value="hard-surfaced"/>
-    <list_entry value="wooden"/>
-    <list_entry value="metal"/>
-    <list_entry value="grp"/>
-    <list_entry value="painted"/>
-    <list_entry value="framework"/>
+    <list_entry value="masonry" display_value="Masonry" de.display_value="Mauerwerk"/>
+    <list_entry value="concreted" display_value="Concreted" de.display_value="Betoniert"/>
+    <list_entry value="loose_boulders" display_value="Loose boulders" de.display_value="Loses Geröll"/>
+    <list_entry value="hard-surfaced" display_value="Hard-surfaced" de.display_value="befestigt"/>
+    <list_entry value="wooden" display_value="Wooden" de.display_value="Hölzern"/>
+    <list_entry value="metal" display_value="Metal" de.display_value="Metallisch"/>
+    <list_entry value="grp" display_value="GRP" de.display_value="GFK"/>
+    <list_entry value="painted" display_value="Painted" de.display_value="Bemalt"/>
+    <list_entry value="framework" display_value="Framework" de.display_value="Gerüst/Rahmen"/>
   </chunk>
   
   <chunk id="product">
-    <list_entry value="oil"/>
-    <list_entry value="gas"/>
-    <list_entry value="water"/>
-    <list_entry value="stone"/>
-    <list_entry value="coal"/>
-    <list_entry value="ore"/>
-    <list_entry value="chemicals"/>
-    <list_entry value="drinking_water"/>
-    <list_entry value="milk"/>
-    <list_entry value="bauxite"/>
-    <list_entry value="coke"/>
-    <list_entry value="iron_ingots"/>
-    <list_entry value="salt"/>
-    <list_entry value="sand"/>
-    <list_entry value="timber"/>
-    <list_entry value="sawdust"/>
-    <list_entry value="scrap"/>
-    <list_entry value="lng"/>
-    <list_entry value="lpg"/>
-    <list_entry value="wine"/>
-    <list_entry value="cement"/>
-    <list_entry value="grain"/>
+    <list_entry value="oil" display_value="Oil" de.display_value="Öl"/>
+    <list_entry value="gas" display_value="Gas"/>
+    <list_entry value="water" display_value="Water" de.display_value="Wasser"/>
+    <list_entry value="stone" display_value="Stone" de.display_value="Stein"/>
+    <list_entry value="coal" display_value="Coal" de.display_value="Kole"/>
+    <list_entry value="ore" display_value="Ore" de.display_value="Erz"/>
+    <list_entry value="chemicals" display_value="Chemicals" de.display_value="Chemikalien"/>
+    <list_entry value="drinking_water" display_value="Drinking water" de.display_value="Trinkwasser"/>
+    <list_entry value="milk" display_value="Milk" de.display_value="Milch"/>
+    <list_entry value="bauxite" display_value="Bauxite" de.display_value="Bauxit"/>
+    <list_entry value="coke" display_value="Coke" de.display_value="Steinkohlekoks"/>
+    <list_entry value="iron_ingots" display_value="Iron ingots" de.display_value="Stahl"/>
+    <list_entry value="salt" display_value="Salt" de.display_value="Salz"/>
+    <list_entry value="sand" display_value="Sand" de.display_value="Sand"/>
+    <list_entry value="timber" display_value="Timber" de.display_value="Holz"/>
+    <list_entry value="sawdust" display_value="Sawdust" de.display_value="Sägemehl"/>
+    <list_entry value="scrap" display_value="Scrap" de.display_value="Altmetall"/>
+    <list_entry value="lng" display_value="Liquefied Natural Gas" de.display_value="Flüssig Erdgas"/>
+    <list_entry value="lpg" display_value="Liquefied Petroleum Gas" de.display_value="Propangas/Autogas"/>
+    <list_entry value="wine" display_value="Wine" de.display_value="Wein"/>
+    <list_entry value="cement" display_value="Cement" de.display_value="Zement"/>
+    <list_entry value="grain" display_value="Grain" de.display_value="Getreide"/>
   </chunk>
   
   <chunk id="lightcolours">
-    <list_entry value="white" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/white.svg" icon_size="16"/>
-    <list_entry value="red" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/red.svg" icon_size="16"/>
-    <list_entry value="green" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/green.svg" icon_size="16"/>
-    <list_entry value="yellow" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/yellow.svg" icon_size="16"/>
-    <list_entry value="blue" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/blue.svg" icon_size="16"/>
-    <list_entry value="amber" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/amber.svg" icon_size="16"/>
-    <list_entry value="violet" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/violet.svg" icon_size="16"/>
-    <list_entry value="orange" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/orange.svg" icon_size="16"/>
-    <list_entry value="magenta" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/magenta.svg" icon_size="16"/>
+    <list_entry value="white" display_value="White" de.display_value="Weiss" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/white.svg" icon_size="16"/>
+    <list_entry value="red" display_value="Red" de.display_value="Rot" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/red.svg" icon_size="16"/>
+    <list_entry value="green" display_value="Green" de.display_value="Grün" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/green.svg" icon_size="16"/>
+    <list_entry value="yellow" display_value="Yellow" de.display_value="Gelb" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/yellow.svg" icon_size="16"/>
+    <list_entry value="blue" display_value="Blue" de.display_value="Blau" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/blue.svg" icon_size="16"/>
+    <list_entry value="amber" display_value="Amber" de.display_value="Bernsteinfarbend" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/amber.svg" icon_size="16"/>
+    <list_entry value="violet" display_value="Violet" de.display_value="Violett" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/violet.svg" icon_size="16"/>
+    <list_entry value="orange" display_value="Orange" de.display_value="Orange" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/orange.svg" icon_size="16"/>
+    <list_entry value="magenta" display_value="Magenter" de.display_value="Purpur" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/magenta.svg" icon_size="16"/>
   </chunk>
   
   <chunk id="othercolours">
-    <list_entry value="black" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/black.svg" icon_size="16"/>
-    <list_entry value="grey" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/grey.svg" icon_size="16"/>
-    <list_entry value="brown" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/brown.svg" icon_size="16"/>
-    <list_entry value="pink" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/pink.svg" icon_size="16"/>
+    <list_entry value="black" display_value="Black" de.display_value="Schwarz" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/black.svg" icon_size="16"/>
+    <list_entry value="grey" display_value="Grey" de.display_value="Grau" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/grey.svg" icon_size="16"/>
+    <list_entry value="brown" display_value="Brown" de.display_value="Braun" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/brown.svg" icon_size="16"/>
+    <list_entry value="pink" display_value="Pink" de.display_value="Pink" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/pink.svg" icon_size="16"/>
   </chunk>
   
   <chunk id="lightchars">
@@ -220,29 +220,32 @@
   </chunk>
   
   <chunk id="notice_impact">
-		<list_entry value="downstream" display_value="Downstream" de.display_value="Strom abwärts" de.short_description=""/>
-		<list_entry value="upstream" display_value="Upstream" de.display_value="Strom aufwärts" de.short_description=""/>
-		<list_entry value="left_bank" display_value="Left bank" de.display_value="linkes Ufer" de.short_description=""/>
-		<list_entry value="right_bank" display_value="Right bank" de.display_value="rechtes Ufer" de.short_description=""/>
-		<list_entry value="bank_to_bank" display_value="Bank to bank" de.display_value="Ufer zu Ufer" de.short_description=""/>
-		<list_entry value="to_harbour" display_value="To harbour" de.display_value="zum Hafen" de.short_description=""/>
-	</chunk>
+    <list_entry value="downstream" display_value="Downstream" de.display_value="Strom abwärts" de.short_description=""/>
+    <list_entry value="upstream" display_value="Upstream" de.display_value="Strom aufwärts" de.short_description=""/>
+    <list_entry value="left_bank" display_value="Left bank" de.display_value="linkes Ufer" de.short_description=""/>
+    <list_entry value="right_bank" display_value="Right bank" de.display_value="rechtes Ufer" de.short_description=""/>
+    <list_entry value="bank_to_bank" display_value="Bank to bank" de.display_value="Ufer zu Ufer" de.short_description=""/>
+    <list_entry value="to_harbour" display_value="To harbour" de.display_value="zum Hafen" de.short_description=""/>
+  </chunk>
   
-	<chunk id="notice_addition">
-		<list_entry value="top_board" display_value="Top board" de.display_value="Schild oben" de.short_description="Schild mit zusatzinformation oben"/>
-		<list_entry value="bottom_board" display_value="Bottom board" de.display_value="Schild unten" de.short_description="Schild mit zusatzinformation unten"/>
-		<list_entry value="left_triangle" display_value="Left triangle" de.display_value="Dreieck links" de.short_description="Weisses Dreieck (Pfeil) nach links zeigend"/>
-		<list_entry value="right_triangle" display_value="Right triangle" de.display_value="Dreieck rechts" de.short_description="Weisses Dreieck (Pfeil) nach rechts zeigend"/>
-		<list_entry value="bottom_triangle" display_value="Bottom triangle" de.display_value="Dreieck unten" de.short_description="Weisses Dreieck (Pfeil) nach unten zeigend"/>
-	</chunk>
+  <chunk id="notice_addition">
+    <list_entry value="top_board" display_value="Top board" de.display_value="Schild oben" de.short_description="Schild mit zusatzinformation oben"/>
+    <list_entry value="bottom_board" display_value="Bottom board" de.display_value="Schild unten" de.short_description="Schild mit zusatzinformation unten"/>
+    <list_entry value="left_triangle" display_value="Left triangle" de.display_value="Dreieck links" de.short_description="Weisses Dreieck (Pfeil) nach links zeigend"/>
+    <list_entry value="right_triangle" display_value="Right triangle" de.display_value="Dreieck rechts" de.short_description="Weisses Dreieck (Pfeil) nach rechts zeigend"/>
+    <list_entry value="bottom_triangle" display_value="Bottom triangle" de.display_value="Dreieck unten" de.short_description="Weisses Dreieck (Pfeil) nach unten zeigend"/>
+  </chunk>
 
-	<chunk id="notice_impact_distances">
-	  <text key="seamark:notice:information" text="Notice Text" de.text="Zusatz Information"/>
+  <chunk id="notice_impact_distances">
+    <combo key="seamark:notice:orientation" text="Orientation of Seamakr" de.text="Ausrichtung des Seezeichen" delete_if_empty="true"/>
+    <combo key="layer" text="Layer" de.text="Ebene" values="5,4,3,2,1,0,-1,-2,-3,-4,-5" default="" delete_if_empty="true"/>
+    <text key="seamark:notice:information" text="Notice Text" de.text="Zusatz Information"/>
     <text key="seamark:notice:distance_up" text="Distance upstream" de.text="Abstand Strom aufwärts"/>
     <text key="seamark:notice:distance_down" text="Distance downstream" de.text="Abstand Strom abwärts"/>
     <text key="seamark:notice:distance_start" text="Distance start" de.text="Abstand Start"/>
     <text key="seamark:notice:distance_end" text="Distance end" de.text="Abstand Ende"/>
-	</chunk>
+    <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Notice_Marks#Attributes" text="Seamark:notice:* Attributes"/>
+  </chunk>
   
   <group name="Seamarks" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/png/OpenSeaMapLogo_16.png">
     
