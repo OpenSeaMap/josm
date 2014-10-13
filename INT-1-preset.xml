@@ -237,8 +237,7 @@
   </chunk>
 
   <chunk id="notice_impact_distances">
-    <combo key="seamark:notice:orientation" text="Orientation of Seamakr" de.text="Ausrichtung des Seezeichen" delete_if_empty="true"/>
-    <combo key="layer" text="Layer" de.text="Ebene" values="5,4,3,2,1,0,-1,-2,-3,-4,-5" default="" delete_if_empty="true"/>
+    <text key="seamark:notice:orientation" text="Orientation of Notice" de.text="Ausrichtung des Seezeichen" delete_if_empty="true"/>
     <text key="seamark:notice:information" text="Notice Text" de.text="Zusatz Information"/>
     <text key="seamark:notice:distance_up" text="Distance upstream" de.text="Abstand Strom aufwärts"/>
     <text key="seamark:notice:distance_down" text="Distance downstream" de.text="Abstand Strom abwärts"/>
