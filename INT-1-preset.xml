@@ -241,8 +241,8 @@
     <text key="seamark:notice:information" text="Notice Text" de.text="Zusatz Information"/>
     <text key="seamark:notice:distance_up" text="Distance upstream" de.text="Abstand Strom aufwärts"/>
     <text key="seamark:notice:distance_down" text="Distance downstream" de.text="Abstand Strom abwärts"/>
-    <text key="seamark:notice:distance_start" text="Distance start" de.text="Abstand Start"/>
-    <text key="seamark:notice:distance_end" text="Distance end" de.text="Abstand Ende"/>
+    <text key="seamark:notice:distance_start" text="Distance to start" de.text="Abstand Start"/>
+    <text key="seamark:notice:distance_end" text="Distance to end" de.text="Abstand Ende"/>
     <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Notice_Marks#Attributes" text="Seamark:notice:* Attributes"/>
   </chunk>
   
@@ -961,11 +961,22 @@
           <text key="seamark:name" text="Name"/>
         </item>
         
-        <item name="Minor Posts/Piles (F22)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F22.svg" type="node">
-          <label text="F22: Minor Posts/Piles" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F22.svg"/>
+        <item name="Mooring Posts/Piles (F22)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F22.svg" type="node">
+          <label text="F22: Mooring Posts/Piles" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F22.svg"/>
           <space/>
           <key key="seamark:type" value="mooring"/>
           <key key="seamark:mooring:category" value="post"/>
+        </item>
+        
+        <item name="Minor Posts/Piles (F22)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F22.svg" type="node">
+          <label text="F22: Minor Posts/Piles" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F22.svg"/>
+          <space/>
+          <key key="seamark:type" value="pile"/>
+          <combo key="seamark:pile:category" text="Category">
+            <list_entry value="stake"/>
+            <list_entry value="post"/>
+            <list_entry value="tripodal"/>
+          </combo>
         </item>
         
         <item name="Slipway, Patent Slip or Ramp (F23)" icon="presets/empty.png" type="node,way,closedway">
