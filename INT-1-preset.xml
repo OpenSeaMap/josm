@@ -789,7 +789,7 @@
         <item name="Harbour" de.name="Hafen" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" type="node,closedway">
           <label text="F: Harbour" de.name="F: Hafen, Festmacher, Hafenelemnte" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg"/>
           <space/>
-          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Harbours" de.href="http://wiki.openstreetmap.org/wiki/DE:Hafen"text="Harbours" de.text="Häfen"/>
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Harbours" de.href="http://wiki.openstreetmap.org/wiki/DE:Hafen" text="Harbours" de.text="Häfen"/>
           <key key="harbour" value="yes"/>
           <key key="seamark:type" value="harbour"/>
           <text key="seamark:name" text="Name"/>
