@@ -782,74 +782,74 @@
     
     <!---***********************Section F: Ports***************************-->
     
-    <group name="F: Ports" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg">
+    <group name="F: Ports, Moorings" de.name="F: Hafen, Festmacher, Hafenelemente" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg">
       
-      <group name="Harbours in General" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg">
+      <group name="Harbours in General" de.name="Hafen Hauptelemente" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg">
         
-        <item name="Harbour" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" type="node,closedway">
-          <label text="F: Harbour" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg"/>
+        <item name="Harbour" de.name="Hafen" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" type="node,closedway">
+          <label text="F: Harbour" de.name="F: Hafen, Festmacher, Hafenelemnte" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg"/>
           <space/>
-          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Harbours" text="Harbours"/>
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Harbours" de.href="http://wiki.openstreetmap.org/wiki/DE:Hafen"text="Harbours" de.text="Häfen"/>
           <key key="harbour" value="yes"/>
           <key key="seamark:type" value="harbour"/>
           <text key="seamark:name" text="Name"/>
           <combo key="harbour:operator" text="Operator" readonly="false">
           </combo>
-          <multiselect key="seamark:harbour:category" text="Category" delimiter=";"  >
-            <list_entry value="roro" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
-            <list_entry value="ferry" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
-            <list_entry value="fishing" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F10.svg" icon_size="16"/>
-            <list_entry value="marina" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U1.1.svg" icon_size="16"/>
-            <list_entry value="marina_no_facilities" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U1.2.svg" icon_size="16"/>
-            <list_entry value="naval" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
-            <list_entry value="tanker" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
-            <list_entry value="passenger" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
-            <list_entry value="shipyard" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
-            <list_entry value="container" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
-            <list_entry value="bulk" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
-            <list_entry value="syncrolift" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
-            <list_entry value="straddle_carrier" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
-            <list_entry value="lay_up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
+          <multiselect key="seamark:harbour:category" text="Category" de.text="Kategorie" delimiter=";"  >
+            <list_entry value="roro" display_value="Carfarry" de.display_falue="Autofähre" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
+            <list_entry value="ferry" display_value="Farry" de.display_value="Fährhafen" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
+            <list_entry value="fishing" display_value="Fishing" de.display_value="Fischerhafen" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F10.svg" icon_size="16"/>
+            <list_entry value="marina" display_value="Marina" de.display_value="Marina" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U1.1.svg" icon_size="16"/>
+            <list_entry value="marina_no_facilities" display_value="Marina no facilities" de.display_value="Marina ohne Dienstleistung" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/U/U1.2.svg" icon_size="16"/>
+            <list_entry value="naval" display_value="Naval" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
+            <list_entry value="tanker" display_value="Tanker" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
+            <list_entry value="passenger" display_value="Passenger" de.display_value="Passagier" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
+            <list_entry value="shipyard" de.display_value="Shipyard" de.display_value="Werft" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
+            <list_entry value="container" display_value="Container" de.display_value="Kontainerhafen" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
+            <list_entry value="bulk" display_value="Bulk" de.display_value="Hauptteil" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
+            <list_entry value="syncrolift" display_value="Syncrolift" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
+            <list_entry value="straddle_carrier" display_value="Straddle Carrier" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
+            <list_entry value="lay_up" display_value="Lay Up" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
             <list_entry value="timber" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
-            <list_entry value="service_repair" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
-            <list_entry value="quarantine" icon="https://raw.gitusercontent.com/Skippern/INT-1/master/SVG/F/F62.1.avg" icon_size="16"/>
-            <list_entry value="seaplane" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
-            <list_entry value="cargo" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
-            <list_entry value="offshore_support" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
-            <list_entry value="port_support" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
+            <list_entry value="service_repair" display_value="Service Repair" de.display_value="Reparaturwerkstatt" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
+            <list_entry value="quarantine" display_value="Quarantine" de.display_value="Quarantäne" icon="https://raw.gitusercontent.com/Skippern/INT-1/master/SVG/F/F62.1.avg" icon_size="16"/>
+            <list_entry value="seaplane" display_value="Seaplane" de.display_value="Wasserflugzeug" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
+            <list_entry value="cargo" display_value="Cargo" de.display_value="Fracht" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
+            <list_entry value="offshore_support" display_value="Offshore Support" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
+            <list_entry value="port_support" display_value="Port Support" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
           </multiselect>
-          <text key="operator" text="Harbour Operator"/>
+          <text key="operator" text="Harbour Operator" de.text="Hafenmeister"/>
           <space/>
-          <check key="port_of_entry" value_on="yes" value_off="no" text="Port of Entry" default="off"/>
+          <check key="port_of_entry" value_on="yes" value_off="no" text="Port of Entry" de.text="Hafen zugänglich" default="off"/>
           <space/>
-          <label text="Harbour Access Restrictions"/>
+          <label text="Harbour Access Restrictions" de.text="Hafen Beschränkungen"/>
           <space/>
           <text key="access:tide" text="Tide state"/>
-          <text key="access:tidal_range" text="Tidal range"/>
-          <text key="access:sill_height" text="Sill height"/>
+          <text key="access:tidal_range" text="Tidal range" de.text="Gezeiten Zeitraum"/>
+          <text key="access:sill_height" text="Sill height" de.text="Höhenschwelle"/>
           <text key="access:swell" text="Swell conditions"/>
           <text key="access:ice" text="Ice conditions"/>
-          <text key="access:time" text="Time limits"/>
+          <text key="access:time" text="Time limits" de.text="Zeitbegrenzungen"/>
           <space/>
-          <label text="Vessel Size Restrictions"/>
+          <label text="Vessel Size Restrictions" de.text="Begrenzung der Schiffsgröße"/>
           <space/>
-          <text key="maxlength" text="Maximum length"/>
-          <text key="maxwidth" text="Maximum beam"/>
-          <text key="maxdraft" text="Maximum draft"/>
-          <text key="maxairdraft" text="Maximum height"/>
-          <text key="maxspeed" text="Speed limit"/>
+          <text key="maxlength" text="Maximum length" de.text="Maximale Länge"/>
+          <text key="maxwidth" text="Maximum beam" de.text="Maximale Länge"/>
+          <text key="maxdraft" text="Maximum draft" de.text="Maximaler Tiefgang"/>
+          <text key="maxairdraft" text="Maximum height" de.text="Maximale Höhe"/>
+          <text key="maxspeed" text="Speed limit" de.text="Maximale Geschwindigkeit"/>
           <space/>
           <label text="Contact Information"/>
           <space/>
-          <text key="harbour_master" text="Harbour Master"/>
-          <text key="phone" text="Phone"/>
-          <text key="fax" text="Fax"/>
-          <text key="email" text="Email"/>
-          <text key="website" text="Web site"/>
-          <text key="vhf_channel" text="VHF channel"/>
-          <text key="vhf_mmsi" text="VHF MMSI"/>
+          <text key="harbour_master" text="Harbour Master" de.text="Hafenmeister"/>
+          <text key="phone" text="Phone" de.text="Telefon"/>
+          <text key="fax" text="Fax" de.text="Fax"/>
+          <text key="email" text="Email" de.text="Email"/>
+          <text key="website" text="Web site" de.text="Webseite"/>
+          <text key="vhf_channel" text="VHF channel" de.text="UKW/VHF Kanal"/>
+          <text key="vhf_mmsi" text="VHF MMSI" de.text="UKW/VHF MMSI Funk ID"/>
           <space/>
-          <text key="harbour:information" text="General Information"/>
+          <text key="harbour:information" text="General Information" de.text="Hafen Hauptinformationen"/>
         </item>
         
       </group>
