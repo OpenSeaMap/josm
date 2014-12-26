@@ -804,7 +804,7 @@
             <list_entry value="naval" display_value="Naval" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
             <list_entry value="tanker" display_value="Tanker" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
             <list_entry value="passenger" display_value="Passenger" de.display_value="Passagier" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
-            <list_entry value="shipyard" de.display_value="Shipyard" de.display_value="Werft" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
+            <list_entry value="shipyard" display_value="Shipyard" de.display_value="Werft" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
             <list_entry value="container" display_value="Container" de.display_value="Kontainerhafen" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
             <list_entry value="bulk" display_value="Bulk" de.display_value="Hauptteil" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
             <list_entry value="syncrolift" display_value="Syncrolift" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg" icon_size="16"/>
