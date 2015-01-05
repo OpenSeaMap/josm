@@ -834,7 +834,7 @@
           <label text="Vessel Size Restrictions" de.text="Begrenzung der Schiffsgröße"/>
           <space/>
           <text key="maxlength" text="Maximum length" de.text="Maximale Länge"/>
-          <text key="maxwidth" text="Maximum beam" de.text="Maximale Länge"/>
+          <text key="maxwidth" text="Maximum beam" de.text="Maximale Breite"/>
           <text key="maxdraft" text="Maximum draft" de.text="Maximaler Tiefgang"/>
           <text key="maxairdraft" text="Maximum height" de.text="Maximale Höhe"/>
           <text key="maxspeed" text="Speed limit" de.text="Maximale Geschwindigkeit"/>
@@ -854,65 +854,66 @@
         
       </group>
       
-      <group name="Protection Structures (F1-6)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg">
+      <!--****** Wave breaker for beach?! *****-->
+      <group name="Protection Structures (F1-6)" de.name="Sichereits Einrichtungen (F1-6)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg">
         
-        <item name="Training Wall (F5)" icon="presets/empty.png" type="way,closedway">
-          <label text="F5: Training Wall"/>
+        <item name="Training Wall (F5)" de.name="Wellenbrecher (F5)" icon="presets/empty.png" type="way,closedway">
+          <label text="F5: Training Wall" de.text="F5: Wellenbrecher"/>
           <space/>
           <key key="seamark:type" value="shoreline_contruction"/>
           <key key="seamark:shoreline_contruction:category" value="training_wall"/>
-          <combo key="shoreline_construction:water_level" text="Water Level">
-            <list_entry value="dry"/>
-            <list_entry value="submerged"/>
-            <list_entry value="covers"/>
+          <combo key="shoreline_construction:water_level" text="Water Level" de.text="Wasserstand">
+            <list_entry value="dry" display_value="Dry" de.display_value="Trocken"/>
+            <list_entry value="submerged" display_value="Submeged" de.display_value="unter Wasser"/>
+            <list_entry value="covers" diplay_value="Covers" de.display_value="Verdeckt"/>
           </combo>
         </item>
         
       </group>
       
-      <group name="Harbour Installations (F10-34)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg">
+      <group name="Harbour Installations (F10-34)" de.name="Hafen Einrichtungen (F10-34)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F.svg">
         
-        <item name="Fishing Harbour (F10)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F10.svg" type="node,closedway">
-          <label text="F10: Fishing Harbour" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F10.svg"/>
+        <item name="Fishing Harbour (F10)" de.name="Fischerhafen (F10)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F10.svg" type="node,closedway">
+          <label text="F10: Fishing Harbour" de.text="F10: Fischerhafen" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F10.svg"/>
           <space/>
           <key key="harbour" value="yes"/>
           <key key="seamark:type" value="harbour"/>
           <key key="seamark:harbour:category" value="fishing"/>
-          <text key="name" text="Name"/>
+          <text key="name" text="Name" de.text="Name"/>
           <space/>
-          <text key="operator" text="Harbour Operator"/>
+          <text key="operator" text="Harbour Operator" de.text="Hafenleiter"/>
           <space/>
-          <check key="port_of_entry" value_on="yes" value_off="no" text="Port of Entry" default="off"/>
+          <check key="port_of_entry" value_on="yes" value_off="no" text="Port of Entry" de.text="Hafeneinfahrt" default="off"/>
           <space/>
-          <label text="Harbour Access Restrictions"/>
+          <label text="Harbour Access Restrictions" de.text="Hafennutzungsbeschränkungen"/>
           <space/>
-          <text key="access:tide" text="Tide state"/>
-          <text key="access:tidal_range" text="Tidal range"/>
-          <text key="access:sill_height" text="Sill height"/>
-          <text key="access:swell" text="Swell conditions"/>
-          <text key="access:ice" text="Ice conditions"/>
-          <text key="access:time" text="Time limits"/>
+          <text key="access:tide" text="Tide state" de.text="Gezeitenangaben"/>
+          <text key="access:tidal_range" text="Tidal range" de.text="Gezeitenbereich"/>
+          <text key="access:sill_height" text="Sill height" de.text="Hoher Wasserstand"/>
+          <text key="access:swell" text="Swell conditions" de.text="Wellengang Bedingungen"/>
+          <text key="access:ice" text="Ice conditions" de.text="Eis Bedingungen"/>
+          <text key="access:time" text="Time limits" de.text="Zeitbegrenzung"/>
           <space/>
-          <label text="Vessel Size Restrictions"/>
+          <label text="Vessel Size Restrictions" de.text="Schiffsgrößen Auflage"/>
           <space/>
-          <text key="maxlength" text="Maximum length"/>
-          <text key="maxwidth" text="Maximum beam"/>
-          <text key="maxdraft" text="Maximum draft"/>
-          <text key="maxairdraft" text="Maximum height"/>
-          <text key="maxspeed" text="Speed limit"/>
+          <text key="maxlength" text="Maximum length" de.text="Maximale Länge"/>
+          <text key="maxwidth" text="Maximum beam" de.text="Maximale Breite"/>
+          <text key="maxdraft" text="Maximum draft" de.text="Maximaler Tiefgang"/>
+          <text key="maxairdraft" text="Maximum height" de.text="Maximale Höhe"/>
+          <text key="maxspeed" text="Speed limit" de.text="Geschwindugkeitsbegrenzung"/>
           <space/>
-          <label text="Contact Information"/>
+          <label text="Contact Information" de.text="Kontakt Informationen"/>
           <space/>
-          <text key="harbour_master" text="Harbour Master"/>
-          <text key="phone" text="Phone"/>
-          <text key="fax" text="Fax"/>
-          <text key="email" text="Email"/>
-          <text key="website" text="Web site"/>
-          <text key="vhf_channel" text="VHF channel"/>
-          <text key="vhf_mmsi" text="VHF MMSI"/>
+          <text key="harbour_master" text="Harbour Master" de.text="Havenmeister"/>
+          <text key="phone" text="Phone" de.text="Telefon"/>
+          <text key="fax" text="Fax" de.text="Fax"/>
+          <text key="email" text="Email" de.text="Email"/>
+          <text key="website" text="Web site" de.text="Internetseite"/>
+          <text key="vhf_channel" text="VHF channel" de.text="VHF/UKW Kanal"/>
+          <text key="vhf_mmsi" text="VHF MMSI" de.text="VHF/UKW Kennung (MMSI)"/>
           <space/>
-          <text key="harbour:information" text="General Information"/>
-          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Harbours" text="Harbours"/>
+          <text key="harbour:information" text="General Information" de.text="Hauptinformationen"/>
+          <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Harbours" text="Harbours" de.text="Häfen"/>
         </item>
         
         <item name="Designation of Berth (F19.1)" icon="presets/empty.png" type="node,way,closedway">
