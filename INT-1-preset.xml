@@ -1647,7 +1647,6 @@
         <label text="M40: Radio Reporting Points and Lines" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/M/M40.2.svg"/>
         <space/>
         <key key="seamark:type" value="calling-in_point"/>
-        <text key="seamark:calling-in_point:channel" text="VHF Channel"/>
         <text key="seamark:calling-in_point:orientation" text="Point Orientation"/>
         <combo key="seamark:calling-in_point:traffic_flow" text="Traffic Flow">
           <list_entry value="inbound" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/M/M40.1.svg" icon_size="16"/>
@@ -1655,6 +1654,8 @@
           <list_entry value="one-way" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/M/M40.1.svg" icon_size="16"/>
           <list_entry value="two-way" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/M/M40.2.svg" icon_size="16"/>
         </combo>
+        <text key="seamark:calling-in_point:channel" text="VHF Channel"/>
+        <text key="seamark:calling-in_point:callsign" text="Call sign"/>
       </item>
       
       <item name="Ferry Route (M50-M51)" icon="presets/empty.png" type="way,relation">
