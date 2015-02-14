@@ -4915,7 +4915,7 @@
     </item>
     
     <item name="README">
-      <label text="Documentation of the tagging provided by this preset can be found here:"/>
+      <label text="Documentation of the tagging provided by this preset can be found here:" de.text="Dokumentationen worauf diese diese Vorlage basiert, finden Sie hier:"/>
       <space/>
       <link href="http://www.iho.int/iho_pubs/standard/S-4/INT1_FR_Ed5_2012.pdf" text="IHO INT-1 (English/French)"/>
       <link href="http://www.nauticalcharts.noaa.gov/mcd/chart1/ChartNo1.pdf" text="US NOAA INT-1"/>
@@ -4923,6 +4923,11 @@
       <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Objects" text="Seamark Objects"/>
       <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Attributes" text="Seamark Attributes"/>
       <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/INT-1_Cross_Reference" text="INT-1 Cross Reference"/>
+      <link href="https://github.com/OpenSeaMap/josm/commits/master/INT-1-preset.xml" text="Check last update" de.text="Prüfe letztes Update"/>
+      <label text="Manual update of this Preset, delet the files in:" de.text="Manuelles Update der Vorlage, Dateien löchen in:"/>
+      <label text="Windows 7: \Users\[yourUSERNAME]\AppData\Roaming\JOSM\cache\"/>
+      <!-- Please check foldername "ApplicationData", my Windows is in German -->
+      <label text="Windows XP: \Documents and Settings\[yourUSERNAME]\ApplicationData\JOSM\cache\" de.text="Windows XP: \Dokumente und Einstellungen\[deinBENUTZERNAME]\Anwendungsdaten\JOSM\cache\"/>
     </item>
     
   </group>
