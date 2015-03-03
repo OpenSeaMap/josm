@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <presets shortdescription="Harbours" de.shortdescription="Hafen" description="Harbour elements for OpenSeaMap" author="Malcolm Herring" version="1.0_2013-05-09" xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
   <separator/>
-  <group name="Harbour" de.name="Hafen" fr.name="Port" icon="presets/marina.png">
+  <group name="Harbour" de.name="Hafen" fr.name="Port" icon="http://dev.openseamap.org/josm/icons/Harbour16.png">
     <item name="Harbour" de.name="Hafen" fr.name="Port" icon="http://dev.openseamap.org/josm/icons/Harbour16.png" type="node,way,closedway,relation">
       <link href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Harbours" />
       <key key="harbour" value="yes" />
