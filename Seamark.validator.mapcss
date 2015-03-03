@@ -1,0 +1,137 @@
+/*
+ * Since the OpenSeaMap tagging scheme is quite complicated, and prone of entering data wrongly, the need for data validation is strong
+ *
+ * This validator is meant to identify clearly wrong tagging. Border values where doubt whether can be positive or negative is avoided
+ * in order not to generate false-negatives or false-positives.
+ *
+ * Any short-comings to this validator can be reported as an issue on http://github.com/OpenSeaMap/josm/issues
+ */
+meta {
+    title: "Seamark Validation Rules";
+    version: "0.1";
+    description: "Rules to give warning when tagging of seamarks are not in accordance with standards in the data model";
+    author: "Aun (Skippern) Johnsen";
+    link: "http://wiki.openstreetmap.org/wiki/OpenSeaMap/Seamark_Objects";
+    watch-modified: true;
+}
+
+/* Multi-colour buoys and beacons without colour_pattern */
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:color"*=";"][!"seamark:buoy_lateral:colour_pattern"],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:color"*=";"][!"seamark:beacon_lateral:colour_pattern"],
+node["seamark:type"=buoy_cardinal]["seamark:buoy_cardinal:color"*=";"][!"seamark:buoy_cardinal:colour_pattern"],
+node["seamark:type"=beacon_cardinal]["seamark:beacon_cardinal:color"*=";"][!"seamark:beacon_cardinal:colour_pattern"],
+node["seamark:type"=buoy_isolated_danger]["seamark:buoy_isolated_danger:color"*=";"][!"seamark:buoy_isolated_danger:colour_pattern"],
+node["seamark:type"=beacon_isolated_danger]["seamark:beacon_isolated_danger:color"*=";"][!"seamark:beacon_isolated_danger:colour_pattern"],
+node["seamark:type"=buoy_safe_water]["seamark:buoy_safe_water:color"*=";"][!"seamark:buoy_safe_water:colour_pattern"],
+node["seamark:type"=beacon_special_purpose]["seamark:beacon_special_purpose:color"*=";"][!"seamark:beacon_special_purpose:colour_pattern"] {
+    throwWarning:   tr("Multi-colour {0} without {1}", "{0.value}", "{2.key}");
+}
+
+/* Unrecognized colour_pattern (might be a reason for non-standard colour patterns so we don't check that, just making sure that one of the
+ * defined patterns are used*/
+node["seamark:buoy_lateral:colour_pattern"]["seamark:buoy_lateral:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:beacon_lateral:colour_pattern"]["seamark:beacon_lateral:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:buoy_cardinal:colour_pattern"]["seamark:buoy_cardinal:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:beacon_cardinal:colour_pattern"]["seamark:beacon_cardinal:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:buoy_isolated_danger:colour_pattern"]["seamark:buoy_isolated_danger:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:beacon_isolated_danger:colour_pattern"]["seamark:beacon_isolated_danger:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:buoy_installation:colour_pattern"]["seamark:buoy_installation:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:buoy_safe_water:colour_pattern"]["seamark:buoy_safe_water:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:beacon_safe_water:colour_pattern"]["seamark:beacon_safe_water:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:buoy_special_purpose:colour_pattern"]["seamark:buoy_special_purpose:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:beacon_special_purpose:colour_pattern"]["seamark:beacon_special_purpose:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:topmark:colour_pattern"]["seamark:topmark:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:daymark:colour_pattern"]["seamark:daymark:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:bridge:colour_pattern"]["seamark:bridge:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:building:colour_pattern"]["seamark:building:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:landmark:colour_pattern"]["seamark:landmark:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:light_float:colour_pattern"]["seamark:light_float:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:light_vessel:colour_pattern"]["seamark:light_vessel:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:notice:colour_pattern"]["seamark:notice:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:pile:colour_pattern"]["seamark:pile:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:platform:colour_pattern"]["seamark:platform:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
+node["seamark:mooring:colour_pattern"]["seamark:mooring:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/] {
+    throwWarning:   tr("Unrecognized {0}: {1}", "{0.key}", "{0.value}");
+}
+
+/* Lateral mark without IALA-system */
+node["seamark:type"=buoy_lateral][!"seamark:buoy_lateral:system"],
+node["seamark:type"=beacon_lateral][!"seamark:beacon_lateral:system"] {
+    throwWarning:   tr("{0} have no IALA or system defind ({1})", "{0.value}", "{1.key}");
+}
+/* Wrong category/color combination on lateral marks */
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=iala-a]["seamark:buoy_lateral:colour"=red]["seamark:buoy_lateral:category"!=port],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=iala-a]["seamark:beacon_lateral:colour"=red]["seamark:beacon_lateral:category"!=port],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=iala-a]["seamark:buoy_lateral:colour"=green]["seamark:buoy_lateral:category"!=starboard],
+node["seamark:type"=beacon_lateral]"seamark:beacon_lateral:system"=iala-a]["seamark:buoy_lateral:colour"=green]["seamark:beacon_lateral:category"!=starboard],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=iala-a]["seamark:buoy_lateral:colour"="green;red;green"]["seamark:buoy_lateral:category"!=preferred_channel_starboard],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=iala-a]["seamark:beacon_lateral:colour"="green;red;green"]["seamark:beacon_lateral:category"!=preferred_channel_starboard],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=iala-b]["seamark:buoy_lateral:colour"="green;red;green"]["seamark:buoy_lateral:category"!=preferred_channel_port],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=iala-b]["seamark:beacon_lateral:colour"="green;red;green"]["seamark:beacon_lateral:category"!=preferred_channel_port],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=iala-b]["seamark:buoy_lateral:colour"="red;green;red"]["seamark:buoy_lateral:category"!=preferred_channel_starboard],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=iala-b]["seamark:beacon_lateral:colour"="red;green;red"]["seamark:beacon_lateral:category"!=preferred_channel_starboard],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=iala-a]["seamark:buoy_lateral:colour"="red;green;red"]["seamark:buoy_lateral:category"!=preferred_channel_port],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=iala-a]["seamark:beacon_lateral:colour"="red;green;red"]["seamark:beacon_lateral:category"!=preferred_channel_port],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=iala-b]["seamark:buoy_lateral:colour"=green]["seamark:buoy_lateral:category"!=port],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=iala-b]["seamark:beacon_lateral:colour"=green]["seamark:beacon_lateral:category"!=port],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=iala-b]["seamark:buoy_lateral:colour"=red]["seamark:buoy_lateral:category"!=starboard],
+node["seamark:type"=beacon_lateral]"seamark:beacon_lateral:system"=iala-b]["seamark:buoy_lateral:colour"=red]["seamark:beacon_lateral:category"!=starboard],
+/* CEVNI buoys */
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=cevni]["seamark:buoy_lateral:colour"=green]["seamark:buoy_lateral:category"!~/starboard|waterway_left|channel_left/],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=cevni]["seamark:buoy_lateral:colour"=red]["seamark:buoy_lateral:category"!~/port|waterway_right|channel_right/],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=cevni]["seamark:buoy_lateral:colour"="red;green;red;green"]["seamark:buoy_lateral:category"!~/preferred_channel_starboard|preferred_channel_port|waterway_separation|channel_separation/],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=cevni]["seamark:buoy_lateral:colour"="red;green;red"]["seamark:buoy_lateral:category"!~/preferred_channel_starboard|turnoff_right/],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=cevni]["seamark:buoy_lateral:colour"="green;red;green"]["seamark:buoy_lateral:category"!~/preferred_channel_port|turnoff_left/],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=cevni]["seamark:buoy_lateral:colour"="red;white;red;white"]["seamark:buoy_lateral:category"!=danger_right],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=cevni]["seamark:buoy_lateral:colour"="green;white;green;white"]["seamark:buoy_lateral:category"!=danger_left],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=cevni]["seamark:buoy_lateral:colour"="white;red"]["seamark:buoy_lateral:category"!=turnoff_right],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=cevni]["seamark:buoy_lateral:colour"="white;green"]["seamark:buoy_lateral:category"!=turnoff_left],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=cevni]["seamark:buoy_lateral:colour"="red;white;red"]["seamark:buoy_lateral:category"!=junction_right],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=cevni]["seamark:buoy_lateral:colour"="green;white;green"]["seamark:buoy_lateral:category"!=junction_left],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=cevni]["seamark:buoy_lateral:colour"="red;white"]["seamark:buoy_lateral:category"!=harbour_right],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=cevni]["seamark:buoy_lateral:colour"="green;white"]["seamark:buoy_lateral:category"!=harbour_left],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=cevni]["seamark:buoy_lateral:colour"=yellow]["seamark:buoy_lateral:category"!=harbour_right]["seamark:topmark:colour"=red],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=cevni]["seamark:buoy_lateral:colour"=yellow]["seamark:buoy_lateral:category"!=harbour_left]["seamark:topmark:colour"=green],
+node["seamark:type"=buoy_lateral]["seamark:buoy_lateral:system"=cevni]["seamark:buoy_lateral:colour"=yellow]["seamark:buoy_lateral:category"!=bridge_pier][!"seamark:topmark:colour"],
+/* CEVNI beacons */
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=cevni]["seamark:beacon_lateral:colour"=green]["seamark:beacon_lateral:category"!~/starboard|waterway_left|channel_left/],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=cevni]["seamark:beacon_lateral:colour"=red]["seamark:beacon_lateral:category"!~/port|waterway_right|channel_right/],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=cevni]["seamark:beacon_lateral:colour"="red;green;red;green"]["seamark:beacon_lateral:category"!~/preferred_channel_starboard|preferred_channel_port|waterway_separation|channel_separation/],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=cevni]["seamark:beacon_lateral:colour"="red;green;red"]["seamark:beacon_lateral:category"!~/preferred_channel_starboard|turnoff_right/],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=cevni]["seamark:beacon_lateral:colour"="green;red;green"]["seamark:beacon_lateral:category"!~/preferred_channel_port|turnoff_left/],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=cevni]["seamark:beacon_lateral:colour"="red;white;red;white"]["seamark:beacon_lateral:category"!=danger_right],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=cevni]["seamark:beacon_lateral:colour"="green;white;green;white"]["seamark:beacon_lateral:category"!=danger_left],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=cevni]["seamark:beacon_lateral:colour"="white;red"]["seamark:beacon_lateral:category"!=turnoff_right],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=cevni]["seamark:beacon_lateral:colour"="white;green"]["seamark:beacon_lateral:category"!=turnoff_left],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=cevni]["seamark:beacon_lateral:colour"="red;white;red"]["seamark:beacon_lateral:category"!=junction_right],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=cevni]["seamark:beacon_lateral:colour"="green;white;green"]["seamark:beacon_lateral:category"!=junction_left],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=cevni]["seamark:beacon_lateral:colour"="red;white"]["seamark:beacon_lateral:category"!=harbour_right],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=cevni]["seamark:beacon_lateral:colour"="green;white"]["seamark:beacon_lateral:category"!=harbour_left],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=cevni]["seamark:beacon_lateral:colour"=yellow]["seamark:beacon_lateral:category"!=harbour_right]["seamark:topmark:colour"=red],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=cevni]["seamark:beacon_lateral:colour"=yellow]["seamark:beacon_lateral:category"!=harbour_left]["seamark:topmark:colour"=green],
+node["seamark:type"=beacon_lateral]["seamark:beacon_lateral:system"=cevni]["seamark:beacon_lateral:colour"=yellow]["seamark:beacon_lateral:category"!=bridge_pier][!"seamark:topmark:colour"] {
+    throwWarning:   tr("Probably wrong category on {0}, {1} colour mean {2} in {3}", "{0.value}", "{2.value}", "{3.value}", "{1.value}");
+}
+
+/* Cardinal Marks */
+node["seamark:type"=buoy_cardinal]["seamark:buoy_cardinal:colour"="black;yellow"]["seamark:buoy_cardinal:category"!=north],
+node["seamark:type"=beacon_cardinal]["seamark:beacon:cardinal:colour"="black;yellow"]["seamark:beacon_cardinal:category"!=north],
+node["seamark:type"=buoy_cardinal]["seamark:buoy_cardinal:colour"="black;yellow;black"]["seamark:buoy_cardinal:category"!=east],
+node["seamark:type"=beacon_cardinal]["seamark:beacon:cardinal:colour"="black;yellow;black"]["seamark:beacon_cardinal:category"!=east],
+node["seamark:type"=buoy_cardinal]["seamark:buoy_cardinal:colour"="yellow;black"]["seamark:buoy_cardinal:category"!=south],
+node["seamark:type"=beacon_cardinal]["seamark:beacon:cardinal:colour"="yellow;black"]["seamark:beacon_cardinal:category"!=south],
+node["seamark:type"=buoy_cardinal]["seamark:buoy_cardinal:colour"="yellow;black;yellow"]["seamark:buoy_cardinal:category"!=west],
+node["seamark:type"=beacon_cardinal]["seamark:beacon:cardinal:colour"="yellow;black;yellow"]["seamark:beacon_cardinal:category"!=west] {
+    throwWarning:   tr("Probably wrong category on {0}, the colour combination {1} usually mean {2}", "{0.value}", "{1.value}", "{2.value}");
+}
+
+node["seamark:type"=wreck][!"seamark:wreck:category"] {
+    throwWarning:   tr("{0} have no {1}", "{0.value}", "{1.key}");
+}
+node["seamark:wreck:category"]["seamark:type"!=wreck] {
+    throwWarning:   tr("{0} set without {1}={2}", "{0.key}", "{1.key}", "{1.value}");
+}
+
+node["seamark:type"=rock][!"seamark:rock:water_level"] {
+    throwWarning:   tr("{0} without {1}", "{0.value}", "{1.key}");
+}
