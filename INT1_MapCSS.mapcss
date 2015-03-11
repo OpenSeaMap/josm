@@ -510,11 +510,15 @@ node["seamark:type"=notice]::int1_notice {
     icon-offset-x:  0;
     set				notice;
 }
-node["seamark:notice:1:category"].notice::int1_notice {
+node["seamark:notice:1:category"]::int1_notice {
+    icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/generic.svg";
+    icon-height:	16;
 	icon-offset-x:	8;
     set				notice1;
 }
-node["seamark:notice:2:category"].notice::int1_notice {
+node["seamark:notice:2:category"]::int1_notice {
+    icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/generic.svg";
+    icon-height:	16;
 	icon-offset-x:	-8;
     set				notice2;
 }
