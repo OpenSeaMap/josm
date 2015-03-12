@@ -443,10 +443,10 @@ area[boundary],
 relation[boundary] > way::int1_border {
 	set				border;
 }
-*[boundary=administrative][!maritime].border::int1_border,
-*[boundary=administrative][maritime?!].border::int1_border,
-relation[boundary=administrative] > way[!maritime].border::int1_border,
-relation[boundary=administrative] > way[maritime?!].border::int1_border {
+*[boundary=administrative][admin_level=2][!maritime].border::int1_border,
+*[boundary=administrative][admin_level=2][maritime?!].border::int1_border,
+relation[boundary=administrative][admin_level=2] > way[!maritime].border::int1_border,
+relation[boundary=administrative][admin_level=2] > way[maritime?!].border::int1_border {
 	repeat-image:			"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/N/N40.svg";
 	repeat-image-width:		eval(300 / any(tag(admin_level), "2"));
 	repeat-image-spacing:	3;
@@ -454,8 +454,8 @@ relation[boundary=administrative] > way[maritime?!].border::int1_border {
 }
 *[boundary=maritime][border_type=territorial].border::int1_border,
 *[boundary=administrative][maritime?].border::int1_border,
-relation[boundary=administrative] > way[maritime?].border::int1_border,
-relation[boundary=administrative] > way[border_type=territorial].border::int1_border {
+relation[boundary=administrative][admin_level=2] > way[maritime?].border::int1_border,
+relation[boundary=administrative][admin_level=2] > way[border_type=territorial].border::int1_border {
 	repeat-image:			"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/N/N41.svg";
 	repeat-image-width:		eval(300 / any(tag(admin_level), "2" ));
 	repeat-image-spacing:	3;
@@ -502,6 +502,28 @@ node["seamark:type"=beacon_special_purpose]::int1_buoy {
     icon-offset-y:  -6;
 	text:			"seamark:name";
 	text-color:		black;
+}
+
+/* Topmarks */
+node["seamark:type"=buoy_lateral]["seamark:topmark:shape"]::int1_topmark,
+node["seamark:type"=buoy_cardinal]["seamark:topmark:shape"]::int1_topmark,
+node["seamark:type"=buoy_isolated_danger]["seamark:topmark:shape"]::int1_topmark,
+node["seamark:type"=buoy_safe_water]["seamark:topmark:shape"]::int1_topmark,
+node["seamark:type"=buoy_special_purpose]["seamark:topmark:shape"]::int1_topmark {
+    icon-image:     eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/", coalesce(replace(replace(tag("seamark:topmark:shape"), ",", ""), " ", "_"), "sphere"), "/", cond(has_tag_key("seamark:topmark:colour_pattern"), concat(tag("seamark:topmark:colour_pattern"), "/")), coalesce(replace(tag("seamark:topmark:colour"),";","_"), "generic"), ".svg"));
+    icon-width:    6;
+    icon-offset-x:  4;
+    icon-offset-y:  -20;
+}
+node["seamark:type"=beacon_lateral]["seamark:topmark:shape"]::int1_topmark,
+node["seamark:type"=beacon_cardinal]["seamark:topmark:shape"]::int1_topmark,
+node["seamark:type"=beacon_isolated_danger]["seamark:topmark:shape"]::int1_topmark,
+node["seamark:type"=beacon_safe_water]["seamark:topmark:shape"]::int1_topmark,
+node["seamark:type"=beacon_special_purpose]["seamark:topmark:shape"]::int1_topmark {
+    icon-image:     eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/", coalesce(replace(replace(tag("seamark:topmark:shape"), ",", ""), " ", "_"), "sphere"), "/", cond(has_tag_key("seamark:topmark:colour_pattern"), concat(tag("seamark:topmark:colour_pattern"), "/")), coalesce(replace(tag("seamark:topmark:colour"),";","_"), "generic"), ".svg"));
+    icon-width:    6;
+    icon-offset-x:  1;
+    icon-offset-y:  -20;
 }
 
 node["seamark:type"=notice]::int1_notice {
