@@ -448,16 +448,16 @@ relation[boundary] > way::int1_border {
 relation[boundary=administrative][admin_level=2] > way[!maritime].border::int1_border,
 relation[boundary=administrative][admin_level=2] > way[maritime?!].border::int1_border {
 	repeat-image:			"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/N/N40.svg";
-	repeat-image-width:		eval(300 / any(tag(admin_level), "2"));
+	repeat-image-width:		150;
 	repeat-image-spacing:	3;
 	opacity:				0.05;
 }
 *[boundary=maritime][border_type=territorial].border::int1_border,
-*[boundary=administrative][maritime?].border::int1_border,
+*[boundary=administrative][admin_level=2][maritime?].border::int1_border,
 relation[boundary=administrative][admin_level=2] > way[maritime?].border::int1_border,
 relation[boundary=administrative][admin_level=2] > way[border_type=territorial].border::int1_border {
 	repeat-image:			"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/N/N41.svg";
-	repeat-image-width:		eval(300 / any(tag(admin_level), "2" ));
+	repeat-image-width:		150;
 	repeat-image-spacing:	3;
 	opacity:				0.05;
 }
@@ -527,63 +527,66 @@ node["seamark:type"=beacon_special_purpose]["seamark:topmark:shape"]::int1_topma
 }
 
 node["seamark:type"=notice]::int1_notice {
+    z-index:        1;
 	icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/generic.svg";
 	icon-height:	16;
     icon-offset-x:  0;
     set				notice;
 }
-node["seamark:notice:1:category"]::int1_notice {
+node["seamark:notice:1:category"]::int1_notice_left {
+    z-index:        3;
     icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/generic.svg";
     icon-height:	16;
 	icon-offset-x:	8;
-    set				notice1;
+    set				notice_left;
 }
-node["seamark:notice:2:category"]::int1_notice {
+node["seamark:notice:2:category"]::int1_notice_right {
+    z-index:        3;
     icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/generic.svg";
     icon-height:	16;
 	icon-offset-x:	-8;
-    set				notice2;
+    set				notice_right;
 }
 *["seamark:notice:system"=bniwr]["seamark:notice:category"].notice::int1_notice,
 *["seamark:notice:system"=bniwr2]["seamark:notice:category"].notice::int1_notice {
 	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/BNIWR/", tag("seamark:notice:bank"), "/", tag("seamark:notice:category"), ".svg"));
 }
-*["seamark:notice:1:system"=bniwr]["seamark:notice:1:category"].notice1::int1_notice,
-*["seamark:notice:1:system"=bniwr2]["seamark:notice:1:category"].notice1::int1_notice {
+*["seamark:notice:1:system"=bniwr]["seamark:notice:1:category"].notice_left::int1_notice_left,
+*["seamark:notice:1:system"=bniwr2]["seamark:notice:1:category"].notice_left::int1_notice_left {
 	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/BNIWR/", tag("seamark:notice:1:bank"), "/", tag("seamark:notice:1:category"), ".svg"));
 }
-*["seamark:notice:2:system"=bniwr]["seamark:notice:2:category"].notice2::int1_notice,
-*["seamark:notice:2:system"=bniwr2]["seamark:notice:2:category"].notice2::int1_notice {
+*["seamark:notice:2:system"=bniwr]["seamark:notice:2:category"].notice_right::int1_notice_right,
+*["seamark:notice:2:system"=bniwr2]["seamark:notice:2:category"].notice_right::int1_notice_right {
 	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/BNIWR/", tag("seamark:notice:2:bank"), "/", tag("seamark:notice:2:category"), ".svg"));
 }
 
 *["seamark:notice:system"=ppwbc]["seamark:notice:category"].notice::int1_notice {
 	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/", tag("seamark:notice:bank"), "/", tag("seamark:notice:category"), ".svg"));
 }
-*["seamark:notice:1:system"=ppwbc]["seamark:notice:1:category"].notice1::int1_notice {
+*["seamark:notice:1:system"=ppwbc]["seamark:notice:1:category"].notice_left::int1_notice_left {
 	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/", tag("seamark:notice:1:bank"), "/", tag("seamark:notice:1:category"), ".svg"));
 }
-*["seamark:notice:2:system"=ppwbc]["seamark:notice:2:category"].notice2::int1_notice {
+*["seamark:notice:2:system"=ppwbc]["seamark:notice:2:category"].notice_right::int1_notice_right {
 	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/", tag("seamark:notice:2:bank"), "/", tag("seamark:notice:2:category"), ".svg"));
 }
 
 *["seamark:notice:system"=cevni]["seamark:notice:category"].notice::int1_notice {
 	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/", tag("seamark:notice:category"), ".svg"));
 }
-*["seamark:notice:1:system"=cevni]["seamark:notice:1:category"].notice1::int1_notice {
+*["seamark:notice:1:system"=cevni]["seamark:notice:1:category"].notice_left::int1_notice_left {
 	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/", tag("seamark:notice:1:category"), ".svg"));
 }
-*["seamark:notice:2:system"=cevni]["seamark:notice:2:category"].notice2::int1_notice {
+*["seamark:notice:2:system"=cevni]["seamark:notice:2:category"].notice_right::int1_notice_right {
     icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/", tag("seamark:notice:2:category"), ".svg"));
 }
 
 *["seamark:notice:system"=riwr]["seamark:notice:category"].notice::int1_notice {
 	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/RIWR/", tag("seamark:notice:category"), ".svg"));
 }
-*["seamark:notice:1:system"=riwr]["seamark:notice:1:category"].notice1::int1_notice {
+*["seamark:notice:1:system"=riwr]["seamark:notice:1:category"].notice_left::int1_notice_left {
 	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/RIWR/", tag("seamark:notice:1:category"), ".svg"));
 }
-*["seamark:notice:2:system"=riwr]["seamark:notice:2:category"].notice2::int1_notice {
+*["seamark:notice:2:system"=riwr]["seamark:notice:2:category"].notice_right::int1_notice_right {
 	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/RIWR/", tag("seamark:notice:2:category"), ".svg"));
 }
 
