@@ -2850,7 +2850,7 @@
             <space/>
             <key key="seamark:type" value="buoy_cardinal"/>
             <combo key="seamark:buoy_cardinal:category" text="Category">
-              <reference ref="laterals"/>
+              <reference ref="cardinals"/>
             </combo>
             <combo key="seamark:buoy_cardinal:shape" text="Shape">
               <reference ref="buoyshapes"/>
