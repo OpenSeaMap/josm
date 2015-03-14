@@ -233,6 +233,8 @@ node["seamark:landmark:category"=tower]["seamark:landmark:function"=television].
 }
 node["seamark:landmark:category"=mast][!"seamark:landmark:function"].landmark::int1_landmark {
 	icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E28.svg";
+    icon-width:     16;
+    icon-offset-y:  -11;
 }
 node["seamark:landmark:category"=mast]["seamark:landmark:function"=communication].landmark::int1_landmark,
 node["seamark:landmark:category"=mast]["seamark:landmark:function"=radio].landmark::int1_landmark,
@@ -240,6 +242,8 @@ node["seamark:landmark:category"=mast]["seamark:landmark:function"=radar].landma
 node["seamark:landmark:category"=mast]["seamark:landmark:function"=microwave].landmark::int1_landmark,
 node["seamark:landmark:category"=mast]["seamark:landmark:function"=television].landmark::int1_landmark {
 	icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/E/E28_.svg";
+    icon-width:     16;
+    icon-offset-y:  -11;
 }
 
 node["seamark:landmark:category"=water_tower].landmark::int1_landmark {
