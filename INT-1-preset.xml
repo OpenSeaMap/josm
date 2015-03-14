@@ -129,7 +129,7 @@
     <list_entry value="amber" display_value="Amber" de.display_value="Bernsteinfarbend" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/amber.svg" icon_size="16"/>
     <list_entry value="violet" display_value="Violet" de.display_value="Violett" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/violet.svg" icon_size="16"/>
     <list_entry value="orange" display_value="Orange" de.display_value="Orange" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/orange.svg" icon_size="16"/>
-    <list_entry value="magenta" display_value="Magenter" de.display_value="Purpur" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/magenta.svg" icon_size="16"/>
+    <list_entry value="magenta" display_value="Magenta" de.display_value="Purpur" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/magenta.svg" icon_size="16"/>
   </chunk>
   
   <chunk id="othercolours">
@@ -137,6 +137,29 @@
     <list_entry value="grey" display_value="Grey" de.display_value="Grau" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/grey.svg" icon_size="16"/>
     <list_entry value="brown" display_value="Brown" de.display_value="Braun" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/brown.svg" icon_size="16"/>
     <list_entry value="pink" display_value="Pink" de.display_value="Pink" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/pink.svg" icon_size="16"/>
+  </chunk>
+  
+  <chunk id="lateralcolours">
+    <list_entry value="red" display_value="Red" de.display_value="Rot"/>
+    <list_entry value="red;green;red" display_value="Red-Green-Red" de.display_value="Rot-Grün-Rot"/>
+    <list_entry value="red;green" display_value="Red-Green" de.display_value="Rot-Grün"/>
+    <list_entry value="red;white" display_value="Red-White" de.display_value="Rot-Weiss"/>
+    <list_entry value="red;white;red;white" display_value="Red-White-Red-White" de.display_value="Rot-Weiss-Rot-Weiss"/>
+    <list_entry value="red;green;red;green" display_value="Red-Green-Red-Green" de.display_value="Rot-Grün-Rot-Grün"/>
+    <list_entry value="green" display_value="Green" de.display_value="Grün"/>
+    <list_entry value="green;red;green" display_value="Green-Red-Green" de.display_value="Grün-Rot-Grün"/>
+    <list_entry value="green;red" display_value="Red-Green" de.display_value="Grün-Rot"/>
+    <list_entry value="green;white" display_value="Red-White" de.display_value="Grün-Weiss"/>
+    <list_entry value="green;white;green;white" display_value="Red-White-Red-White" de.display_value="Grün-Weiss-Grün-Weiss"/>
+  </chunk>
+  
+  <chunk id="cardinalcolours">
+    <list_entry value="black" display_value="Black" de.display_value="Schwarz"/>
+    <list_entry value="black;yellow" display_value="Black-Yellow" de.display_value="Schwarz-Gelb"/>
+    <list_entry value="black;yellow;black" display_value="Black-Yellow-Black" de.display_value="Schwarz-Gelb-Schwarz"/>
+    <list_entry value="yellow;black" display_value="Yellow-Black" de.display_value="Gelb-Schwarz"/>
+    <list_entry value="yellow;black;yellow" display_value="Yellow-Black-Yellow" de.display_value="Gelb-Schwarz-Gelb"/>
+    <list_entry value="black;red;black" display_value="Black-Red-Black" de.display_value="Schwarz-Rot-Schwarz"/>
   </chunk>
   
   <chunk id="lightchars">
@@ -2834,10 +2857,9 @@
             <combo key="seamark:buoy_lateral:shape" text="Shape">
               <reference ref="buoyshapes"/>
             </combo>
-            <multiselect key="seamark:buoy_lateral:colour" text="Colour(s)">
-              <reference ref="lightcolours"/>
-              <reference ref="othercolours"/>
-            </multiselect>
+            <combo key="seamark:buoy_lateral:colour" text="Colour(s)">
+              <reference ref="lateralcolours"/>
+            </combo>
             <combo key="seamark:buoy_lateral:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
             </combo>
@@ -2855,10 +2877,9 @@
             <combo key="seamark:buoy_cardinal:shape" text="Shape">
               <reference ref="buoyshapes"/>
             </combo>
-            <multiselect key="seamark:buoy_cardinal:colour" text="Colour(s)">
-              <reference ref="lightcolours"/>
-              <reference ref="othercolours"/>
-            </multiselect>
+            <combo key="seamark:buoy_cardinal:colour" text="Colour(s)">
+              <reference ref="cardinalcolours"/>
+            </combo>
             <combo key="seamark:buoy_cardinal:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
             </combo>
@@ -2873,10 +2894,9 @@
             <combo key="seamark:buoy_safe_water:shape" text="Shape">
               <reference ref="buoyshapes"/>
             </combo>
-            <multiselect key="seamark:buoy_safe_water:colour" text="Colour(s)">
-              <reference ref="lightcolours"/>
-              <reference ref="othercolours"/>
-            </multiselect>
+            <combo key="seamark:buoy_safe_water:colour" text="Colour(s)">
+              <reference ref="lateralcolours"/>
+            </combo>
             <combo key="seamark:buoy_safe_water:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
             </combo>
@@ -2891,10 +2911,9 @@
             <combo key="seamark:buoy_isolated_danger:shape" text="Shape">
               <reference ref="buoyshapes"/>
             </combo>
-            <multiselect key="seamark:buoy_isolated_danger:colour" text="Colour(s)">
-              <reference ref="lightcolours"/>
-              <reference ref="othercolours"/>
-            </multiselect>
+            <combo key="seamark:buoy_isolated_danger:colour" text="Colour(s)">
+              <reference ref="cardinalcolours"/>
+            </combo>
             <combo key="seamark:buoy_isolated_danger:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
             </combo>
@@ -2912,10 +2931,10 @@
             <combo key="seamark:buoy_special_purpose:shape" text="Shape">
               <reference ref="buoyshapes"/>
             </combo>
-            <multiselect key="seamark:buoy_special_purpose:colour" text="Colour(s)">
+            <combo key="seamark:buoy_special_purpose:colour" text="Colour(s)">
               <reference ref="lightcolours"/>
               <reference ref="othercolours"/>
-            </multiselect>
+            </combo>
             <combo key="seamark:buoy_special_purpose:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
             </combo>
@@ -3390,10 +3409,9 @@
             <combo key="seamark:beacon_lateral:shape" text="Shape">
               <reference ref="beaconshapes"/>
             </combo>
-            <multiselect key="seamark:beacon_lateral:colour" text="Colour(s)">
-              <reference ref="lightcolours"/>
-              <reference ref="othercolours"/>
-            </multiselect>
+            <combo key="seamark:beacon_lateral:colour" text="Colour(s)">
+              <reference ref="lateralcolours"/>
+            </combo>
             <combo key="seamark:beacon_lateral:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
             </combo>
@@ -3411,10 +3429,9 @@
             <combo key="seamark:beacon_cardinal:shape" text="Shape">
               <reference ref="beaconshapes"/>
             </combo>
-            <multiselect key="seamark:beacon_cardinal:colour" text="Colour(s)">
-              <reference ref="lightcolours"/>
-              <reference ref="othercolours"/>
-            </multiselect>
+            <combo key="seamark:beacon_cardinal:colour" text="Colour(s)">
+              <reference ref="cardinalcolours"/>
+            </combo>
             <combo key="seamark:beacon_cardinal:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
             </combo>
@@ -3429,10 +3446,9 @@
             <combo key="seamark:beacon_safe_water:shape" text="Shape">
               <reference ref="beaconshapes"/>
             </combo>
-            <multiselect key="seamark:beacon_safe_water:colour" text="Colour(s)">
-              <reference ref="lightcolours"/>
-              <reference ref="othercolours"/>
-            </multiselect>
+            <combo key="seamark:beacon_safe_water:colour" text="Colour(s)">
+              <reference ref="lateralcolours"/>
+            </combo>
             <combo key="seamark:beacon_safe_water:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
             </combo>
@@ -3447,10 +3463,9 @@
             <combo key="seamark:beacon_isolated_danger:shape" text="Shape">
               <reference ref="beaconshapes"/>
             </combo>
-            <multiselect key="seamark:beacon_isolated_danger:colour" text="Colour(s)">
-              <reference ref="lightcolours"/>
-              <reference ref="othercolours"/>
-            </multiselect>
+            <combo key="seamark:beacon_isolated_danger:colour" text="Colour(s)">
+              <reference ref="cardinalcolours"/>
+            </combo>
             <combo key="seamark:beacon_isolated_danger:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
             </combo>
@@ -3468,10 +3483,10 @@
             <combo key="seamark:beacon_special_purpose:shape" text="Shape">
               <reference ref="beaconshapes"/>
             </combo>
-            <multiselect key="seamark:beacon_special_purpose:colour" text="Colour(s)">
+            <combo key="seamark:beacon_special_purpose:colour" text="Colour(s)">
               <reference ref="lightcolours"/>
               <reference ref="othercolours"/>
-            </multiselect>
+            </combo>
             <combo key="seamark:beacon_special_purpose:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
             </combo>
