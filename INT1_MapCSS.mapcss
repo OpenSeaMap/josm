@@ -67,6 +67,7 @@ node["seamark:type"] {
 way["seamark:type"] {
 	color:			blue;
 	width:			thinnest;
+    opacity:        1;
 }
 /* B: Positions, Distances, Directions, Compass */
 node["seamark:type"=distance_mark]::int1_distance {
