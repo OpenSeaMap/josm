@@ -380,6 +380,22 @@ way["seamark:type"=navigation_line]::int1_navigation_line {
     dashes:         8,6;
     opacity:        1.0;
 }
+way["seamark:type"=separation_lane]::int1_separation_lane {
+    repeat-image:      "https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/M/M10.svg";
+    repeat-image-width: 128;
+    repeat-image-spacing: 32;
+}
+way["seamark:type"=separation_lane]::int1_separation_lane {
+    repeat-image:      "https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/M/M11.svg";
+    repeat-image-width: 128;
+    repeat-image-spacing: 32;
+}
+way["seamark:type"=separation_line]::int1_separation_line {
+    
+}
+way["seamark:type"=separation_zone]:closed::int1_separation_zone {
+    
+}
 node["seamark:type"=calling-in_point]::int1_RDOCAL {
 	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/M/M40.", cond(tag("seamark:calling-in_point:traffic_flow") == "one-way", "1", "2") , ".svg"));
 	icon-height:	24;
@@ -486,7 +502,7 @@ node["seamark:light:colour"]::int1_light {
 
 /* Q: Buoys, Beacons */
 node["seamark:type"=daymark]::int1_daymark {
-	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/", tag("seamark:daymark:shape"), "/", coalesce(tag("seamark:daymark:colour"), "generic"), ".svg"));
+	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/", tag("seamark:daymark:shape"), "/", any(tag("seamark:daymark:colour"), "generic"), ".svg"));
 	icon-width:		16;
 }
 
@@ -500,7 +516,7 @@ node["seamark:type"=buoy_safe_water]::int1_buoy,
 node["seamark:type"=beacon_safe_water]::int1_buoy,
 node["seamark:type"=buoy_special_purpose]::int1_buoy,
 node["seamark:type"=beacon_special_purpose]::int1_buoy {
-	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/", coalesce(tag(concat("seamark:",tag("seamark:type"),":shape")), "buoyant"), "/", cond(has_tag_key(concat("seamark:",tag("seamark:type"),":colour_pattern")),concat(tag(concat("seamark:",tag("seamark:type"),":colour_pattern")),"/"), ""), coalesce(replace(tag(concat("seamark:",tag("seamark:type"),":colour")),";","_"), "generic"), ".svg" ));
+	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/", any(tag(concat("seamark:",tag("seamark:type"),":shape")), "buoyant"), "/", cond(has_tag_key(concat("seamark:",tag("seamark:type"),":colour_pattern")),concat(tag(concat("seamark:",tag("seamark:type"),":colour_pattern")),"/"), ""), any(replace(tag(concat("seamark:",tag("seamark:type"),":colour")),";","_"), "generic"), ".svg" ));
 	icon-height:	16;
 	icon-opacity:	1;
     icon-offset-x:  1;
@@ -515,7 +531,7 @@ node["seamark:type"=buoy_cardinal]["seamark:topmark:shape"]::int1_topmark,
 node["seamark:type"=buoy_isolated_danger]["seamark:topmark:shape"]::int1_topmark,
 node["seamark:type"=buoy_safe_water]["seamark:topmark:shape"]::int1_topmark,
 node["seamark:type"=buoy_special_purpose]["seamark:topmark:shape"]::int1_topmark {
-    icon-image:     eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/", coalesce(replace(replace(tag("seamark:topmark:shape"), ",", ""), " ", "_"), "sphere"), "/", cond(has_tag_key("seamark:topmark:colour_pattern"), concat(tag("seamark:topmark:colour_pattern"), "/")), coalesce(replace(tag("seamark:topmark:colour"),";","_"), "generic"), ".svg"));
+    icon-image:     eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/", any(replace(replace(tag("seamark:topmark:shape"), ",", ""), " ", "_"), "sphere"), "/", cond(has_tag_key("seamark:topmark:colour_pattern"), concat(tag("seamark:topmark:colour_pattern"), "/")), any(replace(tag("seamark:topmark:colour"),";","_"), "generic"), ".svg"));
     icon-width:    6;
     icon-offset-x:  4;
     icon-offset-y:  -20;
@@ -525,7 +541,7 @@ node["seamark:type"=beacon_cardinal]["seamark:topmark:shape"]::int1_topmark,
 node["seamark:type"=beacon_isolated_danger]["seamark:topmark:shape"]::int1_topmark,
 node["seamark:type"=beacon_safe_water]["seamark:topmark:shape"]::int1_topmark,
 node["seamark:type"=beacon_special_purpose]["seamark:topmark:shape"]::int1_topmark {
-    icon-image:     eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/", coalesce(replace(replace(tag("seamark:topmark:shape"), ",", ""), " ", "_"), "sphere"), "/", cond(has_tag_key("seamark:topmark:colour_pattern"), concat(tag("seamark:topmark:colour_pattern"), "/")), coalesce(replace(tag("seamark:topmark:colour"),";","_"), "generic"), ".svg"));
+    icon-image:     eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/", any(replace(replace(tag("seamark:topmark:shape"), ",", ""), " ", "_"), "sphere"), "/", cond(has_tag_key("seamark:topmark:colour_pattern"), concat(tag("seamark:topmark:colour_pattern"), "/")), any(replace(tag("seamark:topmark:colour"),";","_"), "generic"), ".svg"));
     icon-width:    6;
     icon-offset-x:  1;
     icon-offset-y:  -20;
