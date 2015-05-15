@@ -139,18 +139,22 @@
     <list_entry value="pink" display_value="Pink" de.display_value="Pink" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q3/pink.svg" icon_size="16"/>
   </chunk>
   
-  <chunk id="lateralcolours">
+  <chunk id="rightlateralcolours">
     <list_entry value="red" display_value="Red" de.display_value="Rot"/>
     <list_entry value="red;green;red" display_value="Red-Green-Red" de.display_value="Rot-Grün-Rot"/>
     <list_entry value="red;green" display_value="Red-Green" de.display_value="Rot-Grün"/>
     <list_entry value="red;white" display_value="Red-White" de.display_value="Rot-Weiss"/>
     <list_entry value="red;white;red;white" display_value="Red-White-Red-White" de.display_value="Rot-Weiss-Rot-Weiss"/>
     <list_entry value="red;green;red;green" display_value="Red-Green-Red-Green" de.display_value="Rot-Grün-Rot-Grün"/>
+  </chunk>
+  
+  <chunk id="leftlateralcolours">
     <list_entry value="green" display_value="Green" de.display_value="Grün"/>
     <list_entry value="green;red;green" display_value="Green-Red-Green" de.display_value="Grün-Rot-Grün"/>
     <list_entry value="green;red" display_value="Red-Green" de.display_value="Grün-Rot"/>
     <list_entry value="green;white" display_value="Red-White" de.display_value="Grün-Weiss"/>
     <list_entry value="green;white;green;white" display_value="Red-White-Red-White" de.display_value="Grün-Weiss-Grün-Weiss"/>
+    <list_entry value="green;red;green;red" display_value="Green-Red-Green-Red" de.display_value="Grün-Rot-Grün-Rot"/>
   </chunk>
   
   <chunk id="cardinalcolours">
@@ -2858,7 +2862,8 @@
               <reference ref="buoyshapes"/>
             </combo>
             <combo key="seamark:buoy_lateral:colour" text="Colour(s)">
-              <reference ref="lateralcolours"/>
+              <reference ref="rightlateralcolours"/>
+              <reference ref="leftlateralcolours"/>
             </combo>
             <combo key="seamark:buoy_lateral:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
@@ -2895,7 +2900,8 @@
               <reference ref="buoyshapes"/>
             </combo>
             <combo key="seamark:buoy_safe_water:colour" text="Colour(s)">
-              <reference ref="lateralcolours"/>
+              <reference ref="rightlateralcolours"/>
+              <reference ref="leftlateralcolours"/>
             </combo>
             <combo key="seamark:buoy_safe_water:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
@@ -3410,7 +3416,8 @@
               <reference ref="beaconshapes"/>
             </combo>
             <combo key="seamark:beacon_lateral:colour" text="Colour(s)">
-              <reference ref="lateralcolours"/>
+              <reference ref="rightlateralcolours"/>
+              <reference ref="leftlateralcolours"/>
             </combo>
             <combo key="seamark:beacon_lateral:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
@@ -3447,7 +3454,8 @@
               <reference ref="beaconshapes"/>
             </combo>
             <combo key="seamark:beacon_safe_water:colour" text="Colour(s)">
-              <reference ref="lateralcolours"/>
+              <reference ref="rightlateralcolours"/>
+              <reference ref="leftlateralcolours"/>
             </combo>
             <combo key="seamark:beacon_safe_water:colour_pattern" text="Colour Pattern">
               <reference ref="patterns"/>
