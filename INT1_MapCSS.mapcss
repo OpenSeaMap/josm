@@ -385,16 +385,20 @@ way["seamark:type"=separation_lane]::int1_separation_lane {
     repeat-image-width: 128;
     repeat-image-spacing: 32;
 }
-way["seamark:type"=separation_lane]::int1_separation_lane {
+way["seamark:type"=recommended_traffic_lane]::int1_separation_lane {
     repeat-image:      "https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/M/M11.svg";
     repeat-image-width: 128;
     repeat-image-spacing: 32;
 }
 way["seamark:type"=separation_line]::int1_separation_line {
-    
+    color:          darkmagenta;
+    dashes:         8,6;
+    width:          3;
+    opacity:        1.0;
 }
 way["seamark:type"=separation_zone]:closed::int1_separation_zone {
-    
+    fill-color:     magenta;
+    fill-opacity:   0.5;
 }
 node["seamark:type"=calling-in_point]::int1_RDOCAL {
 	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/M/M40.", cond(tag("seamark:calling-in_point:traffic_flow") == "one-way", "1", "2") , ".svg"));
