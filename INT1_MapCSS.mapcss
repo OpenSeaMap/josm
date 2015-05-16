@@ -505,8 +505,8 @@ node["seamark:light:colour"]::int1_light {
 }
 
 /* Q: Buoys, Beacons */
-node["seamark:type"=daymark]::int1_daymark {
-	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/", tag("seamark:daymark:shape"), "/", any(tag("seamark:daymark:colour"), "generic"), ".svg"));
+node["seamark:daymark:shape"]::int1_daymark {
+	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/", replace(replace(tag("seamark:daymark:shape"), " ", "_"), ",", ""), "/", any(tag("seamark:daymark:colour"), "generic"), ".svg"));
 	icon-width:		16;
 }
 
