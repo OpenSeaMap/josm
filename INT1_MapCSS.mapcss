@@ -520,7 +520,7 @@ node["seamark:type"=buoy_safe_water]::int1_buoy,
 node["seamark:type"=beacon_safe_water]::int1_buoy,
 node["seamark:type"=buoy_special_purpose]::int1_buoy,
 node["seamark:type"=beacon_special_purpose]::int1_buoy {
-	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/", any(tag(concat("seamark:",tag("seamark:type"),":shape")), "buoyant"), "/", cond(has_tag_key(concat("seamark:",tag("seamark:type"),":colour_pattern")),concat(tag(concat("seamark:",tag("seamark:type"),":colour_pattern")),"/"), ""), any(replace(tag(concat("seamark:",tag("seamark:type"),":colour")),";","_"), "generic"), ".svg" ));
+	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/", any(replace(tag(concat("seamark:",tag("seamark:type"),":shape")), "pile", "buoyant"), "buoyant"), "/", cond(has_tag_key(concat("seamark:",tag("seamark:type"),":colour_pattern")),concat(tag(concat("seamark:",tag("seamark:type"),":colour_pattern")),"/"), ""), any(replace(tag(concat("seamark:",tag("seamark:type"),":colour")),";","_"), "generic"), ".svg" ));
 	icon-height:	16;
 	icon-opacity:	1;
     icon-offset-x:  1;
