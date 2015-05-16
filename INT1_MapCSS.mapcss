@@ -506,8 +506,21 @@ node["seamark:light:colour"]::int1_light {
 
 /* Q: Buoys, Beacons */
 node["seamark:daymark:shape"]::int1_daymark {
-	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/", replace(replace(tag("seamark:daymark:shape"), " ", "_"), ",", ""), "/", any(tag("seamark:daymark:colour"), "generic"), ".svg"));
+	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q9/", replace(replace(tag("seamark:daymark:shape"), " ", "_"), ",", ""), "/", any(replace(tag("seamark:daymark:colour"), ";", "_"), "generic"), ".svg"));
 	icon-width:		16;
+}
+node["seamark:type"=buoy_lateral]["seamark:daymark:shape"]::int1_daymark,
+node["seamark:type"=beacon_lateral]["seamark:daymark:shape"]::int1_daymark,
+node["seamark:type"=buoy_cardinal]["seamark:daymark:shape"]::int1_daymark,
+node["seamark:type"=beacon_cardinal]["seamark:daymark:shape"]::int1_daymark,
+node["seamark:type"=buoy_isolated_danger]["seamark:daymark:shape"]::int1_daymark,
+node["seamark:type"=beacon_isolated_danger]["seamark:daymark:shape"]::int1_daymark,
+node["seamark:type"=buoy_safe_water]["seamark:daymark:shape"]::int1_daymark,
+node["seamark:type"=beacon_safe_water]["seamark:daymark:shape"]::int1_daymark,
+node["seamark:type"=buoy_special_purpose]["seamark:daymark:shape"]::int1_daymark,
+node["seamark:type"=beacon_special_purpose]["seamark:daymark:shape"]::int1_daymark {
+    icon-offset-x:  1;
+    icon-offset-y:  -20;
 }
 
 node["seamark:type"=buoy_lateral]::int1_buoy,
