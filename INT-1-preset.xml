@@ -1245,7 +1245,7 @@
         <key key="seamark:obstruction:category" value="foul_ground"/>
       </item>
       
-      <item name="Obstruction (K40-K43)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K40.svg" type="node">
+      <item name="Obstruction (K40-K43)" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K40.svg" type="node,closedway">
         <label text="K40-K43: Obstruction" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K40.svg"/>
         <space/>
         <key key="seamark:type" value="obstruction"/>
