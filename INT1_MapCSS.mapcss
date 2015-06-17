@@ -585,48 +585,13 @@ node["seamark:notice:2:category"]::int1_notice_right {
 	icon-offset-x:	-8;
     set				notice_right;
 }
-*["seamark:notice:system"=bniwr]["seamark:notice:category"].notice::int1_notice,
-*["seamark:notice:system"=bniwr2]["seamark:notice:category"].notice::int1_notice {
-	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/BNIWR/", tag("seamark:notice:bank"), "/", tag("seamark:notice:category"), ".svg"));
-}
-*["seamark:notice:1:system"=bniwr]["seamark:notice:1:category"].notice_left::int1_notice_left,
-*["seamark:notice:1:system"=bniwr2]["seamark:notice:1:category"].notice_left::int1_notice_left {
-	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/BNIWR/", tag("seamark:notice:1:bank"), "/", tag("seamark:notice:1:category"), ".svg"));
-}
-*["seamark:notice:2:system"=bniwr]["seamark:notice:2:category"].notice_right::int1_notice_right,
-*["seamark:notice:2:system"=bniwr2]["seamark:notice:2:category"].notice_right::int1_notice_right {
-	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/BNIWR/", tag("seamark:notice:2:bank"), "/", tag("seamark:notice:2:category"), ".svg"));
-}
+/* See BNIWR_MapCSS.mapcss for BNIWR marks */
 
-*["seamark:notice:system"=ppwbc]["seamark:notice:category"].notice::int1_notice {
-	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/", tag("seamark:notice:bank"), "/", tag("seamark:notice:category"), ".svg"));
-}
-*["seamark:notice:1:system"=ppwbc]["seamark:notice:1:category"].notice_left::int1_notice_left {
-	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/", tag("seamark:notice:1:bank"), "/", tag("seamark:notice:1:category"), ".svg"));
-}
-*["seamark:notice:2:system"=ppwbc]["seamark:notice:2:category"].notice_right::int1_notice_right {
-	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/", tag("seamark:notice:2:bank"), "/", tag("seamark:notice:2:category"), ".svg"));
-}
+/* See PPWBC_MapCSS.mapcss for PPWBC marks */
 
-*["seamark:notice:system"=cevni]["seamark:notice:category"].notice::int1_notice {
-	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/", tag("seamark:notice:category"), ".svg"));
-}
-*["seamark:notice:1:system"=cevni]["seamark:notice:1:category"].notice_left::int1_notice_left {
-	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/", tag("seamark:notice:1:category"), ".svg"));
-}
-*["seamark:notice:2:system"=cevni]["seamark:notice:2:category"].notice_right::int1_notice_right {
-    icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/", tag("seamark:notice:2:category"), ".svg"));
-}
+/* See CEVNI_MapCSS.mapcss for CEVNI marks */
 
-*["seamark:notice:system"=riwr]["seamark:notice:category"].notice::int1_notice {
-	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/RIWR/", tag("seamark:notice:category"), ".svg"));
-}
-*["seamark:notice:1:system"=riwr]["seamark:notice:1:category"].notice_left::int1_notice_left {
-	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/RIWR/", tag("seamark:notice:1:category"), ".svg"));
-}
-*["seamark:notice:2:system"=riwr]["seamark:notice:2:category"].notice_right::int1_notice_right {
-	icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/RIWR/", tag("seamark:notice:2:category"), ".svg"));
-}
+/* See RIWR_MapCSS.mapcss for RIWR marks */
 
 /* R: Fog Signals */
 node["seamark:fog_signal:category"]::int1_fog_signal {

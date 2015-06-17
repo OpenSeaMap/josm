@@ -1,0 +1,39 @@
+/* MapCSS scheme for rendering INT-1 style maps based on OpenStreetMap data
+ *
+ * The best way to check marine map data quality is to compare with existing map with
+ * similar rendering. Also for maritime personel wanting to verify if what is in the
+ * database corresponds with reality, seeing it rendered in a standardized and familiar
+ * way is the best option.
+ *
+ */
+
+/* Meta data */
+meta {
+	title:				"BNIWR Rendering (standarized symbols)";
+	icon:				"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/IHO_c.svg";
+	author:				"Aun (Skippern) Johnsen";
+	version:			"0.1";
+	description:		"JOSM rendering of nautical symbols according to BNIWR standard";
+	min-josm-version:	8087;
+}
+
+/* For JOSM, creating a light background color */
+canvas {
+	antialiasing:		'full';
+	default-points: 	true; /* hides points */
+	default-lines: 		true; /* hides lines */
+}
+*["seamark:notice:system"=bniwr]["seamark:notice:category"].notice::int1_notice,
+*["seamark:notice:system"=bniwr2]["seamark:notice:category"].notice::int1_notice {
+icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/BNIWR/", tag("seamark:notice:bank"), "/", tag("seamark:notice:category"), ".svg"));
+}
+*["seamark:notice:1:system"=bniwr]["seamark:notice:1:category"].notice_left::int1_notice_left,
+*["seamark:notice:1:system"=bniwr2]["seamark:notice:1:category"].notice_left::int1_notice_left {
+icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/BNIWR/", tag("seamark:notice:1:bank"), "/", tag("seamark:notice:1:category"), ".svg"));
+}
+*["seamark:notice:2:system"=bniwr]["seamark:notice:2:category"].notice_right::int1_notice_right,
+*["seamark:notice:2:system"=bniwr2]["seamark:notice:2:category"].notice_right::int1_notice_right {
+icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/BNIWR/", tag("seamark:notice:2:bank"), "/", tag("seamark:notice:2:category"), ".svg"));
+}
+
+/* END */
