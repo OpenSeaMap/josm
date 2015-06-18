@@ -10,3 +10,6 @@ JOSM Tagging Presets:
 - INT-1-preset.xml
 - Presets_Hafen.xml
 - Presets_Sport.xml
+
+JOSM Tagging Validator:
+- Seamarks.validator.mapcss

@@ -28,7 +28,7 @@ node["seamark:type"=beacon_special_purpose]["seamark:beacon_special_purpose:colo
 }
 
 /* Unrecognized colour_pattern (might be a reason for non-standard colour patterns so we don't check that, just making sure that one of the
- * defined patterns are used*/
+ * defined patterns are used */
 node["seamark:buoy_lateral:colour_pattern"]["seamark:buoy_lateral:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
 node["seamark:beacon_lateral:colour_pattern"]["seamark:beacon_lateral:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
 node["seamark:buoy_cardinal:colour_pattern"]["seamark:buoy_cardinal:colour_pattern"!~/horizontal|vertical|diagonal|squared|stripes|border|cross|saltire/],
