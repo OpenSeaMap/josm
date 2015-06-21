@@ -23,13 +23,34 @@ canvas {
 	default-points: 	true; /* hides points */
 	default-lines: 		true; /* hides lines */
 }
-*["seamark:notice:system"=ppwbc]["seamark:notice:category"].notice::int1_notice {
+node["seamark:type"=notice]::ppwbc_notice {
+z-index:        1;
+icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/generic.svg";
+icon-height:	16;
+icon-offset-x:  0;
+set				notice;
+}
+node["seamark:notice:1:category"]::ppwbc_notice_left {
+z-index:        3;
+icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/generic.svg";
+icon-height:	16;
+icon-offset-x:	8;
+set				notice_left;
+}
+node["seamark:notice:2:category"]::ppwbc_notice_right {
+z-index:        3;
+icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/generic.svg";
+icon-height:	16;
+icon-offset-x:	-8;
+set				notice_right;
+}
+*["seamark:notice:system"=ppwbc]["seamark:notice:category"].notice::ppwbc_notice {
 icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/", tag("seamark:notice:bank"), "/", tag("seamark:notice:category"), ".svg"));
 }
-*["seamark:notice:1:system"=ppwbc]["seamark:notice:1:category"].notice_left::int1_notice_left {
+*["seamark:notice:1:system"=ppwbc]["seamark:notice:1:category"].notice_left::ppwbc_notice_left {
 icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/", tag("seamark:notice:1:bank"), "/", tag("seamark:notice:1:category"), ".svg"));
 }
-*["seamark:notice:2:system"=ppwbc]["seamark:notice:2:category"].notice_right::int1_notice_right {
+*["seamark:notice:2:system"=ppwbc]["seamark:notice:2:category"].notice_right::ppwbc_notice_right {
 icon-image:		eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/PPWBC/", tag("seamark:notice:2:bank"), "/", tag("seamark:notice:2:category"), ".svg"));
 }
 
