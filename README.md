@@ -13,3 +13,17 @@ JOSM Tagging Presets:
 
 JOSM Tagging Validator:
 - Seamarks.validator.mapcss
+
+To deploy these styles
+- start JOSM
+- Edit > Preferences > Map Settings > Map Paint Style
+- Add a new style by entering URL
+- eg. https://raw.githubusercontent.com/OpenSeaMap/josm/master/INT1_MapCSS.mapcss
+
+To deploy these presets
+- start JOSM
+- Edit > Preferences > Map Settings > Tagging Presets
+- Add a new preset by entering URL
+- eg. https://raw.githubusercontent.com/OpenSeaMap/josm/master/INT-1-preset.xml
+
+<b>Just make sure, the URL points to the RAW file content!</b>
