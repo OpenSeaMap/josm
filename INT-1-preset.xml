@@ -4058,7 +4058,7 @@
             <label text="CEVNI Restriction Notice" de.text="CEVNI Beschränkungs Schilder" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/navigation_restrictions.svg"/>
             <space/>
             <key key="seamark:type" value="notice"/>
-            <key key="seamark:notice:function" value="Restriction"/>
+            <key key="seamark:notice:function" value="restriction"/>
             <key key="seamark:notice:system" value="cevni"/>
             <combo key="seamark:notice:category" text="Notice Category"  de.text="Schild Kategorie">
               <list_entry value="limited_depth" display_value="Limited depth" de.display_value="Begrenzte Tiefe" de.short_description="Wassertiefe stark begrenzt" icon="https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/CEVNI/limited_depth.svg" icon_size="16"/>
