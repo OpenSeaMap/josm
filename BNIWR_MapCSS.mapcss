@@ -20,25 +20,31 @@ meta {
 /* For JOSM, creating a light background color */
 canvas {
 	antialiasing:		'full';
-	default-points: 	true; /* hides points */
-	default-lines: 		true; /* hides lines */
+	default-points: 	true; /* show points */
+	default-lines: 		true; /* show lines */
 }
-node["seamark:type"=notice]::bniwr_notice {
-z-index:        1;
+/* Erase generic */
+*["seamark:notice:system"=bniwr2].notice::int1_notice,
+*["seamark:notice:system"=bniwr].notice::int1_notice {
+    icon-opacity:   0.0;
+}
+
+node["seamark:notice:system"=bniwr]["seamark:type"=notice]::bniwr_notice {
+z-index:        4;
 icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/generic.svg";
 icon-height:	16;
 icon-offset-x:  0;
 set				notice;
 }
-node["seamark:notice:1:category"]::bniwr_notice_left {
-z-index:        3;
+node["seamark:notice:system"=bniwr]["seamark:notice:1:category"]::bniwr_notice_left {
+z-index:        5;
 icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/generic.svg";
 icon-height:	16;
 icon-offset-x:	8;
 set				notice_left;
 }
-node["seamark:notice:2:category"]::bniwr_notice_right {
-z-index:        3;
+node["seamark:notice:system"=bniwr]["seamark:notice:2:category"]::bniwr_notice_right {
+z-index:        5;
 icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/generic.svg";
 icon-height:	16;
 icon-offset-x:	-8;

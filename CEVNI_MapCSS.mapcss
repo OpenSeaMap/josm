@@ -24,15 +24,22 @@ symbol-fill-color: #2ECCFA;
 
 /* Default */
 node[seamark:notice:category]::cevni_notemark {
+    z-index:       4;
 	icon-image:   "https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/png/OpenSeaMapLogo_16.png";
 	icon-width:   16;
 	icon-height:  16;
 	icon-offset-x: 0;
 	icon-offset-y: 0;
 }
+/* Erase generic */
+*["seamark:notice:system"=cevni].notice::int1_notice {
+icon-opacity:   0.0;
+}
+
 
 /* Addition */
 node["seamark:notice:system"=cevni][seamark:notice:category][seamark:notice:addition=right_triangle]::cevni_addition {
+    z-index:       5;
 	icon-image:    "https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/png/Notice_right_triangle.png";
 	icon-width:     8;
 	icon-height:   16;
@@ -40,6 +47,7 @@ node["seamark:notice:system"=cevni][seamark:notice:category][seamark:notice:addi
 }
 
 node["seamark:notice:system"=cevni]["seamark:notice:category"]["seamark:notice:addition"=left_triangle]::cevni_addition {
+z-index:       5;
 	icon-image:    "https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/png/Notice_left_triangle.png";
 	icon-width:      8;
 	icon-height:    16;
@@ -47,6 +55,7 @@ node["seamark:notice:system"=cevni]["seamark:notice:category"]["seamark:notice:a
 }
 
 node["seamark:notice:system"=cevni]["seamark:notice:category"]["seamark:notice:addition"=bottom_triangle]::cevni_addition {
+z-index:       5;
 	icon-image:   "https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/png/Notice_bottom_triangle.png";
 	icon-width:    16;
 	icon-height:    8;
@@ -54,6 +63,7 @@ node["seamark:notice:system"=cevni]["seamark:notice:category"]["seamark:notice:a
 }
 
 node["seamark:notice:system"=cevni]["seamark:notice:category"]["seamark:notice:addition"=bottom_board]::cevni_addition {
+z-index:       5;
 	icon-image:    "https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/png/Notice_board.png";
 	icon-width:    16;
 	icon-height:    8;
@@ -61,6 +71,7 @@ node["seamark:notice:system"=cevni]["seamark:notice:category"]["seamark:notice:a
 }
 
 node["seamark:notice:system"=cevni]["seamark:notice:category"]["seamark:notice:addition"=top_board]::cevni_addition {
+z-index:       5;
 	icon-image:     "https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/png/Notice_board.png";
 	icon-width:     16;
 	icon-height:     8;
@@ -69,6 +80,7 @@ node["seamark:notice:system"=cevni]["seamark:notice:category"]["seamark:notice:a
 
 /* Multiple Signs (Placeholder) */
 node["seamark:notice:1:system"=cevni]["seamark:notice:1:category"]::cevni_1 {
+z-index:       1;
 	icon-image:    "https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/png/OpenSeaMapLogo_16.png";
 	icon-offset-y: -8;
 	icon-height:   16;
@@ -76,6 +88,7 @@ node["seamark:notice:1:system"=cevni]["seamark:notice:1:category"]::cevni_1 {
 }
 
 node["seamark:notice:2:system"=cevni]["seamark:notice:2:category"]::cevni_2 {
+z-index:       1;
 	icon-image:    "https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/png/OpenSeaMapLogo_16.png";
 	icon-offset-y:  8;
 	icon-width:    16;
@@ -83,6 +96,7 @@ node["seamark:notice:2:system"=cevni]["seamark:notice:2:category"]::cevni_2 {
 }
 
 node["seamark:notice:3:system"=cevni]["seamark:notice:3:category"]::cevni_3 {
+z-index:       1;
 	icon-image:    "https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/png/OpenSeaMapLogo_16.png";
 	icon-offset-y: 24;
 	icon-width:    16;
@@ -90,6 +104,7 @@ node["seamark:notice:3:system"=cevni]["seamark:notice:3:category"]::cevni_3 {
 }
 
 node["seamark:notice:4:system"=cevni]["seamark:notice:4:category"]::cevni_4 {
+z-index:       1;
 	icon-image:    "https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/png/OpenSeaMapLogo_16.png";
 	icon-offset-y: 40;
 	icon-width:    16;
@@ -97,6 +112,7 @@ node["seamark:notice:4:system"=cevni]["seamark:notice:4:category"]::cevni_4 {
 }
 
 node["seamark:notice:5:system"=cevni]["seamark:notice:5:category"]::cevni_5 {
+z-index:       1;
 	icon-image:    "https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/png/OpenSeaMapLogo_16.png";
 	icon-offset-y: 56;
 	icon-width:    16;

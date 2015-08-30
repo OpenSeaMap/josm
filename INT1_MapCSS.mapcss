@@ -299,6 +299,13 @@ way[man_made=pier]::int1_pier {
 /* G: Topographic Terms */
 /* H: Tides, Currents */
 /* I: Depths */
+node["depth"]::int1_depth {
+    text:           depth;
+    font-size:      8;
+    font-family:    TimesNewRoman;
+    text-color:     black;
+    text-anchor-vertical:   below;
+}
 /* J: Nature of seabed */
 /* K: Rocks, Wrecks, Obstructions */
 node["seamark:type"=obstruction]::int1_obstruction {
@@ -353,6 +360,12 @@ node["seamark:wreck:category"=hull_showing].wreck::int1_obstruction {
 node["seamark:wreck:category"=funnel_showing].wreck::int1_obstruction {
 	icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K28.svg";
 	text:			eval("funnel");
+}
+node["seamark:type"=restricted_area]["seamark:restricted_area:category"=foul_ground]::int1_obstruction {
+    icon-image:     "https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/K/K31.svg";
+    text:           eval("foul");
+    text-color:     black;
+    text-anchor-vertical:    center;
 }
 
 /* L: Offshore Installations */
@@ -491,6 +504,9 @@ relation[boundary=administrative][admin_level=2] > way[border_type=territorial].
 node[man_made=lighthouse]::int1_lighthouse {
 	icon-image:				"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P1.major.disused.svg";
 }
+node[man_made=lighthouse]["seamark:type"]::int1_lighthouse {
+    icon-image:				"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P1.minor.svg";
+}
 node["seamark:type"=light_major]::int1_lighthouse {
 	icon-image:				"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P1.major.svg";
 }
@@ -502,6 +518,12 @@ node["seamark:light:colour"]::int1_light {
 	icon-image:				eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P10.1_",tag("seamark:light:colour"),".svg"));
     icon-offset-x:          -5;
     icon-offset-y:          -6;
+}
+
+node["seamark:light:category"=spotlight]::int1_light {
+    icon-image:             eval(concat("https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/P/P11_", any(tag("seamark:light:colour"), "white"), ".svg"));
+    icon-offset-x:          0;
+    icon-offset-y:          0;
 }
 
 /* Q: Buoys, Beacons */
@@ -564,27 +586,34 @@ node["seamark:type"=beacon_special_purpose]["seamark:topmark:shape"]::int1_topma
     icon-offset-y:  -20;
 }
 
+node["seamark:beacon_lateral:shape"=lattice]::int1_buoy,
+node["seamark:beacon_cardinal:shape"=lattice]::int1_buoy,
+node["seamark:beacon_isolated_danger:shape"=lattice]::int1_buoy,
+node["seamark:beacon_safe_water:shape"=lattice]::int1_buoy,
+node["seamark:beacon_special_purpose:shape"=lattice]::int1_buoy{
+    icon-image:     "https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q111/generic.svg";
+    icon-height:    16;
+}
+
+
 node["seamark:type"=notice]::int1_notice {
     z-index:        1;
 	icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/generic.svg";
-	icon-height:	16;
+	icon-height:	12;
     icon-offset-x:  0;
     set				notice;
 }
-node["seamark:notice:1:category"]::int1_notice_left {
-    z-index:        3;
-    icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/generic.svg";
-    icon-height:	16;
-	icon-offset-x:	8;
-    set				notice_left;
+/* Generic notice marks, try system specific marks if these don't do */
+*["seamark:notice:2:category"].notice::int1_notice {
+    icon-image:     eval(concat("http://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/generic/", tag("seamark:notice:2:category"), ".svg"));
 }
-node["seamark:notice:2:category"]::int1_notice_right {
-    z-index:        3;
-    icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/generic.svg";
-    icon-height:	16;
-	icon-offset-x:	-8;
-    set				notice_right;
+*["seamark:notice:1:category"].notice::int1_notice {
+    icon-image:     eval(concat("http://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/generic/", tag("seamark:notice:1:category"), ".svg"));
 }
+*["seamark:notice:category"].notice::int1_notice {
+    icon-image:     eval(concat("http://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/Q/Q126/generic/", tag("seamark:notice:category"), ".svg"));
+}
+
 /* See BNIWR_MapCSS.mapcss for BNIWR marks */
 
 /* See PPWBC_MapCSS.mapcss for PPWBC marks */
