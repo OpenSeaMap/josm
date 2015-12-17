@@ -285,6 +285,13 @@ node["seamark:type"=harbour]::int1_harbour {
 node["seamark:harbour:category"=fishing].harbour::int1_harbour {
 	icon-image:		"https://raw.githubusercontent.com/OpenSeaMap/josm/master/icons/svg/F/F10.svg";
 }
+node["seamark:type"=berth]::int1_mooring {
+    symbol-shape:   circle;
+    color:          magenta;
+    symbol-size:    10;
+    text:           "seamark:name";
+    text-color:     magenta;
+}
 area[man_made=pier]:closed::int1_pier,
 way[man_made=pier]::int1_pier {
 	width:			10;
